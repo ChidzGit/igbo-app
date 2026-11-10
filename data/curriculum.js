@@ -19,11 +19,19 @@
   title, tip, items, type ("letters" = no typing exercises).
 */
 window.CURRICULUM = {
-  version: "1.4.0",
+  version: "1.5.0",
   updated: "2026-11-10",
 
   // Newest first. Shown in the app under More → "What's new".
   changelog: [
+    { version: "1.5.0", date: "2026-11-10", changes: [
+      "Section 4 (A2) is now open: 9 new units, 24 lessons and 181 new words, phrases and sentences.",
+      "New units: Proverbs (Ilu), Discussing & Comparing, Custom & Respect, Life Events, Chi, Ancestors & Folktales (with a little Igbo history), Weather & Seasons, Cooking, At the Doctor, and Plans, Invitations & Calls.",
+      "The proverbs come with a word-for-word meaning and when to use them. Comparing is explained with karịa (more than) and kacha (the most). The days of the week (Mọnde, Tuuzde, Fraịde, Satọde) are new.",
+      "78 of the 181 are marked ⚑ because only one source had them, or we built the sentence from a pattern. They are on the list for a native speaker (section N of QUESTIONS-FOR-PARENT.md).",
+      "Four older items that had '…' in them now use a real example (for example 'Aha m bụ Ada'), so they work in the typing and word-bank exercises.",
+      "Left out on purpose: words nobody could confirm (for example fry, stir, pound and cut), a recipe, and the Section 4 review unit, because the Daily test already reviews."
+    ] },
     { version: "1.4.0", date: "2026-11-10", changes: [
       "Sections 2 and 3 grow: 21 new units and 41 new lessons, with 298 new words and phrases.",
       "Section 2 (A1) adds 11 units: Asking Questions, Where Is It?, My Day, At Home, Jobs, Animals, Clothes, Describing Things, Opinions & Advice, Countries & Peoples and Linking Words.",
@@ -79,7 +87,16 @@ window.CURRICULUM = {
     { id: "bu200", name: "Boston University 200-word Igbo: clothing", url: "https://www.bu.edu/200word/igbo/clothing/", note: "Free university word table. Used only as a second opinion." },
     { id: "latinum", name: "Latinum Institute: Igbo lesson 8 (verbs, past and future)", url: "https://latinum.substack.com/p/lesson-8-igbo-a-latinum-institute", note: "Free lesson. Single source for some tense examples, so they are marked ⚑." },
     { id: "ucla1981", name: "UCLA Phonetics Archive: Igbo conversation (1981)", url: "http://archive.phonetics.ucla.edu/Language/IBO/ibo_conversation_1981_01.html", note: "Word list with recordings; used for a pattern only." },
-    { id: "nkenne", name: "NKENNE: The importance of kola nut in Igbo rituals", url: "https://www.nkenne.com/blog/the-importance-of-kola-nut-in-igbo-rituals", note: "Blog. Single source for the kola phrases, so they are marked ⚑." }
+    { id: "nkenne", name: "NKENNE: The importance of kola nut in Igbo rituals", url: "https://www.nkenne.com/blog/the-importance-of-kola-nut-in-igbo-rituals", note: "Blog. Single source for the kola phrases, so they are marked ⚑." },
+    { id: "ifont", name: "ifont blog: Igbo proverb #6", url: "https://ifont.blogspot.com/2011/12/proverb-6.html", note: "Blog post on the kite-and-eagle proverb with its meaning." },
+    { id: "zikoko", name: "Zikoko: 15 Igbo proverbs and their meanings", url: "https://www.zikoko.com/life/15-igbo-proverbs-and-their-meanings/", note: "Free article. Its Igbo has no dots, so we added them; proverbs only from here are marked ⚑." },
+    { id: "legit", name: "Legit.ng: Igbo proverbs and their meaning", url: "https://www.legit.ng/1087216-igbo-proverbs-meaning.html", note: "Free article. Some entries are garbled, so only clear ones are used and marked ⚑." },
+    { id: "meigen", name: "Meigen School: 25 Igbo proverbs", url: "https://meigen-school.pages.dev/en/proverbs/igbo-proverbs/", note: "Low-reliability list. Anything only from here is marked ⚑." },
+    { id: "wiki-odinani", name: "Wikipedia: Odinani", url: "https://en.wikipedia.org/wiki/Odinani", note: "Overview of traditional Igbo belief. Used for background and a few words, marked ⚑." },
+    { id: "wiki-nri", name: "Wikipedia: Kingdom of Nri", url: "https://en.wikipedia.org/wiki/Kingdom_of_Nri", note: "History of Nri and Igbo-Ukwu. Facts only; the Igbo sentences are ours, marked ⚑." },
+    { id: "wiki-mbeku", name: "Wikipedia: Mbeku (tortoise tales)", url: "https://en.wikipedia.org/wiki/Mbeku", note: "Summary of tortoise folktales. The Igbo sentences are ours, marked ⚑." },
+    { id: "wiki-marriage", name: "Wikipedia: Traditional marriage in Igbo culture", url: "https://en.wikipedia.org/wiki/Traditional_marriage_in_Igbo_culture", note: "Stage names of a traditional wedding." },
+    { id: "umuigbo", name: "umuigbo.com: Child naming ceremony in Igbo culture", url: "https://umuigbo.com/child-naming-ceremony-in-igbo-culture/igbo-culture", note: "Describes the naming ceremony; single source, so marked ⚑." }
   ],
 
   // Stages (shown as numbered Sections on the Learn screen, with CEFR level).
@@ -89,7 +106,7 @@ window.CURRICULUM = {
     { id: "s1", number: 1, cefr: "Intro", title: "Essential phrases", focus: "Start with essential phrases and simple grammar.", units: ["alphabet","greetings","intro","family","eatingout","market","school","travel"] },
     { id: "s2", number: 2, cefr: "A1", title: "Basic interactions", focus: "Words, phrases and grammar for basic interactions.", units: ["food","numbers","colours","verbs","questions","whereis","routine","home","jobs","animals","clothes","describe","opinions","peoples","linking"] },
     { id: "s3", number: 3, cefr: "A1", title: "Basic conversations", focus: "Foundational sentences for basic conversations.", units: ["time","body","everyday","clock","past","future","feelings","people","chat","cities","nature","arts","igboland"] },
-    { id: "s4", number: 4, cefr: "A2", title: "Everyday topics", focus: "Use sentences in conversations about everyday topics.", units: [] },
+    { id: "s4", number: 4, cefr: "A2", title: "Everyday topics", focus: "Use sentences in conversations about everyday topics.", units: ["ilu","discuss","omenala","ceremonies","beliefs","weather","cooking","doctor","plans"] },
     { id: "s5", number: 5, cefr: "B1", title: "Wider topics", focus: "Form sentences about a wider variety of topics.", units: [] },
     { id: "s6", number: 6, cefr: "B1", title: "Complex ideas", focus: "Communicate more complex ideas in conversations.", units: [] },
     { id: "s7", number: 7, cefr: "B2", title: "Feelings & opinions", focus: "Talk about abstract feelings and opinions.", units: [] },
@@ -301,7 +318,7 @@ window.CURRICULUM = {
           items: [
             { ig: "aha", en: "name" },
             { ig: "Kedụ aha gị?", en: "What is your name?", alt: ["Kedu aha gị?", "Kedụ afa gị?"], src: "omniglot" },
-            { ig: "Aha m bụ…", en: "My name is…", alt: ["Aha m bu"], src: "elias" },
+            { ig: "Aha m bụ Ada", en: "My name is Ada", alt: ["Aha m bu Ada"], note: "Swap 'Ada' for your own name.", src: "elias" },
             { ig: "Ebee ka ị si?", en: "Where are you from?", alt: ["Ebee ka i si?", "Onye ebee ka ị bụ?"], src: "elias" },
             { ig: "E si m England", en: "I am from England", alt: ["Esi m England"], note: "Or 'A bụ m onye England': I am a person of England.", src: "omniglot" },
             { ig: "A bụ m onye Igbo", en: "I am Igbo (an Igbo person)" },
@@ -320,7 +337,7 @@ window.CURRICULUM = {
             { ig: "Aghọtara m", en: "I understand" },
             { ig: "Biko kwuo ya ọzọ", en: "Please say it again", alt: ["Biko kwuo ihe ahụ ọzọ"], src: "omniglot" },
             { ig: "Biko jiri nwayọ kwuo okwu", en: "Please speak slowly", alt: ["Biko jiri nwayọọ kwuo okwu", "Biko jiri nwayọọ kwuo"], src: "omniglot" },
-            { ig: "Gịnị ka a na-akpọ … n'Igbo?", en: "How do you say … in Igbo? (lit. what is … called)", alt: ["Kedụ ka e si ekwu … n'asụsụ Igbo?"], src: "omniglot" }
+            { ig: "Gịnị ka a na-akpọ 'water' n'Igbo?", en: "How do you say 'water' in Igbo? (lit. what is 'water' called)", alt: ["Kedụ ka e si ekwu 'water' n'asụsụ Igbo?"], note: "Swap 'water' for any English word.", src: "omniglot" }
           ]
         },
         {
@@ -586,7 +603,7 @@ window.CURRICULUM = {
             { ig: "kụzi", en: "to teach", alt: ["kụzie", "ịkụzi"], src: "nkowaokwu" },
             { ig: "jụ", en: "to ask", alt: ["ịjụ"], note: "'jụrụ' = asked.", src: "nkowaokwu" },
             { ig: "za", en: "to answer", alt: ["ịza"], note: "'zara' = answered.", src: "nkowaokwu" },
-            { ig: "Gịnị pụtara …?", en: "What does … mean?", note: "'pụtara' = means.", unsure: true, src: "nkowaokwu" }
+            { ig: "Gịnị pụtara ahịa?", en: "What does 'ahịa' mean?", note: "'pụtara' = means. Swap 'ahịa' for any word.", unsure: true, src: "nkowaokwu" }
           ]
         },
         {
@@ -1482,7 +1499,7 @@ window.CURRICULUM = {
             { ig: "Ọ dịghị mma", en: "It's not good" },
             { ig: "Jisie ike", en: "Well done / Keep it up (lit. 'hold strength')" },
             { ig: "Nwayọọ nwayọọ", en: "Slowly, slowly / Take it easy", unsure: true },
-            { ig: "Ọ dị ka…", en: "It is like… / It seems…" },
+            { ig: "Ọ dị ka nne ya", en: "She looks like her mother", alt: ["Ọ dị ka nne ya."], note: "'Ọ dị ka …' = it is like … / it seems …. Here 'ọ' means she.", unsure: true },
             { ig: "Chukwu nọ", en: "God is there (encouragement)", unsure: true }
           ]
         },
@@ -1876,6 +1893,446 @@ window.CURRICULUM = {
             { ig: "mmanwụ", en: "masquerade (masked spirit figure)", alt: ["mmọnwụ"], note: "The dictionary headword is 'mmọnwụ'; 'mmanwụ' is the common variant.", src: "nkowaokwu" },
             { ig: "Mmọnwụ atọ bịara mmemme ahụ", en: "Three masquerades came to the event", alt: ["Mmanwụ atọ bịara mmemme ahụ","Mmọnwụ atọ bịara mmemme ahụ."], src: "nkowaokwu" },
             { ig: "E chiri ya eze ọhụrụ", en: "He was crowned a new king", alt: ["E chiri ya eze ọhụrụ."], note: "'eze' = king.", src: "nkowaokwu" }
+          ]
+        }
+      ]
+    },
+    /* ───────────────────────── PROVERBS (Section 4) ───────────────────────── */
+    {
+      id: "ilu",
+      title: "Proverbs (Ilu)",
+      igTitle: "Ilu Igbo",
+      color: "#b5482a",
+      description: "Proverbs are the heart of Igbo speech. Learn what an ilu is, then a dozen well-known ones.",
+      lessons: [
+        {
+          id: "ilu-intro",
+          title: "What is an ilu?",
+          tip: "An ilu (proverb) is a short saying that gives advice or a warning. Elders use them in serious talk, and using one correctly shows that you know the culture. Proverbs are best learnt whole, so each one in this unit comes with its word-for-word meaning and what it is used for.",
+          items: [
+            { ig: "ilu", en: "proverb", note: "A short, well-known saying that states a general truth or advice. (A different word 'ilu' also means bitterness.)", src: "nkowaokwu" },
+            { ig: "okwu", en: "word / speech / matter", note: "Also 'a matter' or 'an argument'.", src: "nkowaokwu" },
+            { ig: "amamihe", en: "wisdom / knowledge", note: "What proverbs are said to hold.", src: "nkowaokwu" },
+            { ig: "nkọwa", en: "explanation / meaning", note: "Ask for the nkọwa when you do not understand a proverb.", src: "nkowaokwu" },
+            { ig: "ndị okenye", en: "elders", alt: ["ndi okenye"], note: "Elders are the usual speakers of proverbs.", src: "nkowaokwu" },
+            { ig: "Aghọtaghị m ilu a", en: "I did not understand this proverb", alt: ["Aghọtaghị m ilu a."], note: "'-ghị' makes a verb negative: aghọtara m = I understood, aghọtaghị m = I did not understand.", src: "nkowaokwu" },
+            { ig: "Ilu bụ mmanụ e ji eri okwu", en: "Proverbs are the palm oil with which words are eaten", alt: ["Ilu bụ mmanụ e ji eri okwu."], note: "Meaning: proverbs make speech rich and tasty, like oil on food. A well-known saying about proverbs themselves.", unsure: true, src: "meigen" }
+          ]
+        },
+        {
+          id: "ilu-unity",
+          title: "Sharing and living together",
+          tip: "These proverbs are about fairness and community. Read the English meaning first, then build the sentence word by word. Notice how 'bụ' (is) links two ideas: 'Azụ bụ eze na mmiri' = a fish is king in water.",
+          items: [
+            { ig: "egbe", en: "kite (a bird of prey)", src: "nkowaokwu" },
+            { ig: "Egbe bere, ugo bere; nke sị ibe ya ebela, nku kwaa ya", en: "Let the kite perch and let the eagle perch; whichever says the other may not perch, may its wing break", alt: ["Egbe bere, ugo bere; nke sị ibe ya ebela, nku kwaa ya.", "Egbe bere ugo bere"], note: "Meaning: live and let live. Everyone has an equal right to the shared space. Said when someone tries to push another out.", src: "ifont" },
+            { ig: "Otu osisi adịghị eme oke ọhịa", en: "One tree does not make a forest", alt: ["Otu osisi adighi eme oke ohia", "Otu osisi adịghị eme oke ọhịa."], note: "Meaning: no one succeeds alone, so ask for help. Used to encourage teamwork.", src: "zikoko" },
+            { ig: "Igwe bụ ike", en: "A crowd is strength", alt: ["Igwe bu ike"], note: "Meaning: there is strength in numbers and unity.", unsure: true, src: "zikoko" },
+            { ig: "Azụ bụ eze na mmiri", en: "A fish is king in the water", alt: ["Azu bu eze na mmiri", "Azụ bụ eze na mmiri."], note: "Meaning: everyone is important and in charge in their own place.", src: "zikoko" },
+            { ig: "Aka ekpe kwọ aka nri, aka nri akwọ aka ekpe", en: "If the left hand washes the right, the right washes the left", alt: ["Aka ekpe kwo aka nri, aka nri akwo aka ekpe"], note: "Meaning: favours are returned. One good turn deserves another.", unsure: true, src: "zikoko" }
+          ]
+        },
+        {
+          id: "ilu-wisdom",
+          title: "Patience, time and wisdom",
+          tip: "A proverb often comes after a short story or a problem, and the listener answers with another. Use these when someone is in a hurry, wants to give up, or needs advice. Notice 'adịghị' and 'anaghị' = does not: both make a statement negative.",
+          items: [
+            { ig: "ndidi", en: "patience", src: "nkowaokwu" },
+            { ig: "Ndidi nwe mmeri", en: "Patience brings victory", alt: ["Ndidi nwe mmeri.", "Ndidi nwere mmeri"], note: "Literally 'patience owns victory'. Meaning: the patient person wins in the end.", src: "zikoko" },
+            { ig: "Oge adịghị eche mmadụ", en: "Time does not wait for anyone", alt: ["Oge adighi eche mmadu"], note: "Meaning: do not waste time. Used to encourage someone to act now.", unsure: true, src: "legit" },
+            { ig: "Onye ajụjụ anaghị efu ụzọ", en: "The one who asks questions does not lose the way", alt: ["Onye ajụjụ anaghị efu ụzọ."], note: "Meaning: asking questions keeps you on course. A good proverb for learners!", unsure: true, src: "meigen" },
+            { ig: "Ejula sị: nwayọọ, nwayọọ, ka m wuo ụlọ m", en: "The snail says: slowly, slowly, so that I build my house", alt: ["Ejula sị nwayọọ nwayọọ ka m wuo ụlọ m"], note: "Meaning: steady, patient progress gets the job done.", unsure: true, src: "meigen" },
+            { ig: "Ihe okenye nọ ala hụ, nwata akwụ elu ahụghị ya", en: "What an elder sees sitting down, a child standing up cannot see", alt: ["Ihe okenye nọ ala hụ, nwata kwụ n'elu ahụghị ya"], note: "Meaning: experience shows things that youth cannot yet see. Said to respect elders' advice.", unsure: true, src: "meigen" },
+            { ig: "Mgbe isi rere, ahụ niile na-arịa", en: "When the head is rotten, the whole body suffers", alt: ["Mgbe isi rere ahụ niile na-arịa"], note: "Meaning: when the leader fails, everybody suffers.", unsure: true, src: "meigen" },
+            { ig: "Ewu nwa ogbenye bụ chi ya", en: "A poor person's goat is his 'chi' (his fortune)", alt: ["Ewu nwa ogbenye bu chi ya"], note: "Meaning: be content with what you have; it matters to you as much as a cow does to a rich man. The two sources translate this differently.", unsure: true, src: "zikoko" }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── DISCUSSING & COMPARING (Section 4) ───────────────────────── */
+    {
+      id: "discuss",
+      title: "Discussing & Comparing",
+      color: "#4b4fc4",
+      description: "Agree, disagree, say why, and compare: bigger than, best, nearest, different.",
+      lessons: [
+        {
+          id: "disc-agree",
+          title: "True or not true?",
+          tip: "'Ee' (yes) and 'Mba' (no) answer a question. Add 'Ọ bụ eziokwu' (it is the truth) to agree and 'Ọ bụghị' (it is not) to disagree. To say why, use 'n'ihi na' (because). Most of this lesson is built from patterns, so it is on the list for a native speaker to check.",
+          items: [
+            { ig: "Ee, aga m aga Owere echi", en: "Yes, I will go to Owerri tomorrow", alt: ["Ee, aga m aga Owere echi."], note: "'Ee' starts an answer. 'Aga m aga' = I will go.", src: "nkowaokwu" },
+            { ig: "Ọ bụ eziokwu", en: "It is true", alt: ["Ọ bụ eziokwu.", "O bu eziokwu"], note: "Literally 'it is the truth'.", unsure: true },
+            { ig: "Ọ bụghị eziokwu", en: "It is not true", alt: ["Ọ bụghị eziokwu.", "O bughi eziokwu"], note: "'bụghị' = is not.", unsure: true },
+            { ig: "Echeghị m na ọ bụ eziokwu", en: "I do not think it is true", alt: ["Echeghị m na ọ bụ eziokwu."], note: "The negative of 'Echere m na …' (I think that …).", unsure: true },
+            { ig: "n'ihi na", en: "because", alt: ["maka na"], note: "Joins a reason to a statement.", unsure: true },
+            { ig: "Ahụ adịghị m mma n'ihi na m rịa ọrịa", en: "I do not feel well because I am sick", alt: ["Ahụ adịghị m mma n'ihi na m rịa ọrịa."], unsure: true },
+            { ig: "dịka ọmụmaatụ", en: "for example", alt: ["dika omumaatu"], unsure: true },
+            { ig: "ọmụmaatụ", en: "example", alt: ["omumaatu"], unsure: true }
+          ]
+        },
+        {
+          id: "disc-more",
+          title: "More than",
+          tip: "Igbo has no '-er' ending. To say 'A is taller than B', put 'karịa' (more than) between the two: 'Ada toro ogologo karịa Ike' = Ada grew tall more than Ike. The describing word comes first, then karịa, then the thing you compare with.",
+          items: [
+            { ig: "karịa", en: "more than / than", alt: ["karịrị", "karia"], note: "Put it after the describing word, before the thing you compare. 'karịrị' is the same verb in the past.", src: "nkowaokwu" },
+            { ig: "Ikuku na-ekukarị n'ụgụrụ karịa ọkọchị", en: "Wind blows more in the harmattan than in the dry season", alt: ["Ikuku na-ekukarị n'ụgụrụ karịa ọkọchị."], note: "A dictionary example of 'karịa'.", src: "nkowaokwu" },
+            { ig: "Nke a ka mma karịa nke ahụ", en: "This one is better than that one", alt: ["Nke a ka mma karịa nke ahụ."], note: "'ka mma' = better.", unsure: true },
+            { ig: "Ada toro ogologo karịa Ike", en: "Ada is taller than Ike", alt: ["Ada toro ogologo karịa Ike."], note: "Literally 'Ada grew tall more than Ike'.", unsure: true },
+            { ig: "Ụlọ a dị ukwu karịa ụlọ ahụ", en: "This house is bigger than that house", alt: ["Ụlọ a dị ukwu karịa ụlọ ahụ."], unsure: true },
+            { ig: "Nke a dị ọnụ karịa nke ahụ", en: "This one is more expensive than that one", alt: ["Nke a dị ọnụ karịa nke ahụ."], note: "'nke a' = this one, 'nke ahụ' = that one.", unsure: true },
+            { ig: "Nke a dị njọ karịa nke ahụ", en: "This one is worse than that one", alt: ["Nke a dị njọ karịa nke ahụ."], unsure: true }
+          ]
+        },
+        {
+          id: "disc-best",
+          title: "Best, nearest, different",
+          tip: "For 'the most' or '-est', put 'kacha' (some speakers say 'kachasị') in front of the describing word: 'kacha dị nso' = the nearest. 'Ka mma' means better. Use 'pụrụ iche' for special or different. A short question and answer ends the lesson.",
+          items: [
+            { ig: "kacha dị nso", en: "the nearest", alt: ["kachasị nso"], note: "'kacha' + describing word = the most. (The dictionary lists a different word 'kacha' too.)", unsure: true, src: "wikivoyage" },
+            { ig: "Ebee ka e nwere ụlọ mkpụrụ ọgwụ kacha dị nso?", en: "Where is the nearest pharmacy?", alt: ["Ebee ka e nwere ụlọ mkpụrụ ọgwụ kacha dị nso"], unsure: true, src: "wikivoyage" },
+            { ig: "Nke a kacha mma", en: "This one is the best", alt: ["Nke a kacha mma.", "Nke a kachasị mma"], unsure: true },
+            { ig: "pụrụ iche", en: "special / unique / different", note: "A dictionary word: 'be extraordinary'.", src: "nkowaokwu" },
+            { ig: "Ihe pụrụ iche na-amasị m", en: "I like unique things", alt: ["Ihe pụrụ iche na-amasị m."], src: "nkowaokwu" },
+            { ig: "dị iche", en: "be different", alt: ["di iche"], unsure: true },
+            { ig: "Kedụ nke ka mma?", en: "Which one is better?", alt: ["Kedu nke ka mma?"], unsure: true },
+            { ig: "Nke a ka mma, mana ọ dị oke ọnụ", en: "This one is better, but it is very expensive", alt: ["Nke a ka mma, mana ọ dị oke ọnụ."], note: "'mana' = but.", unsure: true }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── CUSTOM & RESPECT (Section 4) ───────────────────────── */
+    {
+      id: "omenala",
+      title: "Custom & Respect",
+      igTitle: "Omenala",
+      color: "#157a43",
+      description: "Respect for elders, titles, good manners, what is sacred or forbidden, and kola.",
+      lessons: [
+        {
+          id: "om-respect",
+          title: "Respect and elders",
+          tip: "In Igbo society it is expected to show respect (nsọpụrụ) to anyone older. Greet elders first and with a respectful word. 'okenye' is an elder, and 'ndị okenye' means the elders of a place.",
+          items: [
+            { ig: "omenala", en: "custom / tradition", note: "Seen in 'alụmdi na nwunye omenala' (traditional marriage).", unsure: true, src: "wikivoyage" },
+            { ig: "nsọpụrụ", en: "respect / honour", alt: ["nsopuru"], src: "nkowaokwu" },
+            { ig: "A na-enye ya nsọpụrụ n'obodo", en: "He is respected in the town", alt: ["A na-enye ya nsọpụrụ n'obodo."], note: "Literally 'people give him respect'.", src: "nkowaokwu" },
+            { ig: "okenye", en: "elder / grown person", note: "'onye okenye' = an elderly person.", src: "nkowaokwu" },
+            { ig: "Ha nwere ọtụtụ ndị okenye n'etiti ha", en: "They have many elders among them", alt: ["Ha nwere ọtụtụ ndị okenye n'etiti ha."], src: "nkowaokwu" },
+            { ig: "ọnụ ọma", en: "politeness / courtesy", alt: ["ọnụọma"], src: "nkowaokwu" },
+            { ig: "Emeka enweghị ọnụọma", en: "Emeka is not polite", alt: ["Emeka enweghị ọnụọma."], src: "nkowaokwu" },
+            { ig: "ezi omume", en: "good conduct / good manners", alt: ["eziomume"], src: "nkowaokwu" }
+          ]
+        },
+        {
+          id: "om-titles",
+          title: "Titles and manners",
+          tip: "Titles come before a name: Mazị (Mr) for a man and Daa (Madam) for an older woman. Nze and ọzọ are noble titles that a community gives to a person. Do not use a title for a real person unless you know it is right.",
+          items: [
+            { ig: "Onye ọbụla kwesịrị iyi eziomume dịka uwe", en: "Everyone should wear good conduct like a cloth", alt: ["Onye ọbụla kwesịrị iyi eziomume dịka uwe."], note: "A dictionary example about good manners.", src: "nkowaokwu" },
+            { ig: "nze", en: "high chief (a noble title)", note: "The highest chieftaincy in Igbo tradition.", src: "nkowaokwu" },
+            { ig: "Nna ya bụ nze", en: "His father is a high chief", alt: ["Nna ya bụ nze."], src: "nkowaokwu" },
+            { ig: "E chiri m ọzọ be nna m", en: "I was given the Ozo title at my father's place", alt: ["E chiri m ọzọ be nna m."], note: "'ọzọ' here is the noble title, not 'again'.", src: "nkowaokwu" },
+            { ig: "ichie", en: "titled elder", note: "One source says a titled person, another says a male elder you address with respect.", unsure: true, src: "wikivoyage" },
+            { ig: "Mazị Ibekwe", en: "Mr Ibekwe", note: "'Mazị' goes before an older man's name.", unsure: true, src: "wikivoyage" },
+            { ig: "Ndewo, Daa Mgbechi", en: "Hello, Madam Mgbechi", alt: ["Ndewo, Daa Mgbechi."], note: "'Daa' goes before an older woman's name. 'Ndewo' works for anyone.", unsure: true, src: "wikivoyage" },
+            { ig: "Oga diri gị, nwa m", en: "May it go well with you, my child", alt: ["Oga diri gị nwa m"], note: "An elder's reply to a greeting.", unsure: true, src: "igbofocus" }
+          ]
+        },
+        {
+          id: "om-sacred",
+          title: "Sacred, forbidden and kola",
+          tip: "'Nsọ' means holy or sacred, and 'arụ' is something forbidden by custom (a taboo). Kola (ọjị) is offered to guests with a prayer, and many families say that kola brings life and good will. Customs differ from town to town.",
+          items: [
+            { ig: "nsọ", en: "sacred / holy", note: "Also seen on signs as 'Ihe nsọ' (forbidden).", src: "nkowaokwu" },
+            { ig: "Chukwu dị nsọ", en: "God is holy", alt: ["Chukwu dị nsọ."], src: "nkowaokwu" },
+            { ig: "arụ", en: "taboo / abomination (forbidden act)", note: "A different word 'arụ' means 'bite'.", src: "nkowaokwu" },
+            { ig: "A chụpụrụ ya maka arụ o mere", en: "He was sent away because of the taboo he broke", alt: ["A chụpụrụ ya maka arụ o mere."], src: "nkowaokwu" },
+            { ig: "Ihe nsọ", en: "forbidden (lit. sacred thing)", note: "Used on signs.", unsure: true, src: "wikivoyage" },
+            { ig: "Onye wetara ọjị, wetara ndụ", en: "He who brings kola brings life", alt: ["Onye wetara ọjị wetara ndụ", "Onye wetara ọjị, o wetara ndụ"], note: "A saying about hospitality: the visitor with kola brings good will.", unsure: true, src: "meigen" }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── LIFE EVENTS (Section 4) ───────────────────────── */
+    {
+      id: "ceremonies",
+      title: "Life Events",
+      color: "#a8336f",
+      description: "Weddings, birth and naming, Christmas, anniversaries and funerals.",
+      lessons: [
+        {
+          id: "cer-wedding",
+          title: "The wedding",
+          tip: "A traditional Igbo marriage has several steps. Common ones are knocking on the family's door (ịkụ aka), the bride-price talks, and the wine-carrying day (igba nkwụ). Many couples also have a church wedding. Practice varies from town to town.",
+          items: [
+            { ig: "igba nkwụ", en: "the traditional wedding (wine carrying)", alt: ["ịgba nkwụ", "igba nkwu", "Igba Nkwu"], note: "The main day of a traditional marriage, when the bride finds her husband in the crowd and brings him palm wine.", src: "nkowaokwu" },
+            { ig: "Ha gbara nkwu afọ atọ gara aga", en: "They had their traditional wedding three years ago", alt: ["Ha gbara nkwu afọ atọ gara aga."], src: "nkowaokwu" },
+            { ig: "ịkụ aka", en: "to knock (the first step of a wedding)", alt: ["iku aka", "kụ aka"], note: "Literally 'to knock': the groom's family come to ask permission.", src: "nkowaokwu" },
+            { ig: "Onye kụrụ aka n'ụzọ?", en: "Who knocked on the door?", alt: ["Onye kụrụ aka n'ụzọ"], src: "nkowaokwu" },
+            { ig: "Eze lụrụ nwunye ọhụrụ", en: "Eze married a new wife", alt: ["Eze lụrụ nwunye ọhụrụ."], note: "'lụ' = to marry (a man marries a woman).", src: "nkowaokwu" },
+            { ig: "nwunye ọhụrụ", en: "bride / new wife", note: "'ọhụrụ' = new.", unsure: true, src: "nkowaokwu" },
+            { ig: "ime ego", en: "the bride-price talks", alt: ["ịme ego"], note: "'ego' is money. This stage is when the families agree the bride price.", unsure: true, src: "wiki-marriage" }
+          ]
+        },
+        {
+          id: "cer-birth",
+          title: "Birth and Christmas",
+          tip: "A new baby is celebrated with a naming ceremony, and the mother is cared for by an older relative (ọmụgwọ). Many Igbo families travel home for Christmas, so the roads are full in December.",
+          items: [
+            { ig: "ọmụmụ", en: "childbirth", note: "Also 'fruitfulness'. Ncheta ọmụmụ = birthday.", src: "nkowaokwu" },
+            { ig: "Chukwu nyere ya ọmụmụ", en: "God gave her a child", alt: ["Chukwu nyere ya ọmụmụ."], note: "Literally 'God gave her fruitfulness'.", src: "nkowaokwu" },
+            { ig: "ọmụgwọ", en: "omugwo (care for a new mother and baby)", alt: ["omugwo", "ọ̀mụgwọ̀"], note: "An older relative, often the grandmother, looks after the new mother and baby for some weeks. Sources disagree on how long.", src: "nkowaokwu" },
+            { ig: "igu nwa aha", en: "the naming ceremony", alt: ["ịgụ aha", "igu aha"], note: "Held a week or so after birth; the father gives the name. Many families now name the baby sooner.", unsure: true, src: "umuigbo" },
+            { ig: "Ekeresimesi", en: "Christmas", alt: ["Ekeresimeesi"], src: "nkowaokwu" },
+            { ig: "Anyị na-agba Ekeresimeesi", en: "We are celebrating Christmas", alt: ["Anyị na-agba Ekeresimesi", "Anyị na-agba Ekeresimeesi."], src: "nkowaokwu" }
+          ]
+        },
+        {
+          id: "cer-funeral",
+          title: "Anniversaries and funerals",
+          tip: "A funeral (olili) is an important event, often with a wake, burial and a gathering of family. Say 'Ndo' to someone who has lost a loved one. 'ncheta' is remembering a date every year.",
+          items: [
+            { ig: "ncheta", en: "anniversary / remembrance", src: "nkowaokwu" },
+            { ig: "Ncheta ọnwụ nna ha gara nke ọma", en: "The anniversary of their father's death went well", alt: ["Ncheta ọnwụ nna ha gara nkeọma", "Ncheta ọnwụ nna ha gara nke ọma."], src: "nkowaokwu" },
+            { ig: "ozu", en: "corpse / dead body", src: "nkowaokwu" },
+            { ig: "ikwa ozu", en: "to hold a funeral", alt: ["ịkwa ozu"], note: "Literally 'to cry the dead'.", src: "nkowaokwu" },
+            { ig: "A ga-akwa ozu na obodo anyị echi", en: "There will be a funeral in our town tomorrow", alt: ["A ga-akwa ozu na obodo anyị echi."], src: "nkowaokwu" },
+            { ig: "olili", en: "burial", src: "nkowaokwu" },
+            { ig: "Olili ya ga-abụ n'ọnwa na-abịa abịa", en: "His burial will be next month", alt: ["Olili ya ga-abụ n'ọnwa na-abịa abịa."], src: "nkowaokwu" }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── CHI, ANCESTORS & FOLKTALES (Section 4) ───────────────────────── */
+    {
+      id: "beliefs",
+      title: "Chi, Ancestors & Folktales",
+      color: "#6d4bc4",
+      description: "God and the spirit world, folktales and the tortoise, and a little about old times.",
+      lessons: [
+        {
+          id: "bel-god",
+          title: "God, chi and prayer",
+          tip: "Many Igbo people believe in one high God, Chukwu or Chineke, and in a personal spirit or fortune called chi. Today many people use both traditional and Christian words, and families differ. This lesson only teaches the words, not what anyone should believe.",
+          items: [
+            { ig: "Chukwu", en: "God / the great God", note: "Many Igbo people use Chukwu for the high God, in traditional and in Christian speech.", src: "nkowaokwu" },
+            { ig: "chi", en: "personal spirit / fate / soul", note: "Many Igbo people believe each person has a chi that shapes their fortune. 'chi' can also mean 'day' (Ị bọọla chi?).", src: "nkowaokwu" },
+            { ig: "mmụọ", en: "spirit / soul", alt: ["mmuo"], note: "Can also mean ghost or masquerade, depending on the sentence.", src: "nkowaokwu" },
+            { ig: "agbara", en: "deity / spirit", alt: ["agbàrà"], note: "A spirit that some Igbo people honour in traditional belief.", src: "nkowaokwu" },
+            { ig: "ekpere", en: "prayer", src: "nkowaokwu" },
+            { ig: "Chukwu na-aza ekpere", en: "God answers prayer", alt: ["Chukwu na-aza ekpere."], src: "nkowaokwu" },
+            { ig: "Chineke na-aza ekpere e kpere n'asụsụ Igbo", en: "God answers prayers said in the Igbo language", alt: ["Chineke na-aza ekpere e kpere n'asụsụ Igbo."], note: "'Chineke' = God the creator, often used for the God of the Christian Bible.", src: "nkowaokwu" },
+            { ig: "ụlọ ụka", en: "church (building)", alt: ["ulo uka"], note: "'ụka' alone is also used for church.", unsure: true }
+          ]
+        },
+        {
+          id: "bel-folk",
+          title: "Folktales and the tortoise",
+          tip: "Akụkọ ifo (folktales) used to be told to children at night. The tortoise (mbe) is the clever trickster of many tales, and the stories usually teach a lesson about greed or broken promises.",
+          items: [
+            { ig: "akụkọ ifo", en: "folktale / fable", note: "The same words can also mean 'a true account', so context matters.", src: "nkowaokwu" },
+            { ig: "Akụkọ a bụ akụkọ ifo", en: "That story is a folktale", alt: ["Akụkọ a bụ akụkọ ifo."], note: "A dictionary example (it says 'myth').", src: "nkowaokwu" },
+            { ig: "Ukpana", en: "Grasshopper (a character in tortoise tales)", note: "Used as a name for the grasshopper in one fable.", unsure: true, src: "wiki-mbeku" },
+            { ig: "egwu ọnwa", en: "moonlight play (a time for stories)", alt: ["egwu onwa"], note: "Folktales were told by moonlight.", unsure: true },
+            { ig: "Mbe bụ onye aghụghọ", en: "The tortoise is a trickster", alt: ["Mbe bụ onye aghụghọ."], note: "'aghụghọ' = trickery.", unsure: true, src: "wiki-mbeku" },
+            { ig: "Mbe riri nri niile", en: "The tortoise ate all the food", alt: ["Mbe riri nri niile."], note: "From the tale of the tortoise and the birds. 'riri' = ate.", unsure: true, src: "wiki-mbeku" }
+          ]
+        },
+        {
+          id: "bel-past",
+          title: "Ancestors and old times",
+          tip: "Many Igbo people speak of their ancestors with respect. The old kingdom of Nri, in the Igbo heartland, was known for ritual rather than military power. These words are mostly taken from one or two sources, so check them with a native speaker.",
+          items: [
+            { ig: "ndichie", en: "ancestors / the old ones", alt: ["ndị ichie"], note: "Many Igbo people believe the ancestors still watch over their families.", unsure: true, src: "wiki-odinani" },
+            { ig: "alaeze", en: "kingdom", note: "From 'ala' (land) and 'eze' (king).", src: "nkowaokwu" },
+            { ig: "Nri bụ alaeze ochie", en: "Nri was an old kingdom", alt: ["Nri bụ alaeze ochie."], note: "'ochie' = old.", unsure: true, src: "wiki-nri" },
+            { ig: "Eze Nri", en: "the King of Nri (a spiritual ruler)", unsure: true, src: "wiki-nri" },
+            { ig: "Igbo-Ukwu", en: "Igbo-Ukwu (a town famous for old bronze art)", unsure: true, src: "wiki-nri" },
+            { ig: "n'oge gboo", en: "long ago", alt: ["n'oge ochie", "mgbe ochie"], unsure: true },
+            { ig: "akụkọ ihe mere eme", en: "history", alt: ["akuko ihe mere eme"], note: "Literally 'the story of what happened'.", unsure: true }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── WEATHER & SEASONS (Section 4) ───────────────────────── */
+    {
+      id: "weather",
+      title: "Weather & Seasons",
+      color: "#0b6fa4",
+      description: "Dry season, harmattan, rain, cold and clouds, and how to ask about the weather.",
+      lessons: [
+        {
+          id: "wea-seasons",
+          title: "Dry season and harmattan",
+          tip: "Igboland has two main seasons: the rainy season and the dry season (ọkọchị). The harmattan (ụgụrụ) is the dry, dusty wind that blows in the dry season, usually from December to February.",
+          items: [
+            { ig: "ọkọchị", en: "dry season", alt: ["okochi"], src: "nkowaokwu" },
+            { ig: "Ọkọchị na-abịa", en: "The dry season is coming", alt: ["Ọkọchị na-abịa."], note: "'na-abịa' = is coming.", src: "nkowaokwu" },
+            { ig: "ụgụrụ", en: "harmattan (dry, dusty wind)", alt: ["uguru"], src: "nkowaokwu" },
+            { ig: "udu mmiri", en: "rainy season", note: "Only one source; the dictionary has 'udu' as a clay pot.", unsure: true, src: "wikivoyage" },
+            { ig: "Ugbu a bụ oge mmiri ozuzo", en: "This is the rainy season", alt: ["Ugbua bụ oge mmiriozuzo", "Ugbu a bụ oge mmiri ozuzo."], note: "A dictionary example. 'ozuzo' = pouring.", src: "nkowaokwu" },
+            { ig: "Ugbu a bụ oge ụgụrụ", en: "Now it is the harmattan period", alt: ["Ugbu a bụ oge ụgụrụ."], unsure: true, src: "igboguide" },
+            { ig: "okpomọkụ", en: "heat", alt: ["okpomoku"], note: "Heat or hotness.", src: "nkowaokwu" }
+          ]
+        },
+        {
+          id: "wea-today",
+          title: "Rain, cold and clouds",
+          tip: "'Oyi na-atụ' is how the dictionary says 'it is cold'. For rain, 'Mmiri na-ezo' = it is raining and 'Mmiri anaghị ezo' = it is not raining. A friendly way to ask about the weather is 'Olee maka ụbọchị taa?'",
+          items: [
+            { ig: "oyi", en: "cold", note: "Also 'fever' or 'a cold' (the illness).", src: "nkowaokwu" },
+            { ig: "Oyi na-atụ", en: "It is cold", alt: ["Oyi na-atụ."], src: "nkowaokwu" },
+            { ig: "urukpu", en: "clouds", alt: ["ụrụkpụ"], src: "nkowaokwu" },
+            { ig: "Kpakpando apụtala n'urukpu", en: "Stars have appeared among the clouds", alt: ["Kpakpando apụtala n'urukpu."], note: "A dictionary example; it shows 'urukpu' used for the sky.", src: "nkowaokwu" },
+            { ig: "Mmiri na-ezo", en: "It is raining", alt: ["Mmiri na-ezo."], note: "Built from the pattern in 'Mmiri anaghị ezo'.", unsure: true, src: "igboguide" },
+            { ig: "Mmiri anaghị ezo", en: "It is not raining", alt: ["Mmiri anaghị ezo."], unsure: true, src: "igboguide" },
+            { ig: "Oke mmiri ozuzo ekweghị anyị lọta", en: "The heavy downpour did not let us go back", alt: ["Oke mmiri ozuzo ekweghị anyị lọta."], note: "A dictionary example.", src: "nkowaokwu" },
+            { ig: "Olee maka ụbọchị taa?", en: "How is the weather today?", alt: ["Olee maka ụbọchị taa"], note: "Literally 'what about today?'.", unsure: true, src: "igboguide" },
+            { ig: "Ụbọchị taa dị mma", en: "Today is nice", alt: ["Ụbọchị taa dị mma."], unsure: true, src: "igboguide" }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── COOKING (Section 4) ───────────────────────── */
+    {
+      id: "cooking",
+      title: "Cooking",
+      color: "#9a5f00",
+      description: "Soups, swallows and the kitchen: onugbu, egusi, nsara, akpụ, garị and abacha.",
+      lessons: [
+        {
+          id: "cook-dishes",
+          title: "Soups and swallows",
+          tip: "A typical Igbo meal is a starchy food (akpụ or fufu, garị, pounded yam) eaten with a soup (ofe). The soup is usually named after its main ingredient, so 'ofe onugbu' is bitterleaf soup.",
+          items: [
+            { ig: "onugbu", en: "bitter leaf", note: "A leaf used in soup.", src: "nkowaokwu" },
+            { ig: "ofe onugbu", en: "bitterleaf soup", unsure: true },
+            { ig: "Ọ kọrọ onugbu ebe ahụ", en: "He planted bitter leaf there", alt: ["Ọ kọrọ onugbu ebe ahụ."], src: "nkowaokwu" },
+            { ig: "ofe nsara", en: "white soup", alt: ["ofe nsala", "ofe ǹsàrà"], note: "A soup usually cooked without palm oil.", src: "nkowaokwu" },
+            { ig: "Achọrọ m iri ofe nsara", en: "I want to eat white soup", alt: ["Achọrọ m iri ofe nsara."], src: "nkowaokwu" },
+            { ig: "ofe egusi", en: "egusi (melon seed) soup", alt: ["egusi"], unsure: true, src: "wikivoyage" },
+            { ig: "akpụ", en: "cassava / cassava fufu", alt: ["akpu"], src: "nkowaokwu" },
+            { ig: "Ndị Igbo na-eji akpụ emepụta ụdị nri dị ichiiche", en: "Igbo people use cassava to make many kinds of food", alt: ["Ndị Igbo na-eji akpụ emepụta ụdị nri dị ichiiche."], src: "nkowaokwu" }
+          ]
+        },
+        {
+          id: "cook-kitchen",
+          title: "In the kitchen",
+          tip: "'sie' is the verb 'to cook' or 'to boil', and 'siri' is its past (cooked). 'Eghe' means a food is done cooking. Ask who cooked something with 'Onye siri…?'",
+          items: [
+            { ig: "sie", en: "to cook / to boil", note: "'siri' = cooked.", src: "nkowaokwu" },
+            { ig: "Onye siri ofe a?", en: "Who cooked this soup?", alt: ["Onye siri ofe a"], unsure: true, src: "wikivoyage" },
+            { ig: "Mmanụ anọghị na nri o siri", en: "There was no oil in the food he cooked", alt: ["Mmanụ anọghị na nri o siri."], src: "nkowaokwu" },
+            { ig: "Nri ga-eghe na nkeji iri na abụọ", en: "The food will be done in twelve minutes", alt: ["Nri ga-eghe na nkeji 12", "Nri ga-eghe na nkeji iri na abụọ."], note: "'eghe' = to be properly cooked.", src: "nkowaokwu" },
+            { ig: "garị", en: "gari (dried, grated cassava)", alt: ["gari", "garri"], src: "nkowaokwu" },
+            { ig: "A na-elo garị elo", en: "Gari is swallowed", alt: ["A na-elo garị elo."], src: "nkowaokwu" },
+            { ig: "abacha", en: "African salad / cassava flakes", src: "nkowaokwu" },
+            { ig: "Abacha na-amasị m", en: "I like African salad", alt: ["Abacha na-amasị m."], src: "nkowaokwu" },
+            { ig: "Kwọọ aka gị", en: "Wash your hands", alt: ["Kwọọ aka", "Kwọọ aka gị."], note: "A good habit before cooking and eating.", unsure: true, src: "wikivoyage" }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── AT THE DOCTOR (Section 4) ───────────────────────── */
+    {
+      id: "doctor",
+      title: "At the Doctor",
+      color: "#b0213f",
+      description: "Say what hurts, name common illnesses, and ask for a doctor.",
+      lessons: [
+        {
+          id: "doc-sick",
+          title: "Feeling ill",
+          tip: "Use 'Enwere m …' (I have …) with an illness: 'Enwere m isiọwụwa' = I have a headache. 'mgbu' means pain, so 'isi mgbu' is a headache too.",
+          items: [
+            { ig: "ọrịa", en: "sickness / illness", src: "nkowaokwu" },
+            { ig: "Ọ na-arịa ọrịa", en: "She is sick", alt: ["Ọ na-arịa ọrịa."], src: "nkowaokwu" },
+            { ig: "mgbu", en: "ache / pain", note: "Use it with a body part. (A different word 'mgbu' means jealousy.)", src: "nkowaokwu" },
+            { ig: "isiọwụwa", en: "headache", alt: ["isi ọwụwa"], src: "nkowaokwu" },
+            { ig: "Enwere m isiọwụwa", en: "I am having a headache", alt: ["Enwere m isiọwụwa."], note: "The dictionary's own example. (The app also has 'Isi na-awa m'.)", src: "nkowaokwu" },
+            { ig: "iba", en: "fever / malaria", alt: ["ịba"], src: "nkowaokwu" },
+            { ig: "Ịba ji ya aka", en: "He has a fever", alt: ["Iba ji ya aka", "Ịba ji ya aka."], note: "Literally 'fever has caught him'.", src: "nkowaokwu" },
+            { ig: "ụkwara", en: "cough", alt: ["ukwara"], src: "nkowaokwu" },
+            { ig: "Nwa m nwere ụkwara", en: "My baby has a cough", alt: ["Nwa m nwere ụkwara."], src: "nkowaokwu" }
+          ]
+        },
+        {
+          id: "doc-care",
+          title: "At the clinic",
+          tip: "A traditional healer is a dibịa. For a hospital doctor, older books say 'dibịa oyibo' (a doctor of the white man's medicine), and many people today say dọkịta. Ask a native speaker which word they use.",
+          items: [
+            { ig: "ntụtụ", en: "syringe / needle", note: "Not the same as 'ntutu' (hair).", src: "nkowaokwu" },
+            { ig: "E ji ntụtụ agba ọgwụ", en: "Syringes are used to give injections", alt: ["E ji ntụtụ agba ọgwụ."], src: "nkowaokwu" },
+            { ig: "Aṅụrụ m ọgwụ isiọwụwa", en: "I took medicine for a headache", alt: ["Anụrụ m ọgwụ isiọwụwa", "Aṅụrụ m ọgwụ isiọwụwa."], note: "'ṅụ' = to drink or take (medicine).", src: "nkowaokwu" },
+            { ig: "dibịa oyibo", en: "hospital doctor (older word)", alt: ["dibia oyibo"], note: "Literally 'a healer of the white man'.", unsure: true, src: "igboguide" },
+            { ig: "Achọrọ m dibịa oyibo", en: "I need a doctor", alt: ["Achọrọ m dibịa oyibo."], unsure: true, src: "ilanguages" },
+            { ig: "Ahụ na-arịa m", en: "I am sick", alt: ["Ahụ na-arịa m."], note: "Another way to say it, besides 'Ahụ adịghị m mma'.", unsure: true, src: "wikivoyage" },
+            { ig: "afọ ohihi", en: "stomach ache", alt: ["afo ohihi"], unsure: true, src: "wikivoyage" },
+            { ig: "ọgwụ ahụ mgbu", en: "painkiller", unsure: true, src: "wikivoyage" }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── PLANS, INVITATIONS & CALLS (Section 4) ───────────────────────── */
+    {
+      id: "plans",
+      title: "Plans, Invitations & Calls",
+      color: "#0f7a72",
+      description: "Days of the week, making plans, inviting someone, and talking on the phone.",
+      lessons: [
+        {
+          id: "plan-days",
+          title: "Days of the week",
+          tip: "The traditional Igbo week has four market days (Eke, Orie, Afọ, Nkwọ). The seven-day week came with English, so the day names are borrowed words: Mọnde, Tuuzde, Fraịde, Satọde. Sunday is 'Ụbọchị Ụka'.",
+          items: [
+            { ig: "Mọnde", en: "Monday", alt: ["Monde"], src: "nkowaokwu" },
+            { ig: "Mọnde bụ ụbọchị e ji eje ọrụ", en: "Monday is a work day", alt: ["Mọnde bụ ụbọchị e ji eje ọrụ."], src: "nkowaokwu" },
+            { ig: "Tuuzde", en: "Tuesday", alt: ["Tuzde"], src: "nkowaokwu" },
+            { ig: "Wensde", en: "Wednesday", unsure: true, src: "wikivoyage" },
+            { ig: "Tosde", en: "Thursday", alt: ["Tọsde"], unsure: true, src: "wikivoyage" },
+            { ig: "Fraịde", en: "Friday", alt: ["Fraide"], src: "nkowaokwu" },
+            { ig: "Ndị mmadụ na-emekarị njem ụbọchị Fraịde", en: "People often travel on Fridays", alt: ["Ndị mmadụ na-emekarị njem ụbọchị Fraịde."], src: "nkowaokwu" },
+            { ig: "Satọde", en: "Saturday", alt: ["Satode"], src: "nkowaokwu" },
+            { ig: "Anyị na-asụ akwa Satọde ọbụla", en: "We wash clothes every Saturday", alt: ["Anyị na-asụ akwa Satọde ọbụla."], src: "nkowaokwu" }
+          ]
+        },
+        {
+          id: "plan-invite",
+          title: "Making plans",
+          tip: "'Aga m …' = I will …, 'Ị ga-…?' = will you …? and 'Ka anyị …' = let us …. Add a day or 'echi' (tomorrow) to make a plan. Several of these are built from patterns, so they are on the list for a native speaker.",
+          items: [
+            { ig: "Anyị ga-ahụ n'ụbọchị Satọde", en: "We will see each other on Saturday", alt: ["Anyị ga-ahụ n'ụbọchị Satọde."], note: "Built on the dictionary example 'Anyị ga-ahụ echi' (see you tomorrow).", unsure: true, src: "nkowaokwu" },
+            { ig: "Gịnị ka ị na-eme echi?", en: "What are you doing tomorrow?", alt: ["Gịnị ka ị na-eme echi"], unsure: true },
+            { ig: "Ị ga-abịa?", en: "Will you come?", alt: ["I ga-abịa?"], unsure: true },
+            { ig: "Bịa n'ụlọ m", en: "Come to my house", alt: ["Bịa n'ụlọ m."], unsure: true },
+            { ig: "Bịa n'ụlọ m ụbọchị Satọde", en: "Come to my house on Saturday", alt: ["Bịa n'ụlọ m ụbọchị Satọde."], unsure: true },
+            { ig: "Ana m abịa", en: "I am coming", alt: ["Ana m abịa."], unsure: true, src: "wikivoyage" },
+            { ig: "Enwere m oge", en: "I am free (I have time)", alt: ["Enwere m oge."], unsure: true },
+            { ig: "Enweghị m oge", en: "I am busy (I have no time)", alt: ["Enweghị m oge."], unsure: true }
+          ]
+        },
+        {
+          id: "plan-calls",
+          title: "On the phone",
+          tip: "'Kpọọ m' = call me. 'ozi' is a message or news. Remember the polite words you already know, like 'Ndewo' and 'Biko'. These phone phrases are on the list for a native speaker, so say them to someone before trusting them.",
+          items: [
+            { ig: "Kpọọ m", en: "Call me", alt: ["Kpọọ m."], unsure: true, src: "wikivoyage" },
+            { ig: "Kpọọ m mgbe emechaa", en: "Call me later", alt: ["Kpọọ m mgbe emechaa."], unsure: true, src: "wikivoyage" },
+            { ig: "Ka m kpọghachi gị", en: "Let me call you back", alt: ["Kà m kpọghachi gị", "Ka m kpọghachi gị."], unsure: true, src: "wikivoyage" },
+            { ig: "ozi", en: "message / news", src: "nkowaokwu" },
+            { ig: "Ezigaara m Echefula ozi", en: "I sent Echefula a message", alt: ["Ezigaara m Echefula ozi."], note: "A dictionary example. Swap in another name.", src: "nkowaokwu" },
+            { ig: "Enwere m ike ịnweta nọmba gị?", en: "Can I have your number?", alt: ["Enwere m ike inweta nọmba gị?"], unsure: true, src: "wikivoyage" },
+            { ig: "Anaghị m anụ gị", en: "I cannot hear you", alt: ["Anaghị m anụ gị."], unsure: true, src: "wikivoyage" }
           ]
         }
       ]

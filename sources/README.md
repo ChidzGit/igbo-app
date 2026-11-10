@@ -44,6 +44,7 @@ That's it. The next morning update (or any Claude session you ask) converts it t
 - [ ] https://elias.unix.fas.harvard.edu/index.php/node/261: Harvard unit 16, professions ⭐
 - [ ] https://elias.fas.harvard.edu/index.php/languages/Igbo/Beginning/20/buying-and-selling: Harvard unit 20 (and unit 21, directions)
 - [ ] https://elias.fas.harvard.edu/index.php/languages/igbo/beginning/17/my-house: Harvard unit 17, my house
+- [ ] https://www.brainbound.blog/igbo-greetings-guide: greetings and respect for elders ⭐ (403 to automated tools; for the Custom & Respect unit)
 
 ⭐ = most useful
 

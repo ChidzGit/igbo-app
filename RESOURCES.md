@@ -42,6 +42,10 @@ Status key: ✅ used in the app · 🔎 found, not mined yet · 🚫 blocked/unu
 | ✅ | [Latinum Institute: Igbo lesson 8](https://latinum.substack.com/p/lesson-8-igbo-a-latinum-institute) | Past and future sentences | Single source; sentences are marked ⚑. |
 | ✅ | [UCLA Phonetics Archive: Igbo conversation (1981)](http://archive.phonetics.ucla.edu/Language/IBO/ibo_conversation_1981_01.html) | "Why is she angry?" pattern | Used for a pattern only. |
 | ✅ | [NKENNE: kola nut in Igbo rituals](https://www.nkenne.com/blog/the-importance-of-kola-nut-in-igbo-rituals) | Kola phrases (Igboland unit) | Blog, single source; the kola lines are marked ⚑. |
+| ✅ | [ifont: Igbo proverb #6](https://ifont.blogspot.com/2011/12/proverb-6.html), [Zikoko: 15 Igbo proverbs](https://www.zikoko.com/life/15-igbo-proverbs-and-their-meanings/), [Legit.ng: Igbo proverbs](https://www.legit.ng/1087216-igbo-proverbs-meaning.html), [Meigen School: Igbo proverbs](https://meigen-school.pages.dev/en/proverbs/igbo-proverbs/) | Proverbs for the `ilu` unit | Used in v1.5.0. Their Igbo has no dots (we added them) and the translations sometimes disagree; one-source proverbs are marked ⚑. Meigen School is low-reliability. |
+| ✅ | Wikipedia: [Odinani](https://en.wikipedia.org/wiki/Odinani), [Kingdom of Nri](https://en.wikipedia.org/wiki/Kingdom_of_Nri), [Mbeku](https://en.wikipedia.org/wiki/Mbeku), [Traditional marriage in Igbo culture](https://en.wikipedia.org/wiki/Traditional_marriage_in_Igbo_culture) | Background for beliefs, folktales, history and wedding stages | Used in v1.5.0 for facts and a few terms only; the Igbo sentences built from them are marked ⚑. |
+| ✅ | [umuigbo.com: child naming ceremony](https://umuigbo.com/child-naming-ceremony-in-igbo-culture/igbo-culture) | Naming ceremony term | Single source, marked ⚑. |
+| 🚫 | [brainbound.blog: Igbo greetings guide](https://www.brainbound.blog/igbo-greetings-guide) | Greetings and respect for elders | HTTP 403 to automated tools. **Save it yourself** (see sources/README.md). |
 | 🚫 | [Polyglot Club: Igbo adjectives, adverbs, tenses](https://polyglotclub.com/wiki/Language/Igbo/Grammar/Adjectives) | Adjective, adverb and tense grammar | HTTP 403 to automated tools. **Save it yourself** (see sources/README.md). |
 | 🚫 | Harvard ELIAS Units 9, 15, 16, 20, 21 (telling time, future, professions, buying/selling, directions) | The best free lessons for the Section 2 and 3 topics | Site did not load from this machine (DNS failure). Save the pages yourself. |
 | 🔎 | [Census 2020 Igbo glossary (PDF)](https://www2.census.gov/programs-surveys/decennial/2020/resources/language-materials/glossaries/Igbo-Glossary.pdf) | Official-use words (urban, rural) | Seen in a search summary only; not opened. |
@@ -76,3 +80,12 @@ Status key: ✅ used in the app · 🔎 found, not mined yet · 🚫 blocked/unu
 - Research helpers' doubts about existing items (enyi tone, ndo, ugbu a, ụzọ, ọkụ) are parent questions L1–L11 and M1–M2; nothing existing was changed.
 - Blocked pages added to sources/README.md: Polyglot Club grammar pages (403), Harvard ELIAS units (DNS failure).
 - Skipped on purpose: politics, science, economy, astronomy and current events.
+
+### 2026-11-10 (late night): v1.5.0 Section 4 build-out
+- Six research helpers wrote notes in sources/research (s4-ilu, s4-discuss-compare, s4-customs-ceremonies, s4-beliefs-history, s4-weather-cooking, s4-doctor-plans) from the saved pages, web searches and Nkọwa okwu checks. Their dictionary checks were noisy, so well-known words were kept (marked ⚑) rather than dropped, and nothing in older units was changed because of them.
+- Added 9 units, 24 lessons and 181 items to Section 4 (A2); 78 are marked ⚑. Parent questions are section N (N1–N50): doubts about older items (Ụbọchị Ụka, Isi na-awa m, dọkịta vs dibịa oyibo, ntutu vs ntụtụ), the new ⚑ items, and the words still needed.
+- `history` was folded into `beliefs` and `review4` skipped. Weekday names (Mọnde, Tuuzde, Fraịde, Satọde from the dictionary; Wensde, Tosde from Wikivoyage) went into `plans`.
+- Four older items that contained "…" now use real examples (Aha m bụ Ada, Gịnị ka a na-akpọ 'water' n'Igbo?, Gịnị pụtara ahịa?, Ọ dị ka nne ya) so they work in typing and word-bank exercises.
+- Left out because nothing confirmed them: cooking verbs (fry, stir, pound, cut, taste), a recipe, thunder, the sun shining, "Where does it hurt?", phone greetings, war and independence words.
+- Blocked page added to sources/README.md: the brainbound greetings guide (403).
+- Audio: fetched 111 more native-speaker clips (Lingua Libre and Nkọwa okwu examples).

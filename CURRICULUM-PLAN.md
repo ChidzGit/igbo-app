@@ -84,15 +84,31 @@ Status key: ✅ covered · 🟡 partly covered · ❌ gap (the number is its pri
 | Discuss Igboland (in place of "Discuss Vietnam") | `igl-culture` (unit `igboland`; 2026-11-10) | 🟡 one lesson: kola, new yam, masquerade, king |
 | Politics, science, economy, astronomy, current events | none | ❌ 15–19 (lowest priority) |
 
-## Section 4 · A2 (coming soon)
+## Section 4 · A2
 | Vietnamese unit | Igbo idea | Status |
 |---|---|---|
-| Use idioms | **Ilu (proverbs)**, central to Igbo speech | ❌ 1 |
-| Express opinions | agree/disagree, "I think" | ❌ 2 |
-| Discuss morality | omenala (custom), respect for elders | ❌ 3 (parent check) |
-| Discuss the supernatural | chi, ancestors, folktales (akụkọ ifo) | ❌ 4 (handle with care, parent check) |
-| Use advanced vocabulary | review of all units | ❌ 5 |
-| Talk about the army | (skip; replace with "Talk about history") | ❌ 6 |
+| Use idioms | **Ilu (proverbs)**, central to Igbo speech | 🟡 (2026-11-10) unit `ilu`, 3 lessons, 22 items, 13 proverbs; 9 of them marked ⚑ (single source) |
+| Express opinions | agree/disagree, "I think" | ✅ (2026-11-10) unit `discuss`, 3 lessons (agree, "more than" karịa, best/nearest); many sentences are patterns, so ⚑ |
+| Discuss morality | omenala (custom), respect for elders | ✅ (2026-11-10) unit `omenala`, 3 lessons; parent check N18–N23 |
+| Discuss the supernatural | chi, ancestors, folktales (akụkọ ifo) | ✅ (2026-11-10) unit `beliefs`, 3 lessons; neutral wording, parent check N28–N33 |
+| Use advanced vocabulary | review of all units | ❌ skipped: the Daily test already reviews, so a review unit would only duplicate items |
+| Talk about the army | (skip; replace with "Talk about history") | 🟡 (2026-11-10) folded into `beliefs` as the lesson `bel-past` (7 items, mostly ⚑); too thin for its own unit |
+
+Vietnamese Section 4 has only 6 units, so the A2 section is filled out with standard **CEFR A2 themes** as well: past experiences, plans and invitations, the doctor, the weather, cooking, comparisons and life events. The planned units (built 10 Nov 2026):
+
+| Unit id | Title | Covers | Status |
+|---|---|---|---|
+| `ilu` | Proverbs (Ilu) | 20–30 well-known proverbs with meaning and when to use them | ✅ 3 lessons (2026-11-10) |
+| `discuss` | Discussing & Comparing | agree/disagree, because, "more than" (karịa), best, same/different | ✅ 3 lessons (2026-11-10) |
+| `omenala` | Custom & Respect | greeting elders, titles (Nze, Ọzọ, Eze), kola etiquette, good manners | ✅ 3 lessons (2026-11-10) |
+| `ceremonies` | Life Events | wedding (igba nkwu), naming, funeral, Christmas homecoming | ✅ 3 lessons (2026-11-10) |
+| `beliefs` | Chi, Ancestors & Folktales | chi, ndichie, akụkọ ifo, tortoise (mbe) tales (parent check) | ✅ 3 lessons (2026-11-10) |
+| `history` | Igbo History | history, ancestors, Nri, Igbo-Ukwu, old and new times | 🟡 folded into `beliefs` (2026-11-10) |
+| `weather` | Weather & Seasons | rain, sun, dry season, harmattan, hot/cold | ✅ 2 lessons (2026-11-10) |
+| `cooking` | Cooking | Igbo dishes (ofe onugbu, egusi, akpụ, ji), cooking verbs, a recipe | ✅ 2 lessons (no recipe and no verbs for fry/stir/pound: no source) (2026-11-10) |
+| `doctor` | At the Doctor | symptoms, medicine, "where does it hurt?" | ✅ 2 lessons (2026-11-10) |
+| `plans` | Plans, Invitations & Calls | let's…, will you come?, call me, the phone | ✅ 3 lessons (incl. weekdays) (2026-11-10) |
+| `review4` | Section 4 Review | "advanced vocabulary": mixed sentences from the section | ❌ skipped (2026-11-10) |
 
 ## Sections 5–8 · B1–B2 (later)
 These come after Section 4 has content. They will follow the big courses' themes: wider topics, stories and news, and abstract opinions. Before starting them, re-check duolingodata.com for a course that lists Section 5–8 unit titles.
@@ -110,3 +126,4 @@ These come after Section 4 has content. They will follow the big courses' themes
 - 2026-11-10: Plan written. Swahili was rejected (only 3 sections). The plan follows Vietnamese for Sections 1–4 and the big courses for 5–8. The 11 existing units are grouped into Sections 1–3.
 - 2026-11-10: Section 1 filled (v1.3.0). Four new units (`eatingout`, `market`, `school`, `travel`; 13 lessons) and three new lessons in existing units (`greet-welcome`, `intro-from`, `fam-more`). 115 new items, 36 marked unsure; parent questions are in section K of QUESTIONS-FOR-PARENT.md. Weather was skipped on purpose (planned for a later section). Many items rest on one source, so Section 1 is a first draft until the parent answers.
 - 2026-11-10: Sections 2 and 3 filled (v1.4.0). 21 new units (11 in Section 2, 10 in Section 3), 41 lessons, 298 new items, 104 marked unsure; parent questions are in sections L and M of QUESTIONS-FOR-PARENT.md. Politics, science, economy, astronomy and current events were skipped on purpose. Some topics were thin (Asking Questions, Igboland: one lesson each).
+- 2026-11-10: Section 4 filled (v1.5.0). 9 new units (`ilu`, `discuss`, `omenala`, `ceremonies`, `beliefs`, `weather`, `cooking`, `doctor`, `plans`), 24 lessons, 181 new items, 78 marked unsure; parent questions are in section N of QUESTIONS-FOR-PARENT.md. `history` was folded into `beliefs` (too thin) and `review4` was skipped (the Daily test already reviews). Weekdays were added to `plans`. Four old items with "…" were turned into real examples. Left out: cooking verbs (fry, stir, pound, cut), a recipe, thunder/lightning, history of war and independence, and homecoming phrases (no Igbo source).

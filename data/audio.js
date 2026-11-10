@@ -8,6 +8,12 @@ window.AUDIO = {
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
+ "A chụpụrụ ya maka arụ o mere": {
+  "file": "audio/a-chupuru-ya-maka-aru-o-mere-25277b-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
  "A ga m abịa na uhuluchi": {
   "file": "audio/a-ga-m-abia-na-uhuluchi-4e3868-nko.mp3",
   "author": "Nkọwa okwu / IgboAPI contributors",
@@ -20,11 +26,29 @@ window.AUDIO = {
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
+ "A na-elo garị elo": {
+  "file": "audio/a-na-elo-gari-elo-276b28-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "A na-enye ya nsọpụrụ n'obodo": {
+  "file": "audio/a-na-enye-ya-nsopuru-n-obodo-5de123-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
  "Aba": {
   "file": "audio/aba-4d5ecc.mp3",
   "author": "Chinwoke 01",
   "license": "CC0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Chinwoke_01-Aba.wav"
+ },
+ "Abacha na-amasị m": {
+  "file": "audio/abacha-na-amasi-m-17f469-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
  "Abanyere m n'imụlọ ozugbo": {
   "file": "audio/abanyere-m-n-imulo-ozugbo-8b737e-nko.mp3",
@@ -46,6 +70,12 @@ window.AUDIO = {
  },
  "Achọrọ m idina ala": {
   "file": "audio/achoro-m-idina-ala-2697f7-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "Achọrọ m iri ofe nsara": {
+  "file": "audio/achoro-m-iri-ofe-nsara-15ffed-nko.mp3",
   "author": "Nkọwa okwu / IgboAPI contributors",
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
@@ -82,6 +112,12 @@ window.AUDIO = {
  },
  "Agaghị m eji akpa ahụ je mmemme ahụ": {
   "file": "audio/agaghi-m-eji-akpa-ahu-je-mmemme-ahu-b7f99b-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "Aghọtaghị m ilu a": {
+  "file": "audio/aghotaghi-m-ilu-a-2ff439-nko.mp3",
   "author": "Nkọwa okwu / IgboAPI contributors",
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
@@ -128,6 +164,12 @@ window.AUDIO = {
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
+ "Aka ekpe kwọ aka nri, aka nri akwọ aka ekpe": {
+  "file": "audio/aka-ekpe-kwo-aka-nri-aka-nri-akwo-aka-ek-d2be32.mp3",
+  "author": "Mmesoma Mary Faustina",
+  "license": "CC BY 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Mmesoma_Mary_Faustina-Aka_ekpe_kwo_aka_nri%2C_aka_nri_akwo_aka_ekpe.wav"
+ },
  "Akpa m nọ n'elu ochenkwago": {
   "file": "audio/akpa-m-no-n-elu-ochenkwago-226a3e-nko.mp3",
   "author": "Nkọwa okwu / IgboAPI contributors",
@@ -142,6 +184,12 @@ window.AUDIO = {
  },
  "Akụdo mere njem ụnyaahụ": {
   "file": "audio/akudo-mere-njem-unyaahu-6795c9-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "Akụkọ a bụ akụkọ ifo": {
+  "file": "audio/akuko-a-bu-akuko-ifo-eb6c75-nko.mp3",
   "author": "Nkọwa okwu / IgboAPI contributors",
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
@@ -163,6 +211,12 @@ window.AUDIO = {
   "author": "Nkọwa okwu / IgboAPI contributors",
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "Ana m abịa": {
+  "file": "audio/ana-m-abia-9e7042.mp3",
+  "author": "Iwuala chisom",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Iwuala_chisom-Ana_m_ab%E1%BB%8Ba.wav"
  },
  "Ana m asa ahụ": {
   "file": "audio/ana-m-asa-ahu-f43d63-nko.mp3",
@@ -190,6 +244,12 @@ window.AUDIO = {
  },
  "Anyị hụrụ ya mgbe anyị na-alọta": {
   "file": "audio/anyi-huru-ya-mgbe-anyi-na-alota-581b7b-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "Anyị na-agba Ekeresimeesi": {
+  "file": "audio/anyi-na-agba-ekeresimeesi-cd7493-nko.mp3",
   "author": "Nkọwa okwu / IgboAPI contributors",
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
@@ -242,6 +302,12 @@ window.AUDIO = {
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
+ "Aṅụrụ m ọgwụ isiọwụwa": {
+  "file": "audio/anuru-m-ogwu-isiowuwa-cded84-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
  "Bata n'ime ụlọ": {
   "file": "audio/bata-n-ime-ulo-188b35.mp3",
   "author": "Ceentia",
@@ -284,6 +350,24 @@ window.AUDIO = {
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
+ "Chukwu": {
+  "file": "audio/chukwu-8555ae.mp3",
+  "author": "Anyaegbumercy",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Anyaegbumercy-Chukwu.wav"
+ },
+ "Chukwu dị nsọ": {
+  "file": "audio/chukwu-di-nso-3f65a3-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "Chukwu na-aza ekpere": {
+  "file": "audio/chukwu-na-aza-ekpere-06e194-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
  "Daalụ": {
   "file": "audio/daalu-55e281.mp3",
   "author": "Adaeze Nwa'Nsukka",
@@ -308,6 +392,12 @@ window.AUDIO = {
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
+ "E ji ntụtụ agba ọgwụ": {
+  "file": "audio/e-ji-ntutu-agba-ogwu-5b949d-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
  "E nwere onye na-arụ ụlọ n'agbata nke gị": {
   "file": "audio/e-nwere-onye-na-aru-ulo-n-agbata-nke-gi-b6ad74-nko.mp3",
   "author": "Nkọwa okwu / IgboAPI contributors",
@@ -319,6 +409,12 @@ window.AUDIO = {
   "author": "Lebron jay",
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Lebron_jay-Ebe_a_d%E1%BB%8B_mma.wav"
+ },
+ "Ebee ka e nwere ụlọ mkpụrụ ọgwụ kacha dị nso?": {
+  "file": "audio/ebee-ka-e-nwere-ulo-mkpuru-ogwu-kacha-di-020ab7.mp3",
+  "author": "Dagentle",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Dagentle-%C3%89b%C3%A9e_ka_e_nwere_%E1%BB%A5l%E1%BB%8D_mkp%E1%BB%A5r%E1%BB%A5_%E1%BB%8D%CC%81gw%E1%BB%A5%CC%80_kacha_d%E1%BB%8B_nso.wav"
  },
  "Ebee ka ọ dị?": {
   "file": "audio/ebee-ka-o-di-d3a628-nko.mp3",
@@ -334,6 +430,12 @@ window.AUDIO = {
  },
  "Ee": {
   "file": "audio/ee-1f4448-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "Ee, aga m aga Owere echi": {
+  "file": "audio/ee-aga-m-aga-owere-echi-7626c7-nko.mp3",
   "author": "Nkọwa okwu / IgboAPI contributors",
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
@@ -356,6 +458,18 @@ window.AUDIO = {
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Confidence_Obi-%C3%88ke.wav"
  },
+ "Ekeresimesi": {
+  "file": "audio/ekeresimesi-d22fe1-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "Emeka enweghị ọnụọma": {
+  "file": "audio/emeka-enweghi-onuoma-3336a2-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
  "Enugu": {
   "file": "audio/enugu-c480d3.mp3",
   "author": "Anastesia chi",
@@ -367,6 +481,18 @@ window.AUDIO = {
   "author": "Sayvhior",
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Sayvhior-Enwegh%E1%BB%8B_m_ego.wav"
+ },
+ "Enwere m ike ịnweta nọmba gị?": {
+  "file": "audio/enwere-m-ike-inweta-nomba-gi-d60365.mp3",
+  "author": "Iwuala chisom",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Iwuala_chisom-enwere_m_ike_%E1%BB%8Bnweta_n%E1%BB%8Dmba_g%E1%BB%8B%3F.wav"
+ },
+ "Enwere m isiọwụwa": {
+  "file": "audio/enwere-m-isiowuwa-8bdfc7-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
  "Enwere m nkịta": {
   "file": "audio/enwere-m-nkita-d59d45-nko.mp3",
@@ -385,6 +511,18 @@ window.AUDIO = {
   "author": "Nkọwa okwu / IgboAPI contributors",
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "Eze lụrụ nwunye ọhụrụ": {
+  "file": "audio/eze-luru-nwunye-ohuru-5487c6-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "Fraịde": {
+  "file": "audio/fraide-a145dd.mp3",
+  "author": "Adakaibe",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Adakaibe-Fraid%C3%A8.wav"
  },
  "Gaa n'ihu": {
   "file": "audio/gaa-n-ihu-9fe47d.mp3",
@@ -428,8 +566,20 @@ window.AUDIO = {
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
+ "Ha gbara nkwu afọ atọ gara aga": {
+  "file": "audio/ha-gbara-nkwu-afo-ato-gara-aga-8f1f8a-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
  "Ha kwesịrị ịma ebe anyị nọ": {
   "file": "audio/ha-kwesiri-ima-ebe-anyi-no-39f8c6-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "Ha nwere ọtụtụ ndị okenye n'etiti ha": {
+  "file": "audio/ha-nwere-otutu-ndi-okenye-n-etiti-ha-cb4b4b-nko.mp3",
   "author": "Nkọwa okwu / IgboAPI contributors",
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
@@ -458,6 +608,24 @@ window.AUDIO = {
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
+ "Igbo-Ukwu": {
+  "file": "audio/igbo-ukwu-84ecd5.mp3",
+  "author": "Chinwoke 01",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Chinwoke_01-Igbo-ukwu.wav"
+ },
+ "Ihe nsọ": {
+  "file": "audio/ihe-nso-c47e31.mp3",
+  "author": "Adakaibe",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Adakaibe-Ihe_Ns%E1%BB%8D.wav"
+ },
+ "Ihe pụrụ iche na-amasị m": {
+  "file": "audio/ihe-puru-iche-na-amasi-m-96a407-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
  "Ijeọma": {
   "file": "audio/ijeoma-61554b-nko.mp3",
   "author": "Nkọwa okwu / IgboAPI contributors",
@@ -482,6 +650,12 @@ window.AUDIO = {
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
+ "Ikuku na-ekukarị n'ụgụrụ karịa ọkọchị": {
+  "file": "audio/ikuku-na-ekukari-n-uguru-karia-okochi-d62d9f-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
  "Iri ji": {
   "file": "audio/iri-ji-052432.mp3",
   "author": "Iwuala chisom",
@@ -499,6 +673,12 @@ window.AUDIO = {
   "author": "Iwuala chisom",
   "license": "CC0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Iwuala_chisom-K%C3%A0_ch%C3%AD_foo.wav"
+ },
+ "Ka m kpọghachi gị": {
+  "file": "audio/ka-m-kpoghachi-gi-0a0a89.mp3",
+  "author": "Iwuala chisom",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Iwuala_chisom-K%C3%A0_m_kp%E1%BB%8Dghachi_g%E1%BB%8B.wav"
  },
  "Ka ọ dị": {
   "file": "audio/ka-o-di-fb6c37.mp3",
@@ -524,11 +704,29 @@ window.AUDIO = {
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Dagentle-K%C3%A8d%C3%BA_%C3%A1h%C3%A0_g%E1%BB%8B%CC%81.wav"
  },
+ "Kpakpando apụtala n'urukpu": {
+  "file": "audio/kpakpando-aputala-n-urukpu-fa1b77-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "Kpọọ m": {
+  "file": "audio/kpoo-m-79d392.mp3",
+  "author": "Iwuala chisom",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Iwuala_chisom-Kp%E1%BB%8D%E1%BB%8D_m.wav"
+ },
  "Kwụsị!": {
   "file": "audio/kwusi-1684de.mp3",
   "author": "Lebron jay",
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Lebron_jay-Kw%E1%BB%A5s%E1%BB%8B.wav"
+ },
+ "Kwụọ aka gị": {
+  "file": "audio/kwuo-aka-gi-9f6303.mp3",
+  "author": "King ChristLike",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-King_ChristLike-Kw%E1%BB%A5%E1%BB%8D_aka_g%E1%BB%8B.wav"
  },
  "Lema kwa!": {
   "file": "audio/lema-kwa-08d992.mp3",
@@ -554,6 +752,12 @@ window.AUDIO = {
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
+ "Mgbe isi rere, ahụ niile na-arịa": {
+  "file": "audio/mgbe-isi-rere-ahu-niile-na-aria-2fe015.mp3",
+  "author": "Iwuala chisom",
+  "license": "CC BY 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Iwuala_chisom-Mgbe_isi_rere%2C_ah%E1%BB%A5_niile_na-ar%E1%BB%8Ba.wav"
+ },
  "Mgbede ọma": {
   "file": "audio/mgbede-oma-d0b234.mp3",
   "author": "Iwuala chisom",
@@ -566,14 +770,44 @@ window.AUDIO = {
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
+ "Mmanụ anọghị na nri o siri": {
+  "file": "audio/mmanu-anoghi-na-nri-o-siri-c4eeae-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "Mmiri na-ezo": {
+  "file": "audio/mmiri-na-ezo-b8b35f-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
  "Mmọnwụ atọ bịara mmemme ahụ": {
   "file": "audio/mmonwu-ato-biara-mmemme-ahu-c3acf1-nko.mp3",
   "author": "Nkọwa okwu / IgboAPI contributors",
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
+ "Mọnde": {
+  "file": "audio/monde-4f3d51.mp3",
+  "author": "Adakaibe",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Adakaibe-Mond%C3%A8.wav"
+ },
+ "Mọnde bụ ụbọchị e ji eje ọrụ": {
+  "file": "audio/monde-bu-ubochi-e-ji-eje-oru-a81ff7-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
  "Naịra ole bụ ihe a?": {
   "file": "audio/naira-ole-bu-ihe-a-c1ef48-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "Ncheta ọnwụ nna ha gara nke ọma": {
+  "file": "audio/ncheta-onwu-nna-ha-gara-nke-oma-c2dc05-nko.mp3",
   "author": "Nkọwa okwu / IgboAPI contributors",
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
@@ -590,11 +824,29 @@ window.AUDIO = {
   "license": "CC0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Iwuala_chisom-Nd%C3%AAw%C3%B3..wav"
  },
+ "Ndidi nwe mmeri": {
+  "file": "audio/ndidi-nwe-mmeri-966413.mp3",
+  "author": "Miracle2024",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Miracle2024-Ndidi_nwe_mmeri.wav"
+ },
  "Ndo": {
   "file": "audio/ndo-be6ab2.mp3",
   "author": "Iwuala chisom",
   "license": "CC0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Iwuala_chisom-Ndo.wav"
+ },
+ "Ndị Igbo na-eji akpụ emepụta ụdị nri dị ichiiche": {
+  "file": "audio/ndi-igbo-na-eji-akpu-emeputa-udi-nri-di--6781bc-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "Ndị mmadụ na-emekarị njem ụbọchị Fraịde": {
+  "file": "audio/ndi-mmadu-na-emekari-njem-ubochi-fraide-f90d82-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
  "Ndị nne na-amakarị ọgọdọ mgbe ha na-ezu ike": {
   "file": "audio/ndi-nne-na-amakari-ogodo-mgbe-ha-na-ezu--699e73-nko.mp3",
@@ -650,6 +902,12 @@ window.AUDIO = {
   "license": "CC0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Iwuala_chisom-%C5%83s%C3%B2gb%C3%BA_ad%E1%BB%8Bgh%E1%BB%8B.wav"
  },
+ "Nwa m nwere ụkwara": {
+  "file": "audio/nwa-m-nwere-ukwara-6a5aaf-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
  "Nyere m aka!": {
   "file": "audio/nyere-m-aka-c9af6d.mp3",
   "author": "Iwuala chisom",
@@ -674,6 +932,18 @@ window.AUDIO = {
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
+ "Oge adịghị eche mmadụ": {
+  "file": "audio/oge-adighi-eche-mmadu-6782ca.mp3",
+  "author": "King ChristLike",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-King_ChristLike-Oge_ad%E1%BB%8Bgh%E1%BB%8B_eche_mmad%E1%BB%A5.wav"
+ },
+ "Oke mmiri ozuzo ekweghị anyị lọta": {
+  "file": "audio/oke-mmiri-ozuzo-ekweghi-anyi-lota-fadeca-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
  "Olee ebe ị na-aga?": {
   "file": "audio/olee-ebe-i-na-aga-d1a0be.mp3",
   "author": "Dagentle",
@@ -692,6 +962,12 @@ window.AUDIO = {
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Dagentle-I_b%E1%BB%A5_onye.wav"
  },
+ "Onye kụrụ aka n'ụzọ?": {
+  "file": "audio/onye-kuru-aka-n-uzo-568be0-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
  "Onye m hụrụ bụ agadị": {
   "file": "audio/onye-m-huru-bu-agadi-c878cd-nko.mp3",
   "author": "Nkọwa okwu / IgboAPI contributors",
@@ -700,6 +976,18 @@ window.AUDIO = {
  },
  "Onye nwe akpụkpụụkwụ ndị a?": {
   "file": "audio/onye-nwe-akpukpuukwu-ndi-a-81c860-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "Onye siri ofe a?": {
+  "file": "audio/onye-siri-ofe-a-ab562c.mp3",
+  "author": "King ChristLike",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-King_ChristLike-Onye_siri_ofe_a%3F.wav"
+ },
+ "Onye wetara ọjị, wetara ndụ": {
+  "file": "audio/onye-wetara-oji-wetara-ndu-52a2d6-nko.mp3",
   "author": "Nkọwa okwu / IgboAPI contributors",
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
@@ -728,6 +1016,30 @@ window.AUDIO = {
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
+ "Satọde": {
+  "file": "audio/satode-a3ff25.mp3",
+  "author": "Adakaibe",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Adakaibe-Satode.wav"
+ },
+ "Tosde": {
+  "file": "audio/tosde-1e535f.mp3",
+  "author": "Adakaibe",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Adakaibe-Tosd%C3%A8.wav"
+ },
+ "Tuuzde": {
+  "file": "audio/tuuzde-a3c054.mp3",
+  "author": "Adakaibe",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Adakaibe-Tuzde.wav"
+ },
+ "Wensde": {
+  "file": "audio/wensde-3a0485.mp3",
+  "author": "Adakaibe",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Adakaibe-Wensde.wav"
+ },
  "Were ego": {
   "file": "audio/were-ego-2bc19e.mp3",
   "author": "Sayvhior",
@@ -751,6 +1063,12 @@ window.AUDIO = {
   "author": "Anastesia chi",
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Anastesia_chi-a.wav"
+ },
+ "abacha": {
+  "file": "audio/abacha-5626f2.mp3",
+  "author": "Chinwoke 01",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Chinwoke_01-Abacha.wav"
  },
  "abada": {
   "file": "audio/abada-87d4fb.mp3",
@@ -787,6 +1105,12 @@ window.AUDIO = {
   "author": "Adakaibe",
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Adakaibe-%C3%81f%E1%BB%8D%CC%80.wav"
+ },
+ "afọ ohihi": {
+  "file": "audio/afo-ohihi-44ef7f.mp3",
+  "author": "Lezechima404",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Lezechima404-af%E1%BB%8D_ohihi.wav"
  },
  "agadị": {
   "file": "audio/agadi-ee3088.mp3",
@@ -854,6 +1178,12 @@ window.AUDIO = {
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Adakaibe-akpa.wav"
  },
+ "akpụ": {
+  "file": "audio/akpu-6a7352.mp3",
+  "author": "Anastesia chi",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Anastesia_chi-akp%E1%BB%A5.wav"
+ },
  "akpụkpụụkwụ": {
   "file": "audio/akpukpuukwu-2d2b10.mp3",
   "author": "Adakaibe",
@@ -883,6 +1213,24 @@ window.AUDIO = {
   "author": "Nkọwa okwu / IgboAPI contributors",
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "akụkọ ifo": {
+  "file": "audio/akuko-ifo-04321b.mp3",
+  "author": "Juliegwen",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Juliegwen-Ak%E1%BB%A5k%E1%BB%8D_ifo.wav"
+ },
+ "alaeze": {
+  "file": "audio/alaeze-7ce72b.mp3",
+  "author": "Mbah Victor Chukwuemerie",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Mbah_Victor_Chukwuemerie-alaeze.wav"
+ },
+ "amamihe": {
+  "file": "audio/amamihe-642133.mp3",
+  "author": "Dagentle",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Dagentle-amamihe.wav"
  },
  "anya": {
   "file": "audio/anya-d894da.mp3",
@@ -931,6 +1279,12 @@ window.AUDIO = {
   "author": "Nkọwa okwu / IgboAPI contributors",
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "arụ": {
+  "file": "audio/aru-b7976c.mp3",
+  "author": "Igboanude",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Igboanude-ar%E1%BB%A5.wav"
  },
  "asaa": {
   "file": "audio/asaa-e27bbd.mp3",
@@ -1010,6 +1364,12 @@ window.AUDIO = {
   "license": "CC0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Iwuala_chisom-Ch%C3%A8re.wav"
  },
+ "chi": {
+  "file": "audio/chi-bc32c6.mp3",
+  "author": "Ennydavids",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Ennydavids-Chi.wav"
+ },
  "d": {
   "file": "audio/d-3c3638.mp3",
   "author": "Goodymeraj",
@@ -1039,6 +1399,12 @@ window.AUDIO = {
   "author": "Lezechima404",
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Lezechima404-dib%E1%BB%8Ba.wav"
+ },
+ "dị iche": {
+  "file": "audio/di-iche-df51f3-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
  "e": {
   "file": "audio/e-58e6b3.mp3",
@@ -1076,6 +1442,12 @@ window.AUDIO = {
   "license": "CC0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Deventus-Efere.wav"
  },
+ "egbe": {
+  "file": "audio/egbe-03883d-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
  "ego": {
   "file": "audio/ego-c13571.mp3",
   "author": "Adaeze Nwa'Nsukka",
@@ -1088,6 +1460,12 @@ window.AUDIO = {
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Confidence24-egwu.wav"
  },
+ "egwu ọnwa": {
+  "file": "audio/egwu-onwa-899e89-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
  "ehi": {
   "file": "audio/ehi-076e29.mp3",
   "author": "Lezechima404",
@@ -1099,6 +1477,12 @@ window.AUDIO = {
   "author": "Adakaibe",
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Adakaibe-%C3%A8h%C3%ADh%C3%AC%C3%A8.wav"
+ },
+ "ekpere": {
+  "file": "audio/ekpere-4f48c2.mp3",
+  "author": "Akwugo",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Akwugo-Ekpere.wav"
  },
  "ekwentị": {
   "file": "audio/ekwenti-c78feb.mp3",
@@ -1142,6 +1526,12 @@ window.AUDIO = {
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Juliegwen-Ezi.wav"
  },
+ "ezi omume": {
+  "file": "audio/ezi-omume-374b67.mp3",
+  "author": "Goodymeraj",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Goodymeraj-Ezi_omume.wav"
+ },
  "ezigbo": {
   "file": "audio/ezigbo-79791f-nko.mp3",
   "author": "Nkọwa okwu / IgboAPI contributors",
@@ -1183,6 +1573,12 @@ window.AUDIO = {
   "author": "Oby Ezeilo",
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Oby_Ezeilo-gara.wav"
+ },
+ "garị": {
+  "file": "audio/gari-e29010.mp3",
+  "author": "Newtrains",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Newtrains-Garri.wav"
  },
  "gb": {
   "file": "audio/gb-61fc7b.mp3",
@@ -1232,6 +1628,24 @@ window.AUDIO = {
   "license": "CC0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Goodymeraj-I.wav"
  },
+ "iba": {
+  "file": "audio/iba-faff30.mp3",
+  "author": "Lebron jay",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Lebron_jay-Iba.wav"
+ },
+ "ichie": {
+  "file": "audio/ichie-84fa34.mp3",
+  "author": "Chisom Iwuala",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Chisom_Iwuala-Ichie.wav"
+ },
+ "igba nkwụ": {
+  "file": "audio/igba-nkwu-c86e03.mp3",
+  "author": "Vivian Amalachukwu",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Vivian_Amalachukwu-Igba_Nkwu.wav"
+ },
  "igodo": {
   "file": "audio/igodo-3d5bcc.mp3",
   "author": "Celetex",
@@ -1267,6 +1681,12 @@ window.AUDIO = {
   "author": "Iwuala chisom",
   "license": "CC0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Iwuala_chisom-ikuku.wav"
+ },
+ "ilu": {
+  "file": "audio/ilu-1a82a3.mp3",
+  "author": "Iwuala chisom",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Iwuala_chisom-Ilu.wav"
  },
  "imi": {
   "file": "audio/imi-f95157.mp3",
@@ -1394,6 +1814,12 @@ window.AUDIO = {
   "license": "CC0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Akwugo-isii.wav"
  },
+ "isiọwụwa": {
+  "file": "audio/isiowuwa-929492.mp3",
+  "author": "Lezechima404",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Lezechima404-isi%E1%BB%8D%CC%84w%E1%BB%A5%CC%84w%C4%81.wav"
+ },
  "ite": {
   "file": "audio/ite-9c6d13.mp3",
   "author": "Adaeze Nwa'Nsukka",
@@ -1508,12 +1934,6 @@ window.AUDIO = {
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Igboanude-mbe.wav"
  },
- "mbo": {
-  "file": "audio/mbo-8afa46.mp3",
-  "author": "Sayvhior",
-  "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Sayvhior-mbo.wav"
- },
  "mee": {
   "file": "audio/mee-d1bcbc.mp3",
   "author": "Iwuala chisom",
@@ -1537,6 +1957,12 @@ window.AUDIO = {
   "author": "Adakaibe",
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Adakaibe-%E1%B8%BFgb%C3%A8d%C3%A8.wav"
+ },
+ "mgbu": {
+  "file": "audio/mgbu-6e8c8a-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
  "mkpịsị aka": {
   "file": "audio/mkpisi-aka-fb1d31.mp3",
@@ -1579,6 +2005,12 @@ window.AUDIO = {
   "author": "Adaeze Nwa'Nsukka",
   "license": "CC0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Adaeze_Nwa%27Nsukka-Mm%E1%BB%A5ta.wav"
+ },
+ "mmụọ": {
+  "file": "audio/mmuo-38e7e9.mp3",
+  "author": "Chigozirim2005",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Chigozirim2005-Mm%E1%BB%A5%E1%BB%8D.wav"
  },
  "moto": {
   "file": "audio/moto-1f7f1c.mp3",
@@ -1682,17 +2114,35 @@ window.AUDIO = {
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
+ "ncheta": {
+  "file": "audio/ncheta-5b076a-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
  "nde": {
   "file": "audio/nde-1374c5.mp3",
   "author": "Lebron jay",
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Lebron_jay-%C5%83d%C3%A8.wav"
  },
+ "ndidi": {
+  "file": "audio/ndidi-4bb9c7.mp3",
+  "author": "Igboanude",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Igboanude-ndidi.wav"
+ },
  "ndị Igbo": {
   "file": "audio/ndi-igbo-7db6e0.mp3",
   "author": "Dagentle",
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Dagentle-Nd%E1%BB%8B_Igbo.wav"
+ },
+ "ndị okenye": {
+  "file": "audio/ndi-okenye-d41f0d.mp3",
+  "author": "Dagentle",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Dagentle-nd%E1%BB%8B_okenye.wav"
  },
  "ndị ọrụ": {
   "file": "audio/ndi-oru-ac3fbe.mp3",
@@ -1753,6 +2203,12 @@ window.AUDIO = {
   "author": "Vivian Amalachukwu",
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Vivian_Amalachukwu-nk%E1%BB%8Bta.wav"
+ },
+ "nkọwa": {
+  "file": "audio/nkowa-d83fbe.mp3",
+  "author": "Igboanude",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Igboanude-nk%E1%BB%8Dwa.wav"
  },
  "nkụzi": {
   "file": "audio/nkuzi-e66e3f-nko.mp3",
@@ -1844,6 +2300,18 @@ window.AUDIO = {
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Juliegwen-Nso.wav"
  },
+ "nsọ": {
+  "file": "audio/nso-026984.mp3",
+  "author": "Iwuala chisom",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Iwuala_chisom-ns%E1%BB%8D.wav"
+ },
+ "nsọpụrụ": {
+  "file": "audio/nsopuru-55cf85.mp3",
+  "author": "Anastesia chi",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Anastesia_chi-Ns%E1%BB%8Dp%E1%BB%A5r%E1%BB%A5.wav"
+ },
  "nta": {
   "file": "audio/nta-84e551.mp3",
   "author": "Confidence Obi",
@@ -1861,6 +2329,12 @@ window.AUDIO = {
   "author": "Akwugo",
   "license": "CC0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Akwugo-Nt%E1%BB%8B.wav"
+ },
+ "ntụtụ": {
+  "file": "audio/ntutu-80e710.mp3",
+  "author": "Iwuala chisom",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Iwuala_chisom-nt%E1%BB%A5t%E1%BB%A5.wav"
  },
  "nw": {
   "file": "audio/nw-8c1efe.mp3",
@@ -1964,6 +2438,12 @@ window.AUDIO = {
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Ceentia-ny%C3%AA.wav"
  },
+ "nze": {
+  "file": "audio/nze-66268f.mp3",
+  "author": "Sylvaline39",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Sylvaline39-Nze.wav"
+ },
  "nọdụ ala": {
   "file": "audio/nodu-ala-f8812c.mp3",
   "author": "Iwuala chisom",
@@ -2036,6 +2516,24 @@ window.AUDIO = {
   "license": "CC0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Akwugo-%C3%93f%C3%A8.wav"
  },
+ "ofe egusi": {
+  "file": "audio/ofe-egusi-488a07.mp3",
+  "author": "Aminwa 21",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Aminwa_21-Ofe_egusi.wav"
+ },
+ "ofe nsara": {
+  "file": "audio/ofe-nsara-b406eb.mp3",
+  "author": "King ChristLike",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-King_ChristLike-%C3%B3f%C3%A9_ns%C3%A1l%C3%A1.wav"
+ },
+ "ofe onugbu": {
+  "file": "audio/ofe-onugbu-6f790c.mp3",
+  "author": "Chiraldine",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Chiraldine-Ofe_onugbu.wav"
+ },
  "oge": {
   "file": "audio/oge-58c93e.mp3",
   "author": "Adakaibe",
@@ -2060,17 +2558,35 @@ window.AUDIO = {
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
+ "okenye": {
+  "file": "audio/okenye-2db683.mp3",
+  "author": "Adaeze Nwa'Nsukka",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Adaeze_Nwa%27Nsukka-Okenye.wav"
+ },
  "okeọkpa": {
   "file": "audio/okeokpa-798bb4.mp3",
   "author": "Igboanude",
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Igboanude-oke%E1%BB%8Dkpa.wav"
  },
+ "okpomọkụ": {
+  "file": "audio/okpomoku-b6ab9b.mp3",
+  "author": "Igboanude",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Igboanude-okpom%E1%BB%8Dk%E1%BB%A5.wav"
+ },
  "okpu": {
   "file": "audio/okpu-b79fd3.mp3",
   "author": "Adakaibe",
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Adakaibe-okpu.wav"
+ },
+ "okwu": {
+  "file": "audio/okwu-ade609.mp3",
+  "author": "Chigozirim2005",
+  "license": "CC BY 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Chigozirim2005-Okwu.wav"
  },
  "okwuru": {
   "file": "audio/okwuru-47d5d0.mp3",
@@ -2084,11 +2600,29 @@ window.AUDIO = {
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
+ "olili": {
+  "file": "audio/olili-627848-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
  "olu": {
   "file": "audio/olu-f29c8a.mp3",
   "author": "Adaeze Nwa'Nsukka",
   "license": "CC0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Adaeze_Nwa%27Nsukka-Olu.wav"
+ },
+ "omenala": {
+  "file": "audio/omenala-cb1758.mp3",
+  "author": "King ChristLike",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-King_ChristLike-%C3%B3m%C3%A9n%C3%A0l%C3%A0.wav"
+ },
+ "onugbu": {
+  "file": "audio/onugbu-e03222.mp3",
+  "author": "Akwugo",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Akwugo-Onugbu.wav"
  },
  "onye": {
   "file": "audio/onye-c80f93.mp3",
@@ -2174,6 +2708,24 @@ window.AUDIO = {
   "license": "CC0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Goodymeraj-Ot%C3%BA_nar%E1%BB%8B_na_otu.wav"
  },
+ "oyi": {
+  "file": "audio/oyi-408308.mp3",
+  "author": "Akwugo",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Akwugo-Oyi.wav"
+ },
+ "ozi": {
+  "file": "audio/ozi-97f3b1.mp3",
+  "author": "Bigcee007",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Bigcee007-Ozi.wav"
+ },
+ "ozu": {
+  "file": "audio/ozu-f95db0-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
  "p": {
   "file": "audio/p-516b97.mp3",
   "author": "Goodymeraj",
@@ -2234,6 +2786,12 @@ window.AUDIO = {
   "license": "CC0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Goodymeraj-Sh.wav"
  },
+ "sie": {
+  "file": "audio/sie-8d78e8.mp3",
+  "author": "Ceentia",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Ceentia-sie.wav"
+ },
  "t": {
   "file": "audio/t-8efd86.mp3",
   "author": "Goodymeraj",
@@ -2257,6 +2815,12 @@ window.AUDIO = {
   "author": "Juliegwen",
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Juliegwen-Ubi.wav"
+ },
+ "udu mmiri": {
+  "file": "audio/udu-mmiri-ac499a.mp3",
+  "author": "Adakaibe",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Adakaibe-%C3%99d%C3%B9_%E1%B8%BFm%C3%ADr%C3%AD.wav"
  },
  "ufochi": {
   "file": "audio/ufochi-9bcca6-nko.mp3",
@@ -2299,6 +2863,12 @@ window.AUDIO = {
   "author": "Akwugo",
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Akwugo-Unu.wav"
+ },
+ "urukpu": {
+  "file": "audio/urukpu-391913.mp3",
+  "author": "Akwugo",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Akwugo-urukpu.wav"
  },
  "usekwu": {
   "file": "audio/usekwu-8b19ea.mp3",
@@ -2444,12 +3014,6 @@ window.AUDIO = {
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
- "Ị rị kpa ole?": {
-  "file": "audio/i-ri-kpa-ole-9fb704.mp3",
-  "author": "Dagentle",
-  "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Dagentle-%E1%BB%8A_r%E1%BB%8B_kp%C3%A1_ole.wav"
- },
  "ị": {
   "file": "audio/i-5612b4.mp3",
   "author": "Goodymeraj",
@@ -2467,6 +3031,12 @@ window.AUDIO = {
   "author": "Nkọwa okwu / IgboAPI contributors",
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "ịkụ aka": {
+  "file": "audio/iku-aka-ae6cfd.mp3",
+  "author": "Juliegwen",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Juliegwen-Iku_aka.wav"
  },
  "ịnyịnya": {
   "file": "audio/inyinya-7cc7b4.mp3",
@@ -2498,6 +3068,12 @@ window.AUDIO = {
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Vivian_Amalachukwu-%E1%BB%8C_d%E1%BB%8B_%E1%BB%A5t%E1%BB%8D%CC%81..wav"
  },
+ "Ọ kọrọ onugbu ebe ahụ": {
+  "file": "audio/o-koro-onugbu-ebe-ahu-b9224a-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
  "Ọ na-akụzi n'ọtaakara": {
   "file": "audio/o-na-akuzi-n-otaakara-b2bf04-nko.mp3",
   "author": "Nkọwa okwu / IgboAPI contributors",
@@ -2506,6 +3082,12 @@ window.AUDIO = {
  },
  "Ọ na-amasị m ikiri kpakpando n'igwe": {
   "file": "audio/o-na-amasi-m-ikiri-kpakpando-n-igwe-b54d70-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "Ọ na-arịa ọrịa": {
+  "file": "audio/o-na-aria-oria-f4ddd4-nko.mp3",
   "author": "Nkọwa okwu / IgboAPI contributors",
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
@@ -2542,6 +3124,12 @@ window.AUDIO = {
  },
  "Ọdụm abụghị obere anụmanụ": {
   "file": "audio/odum-abughi-obere-anumanu-b1ba70-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "Ọkọchị na-abịa": {
+  "file": "audio/okochi-na-abia-793e6b-nko.mp3",
   "author": "Nkọwa okwu / IgboAPI contributors",
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
@@ -2594,6 +3182,12 @@ window.AUDIO = {
   "license": "CC0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Akwugo-%E1%BB%8Cgw%E1%BB%A5.wav"
  },
+ "ọgwụ ahụ mgbu": {
+  "file": "audio/ogwu-ahu-mgbu-023ded.mp3",
+  "author": "Adakaibe",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Adakaibe-%E1%BB%8Dgw%E1%BB%A5_ah%E1%BB%A5_mgbu.wav"
+ },
  "ọgọdọ": {
   "file": "audio/ogodo-7866d5.mp3",
   "author": "NsirimS",
@@ -2630,6 +3224,12 @@ window.AUDIO = {
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
+ "ọkọchị": {
+  "file": "audio/okochi-fafb55.mp3",
+  "author": "Akwugo",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Akwugo-%E1%BB%8Ck%E1%BB%8Dch%E1%BB%8B.wav"
+ },
  "ọkụkọ": {
   "file": "audio/okuko-a8ccaf.mp3",
   "author": "Speaker: Cassy Recorder: Cassy louis",
@@ -2641,6 +3241,24 @@ window.AUDIO = {
   "author": "Nkọwa okwu / IgboAPI contributors",
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "ọmụgwọ": {
+  "file": "audio/omugwo-975e37.mp3",
+  "author": "Igboanude",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Igboanude-%E1%BB%8Dm%E1%BB%A5gw%E1%BB%8D.wav"
+ },
+ "ọmụmaatụ": {
+  "file": "audio/omumaatu-14ed9c.mp3",
+  "author": "Jossy2000",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Jossy2000-%E1%BB%8Cm%E1%BB%A5maat%E1%BB%A5.wav"
+ },
+ "ọmụmụ": {
+  "file": "audio/omumu-74de5a.mp3",
+  "author": "Adaeze Nwa'Nsukka",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Adaeze_Nwa%27Nsukka-%E1%BB%8Cm%E1%BB%A5m%E1%BB%A5.wav"
  },
  "ọnwa": {
   "file": "audio/onwa-5b15a2.mp3",
@@ -2660,11 +3278,23 @@ window.AUDIO = {
   "license": "CC0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Iwuala_Judith_Chinenyenwa-%E1%BB%8Cn%E1%BB%A5ah%E1%BB%8Ba.wav"
  },
+ "ọnụ ọma": {
+  "file": "audio/onu-oma-fb6729.mp3",
+  "author": "Sayvhior",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Sayvhior-%E1%BB%8Dn%E1%BB%A5_%E1%BB%8Dma.wav"
+ },
  "ọpante": {
   "file": "audio/opante-7d5561-nko.mp3",
   "author": "Nkọwa okwu / IgboAPI contributors",
   "license": "CC BY 4.0",
   "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
+ },
+ "ọrịa": {
+  "file": "audio/oria-89bc55.mp3",
+  "author": "Akwugo",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Akwugo-%E1%BB%8Cr%E1%BB%8Ba.wav"
  },
  "ọrụ": {
   "file": "audio/oru-b24b08.mp3",
@@ -2683,6 +3313,12 @@ window.AUDIO = {
   "author": "Akwugo",
   "license": "CC0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Akwugo-%E1%BB%8Cz%E1%BB%8D.wav"
+ },
+ "Ụbọchị taa dị mma": {
+  "file": "audio/ubochi-taa-di-mma-d11a7e-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
  "Ụjọ na-atụ m": {
   "file": "audio/ujo-na-atu-m-efbb8c.mp3",
@@ -2726,6 +3362,12 @@ window.AUDIO = {
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Chikeme_Chizurum-%E1%BB%A5gw%E1%BB%8D.wav"
  },
+ "ụgụrụ": {
+  "file": "audio/uguru-87d0f8.mp3",
+  "author": "Adakaibe",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Adakaibe-%E1%BB%A5%CC%81g%E1%BB%A5%CC%80r%E1%BB%A5%CC%80.wav"
+ },
  "ụjọ": {
   "file": "audio/ujo-526d36.mp3",
   "author": "Mbah Victor Chukwuemerie",
@@ -2737,6 +3379,12 @@ window.AUDIO = {
   "author": "Akwugo",
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Akwugo-%E1%BB%A4ka.wav"
+ },
+ "ụkwara": {
+  "file": "audio/ukwara-990449.mp3",
+  "author": "Dagentle",
+  "license": "CC BY 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Dagentle-%E1%BB%A4%CC%81kw%C3%A0r%C3%A0.wav"
  },
  "ụkwụ": {
   "file": "audio/ukwu-fe5cea.mp3",
@@ -2767,6 +3415,12 @@ window.AUDIO = {
   "author": "Juliegwen",
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Juliegwen-%E1%BB%A4l%E1%BB%8D_%E1%BB%8Dr%E1%BB%A5.wav"
+ },
+ "ụlọ ụka": {
+  "file": "audio/ulo-uka-7e0118.mp3",
+  "author": "Chigozirim2005",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Chigozirim2005-%E1%BB%A4l%E1%BB%8D_%E1%BB%A5ka_-.wav"
  },
  "ụmụaka": {
   "file": "audio/umuaka-ed5cff.mp3",

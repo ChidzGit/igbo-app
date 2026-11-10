@@ -374,6 +374,79 @@ New words in the Section 3 units: Telling the Time, The Past, The Future, Feelin
 
 ---
 
+## N. Section 4 additions (Nov 2026)
+
+New units in Section 4 (A2): Proverbs (Ilu), Discussing & Comparing, Custom & Respect, Life Events, Chi/Ancestors/Folktales (with a short lesson on old times and Nri), Weather & Seasons, Cooking, At the Doctor, and Plans/Invitations/Calls. Items taken from dictionary examples (Nkọwa okwu) are not flagged. The ⚑ ones come from one source, from a list the dictionary could not confirm, or were built from a pattern. The notes below are from a quick, noisy dictionary check, so please correct me where the dictionary is simply wrong. Wording on beliefs is meant to be neutral and respectful: please tell me if any line is wrong or unwelcome.
+
+### N-1. Doubts about words that were already in the app
+
+| # | Igbo in the app | Doubt and evidence | Parent says |
+|---|-----------------|--------------------|-------------|
+| N1 | Ụbọchị Ụka (Sunday) and ụka (church) | The dictionary lists "ụka" as speech or talk, not church. Wikivoyage gives "Ụbọchị úkà" for Sunday and "ụlọ ụka" for church. The app uses "ụka" for church, which I believe is common. Is "Ụbọchị Ụka" the right name for Sunday, and is "ụka" (or "ụlọ ụka") what you say for church? | |
+| N2 | Isi na-awa m (I have a headache) | No source I could read has "na-awa". The dictionary's own example is "Enwere m isiọwụwa" (also written "isi ọwụwa"). Which do people say? Section 4 now teaches "Enwere m isiọwụwa" next to it. | |
+| N3 | dọkịta vs dibịa oyibo (doctor) | The dictionary has no "dọkịta". It does have "dibịa" (traditional healer). Two older pages say "dibịa oyibo" for a hospital doctor. What do you say for a hospital doctor today? Section 4 teaches "dibịa oyibo" as an older word (⚑) beside the app's "dọkịta". (See also L31 and L35.) | |
+| N4 | ntutu (hair) | The new doctor lesson has "ntụtụ" = syringe/needle (a dictionary entry). The app has "ntutu" = hair. Are they different words in speech, or is one of them wrong? | |
+| N5 | ụlọ ọgwụ (hospital) | The dictionary's headword is "ụnọ ọgwụ" (hospital, dispensary). Is "ụlọ ọgwụ" (used in the app) the right form for you? | |
+| N6 | Afọ na-eme m (My stomach hurts) | Wikivoyage has "afọ ohihi" for stomach ache, and the dictionary does not have "ohihi". Is "Afọ na-eme m" natural? Which one would you say? | |
+| N7 | mmiri (water; also rain) | The weather lesson uses "mmiri na-ezo" (it is raining), built from a pattern in an older conversation. Is "mmiri" the everyday word for rain, or do people say "mmiri ozuzo"? | |
+| N8 | Ekene Ekeresimesi, ncheta ọmụmụ | The dictionary spells "greeting, thanks" as "ekele". The app uses "Ekene". Which spelling should it be? | |
+| N9 | Ọjị bụ ndụ; ịwa ọjị (kola) | Section 4 also has the saying "Onye wetara ọjị, wetara ndụ" (see N23). Please confirm all the kola lines in one go: who breaks the kola, and the wording used in your family. (See also M67.) | |
+
+### N-2. New ⚑ items in Section 4
+
+| # | Igbo (Section 4 unit) | Doubt and evidence | Parent says |
+|---|-----------------------|--------------------|-------------|
+| N10 | Proverbs from one source: Igwe bụ ike; Aka ekpe kwọ aka nri, aka nri akwọ aka ekpe; Onye ajụjụ anaghị efu ụzọ; Ejula sị: nwayọọ, nwayọọ, ka m wuo ụlọ m; Ihe okenye nọ ala hụ, nwata akwụ elu ahụghị ya; Mgbe isi rere, ahụ niile na-arịa (Proverbs) | Each comes from only one web article, and those pages print no dots. I added the dots myself, and "kwọ" (wash) and "akwụ elu" are my best guess. Are the words and spelling right, and is the meaning I gave right? Which of these would you actually say? | |
+| N11 | Ewu nwa ogbenye bụ chi ya (Proverbs) | Two sources translate it differently: "a poor man's goat is his cow" and "a poor person's goat is treated like a cow". The Igbo says "chi ya" (his chi). What does it mean and when is it said? | |
+| N12 | Oge adịghị eche mmadụ (Proverbs) | Two lists agree on "time waits for no one", but the spelling is not confirmed. Is "eche" right for "wait"? | |
+| N13 | Egbe bere, ugo bere; nke sị ibe ya ebela, nku kwaa ya (Proverbs) | Three sources agree, but one spells it "Ebge bere". Which spelling is standard? | |
+| N14 | Ilu bụ mmanụ e ji eri okwu (Proverbs) | One source. I think it is a well-known saying about proverbs. Is the wording right? | |
+| N15 | "True" and "because": Ọ bụ eziokwu, Ọ bụghị eziokwu, Echeghị m na ọ bụ eziokwu, n'ihi na, maka na, dịka ọmụmaatụ, ọmụmaatụ (Discussing) | No page I read gave these words (the dictionary does not list "eziokwu", although the app already uses it). Are they the usual words for "it is true", "I do not think", "because", "for example"? | |
+| N16 | karịa and kacha (Discussing) | The dictionary has "karị" (be more than) and a sentence with "karịa". I built five comparison sentences from that: Ada toro ogologo karịa Ike, Ụlọ a dị ukwu karịa ụlọ ahụ, Nke a dị ọnụ karịa nke ahụ, Nke a dị njọ karịa nke ahụ, Nke a ka mma karịa nke ahụ. Are they natural? For "the most", is "kacha" right, and is "kachasị" the form for "best"? (The dictionary's "kacha" is a different word.) | |
+| N17 | Nke a kacha mma; Kedụ nke ka mma?; Nke a ka mma, mana ọ dị oke ọnụ; dị iche; kacha dị nso; Ebee ka e nwere ụlọ mkpụrụ ọgwụ kacha dị nso? (Discussing) | All built from a pattern or one phrasebook. The dictionary has "pụrụ iche" for special or unique, not "dị iche" for different. Is "dị iche" how you say "different"? | |
+| N18 | omenala (Custom) | Only seen inside "alụmdi na nwunye omenala"; the dictionary does not have it. Is "omenala" custom/tradition, and is "odinala" another spelling? | |
+| N19 | ichie, Mazị Ibekwe, Daa Mgbechi, Oga diri gị, nwa m (Custom) | The dictionary says "ichie" is a noble rank, while Wikivoyage says it is how you address a male elder. "Mazị" and "Daa" are from Wikivoyage; "Oga diri gị, nwa m" is from an old archive page. Which is right, and is it right to teach "Mazị" and "Daa" this way? | |
+| N20 | nze and ọzọ (Custom) | The dictionary entries (nze = high chief, ọzọ = noble title) are used as written. Wikivoyage says nze is used mainly in northern Igboland. Should the app say that? | |
+| N21 | Ihe nsọ (forbidden) (Custom) | Only on a sign list in one phrasebook. Is it used for "forbidden"? | |
+| N22 | Kneeling, bowing or greeting gestures for elders (Custom) | No source I could read confirmed a rule. Should the app teach any gesture? | |
+| N23 | Onye wetara ọjị, wetara ndụ (Custom) | One list gives "he who brings kola brings life"; other versions say "peace" instead of "life". Which wording do you know? | |
+| N24 | igba nkwụ spelling and stages; ịkụ aka; ime ego; nwunye ọhụrụ (Life Events) | The dictionary has "igba nkwụ" and "kụ aka". "ime ego" (bride-price talks) is from Wikipedia only; "ego isi nwanyị" was not found. Spellings vary (Igba Nkwu, Ịgba Nkwụ, Igbankwu). What is the standard spelling and the usual word for the bride price? | |
+| N25 | ọmụgwọ (omugwo) (Life Events) | The dictionary spells it "ọmụgwọ" and says three months. Other pages say 28 days or six months. I wrote "some weeks". Which spelling and how long do you say? | |
+| N26 | igu nwa aha (naming ceremony) (Life Events) | One page gives "igu nwa aha" or "ikuputanwa". Which term does your family use, and on which day is the ceremony? | |
+| N27 | Christmas homecoming, funeral condolence and the August meeting (Life Events) | No Igbo sentences were found, so I left them out. What do people say, for example for "Sorry for your loss" besides "Ndo"? | |
+| N28 | Chineke vs Chukwu; chi; mmụọ; agbara (Chi, Ancestors) | The dictionary has all of these. Some pages say Chineke is used for the Christian God and Chukwu for the high God in traditional belief. Is that how people use them? Does the wording (for example "Many Igbo people believe each person has a chi") feel respectful and right to you? | |
+| N29 | ndichie; ndị nna nna anyị (Chi, Ancestors) | "ndichie" (ancestors) is not in the dictionary; it comes from a Wikipedia article. Is it the everyday word, or do people say "ndị nna nna anyị"? | |
+| N30 | ụlọ ụka; fada (Chi, Ancestors) | See N1. For a Christian priest the brief suggested "fada" and "onye nchụaja"; I did not add either. Which do you use? | |
+| N31 | Ala (earth spirit) and "Chi Ukwu" (Chi, Ancestors) | I left these out. Pages disagree on whether Ala is an earth goddess and on her rank. Should the app mention her, and is "Chi Ukwu" a spelling of Chukwu? | |
+| N32 | Ukpana; egwu ọnwa; Mbe bụ onye aghụghọ; Mbe riri nri niile (Chi, Ancestors) | "Ukpana" (grasshopper) is from Wikipedia. "egwu ọnwa" (moonlight play) is from one article. The two tortoise sentences are mine. Are these right? What do storytellers say to start and end a tale ("Otu mgbe …" was not found)? | |
+| N33 | Nri bụ alaeze ochie; Eze Nri; Igbo-Ukwu; n'oge gboo; akụkọ ihe mere eme (Chi, Ancestors, last lesson) | "alaeze" (kingdom) is in the dictionary; the rest are from Wikipedia or the brief. Is "akụkọ ihe mere eme" the usual word for history? Which start date for Nri should we teach (sources say 10th century, 1043, about 1225, or the 1500s), and are the Igbo-Ukwu bronzes linked to Nri? | |
+| N34 | udu mmiri (rainy season) (Weather) | Wikivoyage only. The dictionary has "udu" as a clay pot. Is "udu mmiri" used, or is there another word for the rainy season? | |
+| N35 | Weather sentences: Ugbu a bụ oge ụgụrụ; Mmiri na-ezo; Mmiri anaghị ezo; Olee maka ụbọchị taa?; Ụbọchị taa dị mma (Weather) | From an older conversation page (spelled in the old way) and one pattern; I rewrote them with dots. Are they natural? | |
+| N36 | ọkụ for hot; sun shining; thunder; lightning (Weather) | Left out. "ọkụ" is "fire" in the app; is it also "hot" in weather? What is the verb for "the sun is shining" (Anwụ na-acha?), and the words for thunder and lightning (the dictionary has "àmụma mmiri" for lightning)? | |
+| N37 | ofe onugbu; ofe egusi; ofe nsara (Cooking) | "onugbu" and "nsara" (white soup) are in the dictionary; "egusi" is not, and the dishes' names as phrases are from my own pairing. The dictionary writes "nsara"; Wikivoyage writes "nsala". Which do you say? | |
+| N38 | Onye siri ofe a?; Kwọọ aka gị (Cooking) | One phrasebook each (it wrote "Kwụọ", which means "pay"; the app uses "kwọ", to wash). "siri" is the past of "sie" (cook) in the dictionary. Are the sentences natural? | |
+| N39 | Doctor lesson: dibịa oyibo, Achọrọ m dibịa oyibo, Ahụ na-arịa m, afọ ohihi, ọgwụ ahụ mgbu | From older pages or Wikivoyage. See N2, N3 and N6. Is "Ahụ na-arịa m" a normal way to say "I am sick"? For fever, is "ịba" the usual word or "ahụ ọkụ"? For injection, is "ntụtụ" right? | |
+| N40 | Wensde and Tosde (Wednesday, Thursday) (Plans) | Only Wikivoyage has them ("Wensde", "Tosdè"), and the dictionary does not. Mọnde, Tuuzde, Fraịde and Satọde are in the dictionary. How do you write Wednesday and Thursday? | |
+| N41 | Plans sentences: Gịnị ka ị na-eme echi?; Ị ga-abịa?; Bịa n'ụlọ m; Bịa n'ụlọ m ụbọchị Satọde; Enwere m oge; Enweghị m oge; Anyị ga-ahụ n'ụbọchị Satọde; Ana m abịa (Plans) | Built by me from verified words and patterns. Are they natural, and for "Come home" is "lọta" better than "bịa"? What do you say for "I am busy" and "Sorry, I can't"? | |
+| N42 | Phone sentences: Kpọọ m; Kpọọ m mgbe emechaa; Ka m kpọghachi gị; Enwere m ike ịnweta nọmba gị?; Anaghị m anụ gị (Plans) | From Wikivoyage. The dictionary has no entry for "kpọghachi" and does not clearly show "call" for "kpọ". Please check each one. | |
+
+### N-3. Words we still need
+
+These had no usable Igbo source, so they are not in the app yet.
+
+| # | Words or phrases | What I need | Parent says |
+|---|------------------|-------------|-------------|
+| N43 | Cooking verbs: fry, stir, pound, cut, taste, wash (food); pounded yam; cooking oil; a short recipe | The brief's words did not match the dictionary (for example "ghee" means "be cooked", not "fry"; "okpa" and "moi moi" are not in it). A short recipe in Igbo, or the words for each step. | |
+| N44 | Doctor: "Where does it hurt?", "Take this medicine twice a day", "I hope you feel better", "Take care of your health" | The Igbo for each. | |
+| N45 | Phone: "Hello?" when answering, "Who is speaking?", "Wait a moment" | Wikivoyage has "chère" for wait, but the dictionary says "chere" means think. | |
+| N46 | Customs: our father/our mother as a respectful way to speak of parents; "ùgwù" (respect, honour) | "ùgwù" is a different word from "ugwu" (mountain), so I left it out. Is "Nna anyị / Nne anyị" right? | |
+| N47 | Proverbs: more well-known ilu with a clear Igbo text (for example "Gidi gidi bụ ugwu eze", "Otu onye tuo izu …", and "Nwata kwọchaa aka …" which was not found as you wrote it) | The full text, the word-for-word meaning and when it is said. Also, is there a verb for "to say a proverb" (the dictionary does not show "ịtụ ilu")? | |
+| N48 | History: war (agha), independence (nnwere onwe), colonial times; the traditional priest (onye nchụaja) | I left these out because no source gave a clear sentence, and some are sensitive. What should we teach, and how neutrally? | |
+| N49 | Same / different: "the same" (is it "otu"?), younger/older (nta, okenye) | The word for "the same as" and for "younger" in standard Igbo. | |
+| N50 | Brainbound greetings guide | https://www.brainbound.blog/igbo-greetings-guide returned an error (403) to the research tool. Could you open it in a browser and tell me if anything is useful? (Also listed in sources/README.md.) | |
+
+---
+
 ## Answered ✅
 
 *(The daily routine moves answered items here and records what changed.)*
