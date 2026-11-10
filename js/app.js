@@ -34,21 +34,37 @@
     for (const w of [it.ig, ...(it.alt || [])]) { const a = AUDIO[w] || audioByKey[strictKey(w)]; if (a && a.file) return a; }
     return null;
   }
-  let player = null, playingBtn = null;
-  function stopAudio() { if (player) { try { player.pause(); } catch (e) {} } if (playingBtn) playingBtn.classList.remove("playing"); playingBtn = null; }
+  // One shared, never-attached Audio element (no native controls bar). Every 🔊 press
+  // stops whatever is playing, rewinds to 0 and calls play() synchronously inside the
+  // click handler, which is what iOS Safari needs to allow playback.
+  let player = null, playingBtn = null, playToken = 0;
+  function clearPlaying() { if (playingBtn) playingBtn.classList.remove("playing"); playingBtn = null; }
+  function getPlayer() {
+    if (player) return player;
+    player = new Audio();
+    player.preload = "auto";
+    player.controls = false;
+    player.setAttribute("playsinline", "");
+    player.setAttribute("webkit-playsinline", "");
+    player.addEventListener("ended", clearPlaying);
+    player.addEventListener("error", clearPlaying);
+    return player;
+  }
+  function stopAudio() { if (player) { try { player.pause(); } catch (e) {} } clearPlaying(); }
   function playClip(file, btn) {
-    stopAudio();
-    if (!player) {
-      player = new Audio();
-      player.preload = "auto";
-      player.onended = player.onerror = () => { if (playingBtn) playingBtn.classList.remove("playing"); playingBtn = null; };
-    }
-    if (!player.src.endsWith(file)) player.src = file;
-    else player.currentTime = 0;
+    const p = getPlayer();
+    try { p.pause(); } catch (e) {}
+    clearPlaying();
+    const url = new URL(file, document.baseURI).href;
+    if (p.src !== url) { p.src = url; try { p.load(); } catch (e) {} }
+    else { try { p.currentTime = 0; } catch (e) { /* metadata not loaded yet: starts at 0 anyway */ } }
+    const token = ++playToken;
     playingBtn = btn || null;
     if (btn) btn.classList.add("playing");
-    const p = player.play();
-    if (p && p.catch) p.catch(() => { if (btn) btn.classList.remove("playing"); }); // autoplay blocked / offline & not cached
+    let pr;
+    try { pr = p.play(); } catch (e) { clearPlaying(); return; }
+    // Autoplay blocked / offline & not cached: just drop the playing state.
+    if (pr && pr.catch) pr.catch(() => { if (token === playToken) clearPlaying(); });
   }
   // 🔊 control: plays in-app when we have a clip, otherwise links to Nkọwa okwu.
   function listenBtn(it, label) {
@@ -66,7 +82,11 @@
   const itemIndex = {}; // key -> {item, lesson, section}
   C.sections.forEach((sec) => sec.lessons.forEach((les, li) => {
     allLessons.push({ sec, les, li });
-    les.items.forEach((it) => { it._key = les.id + "|" + it.ig; itemIndex[it._key] = { item: it, lesson: les, section: sec }; });
+    les.items.forEach((it) => {
+      it._key = les.id + "|" + it.ig;
+      Object.defineProperty(it, "_ctx", { value: { les, sec }, enumerable: false });
+      itemIndex[it._key] = { item: it, lesson: les, section: sec };
+    });
   }));
   const findLesson = (id) => allLessons.find((x) => x.les.id === id);
 
@@ -100,16 +120,123 @@
 
   /* ───────────── exercise builders ───────────── */
   function poolFor(sec) { return sec.lessons.flatMap((l) => l.items); }
-  function distract(item, pool, field, n) {
-    // Never offer a distractor that shares the Igbo OR English text with the answer
-    // (e.g. "Ọ dị mma" appears in two lessons with slightly different glosses).
-    const seen = new Set([item[field]]);
-    const ok = (p) => p.ig !== item.ig && p.en !== item.en && !seen.has(p[field]);
-    const out = [];
-    for (const p of shuffle(pool)) { if (ok(p)) { seen.add(p[field]); out.push(p); } if (out.length >= n) break; }
-    if (out.length < n) for (const p of shuffle(Object.values(itemIndex).map((v) => v.item))) { if (ok(p)) { seen.add(p[field]); out.push(p); } if (out.length >= n) break; }
+  /* Plausible wrong answers. Candidates are always real curriculum items/tokens, ranked by
+     how easy they are to confuse with the answer; we pick n at random from the best ~6. */
+  const ALL_ITEMS = () => Object.values(itemIndex).map((v) => v.item);
+  // Plain form for comparing: no tones, no dots, no punctuation, lower case, single spaces.
+  const plain = (s) => String(s).normalize("NFD").replace(TONES, "").replace(DOTS, "").toLowerCase().replace(/[^\p{L}\s]/gu, "").replace(/\s+/g, " ").trim();
+  // Text as shown, ignoring only case/punctuation/spacing ("Ọ dị mma" == "Ọ dị mma.").
+  const shown = (s) => String(s).normalize("NFC").toLowerCase().replace(/[^\p{L}\p{N}\p{M}\s]/gu, "").replace(/\s+/g, " ").trim();
+  function editSim(a, b) {
+    if (!a.length || !b.length) return 0;
+    let prev = Array.from({ length: b.length + 1 }, (_, j) => j);
+    for (let i = 1; i <= a.length; i++) {
+      const cur = [i];
+      for (let j = 1; j <= b.length; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      prev = cur;
+    }
+    return 1 - prev[b.length] / Math.max(a.length, b.length);
+  }
+  // Letters that learners mix up (dotted twins, digraph families, near sounds).
+  const CONFUSABLE = [["i", "ị"], ["o", "ọ"], ["u", "ụ"], ["n", "ṅ", "ny", "nw", "m"], ["g", "gb", "gh", "gw"], ["k", "kp", "kw"],
+    ["s", "sh"], ["ch", "j"], ["a", "e"], ["b", "gb", "p"], ["p", "kp"], ["w", "gw", "kw", "nw"], ["y", "ny"], ["h", "gh"], ["d", "t"], ["f", "v"], ["r", "l"], ["s", "z"]];
+  const confusable = (a, b) => { a = a.toLowerCase(); b = b.toLowerCase(); return CONFUSABLE.some((g) => g.includes(a) && g.includes(b)); };
+  // How alike two Igbo strings look/sound (0 … ~10).
+  function igSim(a, b) {
+    const pa = plain(a), pb = plain(b);
+    let s = 4 * editSim(pa.replace(/ /g, ""), pb.replace(/ /g, ""));
+    if (pa === pb) s += 4; // dotted/undotted or tone twins (isi / ịsị, àkwá / ákwà)
+    const wa = String(a).split(/\s+/).map(strictKey).filter(Boolean), wb = String(b).split(/\s+/).map(strictKey).filter(Boolean);
+    const setB = new Set(wb), shared = [...new Set(wa)].filter((w) => setB.has(w)).length;
+    s += 3 * shared / Math.max(1, Math.max(new Set(wa).size, setB.size)); // shared words ("Ana m eri nri" / "Ana m aga ahịa")
+    if (wa.length === wb.length) {
+      s += 0.7;
+      if (wa.length > 1 && wa.filter((w, k) => w === wb[k]).length === wa.length - 1) s += 1.5; // same frame, one word swapped
+    }
+    let pre = 0; while (pre < Math.min(pa.length, pb.length, 4) && pa[pre] === pb[pre]) pre++;
+    s += 0.3 * pre;
+    s += 0.8 * (1 - Math.abs(pa.length - pb.length) / Math.max(pa.length, pb.length, 1));
+    return s;
+  }
+  const numOf = (it) => { const m = /^\s*([\d,]+)/.exec(it.en); return m ? +m[1].replace(/,/g, "") : null; };
+  function kindOf(it) {
+    const c = it._ctx;
+    if (c && c.les.type === "letters") return "letter";
+    if (numOf(it) !== null) return "number";
+    return c ? c.sec.id : "";
+  }
+  // Random pick without replacement that favours the best-ranked candidates.
+  function pickRanked(list, n) {
+    const pool = list.map((x, r) => ({ x, w: 1 / (r + 1.5) })), out = [];
+    while (out.length < n && pool.length) {
+      let t = Math.random() * pool.reduce((a, b) => a + b.w, 0), k = 0;
+      while (k < pool.length - 1 && (t -= pool[k].w) > 0) k++;
+      out.push(pool.splice(k, 1)[0].x);
+    }
     return out;
   }
+  function distract(item, field, n) {
+    // Never offer a distractor that shares the Igbo OR English text with the answer
+    // (e.g. "Ọ dị mma" appears in two lessons with slightly different glosses), nor one
+    // that is an accepted alternative answer, nor two options with the same text.
+    const answers = new Set([item.ig, ...(item.alt || [])].map(shown));
+    const ctx = item._ctx || {}, kind = kindOf(item), isLetter = kind === "letter", num = numOf(item);
+    const scored = [];
+    for (const p of ALL_ITEMS()) {
+      if (p === item || shown(p.ig) === shown(item.ig) || shown(p.en) === shown(item.en)) continue;
+      if (answers.has(shown(p.ig)) || [p.ig, ...(p.alt || [])].some((a) => shown(a) === shown(item.ig))) continue;
+      const pk = kindOf(p), pc = p._ctx || {};
+      if (isLetter !== (pk === "letter")) continue; // letters only against letters
+      let s = 0;
+      if (pc.les === ctx.les) s += 2; else if (pc.sec === ctx.sec) s += 1;
+      if (pk === kind) s += 2;
+      if (isLetter && confusable(p.ig, item.ig)) s += 8;
+      if (field === "ig") s += 1.2 * igSim(item.ig, p.ig);
+      else {
+        s += 0.4 * igSim(item.ig, p.ig);
+        s += 2 * editSim(plain(item.en), plain(p.en)) + 1.5 * (1 - Math.abs(item.en.length - p.en.length) / Math.max(item.en.length, p.en.length));
+        if (item.en.split(/\s+/).length === p.en.split(/\s+/).length) s += 0.5;
+      }
+      const pn = numOf(p);
+      if (num !== null && pn !== null) s += 3 / (1 + Math.abs(Math.log((pn + 1) / (num + 1))) * 3); // neighbouring numbers
+      scored.push({ p, s: s + Math.random() * 0.8 });
+    }
+    scored.sort((a, b) => b.s - a.s);
+    const top = [], seen = new Set([shown(item[field])]);
+    for (const { p } of scored) { const k = shown(p[field]); if (seen.has(k)) continue; seen.add(k); top.push(p); if (top.length >= Math.max(6, n)) break; }
+    return pickRanked(top, n);
+  }
+  // Word-bank decoys: real tokens from the curriculum that look like the sentence's own words.
+  const tokenCtx = (() => {
+    const m = new Map(); // token -> {les:Set, sec:Set}
+    ALL_ITEMS().filter((it) => it._ctx.les.type !== "letters").forEach((it) => it.ig.split(/\s+/).forEach((t) => {
+      if (!t || t.includes("…")) return;
+      if (!m.has(t)) m.set(t, { les: new Set(), sec: new Set() });
+      m.get(t).les.add(it._ctx.les); m.get(t).sec.add(it._ctx.sec);
+    }));
+    return m;
+  })();
+  function bankDecoys(item, tokens, n) {
+    const own = new Set(tokens.map(shown)), ctx = item._ctx;
+    const scored = [];
+    for (const [t, c] of tokenCtx) {
+      if (own.has(shown(t)) || !shown(t)) continue;
+      let best = 0;
+      for (const w of tokens) {
+        let s = 4 * editSim(plain(w), plain(t));
+        if (plain(w) === plain(t)) s += 5; // dotted/undotted twin that exists in the curriculum
+        if (plain(w).slice(0, 2) === plain(t).slice(0, 2)) s += 0.5;
+        best = Math.max(best, s);
+      }
+      if (c.les.has(ctx.les)) best += 2; else if (c.sec.has(ctx.sec)) best += 1;
+      scored.push({ t, s: best + Math.random() * 0.8 });
+    }
+    scored.sort((a, b) => b.s - a.s);
+    const top = [], seen = new Set();
+    for (const { t } of scored) { const k = shown(t); if (seen.has(k)) continue; seen.add(k); top.push(t); if (top.length >= 6) break; }
+    return pickRanked(top, n);
+  }
+  if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) window.__mmutaDebug = { distract, bankDecoys, items: ALL_ITEMS };
   function mk(type, item, sec, les) { return { type, item, pool: poolFor(sec), lesson: les, letters: les.type === "letters" }; }
   function reviewTypes(item, les) {
     const t = ["mc-en2ig"];
@@ -181,7 +308,7 @@
     } else if (ex.type === "mc-ig2en" || ex.type === "mc-en2ig") {
       const it = ex.item, toEn = ex.type === "mc-ig2en";
       const field = toEn ? "en" : "ig";
-      const opts = shuffle([it, ...distract(it, ex.pool, field, 3)]);
+      const opts = shuffle([it, ...distract(it, field, 3)]);
       R.state.correct = it[field];
       const label = toEn ? (ex.letters ? "What sound does this letter make?" : "What does this mean?") : (ex.letters ? "Which letter is this?" : "How do you say this in Igbo?");
       body = `<div class="prompt-label">${label}</div>
@@ -197,9 +324,8 @@
     } else if (ex.type === "bank") {
       const it = ex.item;
       const tokens = it.ig.split(/\s+/);
-      const others = [...new Set(ex.pool.flatMap((p) => p.ig.split(/\s+/)))].filter((t) => !tokens.includes(t));
       R.state.tokens = tokens; R.state.built = [];
-      R.state.tiles = shuffle([...tokens, ...pick(others, Math.min(3, others.length))]);
+      R.state.tiles = shuffle([...tokens, ...bankDecoys(it, tokens, 3)]);
       body = `<div class="prompt-label">Build this sentence in Igbo</div>
         <div class="prompt-word">${esc(it.en)}</div>
         <div class="bank-answer ig" id="built"></div>
