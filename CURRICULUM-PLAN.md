@@ -15,8 +15,8 @@ Sources: [duolingodata.com](https://www.duolingodata.com/) (data from Jul 2025, 
 | Section | CEFR | Focus (Duolingo's wording) | Igbo units |
 |---|---|---|---|
 | 1 | Intro | Essential phrases and simple grammar | Alphabet · Greetings · Introducing Yourself · Family · Eating Out · At the Market · At School · Getting Around |
-| 2 | A1 | Words, phrases and grammar for basic interactions | Food & Drink · Numbers · Colours · Action Words |
-| 3 | A1 | Foundational sentences for basic conversations | Time & Days · The Body · Everyday Phrases |
+| 2 | A1 | Words, phrases and grammar for basic interactions | Food & Drink · Numbers · Colours · Action Words · Asking Questions · Where Is It? · My Day · At Home · Jobs · Animals · Clothes · Describing Things · Opinions & Advice · Countries & Peoples · Linking Words |
+| 3 | A1 | Foundational sentences for basic conversations | Time & Days · The Body · Everyday Phrases · Telling the Time · The Past · The Future · Feelings · Describing People · Chatting with Friends · Cities & Towns · Nature · Sports, Music & Stories · Igboland |
 | 4 | A2 | Sentences about everyday topics | (coming soon) |
 | 5 | B1 | Sentences about a wider variety of topics | (later) |
 | 6 | B1 | More complex ideas in conversation | (later) |
@@ -50,38 +50,38 @@ Status key: ✅ covered · 🟡 partly covered · ❌ gap (the number is its pri
 | Describe colours | `col-basic` (6 of 9 items ⚑ waiting for parent check) | 🟡 |
 | Use the present tense / common verbs / describe actions | `verb-commands`, `verb-more`, `verb-sentences` | ✅ |
 | Describe your family | `fam-sentences` | ✅ |
-| Make basic questions | `every-questions` (Section 3) | 🟡 1: who/what/where/when/why/how as a grammar unit |
-| Say where things are | none | ❌ 2: in/on/under/near (n'ime, n'elu, n'okpuru) |
-| Tell your routine | none | ❌ 3: wake, wash, eat, go to work |
-| Identify household goods | none | ❌ 4 |
-| Talk about occupations | none | ❌ 5 |
-| Describe animals | none | ❌ 6 |
-| Discuss clothing | none | ❌ 7 |
-| Make basic statements, describe qualities and characteristics (adjectives) | none | ❌ 8: big/small/good/bad/new/old |
-| Express opinions | none | ❌ 9: "Echere m na…" |
-| Talk about nationalities | none | ❌ 10: Nigeria, Igbo/Yoruba/Hausa, England |
-| Use conjunctions / adverbs | none | ❌ 11–12 (na, ma, mana, kama) |
-| Advise your friends | none | ❌ 13 |
+| Make basic questions | `every-questions` (Section 3), `q-words` (unit `questions`; 2026-11-10) | 🟡 thin: "why" and "because" still unconfirmed |
+| Say where things are | `where-places`, `where-talk` (unit `whereis`; 2026-11-10) | ✅ |
+| Tell your routine | `day-morning`, `day-work` (unit `routine`; 2026-11-10) | 🟡 no confirmed word for "sleep", "wake up", "cook" |
+| Identify household goods | `home-rooms`, `home-things` (unit `home`; 2026-11-10) | 🟡 window and key ⚑; bathroom, TV, bed, lamp missing |
+| Talk about occupations | `job-words`, `job-talk` (unit `jobs`; 2026-11-10) | 🟡 mostly ⚑; driver, tailor, police, engineer missing |
+| Describe animals | `ani-farm`, `ani-wild`, `ani-talk` (unit `animals`; 2026-11-10) | ✅ |
+| Discuss clothing | `clo-wear`, `clo-talk` (unit `clothes`; 2026-11-10) | 🟡 trousers ⚑; shirt, socks, coat missing |
+| Make basic statements, describe qualities and characteristics (adjectives) | `des-size`, `des-quality` (unit `describe`; 2026-11-10) | ✅ ("hot" still missing) |
+| Express opinions | `op-think` (unit `opinions`; 2026-11-10) | ✅ |
+| Talk about nationalities | `ppl-words`, `ppl-talk` (unit `peoples`; 2026-11-10) | 🟡 Ghana, Africa, Britain not confirmed |
+| Use conjunctions / adverbs | `link-words`, `link-talk` (unit `linking`; 2026-11-10) | 🟡 "because", "or", "always" missing |
+| Advise your friends | `op-advice` (unit `opinions`; 2026-11-10) | 🟡 "Don't!" (Emela?) unconfirmed |
 
 ## Section 3 · A1
 | Vietnamese unit | Igbo coverage | Status |
 |---|---|---|
-| Discuss the time | `time-days`, `time-parts`, `time-market` | 🟡 1: clock time ("Ọ bụ elekere ole?") |
+| Discuss the time | `time-days`, `time-parts`, `time-market`, `clk-words`, `clk-talk` (unit `clock`; 2026-11-10) | 🟡 "Ọ bụ elekere ole?", early/late unconfirmed |
 | Identify body parts | `body-head`, `body-limbs` | ✅ |
 | Health | `body-health`, `every-help` | ✅ |
 | Use common phrases | `every-heart`, `every-celebrate` | ✅ |
-| Describe location | `every-places` | 🟡 |
-| Introduce the past tense | none | ❌ 2: -rV suffix (Eriri m nri) |
-| Use basic verbs (future) | none | ❌ 3: ga- (Aga m eri nri) |
-| Express feelings | none | ❌ 4: happy/sad/angry/tired (obi ụtọ, iwe) |
-| Describe yourself / people around you | none | ❌ 5 |
-| Chat with your friends / talk with coworkers | none | ❌ 6–7 |
-| Describe cities | none | ❌ 8: Enugu, Onitsha, Owerri, Lagos |
-| Describe nature / wild animals | none | ❌ 9–10 |
-| Discuss sports | none | ❌ 11 |
-| Talk about the arts | none | ❌ 12: music, dance, masquerade (mmanwụ) |
-| Express surprise | none | ❌ 13 ("Chei!", "Haa!") |
-| Discuss Igboland (in place of "Discuss Vietnam") | none | ❌ 14: towns, rivers, Ọjị (kola) |
+| Describe location | `every-places`, `where-*` (Section 2) | 🟡 |
+| Introduce the past tense | `past-form`, `past-talk` (unit `past`; 2026-11-10) | 🟡 most lines ⚑; negative past unconfirmed |
+| Use basic verbs (future) | `fut-form`, `fut-talk` (unit `future`; 2026-11-10) | ✅ |
+| Express feelings | `feel-words`, `feel-talk` (unit `feelings`; 2026-11-10) | 🟡 bored, excited missing |
+| Describe yourself / people around you | `pers-words`, `pers-talk` (unit `people`; 2026-11-10) | 🟡 kind, clever, fat, slim missing |
+| Chat with your friends / talk with coworkers | `chat-talk` (unit `chat`; 2026-11-10) | 🟡 |
+| Describe cities | `city-words`, `city-talk` (unit `cities`; 2026-11-10) | 🟡 city names kept in English spelling |
+| Describe nature / wild animals | `nat-world`, `nat-talk`, `ani-wild` (units `nature`, `animals`; 2026-11-10) | ✅ (rain, forest still missing) |
+| Discuss sports | `art-words`, `art-talk` (unit `arts`; 2026-11-10) | 🟡 football, wrestling, swimming only |
+| Talk about the arts | `art-words`, `art-talk` (unit `arts`; 2026-11-10) | 🟡 music, story; masquerade is in `igl-culture` |
+| Express surprise | `chat-wow` (unit `chat`; 2026-11-10) | 🟡 Haa! / Ewo! unconfirmed |
+| Discuss Igboland (in place of "Discuss Vietnam") | `igl-culture` (unit `igboland`; 2026-11-10) | 🟡 one lesson: kola, new yam, masquerade, king |
 | Politics, science, economy, astronomy, current events | none | ❌ 15–19 (lowest priority) |
 
 ## Section 4 · A2 (coming soon)
@@ -109,3 +109,4 @@ These come after Section 4 has content. They will follow the big courses' themes
 ## Log
 - 2026-11-10: Plan written. Swahili was rejected (only 3 sections). The plan follows Vietnamese for Sections 1–4 and the big courses for 5–8. The 11 existing units are grouped into Sections 1–3.
 - 2026-11-10: Section 1 filled (v1.3.0). Four new units (`eatingout`, `market`, `school`, `travel`; 13 lessons) and three new lessons in existing units (`greet-welcome`, `intro-from`, `fam-more`). 115 new items, 36 marked unsure; parent questions are in section K of QUESTIONS-FOR-PARENT.md. Weather was skipped on purpose (planned for a later section). Many items rest on one source, so Section 1 is a first draft until the parent answers.
+- 2026-11-10: Sections 2 and 3 filled (v1.4.0). 21 new units (11 in Section 2, 10 in Section 3), 41 lessons, 298 new items, 104 marked unsure; parent questions are in sections L and M of QUESTIONS-FOR-PARENT.md. Politics, science, economy, astronomy and current events were skipped on purpose. Some topics were thin (Asking Questions, Igboland: one lesson each).

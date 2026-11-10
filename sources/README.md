@@ -36,6 +36,14 @@ That's it. The next morning update (or any Claude session you ask) converts it t
 - [ ] https://elias.fas.harvard.edu/languages/igbo/beginning/8/igbo-family-system: Harvard: family ⭐
 - [ ] https://elias.fas.harvard.edu/node/266: Harvard: days, weeks, months ⭐
 - [ ] https://elias.fas.harvard.edu/languages/igbo/beginning: Harvard course contents (then save any unit that looks useful)
+- [ ] https://polyglotclub.com/wiki/Language/Igbo/Grammar/Adjectives: adjectives (403 to automated tools)
+- [ ] https://polyglotclub.com/wiki/Language/Igbo/Grammar/Adverbs: adverbs (403)
+- [ ] https://polyglotclub.com/wiki/Language/Igbo/Grammar/Tenses: tenses (403)
+- [ ] https://elias.fas.harvard.edu/languages/igbo/beginning/9/telling-time: Harvard unit 9, telling time ⭐ (site did not load)
+- [ ] https://elias.fas.harvard.edu/languages/igbo/beginning/15/making-plans-future: Harvard unit 15, future ⭐
+- [ ] https://elias.unix.fas.harvard.edu/index.php/node/261: Harvard unit 16, professions ⭐
+- [ ] https://elias.fas.harvard.edu/index.php/languages/Igbo/Beginning/20/buying-and-selling: Harvard unit 20 (and unit 21, directions)
+- [ ] https://elias.fas.harvard.edu/index.php/languages/igbo/beginning/17/my-house: Harvard unit 17, my house
 
 ⭐ = most useful
 

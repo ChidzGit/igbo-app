@@ -36,6 +36,15 @@ Status key: ✅ used in the app · 🔎 found, not mined yet · 🚫 blocked/unu
 | 🔎 | [YouTube: LearnIgbo](https://www.youtube.com/user/LearnIgbo/videos) · [YouTube channel UCbK07…](https://www.youtube.com/channel/UCbK07IrSaWaMuHymjkXALwQ) | Listening practice | Video, not mined. Good for daily listening. |
 | 🔎 | [Ethnologue: Igbo](https://www.ethnologue.com/language/ibo) | Background facts (speakers, dialects) | Mostly paywalled; low priority. |
 | 🚫 | [Columbia: Igbo index](http://www.columbia.edu/itc/mealac/pritchett/00fwp/igbo_index.html) | Igbo resources index | 403 to automated readers. **Save it yourself** into sources/inbox. |
+| ✅ | [Ezinaulo: Igbo vocabulary lessons](https://ezinaulo.com/igbo-lessons/) | Prepositions (in/on/under), house, animals, clothes, nature word lists | Used in v1.4.0 only as a second source (word lists, no sentences). |
+| ✅ | [Boston University 200-word Igbo: clothing](https://www.bu.edu/200word/igbo/clothing/) | Clothing words | Used in v1.4.0 as a second opinion; its word for trousers ("ịba") disagrees with the dictionary and was not used. |
+| ✅ | [Igbostudy: Learn Igbo verbs](https://www.igbostudy.com/blog/learn-igbo-verbs) + [animal names](https://www.igbostudy.com/blog/list-of-animal-names-in-igbo-language) | Past (-rV) and future (ga-) patterns, animal names | Used in v1.4.0. |
+| ✅ | [Latinum Institute: Igbo lesson 8](https://latinum.substack.com/p/lesson-8-igbo-a-latinum-institute) | Past and future sentences | Single source; sentences are marked ⚑. |
+| ✅ | [UCLA Phonetics Archive: Igbo conversation (1981)](http://archive.phonetics.ucla.edu/Language/IBO/ibo_conversation_1981_01.html) | "Why is she angry?" pattern | Used for a pattern only. |
+| ✅ | [NKENNE: kola nut in Igbo rituals](https://www.nkenne.com/blog/the-importance-of-kola-nut-in-igbo-rituals) | Kola phrases (Igboland unit) | Blog, single source; the kola lines are marked ⚑. |
+| 🚫 | [Polyglot Club: Igbo adjectives, adverbs, tenses](https://polyglotclub.com/wiki/Language/Igbo/Grammar/Adjectives) | Adjective, adverb and tense grammar | HTTP 403 to automated tools. **Save it yourself** (see sources/README.md). |
+| 🚫 | Harvard ELIAS Units 9, 15, 16, 20, 21 (telling time, future, professions, buying/selling, directions) | The best free lessons for the Section 2 and 3 topics | Site did not load from this machine (DNS failure). Save the pages yourself. |
+| 🔎 | [Census 2020 Igbo glossary (PDF)](https://www2.census.gov/programs-surveys/decennial/2020/resources/language-materials/glossaries/Igbo-Glossary.pdf) | Official-use words (urban, rural) | Seen in a search summary only; not opened. |
 | 💲 | Udemy, AmazingTalker, Linguashop, Selar courses | | Paid: not used. |
 
 ## Daily research log
@@ -59,3 +68,11 @@ Status key: ✅ used in the app · 🔎 found, not mined yet · 🚫 blocked/unu
 - Research helpers' "possible errors" in older items (ụka = church, ezinaụlọ, Biko chere, Nri a tọrọ ụtọ…) are listed as questions K1–K12 and were NOT applied. Only the missing dot in "Ebee ka ị si?" was fixed.
 - Audio: fetched 58 more native-speaker clips (Lingua Libre and Nkọwa okwu examples); 275 of 415 items now have audio.
 - Weather was left for a later section.
+
+### 2026-11-10 (night): v1.4.0 Sections 2 and 3 build-out
+- Eight research helpers wrote notes in sources/research (s2-questions-opinions, s2-location-home, s2-routine-jobs, s2-animals-clothing, s2-describe-link, s3-time-tenses, s3-feelings-people, s3-places-culture) from the saved pages, web searches and Nkọwa okwu checks.
+- Added 21 units (11 in Section 2, 10 in Section 3), 41 lessons and 298 items. 104 are marked ⚑ (single source, or sentences built from a pattern); they are rows in sections L and M of QUESTIONS-FOR-PARENT.md.
+- Left out because nothing confirmed them: "Don't!" (Emela), trousers/shirt/coat words, driver/police/tailor/engineer, hour word "awa", bored/excited/kind/clever, Haa!/Ewo!, rain/forest/lake words, street/house number. They are listed as "words I left out" in L-3 and M-3.
+- Research helpers' doubts about existing items (enyi tone, ndo, ugbu a, ụzọ, ọkụ) are parent questions L1–L11 and M1–M2; nothing existing was changed.
+- Blocked pages added to sources/README.md: Polyglot Club grammar pages (403), Harvard ELIAS units (DNS failure).
+- Skipped on purpose: politics, science, economy, astronomy and current events.
