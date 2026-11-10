@@ -1,0 +1,13 @@
+# Third-party copyrighted page text — must NOT be published
+sources/web-pages/
+sources/converted/
+sources/inbox/
+
+# Local tooling / agent config
+.claude/
+.agents/
+skills-lock.json
+
+# Python
+__pycache__/
+*.pyc

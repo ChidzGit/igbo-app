@@ -1,0 +1,45 @@
+# Mmụta Igbo 🦅
+
+A Duolingo-style app for learning Igbo every day, built only from free resources.
+
+## How to open it
+
+**Easiest:** double-click `Start Igbo App.bat`. It starts a tiny local server and opens the app in your browser.
+
+(Or run `python -m http.server 8765` in this folder and go to http://localhost:8765.)
+
+Progress is saved in your browser. Use **More → Export progress** to back it up or move it to another device.
+
+## What's inside
+
+- **Learn**: 11 sections (Alphabet, Greetings, Introductions, Numbers, Family, Food, Body, Colours, Time & Days, Action Words, Everyday Phrases), each a path of short lessons. The first lesson of every section is open; the rest unlock in order.
+- **Exercises**: new-word cards, multiple choice both ways, tap-the-pairs, type it in Igbo (with ị ọ ụ ṅ buttons), build-the-sentence, and **speaking** 🎤. Mistakes come back at the end of the lesson.
+- **Speaking**: record yourself saying the phrase and play it back. If your browser can recognise Igbo speech it scores you automatically; otherwise compare with the native speaker (🔊) and grade yourself. Turn it off under More → Speaking, or tap "Can't speak now". Use Chrome or Edge and allow the microphone.
+- **Daily test**: 10 questions from words you've learned, chosen by spaced repetition (weak and due words first). One score per day, with a history chart.
+- **Streak, XP and daily goal**, like Duolingo.
+- **Words**: every word, with a strength meter, search, and a 🔊 link to hear a native speaker on Nkọwa okwu.
+- **⚑ flags**: words still waiting for a native-speaker check (see `QUESTIONS-FOR-PARENT.md`).
+
+## Files
+
+| File | Purpose |
+|---|---|
+| `data/curriculum.js` | **All lesson content.** The morning routine edits this. |
+| `QUESTIONS-FOR-PARENT.md` | Uncertain words: fill in the answers with your parent. |
+| `RESOURCES.md` | Free sources found + daily research log. |
+| `sources/` | Every source used: saved pages as text, research notes, and an **inbox** for pages you save yourself (see `sources/README.md`). |
+| `tools/fetch_sources.py` | Turns web pages / saved HTML into compact text. |
+| `index.html`, `css/`, `js/` | The app itself. |
+
+## Morning update routine
+
+A scheduled task (**"Igbo curriculum morning update"**) runs every morning at 7:00 from 11 to 20 Nov 2026. Each run:
+1. converts any pages you dropped in `sources/inbox/`
+2. searches for new free Igbo resources and logs them in `RESOURCES.md`
+3. applies any answers you've written in `QUESTIONS-FOR-PARENT.md`
+4. adds or improves lessons in `data/curriculum.js` and bumps the version
+5. adds any new uncertain items to `QUESTIONS-FOR-PARENT.md`
+
+It only runs while the Claude desktop app is open. If the app is closed at 7:00, it runs the next time you open it.
+
+Each run is a **separate, fresh session**. It doesn't add to this chat's context. Find runs under **Scheduled** in the sidebar.
