@@ -618,3 +618,12 @@ main > .mi-stat-tiles { margin: 0 0 var(--space-4); }
 .mi-notice-head p { margin: 0; }
 .mi-tile { min-width: var(--tap-min); }
 .mi-card h2 .mi-icon--streak { color: var(--ochre); fill: var(--ochre); }
+
+/* Stages (numbered Sections) */
+.mi-stage { margin-top: var(--space-6); }
+.mi-stage-title { margin: 0; }
+.mi-stage-label { display: block; color: var(--ink-muted); }
+.mi-stage p { margin: var(--space-1) 0 0; }
+.mi-stage-next { margin-top: var(--space-6); opacity: 0.9; }
+.mi-stage-next h2 { margin: 0; }
+.mi-stage-next p { margin: var(--space-2) 0 0; }

@@ -13,15 +13,22 @@
             (also listed in QUESTIONS-FOR-PARENT.md). Shown in the app with a ⚑ flag.
     src     (optional) id of the source in `sources` below
 
+  Stages: see `stages` below; each lists the section ids (units) it contains.
+
   Lesson fields: id (never change once published, progress is stored by id),
   title, tip, items, type ("letters" = no typing exercises).
 */
 window.CURRICULUM = {
-  version: "1.1.0",
+  version: "1.2.0",
   updated: "2026-11-10",
 
   // Newest first. Shown in the app under More → "What's new".
   changelog: [
+    { version: "1.2.0", date: "2026-11-10", changes: [
+      "The course is now arranged into numbered Sections with CEFR levels (Intro, A1, A2, B1, B2), like Duolingo.",
+      "Sections 1–3 hold everything so far; Section 4 (A2) is next, and Sections 5–8 are the long-term goal.",
+      "Your progress is kept — no lessons were changed or removed."
+    ] },
     { version: "1.1.0", date: "2026-11-10", changes: [
       "Checked everything against the Omniglot pages you saved (phrases + numbers, with corrections by native speakers).",
       "Fixed: zero is 'oroghoro' (efu also accepted); 'see you later' is 'Ka ọmesịa'; 'Kedụ' is spelled with a dot.",
@@ -47,6 +54,20 @@ window.CURRICULUM = {
     { id: "wiki-cal", name: "Wikipedia: Igbo calendar", url: "https://en.wikipedia.org/wiki/Igbo_calendar", note: "Market days Eke, Orie, Afọ, Nkwọ." },
     { id: "omniglot", name: "Omniglot: Igbo numbers & phrases", url: "https://www.omniglot.com/language/phrases/igbo.php", note: "Free phrase & number lists (open in a normal browser)." },
     { id: "languagesandnumbers", name: "Languages and Numbers: Counting in Igbo", url: "https://www.languagesandnumbers.com/how-to-count-in-igbo/en/ibo/", note: "Number-building rules." }
+  ],
+
+  // Stages (shown as numbered Sections on the Learn screen, with CEFR level).
+  // Every section id appears in exactly one stage's `units`. When you add a new
+  // unit (section), also add its id to a stage's `units`. Empty stages show as "coming next".
+  stages: [
+    { id: "s1", number: 1, cefr: "Intro", title: "Essential phrases", focus: "Start with essential phrases and simple grammar.", units: ["alphabet","greetings","intro","family"] },
+    { id: "s2", number: 2, cefr: "A1", title: "Basic interactions", focus: "Words, phrases and grammar for basic interactions.", units: ["food","numbers","colours","verbs"] },
+    { id: "s3", number: 3, cefr: "A1", title: "Basic conversations", focus: "Foundational sentences for basic conversations.", units: ["time","body","everyday"] },
+    { id: "s4", number: 4, cefr: "A2", title: "Everyday topics", focus: "Use sentences in conversations about everyday topics.", units: [] },
+    { id: "s5", number: 5, cefr: "B1", title: "Wider topics", focus: "Form sentences about a wider variety of topics.", units: [] },
+    { id: "s6", number: 6, cefr: "B1", title: "Complex ideas", focus: "Communicate more complex ideas in conversations.", units: [] },
+    { id: "s7", number: 7, cefr: "B2", title: "Feelings & opinions", focus: "Talk about abstract feelings and opinions.", units: [] },
+    { id: "s8", number: 8, cefr: "B2", title: "Confident conversation", focus: "Converse confidently, even about specialised topics.", units: [] }
   ],
 
   sections: [
@@ -292,102 +313,6 @@ window.CURRICULUM = {
       ]
     },
 
-    /* ───────────────────────── 4. NUMBERS ───────────────────────── */
-    {
-      id: "numbers",
-      title: "Numbers",
-      igTitle: "Ọnụọgụgụ",
-      color: "#9a5f00",
-      description: "Count from 1 to a million. Igbo numbers are built like Lego: ten-and-one, ten-two (20)…",
-      lessons: [
-        {
-          id: "num-1-5",
-          title: "1 – 5",
-          tip: "otu, abụọ, atọ, anọ, ise — say them out loud every morning!",
-          items: [
-            { ig: "otu", en: "1 (one)", src: "languagesandnumbers" },
-            { ig: "abụọ", en: "2 (two)", src: "languagesandnumbers" },
-            { ig: "atọ", en: "3 (three)", src: "languagesandnumbers" },
-            { ig: "anọ", en: "4 (four)", src: "languagesandnumbers" },
-            { ig: "ise", en: "5 (five)", src: "languagesandnumbers" }
-          ]
-        },
-        {
-          id: "num-6-10",
-          title: "6 – 10",
-          tip: "9 has several forms: 'itoolu', 'iteghete' and 'itenanị'. All are used in different areas.",
-          items: [
-            { ig: "isii", en: "6 (six)", src: "languagesandnumbers" },
-            { ig: "asaa", en: "7 (seven)", src: "languagesandnumbers" },
-            { ig: "asatọ", en: "8 (eight)", alt: ["asato"], src: "languagesandnumbers" },
-            { ig: "itoolu", en: "9 (nine)", alt: ["itolu", "iteghete", "itenanị"], note: "Standard Igbo: itolu / itoolu. 'iteghete' is another regional form.", src: "nkowaokwu" },
-            { ig: "iri", en: "10 (ten)", src: "languagesandnumbers" },
-            { ig: "oroghoro", en: "0 (zero)", alt: ["efu"], note: "Omniglot (Imo-state school numbers) gives 'oroghoro'; some people say 'efu'.", src: "omniglot" }
-          ]
-        },
-        {
-          id: "num-11-19",
-          title: "11 – 19",
-          tip: "11–19 = iri na + number. 'na' means 'and'. So 13 = iri na atọ (ten and three).",
-          items: [
-            { ig: "iri na otu", en: "11 (eleven)", src: "languagesandnumbers" },
-            { ig: "iri na abụọ", en: "12 (twelve)", src: "languagesandnumbers" },
-            { ig: "iri na atọ", en: "13 (thirteen)" },
-            { ig: "iri na anọ", en: "14 (fourteen)" },
-            { ig: "iri na ise", en: "15 (fifteen)" },
-            { ig: "iri na isii", en: "16 (sixteen)" },
-            { ig: "iri na asaa", en: "17 (seventeen)" },
-            { ig: "iri na asatọ", en: "18 (eighteen)" },
-            { ig: "iri na itoolu", en: "19 (nineteen)", alt: ["iri na iteghete"] }
-          ]
-        },
-        {
-          id: "num-tens",
-          title: "20, 30 … 100+",
-          tip: "Tens = iri + number: 20 = iri abụọ ('ten two'). 25 = iri abụọ na ise. Older counting uses 'ọgụ' (a score of 20).",
-          items: [
-            { ig: "iri abụọ", en: "20 (twenty)", note: "Traditional form: 'ọgụ'.", src: "languagesandnumbers" },
-            { ig: "iri atọ", en: "30 (thirty)" },
-            { ig: "iri anọ", en: "40 (forty)" },
-            { ig: "iri ise", en: "50 (fifty)" },
-            { ig: "iri abụọ na ise", en: "25 (twenty-five)" },
-            { ig: "narị", en: "100 (one hundred)", alt: ["otu narị", "nnarị"], src: "nkowaokwu" },
-            { ig: "puku", en: "1,000 (one thousand)", alt: ["otu puku"], src: "languagesandnumbers" },
-            { ig: "nde", en: "1,000,000 (one million)", alt: ["otu nde"], src: "languagesandnumbers" }
-          ]
-        },
-        {
-          id: "num-using",
-          title: "Using numbers",
-          tip: "In Igbo the number comes AFTER the noun: 'ụmụaka atọ' = three children (children three).",
-          items: [
-            { ig: "ole", en: "how many / how much" },
-            { ig: "Ego ole?", en: "How much (money)?", alt: ["Ọ bụ ego ole?", "Ego ole ka ihe a bụ?"], src: "omniglot" },
-            { ig: "ụmụaka atọ", en: "three children" },
-            { ig: "nke mbụ", en: "first", alt: ["nke izizi"], src: "omniglot" },
-            { ig: "nke abụọ", en: "second" },
-            { ig: "naịra iri ise", en: "fifty naira", unsure: true }
-          ]
-        },
-        {
-          id: "num-ordinals",
-          title: "First, second & big numbers",
-          tip: "Ordinals = 'nke' + number: nke atọ = third. Exception: first = 'nke mbụ'. Big numbers: narị (100), puku (1,000), nde (million), ijeri (billion).",
-          items: [
-            { ig: "nke atọ", en: "third", src: "omniglot" },
-            { ig: "nke iri", en: "tenth", src: "omniglot" },
-            { ig: "otu narị na otu", en: "101 (one hundred and one)", src: "omniglot" },
-            { ig: "narị abụọ", en: "200 (two hundred)", src: "omniglot" },
-            { ig: "puku abụọ", en: "2,000 (two thousand)", src: "omniglot" },
-            { ig: "puku iri", en: "10,000 (ten thousand)", src: "omniglot" },
-            { ig: "otu ijeri", en: "1,000,000,000 (one billion)", src: "omniglot" },
-            { ig: "ọgụ", en: "20 (traditional base-20 count)", note: "Igbo traditionally counted in twenties (vigesimal). 400 = nnụ.", src: "omniglot" },
-            { ig: "nnụ", en: "400 (traditional: twenty twenties)", src: "omniglot" }
-          ]
-        }
-      ]
-    },
-
     /* ───────────────────────── 5. FAMILY ───────────────────────── */
     {
       id: "family",
@@ -497,54 +422,97 @@ window.CURRICULUM = {
       ]
     },
 
-    /* ───────────────────────── 7. BODY ───────────────────────── */
+    /* ───────────────────────── 4. NUMBERS ───────────────────────── */
     {
-      id: "body",
-      title: "The Body",
-      igTitle: "Ahụ",
-      color: "#0f7a72",
-      description: "Head, eyes, hands, feet — and saying something hurts.",
+      id: "numbers",
+      title: "Numbers",
+      igTitle: "Ọnụọgụgụ",
+      color: "#9a5f00",
+      description: "Count from 1 to a million. Igbo numbers are built like Lego: ten-and-one, ten-two (20)…",
       lessons: [
         {
-          id: "body-head",
-          title: "Head & face",
-          tip: "'isi' (head) is also used for 'main/chief' — 'isi ụlọ akwụkwọ' = head teacher.",
+          id: "num-1-5",
+          title: "1 – 5",
+          tip: "otu, abụọ, atọ, anọ, ise — say them out loud every morning!",
           items: [
-            { ig: "ahụ", en: "body" },
-            { ig: "isi", en: "head" },
-            { ig: "anya", en: "eye" },
-            { ig: "ntị", en: "ear" },
-            { ig: "imi", en: "nose" },
-            { ig: "ọnụ", en: "mouth" },
-            { ig: "ezé", en: "tooth", alt: ["eze"], note: "Tone matters: 'eze' (king) vs 'ezé' (tooth)." },
-            { ig: "ntutu", en: "hair" }
+            { ig: "otu", en: "1 (one)", src: "languagesandnumbers" },
+            { ig: "abụọ", en: "2 (two)", src: "languagesandnumbers" },
+            { ig: "atọ", en: "3 (three)", src: "languagesandnumbers" },
+            { ig: "anọ", en: "4 (four)", src: "languagesandnumbers" },
+            { ig: "ise", en: "5 (five)", src: "languagesandnumbers" }
           ]
         },
         {
-          id: "body-limbs",
-          title: "Hands, legs & more",
-          tip: "'aka' covers both hand and arm; 'ụkwụ' covers both foot and leg.",
+          id: "num-6-10",
+          title: "6 – 10",
+          tip: "9 has several forms: 'itoolu', 'iteghete' and 'itenanị'. All are used in different areas.",
           items: [
-            { ig: "aka", en: "hand / arm" },
-            { ig: "ụkwụ", en: "foot / leg" },
-            { ig: "mkpịsị aka", en: "finger" },
-            { ig: "olu", en: "neck (also voice)" },
-            { ig: "obi", en: "heart / chest" },
-            { ig: "afọ", en: "stomach / belly", note: "Also means 'year' — tone and context tell them apart." },
-            { ig: "azụ", en: "back (of the body)" }
+            { ig: "isii", en: "6 (six)", src: "languagesandnumbers" },
+            { ig: "asaa", en: "7 (seven)", src: "languagesandnumbers" },
+            { ig: "asatọ", en: "8 (eight)", alt: ["asato"], src: "languagesandnumbers" },
+            { ig: "itoolu", en: "9 (nine)", alt: ["itolu", "iteghete", "itenanị"], note: "Standard Igbo: itolu / itoolu. 'iteghete' is another regional form.", src: "nkowaokwu" },
+            { ig: "iri", en: "10 (ten)", src: "languagesandnumbers" },
+            { ig: "oroghoro", en: "0 (zero)", alt: ["efu"], note: "Omniglot (Imo-state school numbers) gives 'oroghoro'; some people say 'efu'.", src: "omniglot" }
           ]
         },
         {
-          id: "body-health",
-          title: "Feeling unwell",
-          tip: "'na-awa m' = 'is splitting me' — used for headaches.",
+          id: "num-11-19",
+          title: "11 – 19",
+          tip: "11–19 = iri na + number. 'na' means 'and'. So 13 = iri na atọ (ten and three).",
           items: [
-            { ig: "Isi na-awa m", en: "I have a headache" },
-            { ig: "Ahụ adịghị m mma", en: "I don't feel well" },
-            { ig: "Afọ na-eme m", en: "My stomach hurts", unsure: true },
-            { ig: "dọkịta", en: "doctor" },
-            { ig: "ọgwụ", en: "medicine" },
-            { ig: "Ndo", en: "Sorry (sympathy)" }
+            { ig: "iri na otu", en: "11 (eleven)", src: "languagesandnumbers" },
+            { ig: "iri na abụọ", en: "12 (twelve)", src: "languagesandnumbers" },
+            { ig: "iri na atọ", en: "13 (thirteen)" },
+            { ig: "iri na anọ", en: "14 (fourteen)" },
+            { ig: "iri na ise", en: "15 (fifteen)" },
+            { ig: "iri na isii", en: "16 (sixteen)" },
+            { ig: "iri na asaa", en: "17 (seventeen)" },
+            { ig: "iri na asatọ", en: "18 (eighteen)" },
+            { ig: "iri na itoolu", en: "19 (nineteen)", alt: ["iri na iteghete"] }
+          ]
+        },
+        {
+          id: "num-tens",
+          title: "20, 30 … 100+",
+          tip: "Tens = iri + number: 20 = iri abụọ ('ten two'). 25 = iri abụọ na ise. Older counting uses 'ọgụ' (a score of 20).",
+          items: [
+            { ig: "iri abụọ", en: "20 (twenty)", note: "Traditional form: 'ọgụ'.", src: "languagesandnumbers" },
+            { ig: "iri atọ", en: "30 (thirty)" },
+            { ig: "iri anọ", en: "40 (forty)" },
+            { ig: "iri ise", en: "50 (fifty)" },
+            { ig: "iri abụọ na ise", en: "25 (twenty-five)" },
+            { ig: "narị", en: "100 (one hundred)", alt: ["otu narị", "nnarị"], src: "nkowaokwu" },
+            { ig: "puku", en: "1,000 (one thousand)", alt: ["otu puku"], src: "languagesandnumbers" },
+            { ig: "nde", en: "1,000,000 (one million)", alt: ["otu nde"], src: "languagesandnumbers" }
+          ]
+        },
+        {
+          id: "num-using",
+          title: "Using numbers",
+          tip: "In Igbo the number comes AFTER the noun: 'ụmụaka atọ' = three children (children three).",
+          items: [
+            { ig: "ole", en: "how many / how much" },
+            { ig: "Ego ole?", en: "How much (money)?", alt: ["Ọ bụ ego ole?", "Ego ole ka ihe a bụ?"], src: "omniglot" },
+            { ig: "ụmụaka atọ", en: "three children" },
+            { ig: "nke mbụ", en: "first", alt: ["nke izizi"], src: "omniglot" },
+            { ig: "nke abụọ", en: "second" },
+            { ig: "naịra iri ise", en: "fifty naira", unsure: true }
+          ]
+        },
+        {
+          id: "num-ordinals",
+          title: "First, second & big numbers",
+          tip: "Ordinals = 'nke' + number: nke atọ = third. Exception: first = 'nke mbụ'. Big numbers: narị (100), puku (1,000), nde (million), ijeri (billion).",
+          items: [
+            { ig: "nke atọ", en: "third", src: "omniglot" },
+            { ig: "nke iri", en: "tenth", src: "omniglot" },
+            { ig: "otu narị na otu", en: "101 (one hundred and one)", src: "omniglot" },
+            { ig: "narị abụọ", en: "200 (two hundred)", src: "omniglot" },
+            { ig: "puku abụọ", en: "2,000 (two thousand)", src: "omniglot" },
+            { ig: "puku iri", en: "10,000 (ten thousand)", src: "omniglot" },
+            { ig: "otu ijeri", en: "1,000,000,000 (one billion)", src: "omniglot" },
+            { ig: "ọgụ", en: "20 (traditional base-20 count)", note: "Igbo traditionally counted in twenties (vigesimal). 400 = nnụ.", src: "omniglot" },
+            { ig: "nnụ", en: "400 (traditional: twenty twenties)", src: "omniglot" }
           ]
         }
       ]
@@ -572,6 +540,60 @@ window.CURRICULUM = {
             { ig: "anụnụanụnụ", en: "blue", alt: ["anụnụ anụnụ"], src: "nkowaokwu" },
             { ig: "aja aja", en: "brown (lit. 'sand-sand')", unsure: true },
             { ig: "ntụ ntụ", en: "grey (lit. 'ash-ash')", unsure: true }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── 10. VERBS ───────────────────────── */
+    {
+      id: "verbs",
+      title: "Action Words",
+      igTitle: "Ngwaa",
+      color: "#4f6b1c",
+      description: "Come, go, eat, drink — commands and 'I am …-ing' sentences.",
+      lessons: [
+        {
+          id: "verb-commands",
+          title: "Commands",
+          tip: "Igbo commands often add a vowel that matches the verb: ri → rie (eat!), ga → gaa (go!). This is vowel harmony.",
+          items: [
+            { ig: "bịa", en: "come!" },
+            { ig: "gaa", en: "go!" },
+            { ig: "rie", en: "eat!" },
+            { ig: "ṅụọ", en: "drink!" },
+            { ig: "nọdụ ala", en: "sit down!" },
+            { ig: "bilie", en: "get up! / stand up!" },
+            { ig: "lee", en: "look!", unsure: true },
+            { ig: "chere", en: "wait!" }
+          ]
+        },
+        {
+          id: "verb-more",
+          title: "More verbs",
+          tip: "These are command forms — the easiest way to learn a verb.",
+          items: [
+            { ig: "gụọ", en: "read! / count!" },
+            { ig: "dee", en: "write!" },
+            { ig: "kwuo", en: "say! / speak!" },
+            { ig: "nye", en: "give!", alt: ["nye m"] },
+            { ig: "were", en: "take!" },
+            { ig: "zụta", en: "buy!" },
+            { ig: "mee", en: "do! / make!" },
+            { ig: "kpọọ", en: "call!" }
+          ]
+        },
+        {
+          id: "verb-sentences",
+          title: "I am …-ing",
+          tip: "'Ana m…' = 'I am …-ing'. 'Ọ na-…' = 'He/she is …-ing'. The verb gets an 'a-' or 'e-' in front (vowel harmony again!).",
+          items: [
+            { ig: "Ana m eri nri", en: "I am eating food" },
+            { ig: "Ana m aga ahịa", en: "I am going to the market" },
+            { ig: "Ọ na-aga ụlọ akwụkwọ", en: "He/she is going to school" },
+            { ig: "Ana m agụ akwụkwọ", en: "I am reading a book / I am studying" },
+            { ig: "Achọrọ m ịga ụlọ", en: "I want to go home" },
+            { ig: "Gịnị ka ị na-eme?", en: "What are you doing?", alt: ["Gịnị ka i na-eme?"] }
           ]
         }
       ]
@@ -628,55 +650,54 @@ window.CURRICULUM = {
       ]
     },
 
-    /* ───────────────────────── 10. VERBS ───────────────────────── */
+    /* ───────────────────────── 7. BODY ───────────────────────── */
     {
-      id: "verbs",
-      title: "Action Words",
-      igTitle: "Ngwaa",
-      color: "#4f6b1c",
-      description: "Come, go, eat, drink — commands and 'I am …-ing' sentences.",
+      id: "body",
+      title: "The Body",
+      igTitle: "Ahụ",
+      color: "#0f7a72",
+      description: "Head, eyes, hands, feet — and saying something hurts.",
       lessons: [
         {
-          id: "verb-commands",
-          title: "Commands",
-          tip: "Igbo commands often add a vowel that matches the verb: ri → rie (eat!), ga → gaa (go!). This is vowel harmony.",
+          id: "body-head",
+          title: "Head & face",
+          tip: "'isi' (head) is also used for 'main/chief' — 'isi ụlọ akwụkwọ' = head teacher.",
           items: [
-            { ig: "bịa", en: "come!" },
-            { ig: "gaa", en: "go!" },
-            { ig: "rie", en: "eat!" },
-            { ig: "ṅụọ", en: "drink!" },
-            { ig: "nọdụ ala", en: "sit down!" },
-            { ig: "bilie", en: "get up! / stand up!" },
-            { ig: "lee", en: "look!", unsure: true },
-            { ig: "chere", en: "wait!" }
+            { ig: "ahụ", en: "body" },
+            { ig: "isi", en: "head" },
+            { ig: "anya", en: "eye" },
+            { ig: "ntị", en: "ear" },
+            { ig: "imi", en: "nose" },
+            { ig: "ọnụ", en: "mouth" },
+            { ig: "ezé", en: "tooth", alt: ["eze"], note: "Tone matters: 'eze' (king) vs 'ezé' (tooth)." },
+            { ig: "ntutu", en: "hair" }
           ]
         },
         {
-          id: "verb-more",
-          title: "More verbs",
-          tip: "These are command forms — the easiest way to learn a verb.",
+          id: "body-limbs",
+          title: "Hands, legs & more",
+          tip: "'aka' covers both hand and arm; 'ụkwụ' covers both foot and leg.",
           items: [
-            { ig: "gụọ", en: "read! / count!" },
-            { ig: "dee", en: "write!" },
-            { ig: "kwuo", en: "say! / speak!" },
-            { ig: "nye", en: "give!", alt: ["nye m"] },
-            { ig: "were", en: "take!" },
-            { ig: "zụta", en: "buy!" },
-            { ig: "mee", en: "do! / make!" },
-            { ig: "kpọọ", en: "call!" }
+            { ig: "aka", en: "hand / arm" },
+            { ig: "ụkwụ", en: "foot / leg" },
+            { ig: "mkpịsị aka", en: "finger" },
+            { ig: "olu", en: "neck (also voice)" },
+            { ig: "obi", en: "heart / chest" },
+            { ig: "afọ", en: "stomach / belly", note: "Also means 'year' — tone and context tell them apart." },
+            { ig: "azụ", en: "back (of the body)" }
           ]
         },
         {
-          id: "verb-sentences",
-          title: "I am …-ing",
-          tip: "'Ana m…' = 'I am …-ing'. 'Ọ na-…' = 'He/she is …-ing'. The verb gets an 'a-' or 'e-' in front (vowel harmony again!).",
+          id: "body-health",
+          title: "Feeling unwell",
+          tip: "'na-awa m' = 'is splitting me' — used for headaches.",
           items: [
-            { ig: "Ana m eri nri", en: "I am eating food" },
-            { ig: "Ana m aga ahịa", en: "I am going to the market" },
-            { ig: "Ọ na-aga ụlọ akwụkwọ", en: "He/she is going to school" },
-            { ig: "Ana m agụ akwụkwọ", en: "I am reading a book / I am studying" },
-            { ig: "Achọrọ m ịga ụlọ", en: "I want to go home" },
-            { ig: "Gịnị ka ị na-eme?", en: "What are you doing?", alt: ["Gịnị ka i na-eme?"] }
+            { ig: "Isi na-awa m", en: "I have a headache" },
+            { ig: "Ahụ adịghị m mma", en: "I don't feel well" },
+            { ig: "Afọ na-eme m", en: "My stomach hurts", unsure: true },
+            { ig: "dọkịta", en: "doctor" },
+            { ig: "ọgwụ", en: "medicine" },
+            { ig: "Ndo", en: "Sorry (sympathy)" }
           ]
         }
       ]

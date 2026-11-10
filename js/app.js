@@ -667,7 +667,7 @@
     </div></div>`;
 
     let foundCurrent = false;
-    C.sections.forEach((sec, si) => {
+    const renderSec = (sec, si) => {
       const done = sec.lessons.filter((l) => S.completed[l.id]).length;
       const tok = sec.id === "intro" ? "introductions" : sec.id; // section id → section-* colour token
       if (si) html += `<div class="mi-uli" aria-hidden="true"></div>`;
@@ -687,7 +687,32 @@
           <span class="mi-node-label text-caption" aria-hidden="true">${esc(les.title)}</span></button>`;
       });
       html += `</div></section>`;
+    };
+    const stages = Array.isArray(C.stages) ? C.stages : [];
+    const secById = {}; C.sections.forEach((s) => { secById[s.id] = s; });
+    const placed = new Set();
+    let si = 0;
+    stages.forEach((st) => {
+      const secs = (st.units || []).map((id) => secById[id]).filter(Boolean);
+      secs.forEach((s) => placed.add(s.id));
+      if (!secs.length) return;
+      const tot = secs.reduce((n, s) => n + s.lessons.length, 0);
+      const dn = secs.reduce((n, s) => n + s.lessons.filter((l) => S.completed[l.id]).length, 0);
+      html += `<div class="mi-stage"><h2 class="mi-stage-title text-title"><span class="mi-stage-label text-label">Section ${st.number} · ${esc(st.cefr)}</span> ${esc(st.title)}</h2>
+        <p class="text-gloss">${esc(st.focus)}</p><p class="text-caption mi-muted">${dn}/${tot} lessons in this section</p></div>`;
+      secs.forEach((s) => renderSec(s, si++));
     });
+    const rest = C.sections.filter((s) => !placed.has(s.id));
+    if (rest.length) {
+      if (stages.length) html += `<div class="mi-stage"><h2 class="mi-stage-title text-title">More topics</h2></div>`;
+      rest.forEach((s) => renderSec(s, si++));
+    }
+    const empty = stages.filter((st) => !(st.units || []).some((id) => secById[id]));
+    if (empty.length) {
+      const n = empty[0];
+      html += `<div class="mi-card mi-stage-next"><h2 class="text-heading"><span class="text-label">Coming next</span> Section ${n.number} · ${esc(n.cefr)} — ${esc(n.title)}</h2>
+        <p class="text-gloss">${esc(n.focus)} New units arrive with the morning updates.</p>${empty.length > 1 ? `<p class="text-caption">Then Sections ${empty[1].number}–${empty[empty.length - 1].number}: ${esc(empty[1].cefr)}–${esc(empty[empty.length - 1].cefr)}</p>` : ""}</div>`;
+    }
     html += `<p class="text-caption mi-muted mi-center mi-mt-8">Tip: every section's first lesson is open — jump into any topic you like.</p>`;
     app.innerHTML = html;
 
