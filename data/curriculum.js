@@ -19,11 +19,18 @@
   title, tip, items, type ("letters" = no typing exercises).
 */
 window.CURRICULUM = {
-  version: "1.5.0",
+  version: "1.6.0",
   updated: "2026-11-10",
 
   // Newest first. Shown in the app under More → "What's new".
   changelog: [
+    { version: "1.6.0", date: "2026-11-10", changes: [
+      "Section 5 (B1) is now open: 11 new units, 21 lessons and 157 new words, phrases and sentences.",
+      "New units: Memories, Hopes & Dreams, Work & Business, Studies & Exams, Accidents & Injuries, Friends & Relationships, Housework, Giving Directions, News, Media & Film, Technology, and Community & Environment.",
+      "B1 means longer sentences, so most lessons are full sentences. They explain 'when I was a child' (mgbe m bụ nwata), 'used to' (-karị), 'if' (ọ bụrụ na) and 'I want to become' (achọrọ m ịghọ).",
+      "80 of the 157 are marked ⚑ because only one source had them, or we built the sentence from a pattern. They are on the list for a native speaker (section O of QUESTIONS-FOR-PARENT.md).",
+      "Left out on purpose because nothing confirmed them: pass and fail (an exam), degree, result, cut, bleed, swollen, first aid, iron, rubbish, bridge, charger, battery, password, video, actor and singer."
+    ] },
     { version: "1.5.0", date: "2026-11-10", changes: [
       "Section 4 (A2) is now open: 9 new units, 24 lessons and 181 new words, phrases and sentences.",
       "New units: Proverbs (Ilu), Discussing & Comparing, Custom & Respect, Life Events, Chi, Ancestors & Folktales (with a little Igbo history), Weather & Seasons, Cooking, At the Doctor, and Plans, Invitations & Calls.",
@@ -96,6 +103,9 @@ window.CURRICULUM = {
     { id: "wiki-nri", name: "Wikipedia: Kingdom of Nri", url: "https://en.wikipedia.org/wiki/Kingdom_of_Nri", note: "History of Nri and Igbo-Ukwu. Facts only; the Igbo sentences are ours, marked ⚑." },
     { id: "wiki-mbeku", name: "Wikipedia: Mbeku (tortoise tales)", url: "https://en.wikipedia.org/wiki/Mbeku", note: "Summary of tortoise folktales. The Igbo sentences are ours, marked ⚑." },
     { id: "wiki-marriage", name: "Wikipedia: Traditional marriage in Igbo culture", url: "https://en.wikipedia.org/wiki/Traditional_marriage_in_Igbo_culture", note: "Stage names of a traditional wedding." },
+    { id: "nollysenti", name: "Nollysenti: Igbo film review dataset", url: "https://huggingface.co/datasets/Davlan/nollysenti/blob/main/ig/train.tsv", note: "Real Igbo film reviews. Used only for 'ihe nkiri' (film); single source, so marked ⚑." },
+    { id: "igstyle", name: "Igbo style guide (community, GitHub)", url: "https://www.github.com/bobreyes/styleguides/blob/master/docs/ig/README.md", note: "Technology terms such as ịntanetị. Not an official body, so marked ⚑." },
+    { id: "usefulphrases", name: "Useful phrases in Igbo (saved page)", url: "sources/converted/useful-phrases-in-igbo.md", note: "A saved phrase list. Single source, so marked ⚑." },
     { id: "umuigbo", name: "umuigbo.com: Child naming ceremony in Igbo culture", url: "https://umuigbo.com/child-naming-ceremony-in-igbo-culture/igbo-culture", note: "Describes the naming ceremony; single source, so marked ⚑." }
   ],
 
@@ -107,7 +117,7 @@ window.CURRICULUM = {
     { id: "s2", number: 2, cefr: "A1", title: "Basic interactions", focus: "Words, phrases and grammar for basic interactions.", units: ["food","numbers","colours","verbs","questions","whereis","routine","home","jobs","animals","clothes","describe","opinions","peoples","linking"] },
     { id: "s3", number: 3, cefr: "A1", title: "Basic conversations", focus: "Foundational sentences for basic conversations.", units: ["time","body","everyday","clock","past","future","feelings","people","chat","cities","nature","arts","igboland"] },
     { id: "s4", number: 4, cefr: "A2", title: "Everyday topics", focus: "Use sentences in conversations about everyday topics.", units: ["ilu","discuss","omenala","ceremonies","beliefs","weather","cooking","doctor","plans"] },
-    { id: "s5", number: 5, cefr: "B1", title: "Wider topics", focus: "Form sentences about a wider variety of topics.", units: [] },
+    { id: "s5", number: 5, cefr: "B1", title: "Wider topics", focus: "Form sentences about a wider variety of topics.", units: ["memories","hopes","career","exams","injuries","relations","chores","directions","media","tech","community"] },
     { id: "s6", number: 6, cefr: "B1", title: "Complex ideas", focus: "Communicate more complex ideas in conversations.", units: [] },
     { id: "s7", number: 7, cefr: "B2", title: "Feelings & opinions", focus: "Talk about abstract feelings and opinions.", units: [] },
     { id: "s8", number: 8, cefr: "B2", title: "Confident conversation", focus: "Converse confidently, even about specialised topics.", units: [] }
@@ -2333,6 +2343,416 @@ window.CURRICULUM = {
             { ig: "Ezigaara m Echefula ozi", en: "I sent Echefula a message", alt: ["Ezigaara m Echefula ozi."], note: "A dictionary example. Swap in another name.", src: "nkowaokwu" },
             { ig: "Enwere m ike ịnweta nọmba gị?", en: "Can I have your number?", alt: ["Enwere m ike inweta nọmba gị?"], unsure: true, src: "wikivoyage" },
             { ig: "Anaghị m anụ gị", en: "I cannot hear you", alt: ["Anaghị m anụ gị."], unsure: true, src: "wikivoyage" }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── MEMORIES (Section 5) ───────────────────────── */
+    {
+      id: "memories",
+      title: "Memories",
+      color: "#7f5420",
+      description: "Remember and forget, and talk about when you were a child.",
+      lessons: [
+        {
+          id: "mem-words",
+          title: "Remembering",
+          tip: "'mgbe' means 'when'. 'Achọghị m …' means 'I do not want to …', and the verb after it takes the 'i-' form: icheta (to remember), ichefu (to forget). Those two sentences come straight from the dictionary.",
+          items: [
+            { ig: "cheta", en: "remember", alt: ["chetà", "icheta"], src: "nkowaokwu" },
+            { ig: "chefu", en: "forget", alt: ["chefuo", "ichefu"], note: "The dictionary writes chefù. Some people write chefuo.", src: "nkowaokwu" },
+            { ig: "Achọghị m icheta ihe mere ụbọchị ahụ", en: "I do not want to remember what happened that day", alt: ["Achọghị m icheta ihe mere ụbọchị ahụ."], src: "nkowaokwu" },
+            { ig: "Achọghị m ichefu ihe ndị a", en: "I do not want to forget these things", alt: ["Achọghị m ichefu ihe ndị a."], src: "nkowaokwu" },
+            { ig: "n'oge ọkpụ", en: "long ago (in the far past)", note: "'ọkpụ' is an old word for the distant past.", src: "nkowaokwu" },
+            { ig: "N'oge ọkpụ, ekwentị adịghị ire", en: "Long ago, phones were not on sale", alt: ["N'oge ọkpụ, ekwentị adịghị ire."], note: "A dictionary example. My English is a rough reading: adịghị = is not.", unsure: true, src: "nkowaokwu" },
+            { ig: "afọ gara aga", en: "last year", alt: ["afọ gara aga."], note: "'gara aga' = passed, ago. The dictionary has it only inside 'afọ atọ gara aga' (three years ago).", unsure: true, src: "wikivoyage" },
+            { ig: "Achọrọ m icheta ụbọchị mbụ m gara ụlọ akwụkwọ", en: "I want to remember the first day I went to school", alt: ["Achọrọ m icheta ụbọchị mbụ m gara ụlọ akwụkwọ."], unsure: true }
+          ]
+        },
+        {
+          id: "mem-young",
+          title: "When I was young",
+          tip: "'Mgbe m bụ nwata' = when I was a child ('bụ' takes its past meaning from 'mgbe'). Put -karị on a verb after 'na-' to say you did it often, or used to: 'm na-agakarị' = I often went. 'Have you ever …?' uses -bu- and 'have never' uses -beghị, as in 'Ahụbeghị m mbe mbụ' (Animals). We still need a confirmed 'have ever' form.",
+          items: [
+            { ig: "mgbe m bụ nwata", en: "when I was a child", alt: ["mgbe m bụ nwata."], note: "Built on the dictionary example 'mgbe m bụ nwaakwụkwọ' (when I was a student).", unsure: true },
+            { ig: "na-agakarị", en: "often goes / used to go", note: "-karị = habitually, usually (dictionary). 'na-agakarị' is built from it.", unsure: true, src: "nkowaokwu" },
+            { ig: "Mgbe m bụ nwata, m na-agakarị ahịa n'ụtụtụ", en: "When I was a child, I often went to the market in the morning", alt: ["Mgbe m bụ nwata, m na-agakarị ahịa n'ụtụtụ."], unsure: true },
+            { ig: "Mgbe m bụ nwata, m na-anụkarị akụkọ ifo n'abalị", en: "When I was a child, I often heard folktales at night", alt: ["Mgbe m bụ nwata, m na-anụkarị akụkọ ifo n'abalị."], unsure: true },
+            { ig: "Afọ atọ gara aga, m gara Enugu", en: "Three years ago, I went to Enugu", alt: ["Afọ atọ gara aga, m gara Enugu."], unsure: true },
+            { ig: "Mgbe mbụ m gara ụlọ akwụkwọ, m chetara ya ruo ugbu a", en: "The first time I went to school, I still remember it today", note: "'ruo ugbu a' = until now.", unsure: true },
+            { ig: "Ị chetara ihe ọ bụla mgbe ị bụ nwata?", en: "Do you remember anything from when you were a child?", unsure: true },
+            { ig: "Ee, m chetara ya", en: "Yes, I remember it", alt: ["Ee, m chetara ya."], unsure: true }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── HOPES & DREAMS (Section 5) ───────────────────────── */
+    {
+      id: "hopes",
+      title: "Hopes & Dreams",
+      color: "#6d4bc4",
+      description: "Dreams, hopes and plans, and what you want to become.",
+      lessons: [
+        {
+          id: "hope-words",
+          title: "Hope and dreams",
+          tip: "'nrọ' = a dream, and you 'rọ' a dream: 'nrọ m rọrọ' = the dream I dreamed. 'ghọ' = become or turn into. 'Achọrọ m ịbụ …' = I want to be …. The dictionary sentences here are real examples.",
+          items: [
+            { ig: "olileanya", en: "hope", alt: ["olịleanya"], note: "One blog spells it with a dot under the i.", unsure: true },
+            { ig: "nrọ", en: "dream", src: "nkowaokwu" },
+            { ig: "Ụdị nrọ m rọrọ n'abalị gara aga, aghọtaghị m ya", en: "The kind of dream I had last night, I did not understand it", alt: ["Ụdị nrọ m rọrọ n'abalị gara aga, aghọtaghị m ya."], src: "nkowaokwu" },
+            { ig: "atụmatụ", en: "plan", note: "A planned set of steps to reach a goal.", src: "nkowaokwu" },
+            { ig: "otu ụbọchị", en: "one day (someday)", unsure: true },
+            { ig: "Achọrọ m ịbụ dọkịta", en: "I want to be a doctor", alt: ["Achọrọ m ịbụ dọkịta."], unsure: true },
+            { ig: "Achọrọ m ịghọ dọkịta n'afọ na-abịa abịa", en: "I want to become a doctor next year", alt: ["Achọrọ m ịghọ dọkịta n'afọ na-abịa abịa."], unsure: true }
+          ]
+        },
+        {
+          id: "hope-plans",
+          title: "Plans and wishes",
+          tip: "'ga-' makes the future. Add a time phrase like 'afọ na-abịa abịa' (next year) or 'otu ụbọchị' (one day). 'Ọ bụrụ na' means 'if', so 'Ọ bụrụ na Chukwu kwe' = if God agrees. These are built from patterns and are on the list for a native speaker.",
+          items: [
+            { ig: "afọ na-abịa abịa", en: "next year", alt: ["afọ n'abịa abịa", "afọ na-abịa abịa."], note: "Wikivoyage has it. A dictionary example uses the same phrase but is translated 'next month'.", unsure: true, src: "wikivoyage" },
+            { ig: "N'afọ na-abịa abịa, m ga-aga Enugu", en: "Next year, I will go to Enugu", alt: ["N'afọ na-abịa abịa, m ga-aga Enugu."], unsure: true },
+            { ig: "Otu ụbọchị, m ga-enwe ụlọ m n'obodo m", en: "One day, I will have my own house in my town", alt: ["Otu ụbọchị, m ga-enwe ụlọ m n'obodo m."], unsure: true },
+            { ig: "Olileanya m bụ na m ga-enweta ọrụ ọhụrụ", en: "My hope is that I will get a new job", alt: ["Olileanya m bụ na m ga-enweta ọrụ ọhụrụ."], unsure: true },
+            { ig: "Ọ bụrụ na Chukwu kwe, m ga-abịa echi", en: "If God agrees, I will come tomorrow", alt: ["Ọ bụrụ na Chukwu kwe, m ga-abịa echi."], unsure: true },
+            { ig: "Ọ ga-adị mma", en: "It will be fine", alt: ["Ọ ga-adị mma."], unsure: true },
+            { ig: "Gịnị ka ị chọrọ ịbụ?", en: "What do you want to be?", unsure: true },
+            { ig: "Achọrọ m ịbụ onye ndu n'obodo m", en: "I want to be a leader in my town", alt: ["Achọrọ m ịbụ onye ndu n'obodo m."], unsure: true },
+            { ig: "Ọ bụ atụmatụ dị mma", en: "That is a good plan", alt: ["Ọ bụ atụmatụ dị mma."], unsure: true }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── WORK & BUSINESS (Section 5) ───────────────────────── */
+    {
+      id: "career",
+      title: "Work & Business",
+      color: "#157a43",
+      description: "Trade and business, pay, and talking about your work.",
+      lessons: [
+        {
+          id: "car-trade",
+          title: "Business and trade",
+          tip: "'azụmahịa' = business or trade (from ahịa, trade, and zụ, buy). 'uru' = profit or gain. To say a deal did not work out, use 'adabaghị'. The dictionary sentences below show how the words are used.",
+          items: [
+            { ig: "azụmahịa", en: "business / trade", src: "nkowaokwu" },
+            { ig: "ụlọ ahịa", en: "shop", note: "Wikivoyage uses it for a bookshop. The dictionary has no entry for the phrase.", unsure: true, src: "wikivoyage" },
+            { ig: "uru", en: "profit / gain", src: "nkowaokwu" },
+            { ig: "Anaghị ere akwa n'ahịa ahụ", en: "Clothes are not sold at that market", alt: ["Anaghị ere akwa n'ahịa ahụ."], src: "nkowaokwu" },
+            { ig: "Azụmahịa ya na Okey adabaghị", en: "His business with Okey did not work out", alt: ["Azụmahịa ya na Okey adabaghị."], src: "nkowaokwu" },
+            { ig: "Ọ bụ onye ahịa ọma", en: "She is a good trader", alt: ["Ọ bụ onye ahịa ọma."], unsure: true },
+            { ig: "Amalitere m azụmahịa nke m", en: "I started my own business", alt: ["Amalitere m azụmahịa nke m."], note: "'amalite' (to start) was not confirmed by a dictionary.", unsure: true }
+          ]
+        },
+        {
+          id: "car-work",
+          title: "At work",
+          tip: "'ụgwọ ọrụ' = pay for work (ụgwọ, payment + ọrụ, work). 'ọrụ ike' = hard work (ike = strength). The dictionary writes 'office' as one word, ụlọọrụ; the app writes ụlọ ọrụ.",
+          items: [
+            { ig: "ụgwọ ọrụ", en: "wages / pay for work", src: "nkowaokwu" },
+            { ig: "ọrụ ike", en: "hard work", unsure: true },
+            { ig: "Ọ na-arụ ọrụ ike", en: "She works hard", alt: ["Ọ na-arụ ọrụ ike."], note: "Built sentence. We have not confirmed 'rụ' for 'to work' (see the list for a native speaker).", unsure: true },
+            { ig: "Ụlọ ọrụ ahụ buru ibu", en: "That company is big", alt: ["Ụlọọrụ ahụ buru ibu", "Ụlọ ọrụ ahụ buru ibu."], note: "A dictionary example (spelled ụlọọrụ there). My English for it is a reading of buru ibu (big).", src: "nkowaokwu" },
+            { ig: "Ị chọrọ ịmalite azụmahịa nke gị?", en: "Do you want to start your own business?", unsure: true },
+            { ig: "Ee. Ego dị mkpa", en: "Yes. Money is important", alt: ["Ee. Ego dị mkpa."], unsure: true },
+            { ig: "Uru bụ ihe m chọrọ", en: "Profit is what I want", alt: ["Uru bụ ihe m chọrọ."], unsure: true },
+            { ig: "Ọ bụ nwanyị ahịa", en: "She is a businesswoman", alt: ["Ọ bụ nwanyị ahịa."], unsure: true }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── STUDIES & EXAMS (Section 5) ───────────────────────── */
+    {
+      id: "exams",
+      title: "Studies & Exams",
+      color: "#4b4fc4",
+      description: "Exams, certificates, university, and studying hard.",
+      lessons: [
+        {
+          id: "exam-ule",
+          title: "Exams",
+          tip: "'ule' = exam. 'imụ' = to learn or study, and 'Ana m amụ …' = I am learning …. The sentences with the dictionary as source are real examples. We could not confirm words for pass, fail or result, so they are left out for now.",
+          items: [
+            { ig: "ule", en: "exam / test", src: "nkowaokwu" },
+            { ig: "Ule anyị ga-ebido n'izụụka ọzọ", en: "Our exams will start next week", alt: ["Ule anyị ga-ebido n'izụụka ọzọ."], src: "nkowaokwu" },
+            { ig: "asambodo", en: "certificate", src: "nkowaokwu" },
+            { ig: "Asambodo m ga-abụ ihe kacha mkpa", en: "My certificate will be the most important thing", alt: ["Asambodo m ga-abụ ihe kacha mkpa."], unsure: true },
+            { ig: "imụ", en: "to learn / to study", note: "Not the same as 'amụ' (a different word). Use imụ for learning.", src: "nkowaokwu" },
+            { ig: "Ana m amụ mgbakọ na mwepụ", en: "I am learning addition and subtraction", alt: ["Ana m amụ mgbakọ na mwepụ."], src: "nkowaokwu" }
+          ]
+        },
+        {
+          id: "exam-uni",
+          title: "University",
+          tip: "'mahadum' = university. 'nwa akwụkwọ' = student, and 'ịgụ akwụkwọ' = to read or study (gụ = read, as in the school lessons). 'Ọ ga-abanye …' = she will enter ….",
+          items: [
+            { ig: "mahadum", en: "university", src: "nkowaokwu" },
+            { ig: "Ọ bụ nwa akwụkwọ mahadum", en: "He is a university student", alt: ["Ọ bụ nwa akwụkwọ mahadum."], unsure: true },
+            { ig: "onye nkụzi mahadum", en: "university lecturer", alt: ["onye nkụzi mahadum."], unsure: true },
+            { ig: "Ọ ga-abanye mahadum n'afọ na-abịa abịa", en: "She will enter university next year", alt: ["Ọ ga-abanye mahadum n'afọ na-abịa abịa."], note: "A dictionary example. It translates the last words as 'next month', so the list for a native speaker asks which is right.", unsure: true, src: "nkowaokwu" },
+            { ig: "Ị na-agụ akwụkwọ ike?", en: "Are you studying hard?", unsure: true },
+            { ig: "Ọ ka mma ịgụ akwụkwọ ike", en: "It is better to study hard", alt: ["Ọ ka mma ịgụ akwụkwọ ike."], unsure: true }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── ACCIDENTS & INJURIES (Section 5) ───────────────────────── */
+    {
+      id: "injuries",
+      title: "Accidents & Injuries",
+      color: "#b0213f",
+      description: "Falls, broken bones, wounds, and calling for help.",
+      lessons: [
+        {
+          id: "inj-hurt",
+          title: "Hurt",
+          tip: "'A gbajiri m ụkwụ m' literally means 'my leg broke'. gbajiri is for long, thin things like legs and sticks. Swap 'ụkwụ' for another body part you know. We could not confirm words for 'cut', 'bleed' or 'swollen' yet.",
+          items: [
+            { ig: "ihe mberede", en: "accident", note: "Wikivoyage uses it in 'ụgbọ ihe mberede' (ambulance). The dictionary's closest headword differs in tone.", unsure: true, src: "wikivoyage" },
+            { ig: "Ihe mberede mere!", en: "An accident happened!", unsure: true },
+            { ig: "ọkpụkpụ", en: "bone", src: "nkowaokwu" },
+            { ig: "A gbajiri m ụkwụ m", en: "I broke my leg", alt: ["A gbajiri m ụkwụ m.", "Agbajiri m ụkwụ m"], src: "nkowaokwu" },
+            { ig: "Ọ gbajiri ụkwụ ya", en: "He broke his leg", alt: ["Ọ gbajiri ụkwụ ya."], unsure: true },
+            { ig: "ọnya", en: "wound", src: "nkowaokwu" },
+            { ig: "Apa ahụ bụ ebe o nwere ọnya", en: "That scar is where he had a wound", alt: ["Apa ahụ bụ ebe o nwere ọnya."], src: "nkowaokwu" },
+            { ig: "ọbara", en: "blood", src: "nkowaokwu" }
+          ]
+        },
+        {
+          id: "inj-help",
+          title: "Getting help",
+          tip: "Say 'Ndo' first to someone who is hurt (you learned it in Greetings). 'Kpachara anya!' is meant as 'Be careful!'. 'ambulans' is the English word; Wikivoyage has 'ụgbọ ihe mberede'. These are on the list for a native speaker.",
+          items: [
+            { ig: "Kpachara anya!", en: "Be careful!", unsure: true },
+            { ig: "Ọ dị gị mgbu?", en: "Are you hurt? (Does it hurt you?)", unsure: true },
+            { ig: "Amaka, sị ya ndo", en: "Amaka, say sorry to him", alt: ["Amaka, sị ya ndo."], src: "nkowaokwu" },
+            { ig: "Kpọọ ambulans!", en: "Call an ambulance!", note: "Borrowed from English.", unsure: true, src: "ilanguages" },
+            { ig: "ụgbọ ihe mberede", en: "ambulance", alt: ["ụgbọ ihe mberede."], unsure: true, src: "wikivoyage" },
+            { ig: "bandeeji", en: "bandage", note: "Borrowed from English.", unsure: true, src: "wikivoyage" },
+            { ig: "daa", en: "to fall", note: "The dictionary headword is dà (low tone). A high-tone dá means to hit.", unsure: true }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── FRIENDS & RELATIONSHIPS (Section 5) ───────────────────────── */
+    {
+      id: "relations",
+      title: "Friends & Relationships",
+      color: "#a8336f",
+      description: "Love, marriage, promises, forgiveness and jealousy.",
+      lessons: [
+        {
+          id: "rel-love",
+          title: "Love and promises",
+          tip: "'ịhụnanya' = love. 'lụ' = to marry (a man marries a woman), and the dictionary example uses the command 'Lụọ'. 'nkwa' = a promise. 'I love you' is already in Everyday: 'Ahụrụ m gị n'anya'.",
+          items: [
+            { ig: "ịhụnanya", en: "love", alt: ["ihunanya", "ịhụ̀naanya"], src: "nkowaokwu" },
+            { ig: "Agụụ gị na-agụ m", en: "I miss you", alt: ["Obi gị na-eme m.", "Obi gị na-eme m"], note: "Literally 'hunger for you is hungering me'. 'Obi gị na-eme m' is also listed by one phrasebook.", unsure: true, src: "usefulphrases" },
+            { ig: "lụ", en: "to marry", src: "nkowaokwu" },
+            { ig: "Lụọ onye ọ ga-adabara gị na ya", en: "Marry the person who suits you", alt: ["Lụọ onye ọ ga-adabara gị na ya."], src: "nkowaokwu" },
+            { ig: "Achọrọ m ịlụ gị", en: "I want to marry you", alt: ["Achọrọ m ịlụ gị."], src: "nkowaokwu" },
+            { ig: "nkwa", en: "promise", src: "nkowaokwu" },
+            { ig: "Ada mezuru nkwa ya", en: "Ada kept her promise", alt: ["Ada mezuru nkwa ya."], src: "nkowaokwu" },
+            { ig: "Anyị bụ enyi ruo afọ iri", en: "We have been friends for ten years", alt: ["Anyị bụ enyi ruo afọ iri."], unsure: true }
+          ]
+        },
+        {
+          id: "rel-sorry",
+          title: "Sorry and forgiveness",
+          tip: "'Biko' (please) comes before 'gbaghara m'. 'sị ya ndo' = say sorry to him or her (sị = say). 'ekworo' = jealousy or envy.",
+          items: [
+            { ig: "gbaghara", en: "to forgive", src: "nkowaokwu" },
+            { ig: "Biko, gbaghara m", en: "Please forgive me", alt: ["Biko, gbaghara m."], src: "nkowaokwu" },
+            { ig: "M gbaghara gị", en: "I forgive you", alt: ["M gbaghara gị."], unsure: true },
+            { ig: "sị ya ndo", en: "say sorry to him / her", alt: ["sị ya ndo."], src: "nkowaokwu" },
+            { ig: "ekworo", en: "jealousy / envy", src: "nkowaokwu" },
+            { ig: "Ekworo ehika ebe a", en: "There is too much envy here", alt: ["Ekworo ehika ebe a."], src: "nkowaokwu" }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── HOUSEWORK (Section 5) ───────────────────────── */
+    {
+      id: "chores",
+      title: "Housework",
+      color: "#4f6b1c",
+      description: "Washing, cleaning, sweeping and helping at home.",
+      lessons: [
+        {
+          id: "chore-clean",
+          title: "Cleaning and washing",
+          tip: "'sa' = wash (your body, plates). 'sụ akwa' = wash clothes: sụ is the clothes-washing verb, and 'yi' is to wear. 'hicha' = wipe, clean, mop. 'za ụlọ' = sweep the house. 'sa efere' is wash plates.",
+          items: [
+            { ig: "sa", en: "to wash", note: "'Ana m asa ahụ' (Daily Routine) is the same verb.", src: "nkowaokwu" },
+            { ig: "sụ akwa", en: "to wash clothes", note: "Seen in 'Anyị na-asụ akwa Satọde ọbụla' (Days of the week). The dictionary's own entry for sụ gives 'to have a garment on', so we ask a native speaker.", unsure: true, src: "nkowaokwu" },
+            { ig: "Biko, za ụlọ", en: "Please sweep the house", alt: ["Biko, za ụlọ."], note: "Built with 'za ụlọ' (sweep the house), which no dictionary confirmed.", unsure: true },
+            { ig: "hicha", en: "to wipe / clean / mop", src: "nkowaokwu" },
+            { ig: "Biko, sa efere ndị a", en: "Please wash these plates", alt: ["Biko, sa efere ndị a."], unsure: true, src: "wikivoyage" },
+            { ig: "Ndụka hichara akpụkpọ ụkwụ m", en: "Nduka cleaned my shoe", alt: ["Ndụka hichara akpụkpọ ụkwụ m."], src: "nkowaokwu" },
+            { ig: "Biko, hicha ụlọ m", en: "Please clean my room", alt: ["Biko, hicha ụlọ m."], unsure: true, src: "wikivoyage" }
+          ]
+        },
+        {
+          id: "chore-help",
+          title: "Helping at home",
+          tip: "'ezi' (a different word from 'ezi', pig) is the family compound, the shared yard. 'Ị ga-enyere m aka?' = can you help me? and 'M ga-enyere gị aka' = I can help you. Dialect varies (the fetch-water line uses an older dialect form).",
+          items: [
+            { ig: "ọrụ ụlọ", en: "housework", unsure: true },
+            { ig: "Nne m gwara m ka m hicha ụlọ", en: "My mother told me to clean the house", alt: ["Nne m gwara m ka m hicha ụlọ."], unsure: true },
+            { ig: "Ezi anyị buru ibu", en: "Our compound (extended family) is large", alt: ["Ezi anyị buru ibu."], note: "This 'ezi' (compound) is a different word from 'ezi' (pig) in Animals.", src: "nkowaokwu" },
+            { ig: "Ị ga-enyere m aka?", en: "Can you help me?", alt: ["Ị ga enyere m aka?"], unsure: true, src: "ilanguages" },
+            { ig: "M ga-enyere gị aka", en: "I can help you", alt: ["M ga enyere gị aka", "M ga-enyere gị aka."], unsure: true, src: "ilanguages" },
+            { ig: "Ana m aga ikuta mmiri n'ikpere mmiri", en: "I am going to fetch water at the riverbank", alt: ["Ana m aga ikuta mmiri n'ikpere mmiri."], note: "Older dialect form (ikuta = to fetch).", unsure: true, src: "igboguide" }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── GIVING DIRECTIONS (Section 5) ───────────────────────── */
+    {
+      id: "directions",
+      title: "Giving Directions",
+      color: "#0b6fa4",
+      description: "Left and right, straight on, crossing and asking the way.",
+      lessons: [
+        {
+          id: "dir-turn",
+          title: "Left, right and straight",
+          tip: "'aka ekpe' = left (literally the left hand) and 'aka nri' = right (the eating hand). One older phrase list swaps them, but the dictionary and Wikivoyage agree on this order, so we follow them.",
+          items: [
+            { ig: "aka ekpe", en: "left (side)", note: "Literally the left hand.", src: "nkowaokwu" },
+            { ig: "aka nri", en: "right (side)", unsure: true, src: "wikivoyage" },
+            { ig: "Gaa n'aka ekpe m", en: "Go to my left hand", alt: ["Gaa n'aka ekpe m."], src: "nkowaokwu" },
+            { ig: "Gba na aka nri", en: "Turn right", alt: ["Gbá na áká nri", "Gba na aka nri."], unsure: true, src: "wikivoyage" },
+            { ig: "Gba na aka ekpe", en: "Turn left", alt: ["Gbá na áká èkpè", "Gba na aka ekpe."], unsure: true, src: "wikivoyage" },
+            { ig: "tụgharịa", en: "to turn (change direction)", unsure: true },
+            { ig: "Gaa n'ihu, gba na aka nri", en: "Go straight ahead, then turn right", alt: ["Gaa n'ihu, gba na aka nri."], unsure: true },
+            { ig: "Ahịa ahụ dị n'aka ekpe", en: "The market is on the left", alt: ["Ahịa ahụ dị n'aka ekpe."], unsure: true }
+          ]
+        },
+        {
+          id: "dir-ask",
+          title: "Asking the way",
+          tip: "'gafee' = to cross or pass. 'ụzọ' (road) and 'ahịa' (market) you know already. 'n'ihu' = in front of. Several of these are built from the words above, so they are on the list for a native speaker.",
+          items: [
+            { ig: "gafee", en: "to cross / to pass", alt: ["gafe"], src: "nkowaokwu" },
+            { ig: "Aga m na-agafe ebe a oge niile", en: "I pass this place all the time", alt: ["Aga m na-agafe ebe a oge niile."], src: "nkowaokwu" },
+            { ig: "Gafee ụzọ a", en: "Cross this road", alt: ["Gafee ụzọ a."], unsure: true },
+            { ig: "ábọ", en: "junction", alt: ["abọ"], unsure: true, src: "wikivoyage" },
+            { ig: "Olee ụzọ m ga-esi aga ahịa?", en: "Which way do I go to the market?", unsure: true },
+            { ig: "Ọ dị n'ihu ụlọ ụka", en: "It is in front of the church", alt: ["Ọ dị n'ihu ụlọ ụka."], unsure: true },
+            { ig: "Gafee ụzọ a, ahịa ahụ dị n'aka ekpe", en: "Cross this road, the market is on the left", alt: ["Gafee ụzọ a, ahịa ahụ dị n'aka ekpe."], unsure: true }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── NEWS, MEDIA & FILM (Section 5) ───────────────────────── */
+    {
+      id: "media",
+      title: "News, Media & Film",
+      color: "#b5482a",
+      description: "Radio, television, films and watching.",
+      lessons: [
+        {
+          id: "media-film",
+          title: "Radio and film",
+          tip: "'redio' is borrowed from English. 'nkiri' means watching (especially a match), and 'ihe nkiri' is a film. Careful: 'onyonyo' alone means shadow, not television. News ('ozi', 'akụkọ') is in earlier lessons.",
+          items: [
+            { ig: "redio", en: "radio", note: "Borrowed from English.", src: "nkowaokwu" },
+            { ig: "Ụzọamaka mebiri redio ya", en: "Uzoamaka broke her radio", alt: ["Ụzọamaka mebiri redio ya."], src: "nkowaokwu" },
+            { ig: "Ana m anụ redio kwa ụtụtụ", en: "I listen to the radio every morning", alt: ["Ana m anụ redio kwa ụtụtụ."], note: "Built sentence ('nụ' = hear).", unsure: true },
+            { ig: "igwe onyonyo", en: "television", note: "Literally 'machine of images'.", unsure: true },
+            { ig: "ihe nkiri", en: "film / movie", note: "Not a dictionary entry, but used in real film reviews.", unsure: true, src: "nollysenti" },
+            { ig: "Ihe nkiri a tọrọ ezigbo ụtọ", en: "This film was very enjoyable", alt: ["Ihe nkiri a tọrọ ezigbo ụtọ."], unsure: true, src: "nollysenti" },
+            { ig: "nkiri", en: "watching (a match, a show)", src: "nkowaokwu" },
+            { ig: "Nkiri bọọlụ na-amasị ya", en: "He likes watching football", alt: ["Nkiri bọọlụ na-amasị ya."], src: "nkowaokwu" }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── TECHNOLOGY (Section 5) ───────────────────────── */
+    {
+      id: "tech",
+      title: "Technology",
+      color: "#0f7a72",
+      description: "Computers, the internet, photos and sending things.",
+      lessons: [
+        {
+          id: "tech-phone",
+          title: "Computers, photos and sending",
+          tip: "'kọmputa' and 'foto' are borrowed from English. 'ziga' = send. 'nata' = collect or receive (the dictionary example is about collecting money). No source gave Igbo for charger, battery, password or video, so they are left out.",
+          items: [
+            { ig: "kọmputa", en: "computer", alt: ["kọmpụta"], note: "Borrowed from English.", src: "nkowaokwu" },
+            { ig: "Ọ zụrụ kọmputa ọhụrụ maka ọrụ ya", en: "He bought a new computer for his work", alt: ["Ọ zụrụ kọmputa ọhụrụ maka ọrụ ya."], src: "nkowaokwu" },
+            { ig: "ịntanetị", en: "internet", alt: ["intaneti"], note: "Borrowed from English. Seen in an Igbo style guide, not in the dictionary.", unsure: true, src: "igstyle" },
+            { ig: "foto", en: "photograph", note: "Borrowed from English.", src: "nkowaokwu" },
+            { ig: "Nna m na-ese foto", en: "My father takes photos", alt: ["Nna m na-ese foto."], src: "nkowaokwu" },
+            { ig: "ziga", en: "to send", src: "nkowaokwu" },
+            { ig: "Onye ka m ga-eziga?", en: "Whom shall I send it to?", src: "nkowaokwu" },
+            { ig: "Achọrọ m ịnata ya ego m", en: "I want to collect my money from him", alt: ["Achọrọ m ịnata ya ego m."], src: "nkowaokwu" }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── COMMUNITY & ENVIRONMENT (Section 5) ───────────────────────── */
+    {
+      id: "community",
+      title: "Community & Environment",
+      color: "#9a5f00",
+      description: "Meetings, helping each other, keeping the town clean, and problems like erosion.",
+      lessons: [
+        {
+          id: "com-meet",
+          title: "Meetings and neighbours",
+          tip: "'nzukọ' = a meeting. 'ọgbọ' = an age mate, someone in your age group (an important group in Igbo towns). 'ibe' = a fellow or mate. 'enyemaka' = help.",
+          items: [
+            { ig: "nzukọ", en: "meeting / gathering", src: "nkowaokwu" },
+            { ig: "Anyị nwere nzukọ echi", en: "We have a meeting tomorrow", alt: ["Anyị nwere nzukọ echi."], src: "nkowaokwu" },
+            { ig: "ọgbọ", en: "age mate / peer", src: "nkowaokwu" },
+            { ig: "Gị na ndị ọgbọ gị soro bịa", en: "Come with your peers", alt: ["Gị na ndị ọgbọ gị soro bịa."], src: "nkowaokwu" },
+            { ig: "ibe", en: "mate / fellow", src: "nkowaokwu" },
+            { ig: "Ndị ibe m nọ ebe ahụ ugbua", en: "My mates are there now", alt: ["Ndị ibe m nọ ebe ahụ ugbua."], src: "nkowaokwu" },
+            { ig: "enyemaka", en: "help / aid", src: "nkowaokwu" },
+            { ig: "Emeka chọrọ enyemaka anyị", en: "Emeka needs our help", alt: ["Emeka chọrọ enyemaaka anyị", "Emeka chọrọ enyemaka anyị."], src: "nkowaokwu" }
+          ]
+        },
+        {
+          id: "com-env",
+          title: "Keeping things clean",
+          tip: "'gburugburu' = the surroundings, the environment. 'unyi' = dirty. 'ọcha' is already white in Colours; 'dị ọcha' is used for clean (to be checked). 'mbuze' = erosion or a gully; the dictionary also has a landslide sense with a different tone.",
+          items: [
+            { ig: "gburugburu", en: "environment / surroundings", src: "nkowaokwu" },
+            { ig: "unyi", en: "dirty / untidy", src: "nkowaokwu" },
+            { ig: "Aka m ruru unyi", en: "My hands are dirty", alt: ["Aka m ruru unyi."], src: "nkowaokwu" },
+            { ig: "Obodo anyị dị ọcha", en: "Our town is clean", alt: ["Obodo anyị dị ọcha."], unsure: true },
+            { ig: "mbuze", en: "erosion / gully", src: "nkowaokwu" },
+            { ig: "Ndị mmadụ na-ekpofu ahịhịa na mbuze ahụ", en: "People throw rubbish into that gully", alt: ["Ndị mmadụ na-ekpofu ahịhịa na mbuze ahụ."], note: "'ahịhịa' is usually grass or weeds; here the dictionary uses it for refuse.", src: "nkowaokwu" },
+            { ig: "Mbụze ahụ metụtara ọtụtụ ndị mmadụ", en: "The erosion affected many people", alt: ["Mbụze ahụ metụtara ọtụtụ ndị mmadụ."], note: "The dictionary translates this one as a landslide.", src: "nkowaokwu" }
+          ]
+        },
+        {
+          id: "com-town",
+          title: "Our town",
+          tip: "These are everyday lines about the town. The dictionary ones are real examples; the built ones (road, light, helping) are on the list for a native speaker.",
+          items: [
+            { ig: "Ahịhịa juru n'ubi ahụ", en: "Grass is all over the farm", alt: ["Ahịhịa juru n'ubi ahụ."], src: "nkowaokwu" },
+            { ig: "Ụzọ a dị njọ", en: "This road is bad", alt: ["Ụzọ a dị njọ."], unsure: true },
+            { ig: "Ụgbaala a nọchiri ụzọ", en: "This car is blocking the road", alt: ["Ụgbaala a nọchiri ụzọ."], src: "nkowaokwu" },
+            { ig: "Mmiri kwara ebe ahụ ruru m n'ikpere", en: "The water standing there reached my knee", alt: ["Mmiri kwara ebe ahụ ruru m n'ikpere."], src: "nkowaokwu" },
+            { ig: "Ọ dịghị ọkụ n'obodo anyị", en: "There is no light (electricity) in our town", alt: ["Ọ dịghị ọkụ n'obodo anyị."], unsure: true },
+            { ig: "Anyị kwesịrị inyere ibe anyị aka", en: "We should help one another", alt: ["Anyị kwesịrị inyere ibe anyị aka."], unsure: true }
           ]
         }
       ]

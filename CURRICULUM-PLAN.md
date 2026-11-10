@@ -94,7 +94,7 @@ Status key: ✅ covered · 🟡 partly covered · ❌ gap (the number is its pri
 | Use advanced vocabulary | review of all units | ❌ skipped: the Daily test already reviews, so a review unit would only duplicate items |
 | Talk about the army | (skip; replace with "Talk about history") | 🟡 (2026-11-10) folded into `beliefs` as the lesson `bel-past` (7 items, mostly ⚑); too thin for its own unit |
 
-Vietnamese Section 4 has only 6 units, so the A2 section is filled out with standard **CEFR A2 themes** as well: past experiences, plans and invitations, the doctor, the weather, cooking, comparisons and life events. The planned units (built 10 Nov 2026):
+Vietnamese Section 4 has only 6 units, so the A2 section is filled out with standard **CEFR A2 themes** as well: past experiences, plans and invitations, the doctor, the weather, cooking, comparisons and life events. The planned units (built 10 Nov 2026, v1.6.0):
 
 | Unit id | Title | Covers | Status |
 |---|---|---|---|
@@ -110,7 +110,24 @@ Vietnamese Section 4 has only 6 units, so the A2 section is filled out with stan
 | `plans` | Plans, Invitations & Calls | let's…, will you come?, call me, the phone | ✅ 3 lessons (incl. weekdays) (2026-11-10) |
 | `review4` | Section 4 Review | "advanced vocabulary": mixed sentences from the section | ❌ skipped (2026-11-10) |
 
-## Sections 5–8 · B1–B2 (later)
+## Section 5 · B1: "Form sentences about a wider variety of topics" (built 10 Nov 2026)
+Themes come from the big courses' Section 5 (Spanish, French and Japanese; see `sources/web-pages/duolingo-section5-themes.md`). Only the themes all three share are used, and topics Sections 1–4 already cover are skipped. B1 means longer sentences, linked ideas and talking about experiences.
+
+| Unit id | Title | Covers | Status |
+|---|---|---|---|
+| `memories` | Memories | childhood, "when I was young", have you ever / never (-bu / -beghị), past experiences | ✅ 2 lessons (2026-11-10): the "have ever" form is missing (no source) |
+| `hopes` | Hopes & Dreams | want to become, hope, dream, plans for the future | ✅ 2 lessons (2026-11-10) |
+| `career` | Work & Business | job, office, boss, salary, business and trading, interview | ✅ 2 lessons (2026-11-10): no word for salary, interview, boss, apprentice |
+| `exams` | Studies & Exams | exam, pass/fail, university, degree, studying hard | ✅ 2 lessons (2026-11-10): no word for pass, fail, result, degree |
+| `injuries` | Accidents & Injuries | fall, cut, break, bleed, accident, first aid, "be careful" | ✅ 2 lessons (2026-11-10): no word for cut, bleed, swollen, first aid |
+| `relations` | Friends & Relationships | friendship, love, marriage, argue, forgive, trust | ✅ 2 lessons (2026-11-10) |
+| `chores` | Housework | sweep, wash, fetch water, tidy, cook, help at home | ✅ 2 lessons (2026-11-10): no word for iron, tidy, rubbish |
+| `directions` | Giving Directions | left/right, straight on, junction, turn, cross, far/near | ✅ 2 lessons (2026-11-10): no word for bridge, roundabout, opposite |
+| `media` | News, Media & Film | news, radio, TV, film/Nollywood, newspaper, music | ✅ 1 lesson (thin; no word for newspaper, actor, singer) (2026-11-10) |
+| `tech` | Technology | computer, internet, charge, message, photo, social media | ✅ 1 lesson (thin; no word for charger, battery, password, video) (2026-11-10) |
+| `community` | Community & Environment | community, meeting, help, environment, rubbish, trees, clean | ✅ 3 lessons (2026-11-10): no word for flood |
+
+## Sections 6–8 · B1–B2 (later)
 These come after Section 4 has content. They will follow the big courses' themes: wider topics, stories and news, and abstract opinions. Before starting them, re-check duolingodata.com for a course that lists Section 5–8 unit titles.
 
 ---
@@ -127,3 +144,4 @@ These come after Section 4 has content. They will follow the big courses' themes
 - 2026-11-10: Section 1 filled (v1.3.0). Four new units (`eatingout`, `market`, `school`, `travel`; 13 lessons) and three new lessons in existing units (`greet-welcome`, `intro-from`, `fam-more`). 115 new items, 36 marked unsure; parent questions are in section K of QUESTIONS-FOR-PARENT.md. Weather was skipped on purpose (planned for a later section). Many items rest on one source, so Section 1 is a first draft until the parent answers.
 - 2026-11-10: Sections 2 and 3 filled (v1.4.0). 21 new units (11 in Section 2, 10 in Section 3), 41 lessons, 298 new items, 104 marked unsure; parent questions are in sections L and M of QUESTIONS-FOR-PARENT.md. Politics, science, economy, astronomy and current events were skipped on purpose. Some topics were thin (Asking Questions, Igboland: one lesson each).
 - 2026-11-10: Section 4 filled (v1.5.0). 9 new units (`ilu`, `discuss`, `omenala`, `ceremonies`, `beliefs`, `weather`, `cooking`, `doctor`, `plans`), 24 lessons, 181 new items, 78 marked unsure; parent questions are in section N of QUESTIONS-FOR-PARENT.md. `history` was folded into `beliefs` (too thin) and `review4` was skipped (the Daily test already reviews). Weekdays were added to `plans`. Four old items with "…" were turned into real examples. Left out: cooking verbs (fry, stir, pound, cut), a recipe, thunder/lightning, history of war and independence, and homecoming phrases (no Igbo source).
+- 2026-11-10: Section 5 filled (v1.6.0). 11 new units (`memories`, `hopes`, `career`, `exams`, `injuries`, `relations`, `chores`, `directions`, `media`, `tech`, `community`), 21 lessons, 157 new items, 80 marked unsure; parent questions are in section O of QUESTIONS-FOR-PARENT.md (O1–O51). `media` and `tech` are one lesson each (thin). Many core words (pass/fail, cut, bleed, rubbish, charger, password...) had no source and were left out.

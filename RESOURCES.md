@@ -89,3 +89,10 @@ Status key: ✅ used in the app · 🔎 found, not mined yet · 🚫 blocked/unu
 - Left out because nothing confirmed them: cooking verbs (fry, stir, pound, cut, taste), a recipe, thunder, the sun shining, "Where does it hurt?", phone greetings, war and independence words.
 - Blocked page added to sources/README.md: the brainbound greetings guide (403).
 - Audio: fetched 111 more native-speaker clips (Lingua Libre and Nkọwa okwu examples).
+
+### 2026-11-10 (v1.6.0): Section 5 (B1) build-out
+- Six research helpers wrote notes in sources/research (s5-memories-hopes, s5-work-studies, s5-injuries-relations, s5-chores-directions, s5-media-tech, s5-community) from the saved pages and Nkọwa okwu checks.
+- Added 11 units, 21 lessons and 157 items to Section 5; 80 are marked ⚑. Parent questions are section O (O1–O51).
+- New sources in data/curriculum.js: Nollysenti Igbo film reviews (huggingface.co/datasets/Davlan/nollysenti), a community Igbo style guide on GitHub (for ịntanetị), and the saved "Useful phrases in Igbo" page (for one line).
+- Leads not used: the Microsoft Language Portal glossary for Igbo, Igbo Wikipedia technology pages (two guessed pages gave 404), the UNIZIK computer-terms paper (PDF unreadable), ozikoro.com (age grades, web summary only).
+- Left out because nothing confirmed them: see section O-3 of QUESTIONS-FOR-PARENT.md.

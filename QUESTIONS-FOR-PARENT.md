@@ -447,6 +447,77 @@ These had no usable Igbo source, so they are not in the app yet.
 
 ---
 
+## O. Section 5 additions (Nov 2026)
+
+New units in Section 5 (B1): Memories, Hopes & Dreams, Work & Business, Studies & Exams, Accidents & Injuries, Friends & Relationships, Housework, Giving Directions, News/Media & Film, Technology, and Community & Environment. About half of the 157 new items are marked ⚑ because only one source had them or I built the sentence from a pattern. Items taken from dictionary examples (Nkọwa okwu) are not flagged. The dictionary check was noisy (some pages did not load), so please correct me where the dictionary is simply wrong.
+
+### O-1. Doubts about words that were already in the app
+
+| # | Igbo in the app | Doubt and evidence | Parent says |
+|---|-----------------|--------------------|-------------|
+| O1 | ụlọ ọrụ (office, in Getting Around) vs ụlọọrụ | The dictionary writes "office, place of work" as one word, ụlọọrụ. The app has ụlọ ọrụ. Which spelling do you use? The new unit has "Ụlọ ọrụ ahụ buru ibu" with the other spelling as an alternative. | |
+| O2 | Ị na-arụ ọrụ gịnị? (rụ = to work) | The dictionary gives rụọ as "spoil, damage" first, and ruo as "reach". Is "rụ ọrụ" the normal way to say "to work"? The new line "Ọ na-arụ ọrụ ike" (she works hard) depends on it. | |
+| O3 | ọgwụ (medicine) in Getting Around and At the Doctor | The dictionary lists ọgwụ first as "stump (of a tree)". Is "medicine" a second meaning, or do you say something else for medicine? | |
+| O4 | mgbu "also means jealousy" (notes in At the Doctor and the body lessons) | The dictionary has ekworo for jealousy (Section 5 now teaches it). I did not re-check "mgbu = jealousy". Is that note right, or should it be removed? | |
+| O5 | ezi (pig, in Animals) and ezi (family compound) | Section 5 has "Ezi anyị buru ibu" (our compound/extended family is large). Is it a different tone from ezi (pig)? What is the tone of each? | |
+| O6 | ọcha (white, in Colours) used for "clean" | The dictionary has ọcha mainly as white or fair. "Obodo anyị dị ọcha" (our town is clean) is built on that. Is "dị ọcha" the everyday way to say clean? | |
+| O7 | Ahụrụ m gị n'anya (I love you, in Everyday) | A saved phrase list gives "A hụrụ m gị n'anya" and "A fụlụ m gị n'anya" for "I love you". Which one is natural for you? Section 5 only teaches the word ịhụnanya (love). | |
+
+### O-2. New ⚑ items and gaps in Section 5
+
+| # | Igbo (Section 5 unit) | Doubt and evidence | Parent says |
+|---|-----------------------|--------------------|-------------|
+| O8 | Memories: chefu / chefuo (forget) | The dictionary writes chefù (infinitive ichefu). Wikivoyage writes Chéfùó. Which spelling should the app show first? | |
+| O9 | Memories: "used to" with na-…karị, and "mgbe m bụ nwata" | The dictionary only shows the suffix -karị (habitually). Is "Mgbe m bụ nwata, m na-agakarị ahịa n'ụtụtụ" natural for "when I was a child I often went to the market"? Is there a separate "used to" form? | |
+| O10 | Memories: have ever / have never (-bu-, -beghị) | "Ahụbeghị m mbe mbụ" (I have not seen a tortoise before) is a dictionary example, but no source shows "Agabeghị m Legọọsị" (I have never been to Lagos). I left it out. What is the affirmative "have ever…" form, and does -beghị work with gaa (go)? | |
+| O11 | Memories: n'oge ọkpụ, n'oge ochie, n'oge gboo, mgbe ochie | "N'oge ọkpụ" is in the dictionary as the far past. The older Section 4 lesson uses "n'oge gboo" (⚑). Which phrase do speakers use for "long ago"? | |
+| O12 | Memories: afọ gara aga (last year) and "N'oge ọkpụ, ekwentị adịghị ire" | The dictionary only shows "afọ atọ gara aga" (three years ago); "last year" is from Wikivoyage. Also, I translated the phone sentence as "phones were not on sale" (ire = to be sold). Is that right? | |
+| O13 | Memories: chetara (remembered, past) and icheta | "Mgbe mbụ m gara ụlọ akwụkwọ, m chetara ya ruo ugbu a" and "Ị chetara ihe ọ bụla…" use the past form chetara, built from a pattern. Are they natural? | |
+| O14 | Hopes: olileanya or olịleanya (hope) | The dictionary page would not load. A blog writes olịleanya. Which spelling is standard? Is "Olileanya m bụ na m ga-enweta ọrụ ọhụrụ" natural? | |
+| O15 | Hopes: afọ na-abịa abịa (next year) | Wikivoyage has afọ n'abịa abịa for next year. A dictionary example uses afọ na-abịa abịa but translates it "next month". Which is right for "next year"? Is "ọnwa na-abịa abịa" next month? | |
+| O16 | Hopes: achọrọ m ịbụ … vs achọrọ m ịghọ … | Is "Achọrọ m ịbụ dọkịta" (I want to be a doctor) right, and "Achọrọ m ịghọ dọkịta" (I want to become a doctor)? Neither infinitive is in the dictionary. | |
+| O17 | Hopes: otu ụbọchị (one day), Ọ bụrụ na Chukwu kwe (if God agrees), Ọ ga-adị mma (it will be fine) | All three are built or came from the brief. Are they used by speakers? Is kwe the right verb in "if God agrees"? | |
+| O18 | Hopes: Gịnị ka ị chọrọ ịbụ? and Ọ bụ atụmatụ dị mma | Built questions and replies for the little dialogue. Natural? Also "nrọ ọjọọ" (nightmare, Wikivoyage) was left out; is it right? | |
+| O19 | Work: ụlọ ahịa (shop) | Wikivoyage uses it for a bookshop; the dictionary has no entry for the phrase. What do you call a shop? | |
+| O20 | Work: ọrụ ike (hard work), amalite (to start), nwanyị ahịa (businesswoman) | Built phrases with no dictionary entry. Are ọrụ ike, "Amalitere m azụmahịa nke m" (I started my own business) and "Ọ bụ nwanyị ahịa" natural? | |
+| O21 | Work: salary, loss, apprentice, interview, boss | I used ụgwọ ọrụ (wages, from the dictionary). No dictionary entry for ugwuọnwa (salary), mfu (loss), a word for apprentice (nwa boyi? ọzụzụ?), ajụjụ ọnụ (interview) or boss. What should the app teach? | |
+| O22 | Work: Ee. Ego dị mkpa; Uru bụ ihe m chọrọ; Ị chọrọ ịmalite azụmahịa nke gị? | Dialogue lines built from checked words. Natural? | |
+| O23 | Exams: pass, fail, result, degree, graduate | The dictionary gives gafee as "expire, run out", dara as "press/hit", nsonaazụ as "suffix". No dictionary entry for digrii or gụchaa. What do you say for "pass an exam", "fail an exam", "result", "degree" and "graduate"? These are the biggest gap in the unit. | |
+| O24 | Exams: "Ọ ga-abanye mahadum n'afọ na-abịa abịa" | The dictionary example translates it "next month", the words read "next year" (see O15). | |
+| O25 | Exams: built lines (Asambodo m ga-abụ ihe kacha mkpa; Ọ bụ nwa akwụkwọ mahadum; onye nkụzi mahadum; Ị na-agụ akwụkwọ ike?; Ọ ka mma ịgụ akwụkwọ ike) | All built from checked words. Natural? Is "ịgụ akwụkwọ ike" the way to say "study hard"? | |
+| O26 | Injuries: ihe mberede (accident) and ụgbọ ihe mberede (ambulance) | Wikivoyage writes these. The dictionary has a similar headword iheike with a different tone. Which is right? Do people say ambulans or the Igbo phrase? | |
+| O27 | Injuries: daa (to fall) | The dictionary headword is dà (fall). A high-tone dá means to hit. Which tone and spelling? | |
+| O28 | Injuries: cut, injury, burn, bleed, swollen, first aid, bandage | The research helper's ideas (bee for cut, mmerụ ahụ for injury, ọbara na-agba for bleeding, ọkụ gbara m for burnt) were not in any source, so I left them out. "bandeeji" is from Wikivoyage only. What are the normal words? | |
+| O29 | Injuries: Kpachara anya! (Be careful!), Ọ dị gị mgbu?, Ihe mberede mere!, Ọ gbajiri ụkwụ ya | Built or one-source lines. The dictionary has kpacha (scrape; make neat). Is Kpachara anya right for "be careful"? Do you say "Ọ dị gị mgbu?" for "does it hurt?" | |
+| O30 | Injuries: motorbike (okada?) and "Call an ambulance" | Kpọọ ambulans! is from one phrase list. Is there a word for motorbike? Is Kpọọ ambulans! natural, or do people say something else? | |
+| O31 | Relationships: friendship, trust, engaged, quarrel, visit | No dictionary entry for ọbụbụenyi (friendship), ntụkwasị obi (trust), a word for engaged (nkwa is promise), ịlụ ọgụ or ese okwu (argue), or leta as "visit". What are the words? | |
+| O32 | Relationships: Agụụ gị na-agụ m / Obi gị na-eme m (I miss you) | One saved phrase list only; the literal meaning is "your heart is doing me". Is it used, and how would you say "I miss you"? | |
+| O33 | Relationships: M gbaghara gị and Anyị bụ enyi ruo afọ iri | Built from checked words. Natural? (I forgive you; we have been friends for ten years.) | |
+| O34 | Relationships: ekworo and kwò (jealousy) | The dictionary shows ekworo (jealousy) and a verb form kwò only on that page. Is "be jealous" a real verb? | |
+| O35 | Housework: za ụlọ (sweep), "Biko, za ụlọ" | The dictionary has za as "answer". No source has a sweep verb. What do you say for "to sweep" (and for the person who sweeps)? Also tidy (hazie?), iron clothes (no source), take out the rubbish (mkpofu? no source). | |
+| O36 | Housework: sụ akwa (wash clothes), sa efere (wash plates) | sụ akwa appears in the dictionary example "Anyị na-asụ akwa Satọde ọbụla", but the entry for sụ says "have a garment on". Do you say sụ akwa or sa uwe for washing clothes? Is "Biko, sa efere ndị a" natural? | |
+| O37 | Housework: Ana m aga ikuta mmiri n'ikpere mmiri (fetch water) | One older source with the dialect form ikuta. What do you say for "fetch water"? Also "Ị ga-enyere m aka?" and "M ga-enyere gị aka" (can you help me / I can help you) come from one phrase list. | |
+| O38 | Housework: Nne m gwara m ka m hicha ụlọ, ọrụ ụlọ | Built sentences ("ka m" = that I, gwa = tell). Natural? Is ọrụ ụlọ the word for housework? | |
+| O39 | Directions: aka nri / aka ekpe order, and Gba na aka nri | Wikivoyage and the dictionary agree that aka ekpe = left and aka nri = right. ilanguages.org swaps them. Please confirm. Is "Gba na aka nri" (turn right) natural, and is "tụgharịa" the verb "to turn"? | |
+| O40 | Directions: junction (ábọ), bridge, roundabout, opposite, follow this road | Only ábọ (junction) has a source, and only Wikivoyage. nkwụsị means bus stop, not junction. What are the words for junction, bridge, roundabout, "opposite" and "follow this road"? | |
+| O41 | Directions: built lines (Gaa n'ihu, gba na aka nri; Ahịa ahụ dị n'aka ekpe; Olee ụzọ m ga-esi aga ahịa?; Ọ dị n'ihu ụlọ ụka; Gafee ụzọ a) | All built from checked words. Natural? | |
+| O42 | Media: igwe onyonyo (television) | The dictionary gives onyonyo as "shadow, reflection". igwe onyonyo is my reading of how TV is named. What do you say for television? | |
+| O43 | Media: ihe nkiri (film), Ana m anụ redio kwa ụtụtụ | ihe nkiri is not in the dictionary but is used in real reviews (Nollysenti). Is it the normal word? Is "nụ" right for "listen to the radio"? Is "Ana m anụ redio kwa ụtụtụ" natural? | |
+| O44 | Media: news, newspaper, actor, singer, song | akụkọ is "story" in the dictionary and ozi is "news, message". Which is the everyday word for news? What do you call a newspaper, an actor and a singer? abụ (slow song, hymn) or egwu for a pop song? | |
+| O45 | Technology: ịntanetị (internet), kọmputa | ịntanetị comes from a community style guide, not the dictionary. kọmputa is in the dictionary (also written kọmpụta). What do you say for internet? | |
+| O46 | Technology: charger, battery, password, video, social media, network, website | No source gave an Igbo word, so they were left out. Do you use English words, or are there Igbo ones? | |
+| O47 | Technology: nata (receive) and ziga/zipụ (send) | The dictionary example for nata is about collecting money. Do you use nata for receiving a message or a photo? Is ziga or zipụ better for "send a photo"? | |
+| O48 | Community: rubbish, flood, erosion | No dictionary word for rubbish (mkpofu not found; ahịhịa is grass). mbuze (erosion/gully) is in the dictionary. What do you say for rubbish, flood and erosion? | |
+| O49 | Community: umunna, ọgbọ (age grade), town union | umunna did not load in the dictionary. ọgbọ means age mate; some places say ogbo. Which words do you use for kindred, age grade and town union? | |
+| O50 | Community: Ọ dịghị ọkụ n'obodo anyị; Ụzọ a dị njọ; Anyị kwesịrị inyere ibe anyị aka | Built lines. Is "Ọ dịghị ọkụ" the usual way to say there is no light/electricity? Is "inyere ibe anyị aka" right for "help one another"? | |
+| O51 | Community: tone of mbuze vs mbụze | The dictionary gives both mbùzé (erosion) and mbụ̀ze (landslide). Which tone for which? | |
+
+### O-3. Words we still need (no source at all, so left out)
+
+Pass / fail an exam, result, degree, graduate; cut, bleed, swollen, first aid, burn; iron clothes, tidy, rubbish; bridge, roundabout, opposite, follow; charger, battery, password, video, social media; actor, singer, newspaper; salary, loss, apprentice, interview, boss; friendship, trust, engaged, argue, visit; flood. These are collected in the rows above.
+
+---
+
 ## Answered ✅
 
 *(The daily routine moves answered items here and records what changed.)*

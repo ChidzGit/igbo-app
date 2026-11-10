@@ -45,6 +45,11 @@ That's it. The next morning update (or any Claude session you ask) converts it t
 - [ ] https://elias.fas.harvard.edu/index.php/languages/Igbo/Beginning/20/buying-and-selling: Harvard unit 20 (and unit 21, directions)
 - [ ] https://elias.fas.harvard.edu/index.php/languages/igbo/beginning/17/my-house: Harvard unit 17, my house
 - [ ] https://www.brainbound.blog/igbo-greetings-guide: greetings and respect for elders ⭐ (403 to automated tools; for the Custom & Respect unit)
+- [ ] https://www.microsoft.com/en-us/language: Microsoft Language Portal, Igbo glossary (for technology words such as internet, password, battery; not fetched)
+- [ ] https://ig.wikipedia.org: Igbo Wikipedia technology pages (two guessed pages returned 404; search it by hand for computer, internet, phone words)
+- [ ] https://journals.unizik.edu.ng/jmel/article/view/178: Developing basic computer terms in Igbo (the PDF could not be read by the tools)
+- [ ] https://elias.fas.harvard.edu/languages/igbo/beginning: Harvard unit on directions (DNS failure again; save it if it opens in your browser)
+- [ ] https://nkowaokwu.com/search?word=umunna: Nkọwa okwu pages for umunna, inyere, idei, ekpofu and dịghị stayed on "Loading results" (open them in a normal browser)
 
 ⭐ = most useful
 
