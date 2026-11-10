@@ -55,7 +55,7 @@ window.CURRICULUM = {
       id: "alphabet",
       title: "The Alphabet",
       igTitle: "Mkpụrụ Edemede (Abịdịị)",
-      color: "#16a34a",
+      color: "#157a43",
       description: "36 letters: 8 vowels and 28 consonants, including 9 double-letters (digraphs).",
       lessons: [
         {
@@ -147,7 +147,7 @@ window.CURRICULUM = {
       id: "greetings",
       title: "Greetings",
       igTitle: "Ekele",
-      color: "#0ea5e9",
+      color: "#0b6fa4",
       description: "Say hello, thank you, please, sorry and goodbye.",
       lessons: [
         {
@@ -217,7 +217,7 @@ window.CURRICULUM = {
       id: "intro",
       title: "Introducing Yourself",
       igTitle: "Ịkọwa Onwe Gị",
-      color: "#8b5cf6",
+      color: "#6d4bc4",
       description: "Your name, where you're from, and the words for I, you, we, they.",
       lessons: [
         {
@@ -297,7 +297,7 @@ window.CURRICULUM = {
       id: "numbers",
       title: "Numbers",
       igTitle: "Ọnụọgụgụ",
-      color: "#f59e0b",
+      color: "#9a5f00",
       description: "Count from 1 to a million. Igbo numbers are built like Lego: ten-and-one, ten-two (20)…",
       lessons: [
         {
@@ -393,7 +393,7 @@ window.CURRICULUM = {
       id: "family",
       title: "Family",
       igTitle: "Ezinaụlọ",
-      color: "#ec4899",
+      color: "#a8336f",
       description: "Mum, dad, brothers, sisters, grandparents — and talking about them.",
       lessons: [
         {
@@ -446,7 +446,7 @@ window.CURRICULUM = {
       id: "food",
       title: "Food & Drink",
       igTitle: "Nri na Ihe Ọṅụṅụ",
-      color: "#ef4444",
+      color: "#b5482a",
       description: "Yam, soup, rice, water — and how to say you're hungry.",
       lessons: [
         {
@@ -502,7 +502,7 @@ window.CURRICULUM = {
       id: "body",
       title: "The Body",
       igTitle: "Ahụ",
-      color: "#14b8a6",
+      color: "#0f7a72",
       description: "Head, eyes, hands, feet — and saying something hurts.",
       lessons: [
         {
@@ -555,7 +555,7 @@ window.CURRICULUM = {
       id: "colours",
       title: "Colours",
       igTitle: "Agba",
-      color: "#6366f1",
+      color: "#4b4fc4",
       description: "Traditional Igbo colour words are often linked to things in nature.",
       lessons: [
         {
@@ -582,7 +582,7 @@ window.CURRICULUM = {
       id: "time",
       title: "Time & Days",
       igTitle: "Oge na Ụbọchị",
-      color: "#a16207",
+      color: "#7f5420",
       description: "Today, tomorrow, the four Igbo market days and times of day.",
       lessons: [
         {
@@ -633,7 +633,7 @@ window.CURRICULUM = {
       id: "verbs",
       title: "Action Words",
       igTitle: "Ngwaa",
-      color: "#0f766e",
+      color: "#4f6b1c",
       description: "Come, go, eat, drink — commands and 'I am …-ing' sentences.",
       lessons: [
         {
@@ -687,7 +687,7 @@ window.CURRICULUM = {
       id: "everyday",
       title: "Everyday Phrases",
       igTitle: "Okwu Kwa Ụbọchị",
-      color: "#be123c",
+      color: "#b0213f",
       description: "Places, questions, and phrases you'll hear around the house.",
       lessons: [
         {
