@@ -4,7 +4,9 @@ A Duolingo-style app for learning Igbo every day, built only from free resources
 
 ## How to open it
 
-**Easiest:** double-click `Start Igbo App.bat`. It starts a tiny local server and opens the app in your browser.
+**On your phone (or any device): https://chidzgit.github.io/igbo-app/**: open it in Safari (iPhone) or Chrome (Android) and choose *Add to Home Screen* / *Install app*. `localhost` links only work on the PC itself.
+
+**On this PC (offline copy):** **Easiest:** double-click `Start Igbo App.bat`. It starts a tiny local server and opens the app in your browser.
 
 (Or run `python -m http.server 8765` in this folder and go to http://localhost:8765.)
 
