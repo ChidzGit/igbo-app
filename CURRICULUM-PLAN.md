@@ -14,7 +14,7 @@ Sources: [duolingodata.com](https://www.duolingodata.com/) (data from Jul 2025, 
 
 | Section | CEFR | Focus (Duolingo's wording) | Igbo units |
 |---|---|---|---|
-| 1 | Intro | Essential phrases and simple grammar | Alphabet · Greetings · Introducing Yourself · Family |
+| 1 | Intro | Essential phrases and simple grammar | Alphabet · Greetings · Introducing Yourself · Family · Eating Out · At the Market · At School · Getting Around |
 | 2 | A1 | Words, phrases and grammar for basic interactions | Food & Drink · Numbers · Colours · Action Words |
 | 3 | A1 | Foundational sentences for basic conversations | Time & Days · The Body · Everyday Phrases |
 | 4 | A2 | Sentences about everyday topics | (coming soon) |
@@ -33,14 +33,14 @@ Status key: ✅ covered · 🟡 partly covered · ❌ gap (the number is its pri
 | Vietnamese unit | Igbo coverage | Status |
 |---|---|---|
 | (Igbo-specific) Letters, dots and tones | `alpha-*` (5 lessons) | ✅ |
-| Introduce yourself | `intro-name`, `intro-pronouns`, `intro-age`, `intro-learning` | ✅ |
-| Greet people | `greet-hello`, `greet-times`, `greet-polite`, `greet-thanks` | ✅ |
-| Introduce family members | `fam-core`, `fam-extended` | ✅ |
-| Order a drink / request to the waiter | `food-phrases` (Section 2) | 🟡 1: "Biko, nye m mmiri", ordering at a buka |
-| Talk about the price | none | ❌ 2: "Ego ole?", money and haggling at the market |
-| Communicate at school | none | ❌ 3 |
-| Communicate when travelling | none | ❌ 4 |
-| Talk about places | `every-places` (Section 3) | 🟡 |
+| Introduce yourself | `intro-name`, `intro-pronouns`, `intro-age`, `intro-learning`, `intro-speak-to-me`, `intro-from` (2026-11-10) | ✅ |
+| Greet people | `greet-hello`, `greet-times`, `greet-polite`, `greet-thanks`, `greet-welcome` (2026-11-10) | ✅ |
+| Introduce family members | `fam-core`, `fam-extended`, `fam-sentences`, `fam-more` (2026-11-10) | ✅ |
+| Order a drink / request to the waiter | `eat-order`, `eat-table`, `eat-pay`, `eat-buka` (unit `eatingout`; 2026-11-10) | ✅ |
+| Talk about the price | `mkt-money`, `mkt-haggle`, `mkt-talk` (unit `market`; 2026-11-10) | ✅ |
+| Communicate at school | `sch-things`, `sch-verbs`, `sch-talk` (unit `school`; 2026-11-10) | ✅ |
+| Communicate when travelling | `trv-go`, `trv-where`, `trv-talk` (unit `travel`; 2026-11-10) | ✅ |
+| Talk about places | `every-places` (Section 3), plus hospital / office / "Where is the market?" in `trv-where` (2026-11-10) | 🟡 church (ụka vs ụlọ ụka) and village (obodo vs ogbe) wait for the parent |
 
 ## Section 2 · A1
 | Vietnamese unit | Igbo coverage | Status |
@@ -108,3 +108,4 @@ These come after Section 4 has content. They will follow the big courses' themes
 
 ## Log
 - 2026-11-10: Plan written. Swahili was rejected (only 3 sections). The plan follows Vietnamese for Sections 1–4 and the big courses for 5–8. The 11 existing units are grouped into Sections 1–3.
+- 2026-11-10: Section 1 filled (v1.3.0). Four new units (`eatingout`, `market`, `school`, `travel`; 13 lessons) and three new lessons in existing units (`greet-welcome`, `intro-from`, `fam-more`). 115 new items, 36 marked unsure; parent questions are in section K of QUESTIONS-FOR-PARENT.md. Weather was skipped on purpose (planned for a later section). Many items rest on one source, so Section 1 is a first draft until the parent answers.

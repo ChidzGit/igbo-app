@@ -19,11 +19,18 @@
   title, tip, items, type ("letters" = no typing exercises).
 */
 window.CURRICULUM = {
-  version: "1.2.0",
+  version: "1.3.0",
   updated: "2026-11-10",
 
   // Newest first. Shown in the app under More → "What's new".
   changelog: [
+    { version: "1.3.0", date: "2026-11-10", changes: [
+      "Section 1 grows: 4 new units, Eating Out, At the Market, At School and Getting Around, with 13 new lessons.",
+      "3 new lessons in older units: welcomes and 'and you?' (Greetings), where you're from and where you live (Introducing Yourself), and husband, wife and in-laws (Family).",
+      "115 new words and phrases. Many come from real dictionary examples (Nkọwa okwu) or from two sources that agree.",
+      "36 of them are marked ⚑ because only one source had them. They are on the list for a native speaker to check.",
+      "Small fix: 'Where are you from?' now uses the dotted ị, like the rest of the course."
+    ] },
     { version: "1.2.0", date: "2026-11-10", changes: [
       "The course is now arranged into numbered Sections with CEFR levels (Intro, A1, A2, B1, B2), like Duolingo.",
       "Sections 1–3 hold everything so far; Section 4 (A2) is next, and Sections 5–8 are the long-term goal.",
@@ -53,6 +60,12 @@ window.CURRICULUM = {
     { id: "igbostudy", name: "IgboStudy — free beginner course & blog", url: "https://www.igbostudy.com", note: "Free 1-hour beginner audio/video course and articles." },
     { id: "wiki-cal", name: "Wikipedia: Igbo calendar", url: "https://en.wikipedia.org/wiki/Igbo_calendar", note: "Market days Eke, Orie, Afọ, Nkwọ." },
     { id: "omniglot", name: "Omniglot: Igbo numbers & phrases", url: "https://www.omniglot.com/language/phrases/igbo.php", note: "Free phrase & number lists (open in a normal browser)." },
+    { id: "wikivoyage", name: "Wikivoyage: Igbo phrasebook", url: "https://en.wikivoyage.org/wiki/Igbo_phrasebook", note: "Free travel phrasebook (CC BY-SA). Spelling and tones are inconsistent, so only used with a second source or a dictionary check." },
+    { id: "igboguide", name: "Igboguide.org: Igbo conversations", url: "https://www.igboguide.org/HT-igboconversation.htm", note: "Free sample conversations (market, school, travel). Older spelling." },
+    { id: "ilanguages", name: "ilanguages.org: Igbo phrases", url: "https://www.ilanguages.org/igbo_phrases.php", note: "Free phrase list." },
+    { id: "igbofocus", name: "IgboFocus: Learn Igbo 2 (archived)", url: "https://web.archive.org/web/2019/http://www.igbofocus.co.uk/html/learn_igbo_2.html", note: "Free lessons including price talk. Saved from the Internet Archive." },
+    { id: "igbolearn", name: "IgboLearn blog: Igbo phrases for visiting Nigeria", url: "https://blog.igbolearn.com/igbo-phrases-visiting-nigeria/", note: "Free blog article with shopping and travel phrases." },
+    { id: "nzukomba", name: "Nzukomba: 20 Igbo phrases for shopping", url: "https://nzukomba.com/culture/the-20-best-phrases-in-igbo-language-for-shopping/", note: "Free blog article. Single source, so used carefully." },
     { id: "languagesandnumbers", name: "Languages and Numbers: Counting in Igbo", url: "https://www.languagesandnumbers.com/how-to-count-in-igbo/en/ibo/", note: "Number-building rules." }
   ],
 
@@ -60,7 +73,7 @@ window.CURRICULUM = {
   // Every section id appears in exactly one stage's `units`. When you add a new
   // unit (section), also add its id to a stage's `units`. Empty stages show as "coming next".
   stages: [
-    { id: "s1", number: 1, cefr: "Intro", title: "Essential phrases", focus: "Start with essential phrases and simple grammar.", units: ["alphabet","greetings","intro","family"] },
+    { id: "s1", number: 1, cefr: "Intro", title: "Essential phrases", focus: "Start with essential phrases and simple grammar.", units: ["alphabet","greetings","intro","family","eatingout","market","school","travel"] },
     { id: "s2", number: 2, cefr: "A1", title: "Basic interactions", focus: "Words, phrases and grammar for basic interactions.", units: ["food","numbers","colours","verbs"] },
     { id: "s3", number: 3, cefr: "A1", title: "Basic conversations", focus: "Foundational sentences for basic conversations.", units: ["time","body","everyday"] },
     { id: "s4", number: 4, cefr: "A2", title: "Everyday topics", focus: "Use sentences in conversations about everyday topics.", units: [] },
@@ -229,6 +242,20 @@ window.CURRICULUM = {
             { ig: "Gbakee ngwa ngwa", en: "Get well soon", src: "omniglot" },
             { ig: "Ị nwaka!", en: "Well done! / Congratulations!", alt: ["I nwaka"], src: "omniglot" }
           ]
+        },
+        {
+          id: "greet-welcome",
+          title: "Welcome & and you?",
+          tip: "Welcome a guest with 'Nnọọ!' and invite them in with 'Bata!'. Reply to 'how are you' with 'Adị m mma' and then turn it around: 'And you?'.",
+          items: [
+            { ig: "Bata n'ime ụlọ", en: "Come into the house", alt: ["Bata", "Bata n'ime ụlọ!"], note: "The dictionary example is 'Bata n'ime ụlọ! Nnọọ!' (Come into the house! Welcome!).", src: "nkowaokwu" },
+            { ig: "Nnọọ n'ime obodo anyị", en: "Welcome to our village", alt: ["Nnọọ n'obodo anyị"], note: "From a conversation on igboguide.org.", src: "igboguide" },
+            { ig: "Ndewo, kedụ ka ị mere?", en: "Hello, how are you?", alt: ["Ndeewo, kedụ ka ị mere?", "Ndewo, kedu ka ị mere?"], src: "omniglot" },
+            { ig: "Adị m mma, daalụ", en: "I'm fine, thank you", alt: ["Ọ dị m mma, daalụ", "Adi m mma, daalụ"], src: "omniglot" },
+            { ig: "Ị dịkwa mma?", en: "Are you well too?", alt: ["I dịkwa mma?"], unsure: true, src: "ilanguages" },
+            { ig: "G'ịnwa kwanụ?", en: "And you?", alt: ["Gịnwa kwanụ?", "G'inwa kwanu?", "Gị kwanụ?", "Gi kwanu?"], unsure: true, src: "ilanguages" },
+            { ig: "Ya gaziere gị taa", en: "Have a nice day", note: "'taa' = today. Compare 'Ya gaziere gị' (good luck).", src: "omniglot" }
+          ]
         }
       ]
     },
@@ -262,7 +289,7 @@ window.CURRICULUM = {
             { ig: "aha", en: "name" },
             { ig: "Kedụ aha gị?", en: "What is your name?", alt: ["Kedu aha gị?", "Kedụ afa gị?"], src: "omniglot" },
             { ig: "Aha m bụ…", en: "My name is…", alt: ["Aha m bu"], src: "elias" },
-            { ig: "Ebee ka i si?", en: "Where are you from?", alt: ["Ebee ka ị si?", "Onye ebee ka ị bụ?"], src: "elias" },
+            { ig: "Ebee ka ị si?", en: "Where are you from?", alt: ["Ebee ka i si?", "Onye ebee ka ị bụ?"], src: "elias" },
             { ig: "E si m England", en: "I am from England", alt: ["Esi m England"], note: "Or 'A bụ m onye England': I am a person of England.", src: "omniglot" },
             { ig: "A bụ m onye Igbo", en: "I am Igbo (an Igbo person)" },
             { ig: "Ọ dị m ụtọ ịhụ gị", en: "Nice to meet you", note: "Igbo speakers often just say 'Nnọọ' (welcome) or 'Daalụ' here.", unsure: true }
@@ -308,6 +335,21 @@ window.CURRICULUM = {
             { ig: "Biko chere", en: "Excuse me (to get attention; lit. 'please wait')", src: "omniglot" },
             { ig: "Gbaghara m", en: "Forgive me / Pardon me", src: "omniglot" },
             { ig: "Anya ịị", en: "Long time no see!", note: "Ask your parent how your family says it!", unsure: true, src: "omniglot" }
+          ]
+        },
+        {
+          id: "intro-from",
+          title: "Where are you from?",
+          tip: "Answer 'Kedụ ebe ị si?' with 'E si m …' (I come from …) or say what kind of person you are: 'A bụ m onye …'.",
+          items: [
+            { ig: "Kedụ ebe ị si?", en: "Which place do you come from?", alt: ["Kedu ebe ị si?", "Olee ebe ị si?", "Olee ebe i si?"], src: "ilanguages" },
+            { ig: "E si m Naịjirịa", en: "I am from Nigeria", alt: ["Esi m Naịjirịa", "E si m Naịjịrịa", "E si m Nigeria"], unsure: true, src: "ilanguages" },
+            { ig: "Kedụ ebe ị bi?", en: "Where do you live?", alt: ["Kedu ebe ị bi?", "Olee ebe ị bi?", "Olee ebe i bi?"], src: "ilanguages" },
+            { ig: "Ebi m n'Enugu", en: "I live in Enugu", alt: ["Ebi m na Enugu", "Ebi m n'Enugụ"], note: "Swap in any place: 'Ebi m na London'. Some writers use 'na' instead of n'.", unsure: true, src: "igboguide" },
+            { ig: "A bụ m onye Naịjirịa", en: "I am Nigerian", alt: ["A bụ m onye Naịjịrịa", "Abụ m onye Naịjirịa"], note: "Same pattern as 'A bụ m onye Igbo'.", unsure: true, src: "ilanguages" },
+            { ig: "A bụ m onye Britain", en: "I am British", alt: ["Abụ m onye Britain", "A bụ m onye Briten"], unsure: true, src: "ilanguages" },
+            { ig: "Ana m asụ Bekee", en: "I speak English", alt: ["A na m asụ Bekee"], src: "wikivoyage" },
+            { ig: "Ọ bụ onye Igbo", en: "He / she is an Igbo person", alt: ["O bụ onye Igbo"], note: "'ọ' is the subject word for he / she / it (the app's 'ya' is the object form). Igbo has no he/she difference.", src: "wikivoyage" }
           ]
         }
       ]
@@ -361,6 +403,247 @@ window.CURRICULUM = {
             { ig: "Enwere m nwanne nwoke abụọ", en: "I have two brothers", unsure: true },
             { ig: "Ole ụmụnne ị nwere?", en: "How many siblings do you have?", unsure: true },
             { ig: "Ahụrụ m nne m n'anya", en: "I love my mother" }
+          ]
+        },
+        {
+          id: "fam-more",
+          title: "Husband, wife & in-laws",
+          tip: "Add 'm' (my) after a family word: 'di m' = my husband, 'nwunye m' = my wife. Words for uncle, aunt and in-laws came from one phrasebook only, so they are flagged.",
+          items: [
+            { ig: "Nke a bụ di m", en: "This is my husband" },
+            { ig: "Nke a bụ nwunye m", en: "This is my wife" },
+            { ig: "nne m na nna m", en: "my mother and my father", alt: ["nne na nna m"] },
+            { ig: "okene", en: "cousin", alt: ["okenē"], note: "Dictionary entry: child of an aunt or uncle. Another book says 'nwa nwanne nna m'.", unsure: true, src: "nkowaokwu" },
+            { ig: "dede", en: "uncle", alt: ["dêdè", "dẹdẹ"], unsure: true, src: "wikivoyage" },
+            { ig: "anti", en: "aunt", alt: ["aunty", "àntí"], note: "Borrowed from English 'aunty'; very common in Nigeria.", unsure: true, src: "wikivoyage" },
+            { ig: "nne di", en: "mother-in-law (husband's mother)", alt: ["nne nwunye"], unsure: true, src: "wikivoyage" },
+            { ig: "nna di", en: "father-in-law (husband's father)", alt: ["nna nwunye"], unsure: true, src: "wikivoyage" },
+            { ig: "nwa nwa", en: "grandchild", unsure: true, src: "wikivoyage" }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── EATING OUT (Section 1) ───────────────────────── */
+    {
+      id: "eatingout",
+      title: "Eating Out",
+      igTitle: "Iri Nri",
+      color: "#0f7a72",
+      description: "Order at a buka, ask what's on offer, say it's tasty, and pay.",
+      lessons: [
+        {
+          id: "eat-order",
+          title: "Ordering food & drink",
+          tip: "Start with 'Biko' (please). The pattern is 'Nye m …' (give me …) or 'Achọrọ m …' (I want …).",
+          items: [
+            { ig: "Biko, nye m mmiri", en: "Please give me water", alt: ["Nye m mmiri, biko", "Nye m mmiri"], src: "igboguide" },
+            { ig: "Nye m ofe", en: "Give me soup", alt: ["Biko, nye m ofe"], src: "igboguide" },
+            { ig: "Achọrọ m ọkụkọ", en: "I want chicken", alt: ["Achọrọ m ofe ọkụkọ"], note: "Same pattern as 'Achọrọ m mmiri'.", src: "wikivoyage" },
+            { ig: "Ị nwere mmiri?", en: "Do you have water?", alt: ["I nwere mmiri?", "Unu nwere mmiri?", "Unu enwere mmiri?"], note: "To more than one person (or a shop) say 'Unu nwere …?'.", src: "igboguide" },
+            { ig: "Kedụ mmanya ị chọrọ?", en: "What drink do you want?", alt: ["Kedu mmanya ị chọrọ?"], src: "nkowaokwu" },
+            { ig: "Ị chọrọ anụ?", en: "Do you want meat?", alt: ["I chọrọ anụ?"], src: "igboguide" }
+          ]
+        },
+        {
+          id: "eat-table",
+          title: "Plates, cups & meals",
+          tip: "'Nri' (food) joins with the time of day to name the meals: nri ụtụtụ = morning food = breakfast.",
+          items: [
+            { ig: "efere", en: "plate / dish", alt: ["èfèrè"], note: "Dictionary: a shallow dish food is eaten from.", src: "nkowaokwu" },
+            { ig: "iko", en: "cup", note: "Watch the tone: 'ìko' (cup) is not 'íkó'.", src: "nkowaokwu" },
+            { ig: "ngaji", en: "spoon", src: "nkowaokwu" },
+            { ig: "nri ụtụtụ", en: "breakfast", unsure: true, src: "wikivoyage" },
+            { ig: "nri ehihie", en: "lunch", unsure: true, src: "wikivoyage" },
+            { ig: "nri abalị", en: "dinner / supper", unsure: true, src: "wikivoyage" },
+            { ig: "mmanya nkwụ", en: "palm wine", alt: ["mmanya ngwọ"], note: "A fresh drink tapped from the oil-palm tree.", unsure: true, src: "wikivoyage" }
+          ]
+        },
+        {
+          id: "eat-pay",
+          title: "Tasty! Now pay",
+          tip: "To say food tastes good, use 'dị ụtọ' (is sweet / tasty). When you pay, 'ụgwọ' is the bill or fee.",
+          items: [
+            { ig: "Nri a dị ụtọ", en: "This food is tasty", alt: ["Nri a dị ụtọ nke ukwuu"], note: "This is the exact example in the Nkọwa okwu dictionary.", src: "nkowaokwu" },
+            { ig: "Ọ dị ụtọ", en: "It's tasty (it was tasty)", alt: ["O di ụtọ"], src: "wikivoyage" },
+            { ig: "ụgwọ", en: "bill / fee / payment", note: "Also means a debt.", src: "nkowaokwu" },
+            { ig: "Ego ole ka m ji gị?", en: "How much do I owe you?", alt: ["Ego ole ka m ji gi?"], unsure: true, src: "igboguide" },
+            { ig: "Ka m kwụọ ego", en: "Let me pay", alt: ["Ka m kwụọ ụgwọ", "Ka m kwụa ego"], note: "'kwụọ' = pay.", unsure: true, src: "igboguide" },
+            { ig: "Were ego", en: "Take the money", alt: ["Were ego ahụ"], src: "igboguide" }
+          ]
+        },
+        {
+          id: "eat-buka",
+          title: "At the buka",
+          tip: "A 'buka' is a simple local restaurant. Seller and customer lines, one after another.",
+          items: [
+            { ig: "Ị chọrọ mmiri?", en: "Do you want water?", alt: ["I chọrọ mmiri?"] },
+            { ig: "Ee, achọrọ m anụ", en: "Yes, I want meat", alt: ["Ee, achọrọ m anụ."] },
+            { ig: "Mba, achọrọ m ofe", en: "No, I want soup", src: "igboguide" },
+            { ig: "Ofe a dị ụtọ", en: "This soup is tasty", alt: ["Ofe a tọrọ ụtọ"], src: "igboguide" },
+            { ig: "Daalụ. Ego ole ka m ji gị?", en: "Thank you. How much do I owe you?", alt: ["Daalụ, ego ole ka m ji gị?"], unsure: true, src: "igboguide" },
+            { ig: "Were ego. Rie nke ọma", en: "Take the money. Enjoy your meal.", alt: ["Were ego, rie nke ọma"] }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── AT THE MARKET (Section 1) ───────────────────────── */
+    {
+      id: "market",
+      title: "At the Market",
+      igTitle: "N'Ahịa",
+      color: "#9a5f00",
+      description: "Naira, \"how much?\", too expensive, reduce it, and buying and selling.",
+      lessons: [
+        {
+          id: "mkt-money",
+          title: "Money & prices",
+          tip: "'Ego' is money and 'naịra' is the naira. Hundreds are 'narị' + number and thousands are 'puku' + number: narị ise = 500.",
+          items: [
+            { ig: "naịra", en: "naira (Nigerian money)", alt: ["naira"], src: "nkowaokwu" },
+            { ig: "ọnụ ahịa", en: "price", alt: ["ọnụahịa"], note: "Just 'ọnụ' can also mean price (and mouth).", src: "nzukomba" },
+            { ig: "Naịra ole bụ ihe a?", en: "How many naira is this?", alt: ["Naira ole bụ ihe a?"], note: "Exact example sentence in the Nkọwa okwu dictionary.", src: "nkowaokwu" },
+            { ig: "ire", en: "to sell", alt: ["ịre", "re"], note: "Seller's line: 'Anyị na-ere …' (we are selling …).", src: "nkowaokwu" },
+            { ig: "Achọrọ m ịzụta ji", en: "I want to buy yam", alt: ["Achọrọ m ịzụ ji"], note: "Swap 'ji' for anything: ofe, azụ, ose …", unsure: true, src: "wikivoyage" },
+            { ig: "onye ahịa", en: "seller / trader", note: "Literally 'market person'. Not the word for customer.", unsure: true, src: "nzukomba" },
+            { ig: "narị ise", en: "500 (five hundred)", src: "omniglot" },
+            { ig: "narị anọ", en: "400 (four hundred)", note: "The old count calls 400 'nnụ'.", src: "omniglot" },
+            { ig: "puku atọ", en: "3,000 (three thousand)", src: "omniglot" }
+          ]
+        },
+        {
+          id: "mkt-haggle",
+          title: "Too expensive!",
+          tip: "Bargaining is part of market life. 'oke' means too much / very, so 'Ọ dị oke ọnụ' = it is too expensive.",
+          items: [
+            { ig: "Ọ dị oke ọnụ", en: "It is too expensive", alt: ["Ọ dị oke ọnụ ahịa", "Nke ahụ dị oke ọnụ"], src: "igbolearn" },
+            { ig: "Ọ dị ọnụ", en: "The price is high", alt: ["O di ọnụ"], src: "igbofocus" },
+            { ig: "oke", en: "too much / very big", note: "Dictionary: 'a lot; too much'.", src: "nkowaokwu" },
+            { ig: "Biko, belata ọnụ ya", en: "Please reduce the price", alt: ["Belata ọnụ ya", "Belata ego"], unsure: true, src: "igbolearn" },
+            { ig: "ọnụ ala", en: "cheap (lit. low price)", alt: ["ọnụ ani"], unsure: true, src: "wikivoyage" },
+            { ig: "Enweghị m ego", en: "I don't have money", unsure: true, src: "wikivoyage" }
+          ]
+        },
+        {
+          id: "mkt-talk",
+          title: "Haggling dialogue",
+          tip: "A whole bargain, one line at a time: ask, say it is too much, ask for a reduction, agree, thank.",
+          items: [
+            { ig: "Ị nwere ji?", en: "Do you have yam?", alt: ["I nwere ji?"] },
+            { ig: "Naịra narị ise", en: "Five hundred naira", alt: ["Naịra narị ise.", "Narị ise naịra"], note: "Sources disagree whether the number goes before or after 'naịra'.", unsure: true },
+            { ig: "Ọ dị oke ọnụ. Biko, belata ọnụ ya", en: "It's too expensive. Please reduce the price.", alt: ["Ọ dị oke ọnụ, biko belata ọnụ ya"], unsure: true, src: "igbolearn" },
+            { ig: "Ọ dị mma, naịra narị anọ", en: "Okay, four hundred naira", alt: ["Ọ dị mma. Naịra narị anọ"], unsure: true },
+            { ig: "Ọ dị mma. Achọrọ m ya", en: "Fine. I want it. (I'll take it)", alt: ["Ọ dị mma, achọrọ m ya"], note: "No source confirms an exact 'I'll take it', so 'I want it' is used.", src: "igbolearn" },
+            { ig: "Daalụ. Aga m abịa echi", en: "Thank you. I will come tomorrow.", alt: ["Daalụ, aga m abịa echi", "Daalụ. A ga m abịa echi"], src: "nkowaokwu" }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── AT SCHOOL (Section 1) ───────────────────────── */
+    {
+      id: "school",
+      title: "At School",
+      igTitle: "N'Ụlọ Akwụkwọ",
+      color: "#4b4fc4",
+      description: "Teacher, student, book, questions, and what you do in class.",
+      lessons: [
+        {
+          id: "sch-things",
+          title: "School words",
+          tip: "'Akwụkwọ' means book, paper and also school. 'Ụlọ akwụkwọ' = school (house of books). Teacher = 'onye nkụzi' (the person who teaches).",
+          items: [
+            { ig: "akwụkwọ", en: "book / paper", note: "Also leaf, and (for short) school or education.", src: "nkowaokwu" },
+            { ig: "onyenkụzi", en: "teacher", alt: ["onye nkụzi", "onye nkuzi"], src: "nkowaokwu" },
+            { ig: "nwa akwụkwọ", en: "student / pupil", alt: ["nwata akwụkwọ"], note: "Literally 'child of the book'.", src: "wikivoyage" },
+            { ig: "nkụzi", en: "teaching", alt: ["nkuzi"], src: "nkowaokwu" },
+            { ig: "ajụjụ", en: "question", src: "nkowaokwu" },
+            { ig: "mmụta", en: "learning / knowledge", alt: ["mmuta"], src: "nkowaokwu" },
+            { ig: "pensụl", en: "pencil", alt: ["pensul"], note: "Borrowed from English 'pencil'.", unsure: true, src: "elias" }
+          ]
+        },
+        {
+          id: "sch-verbs",
+          title: "Things you do in class",
+          tip: "These are the bare verbs. In sentences they gain endings, like 'ịgụ' (to read) and 'zara' (answered).",
+          items: [
+            { ig: "gụ", en: "to read / to study", alt: ["ịgụ", "gụọ"], src: "nkowaokwu" },
+            { ig: "de", en: "to write", alt: ["ide", "dee"], src: "nkowaokwu" },
+            { ig: "kụzi", en: "to teach", alt: ["kụzie", "ịkụzi"], src: "nkowaokwu" },
+            { ig: "jụ", en: "to ask", alt: ["ịjụ"], note: "'jụrụ' = asked.", src: "nkowaokwu" },
+            { ig: "za", en: "to answer", alt: ["ịza"], note: "'zara' = answered.", src: "nkowaokwu" },
+            { ig: "Gịnị pụtara …?", en: "What does … mean?", note: "'pụtara' = means.", unsure: true, src: "nkowaokwu" }
+          ]
+        },
+        {
+          id: "sch-talk",
+          title: "In the classroom",
+          tip: "Most of these are real example sentences from the Nkọwa okwu dictionary, so you can also hear them there.",
+          items: [
+            { ig: "Abụ m nwa akwụkwọ", en: "I am a student", alt: ["A bụ m nwa akwụkwọ", "A bụ m nwata akwụkwọ"], src: "ilanguages" },
+            { ig: "Abụ m onyenkụzi", en: "I am a teacher", alt: ["A bụ m onyenkụzi"], src: "nkowaokwu" },
+            { ig: "Ana m aga ụlọ akwụkwọ", en: "I am going to school", alt: ["A na m aga ụlọ akwụkwọ"] },
+            { ig: "Ike jụrụ m ajụjụ", en: "Ike asked me a question", src: "nkowaokwu" },
+            { ig: "Ọ zara ajụjụ niile", en: "She answered all the questions", alt: ["O zara ajụjụ niile"], src: "nkowaokwu" },
+            { ig: "O dere ya n'akwụkwọ", en: "She wrote it on paper", alt: ["Ọ dere ya n'akwụkwọ"], src: "nkowaokwu" },
+            { ig: "A ga m agụ akwụkwọ ahụ taata", en: "I will read that book today", alt: ["A ga m agụ akwụkwọ ahụ taa", "Aga m agụ akwụkwọ ahụ taa"], src: "nkowaokwu" },
+            { ig: "Ọ na-akụzi n'ọtaakara", en: "She teaches in a nursery school", alt: ["O na-akụzi n'ọtaakara"], note: "'ọtaakara' = nursery school.", src: "nkowaokwu" }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── GETTING AROUND (Section 1) ───────────────────────── */
+    {
+      id: "travel",
+      title: "Getting Around",
+      igTitle: "Njem",
+      color: "#157a43",
+      description: "Travel, vehicles, where are you going, near and far, going home.",
+      lessons: [
+        {
+          id: "trv-go",
+          title: "Travel & transport",
+          tip: "'Njem' is a trip you make; 'ụgbọ' means vehicle, so 'ụgbọ elu' (vehicle of the sky) is a plane. People also say 'moto' for a car.",
+          items: [
+            { ig: "njem", en: "journey / trip", src: "nkowaokwu" },
+            { ig: "ije", en: "journey / walk", note: "The root of 'Ijeọma' (safe journey).", src: "nkowaokwu" },
+            { ig: "ụgbọala", en: "car / road vehicle", alt: ["ụgbọ ala"], note: "One book also uses it for bus.", src: "nkowaokwu" },
+            { ig: "moto", en: "car (borrowed from 'motor')", alt: ["motò", "mótò"], src: "nkowaokwu" },
+            { ig: "ụgbọ elu", en: "aeroplane", alt: ["ụgbọelu"], unsure: true, src: "wikivoyage" },
+            { ig: "ọdụ ụgbọala", en: "motor park (where vehicles wait)", alt: ["ọdụ ụgbọ ala"], unsure: true, src: "wikivoyage" },
+            { ig: "Akụdo mere njem ụnyaahụ", en: "Akudo travelled yesterday", src: "nkowaokwu" },
+            { ig: "Ana m aga ọrụ", en: "I am going to work", alt: ["Ana m aga ọlụ", "A na m aga ọrụ"], unsure: true, src: "igboguide" }
+          ]
+        },
+        {
+          id: "trv-where",
+          title: "Near, far & stop here",
+          tip: "'Ebe' is place or where. Ask 'Ọ dị nso?' (is it near?) and tell the driver 'Kwụsị ebe a' (stop here).",
+          items: [
+            { ig: "ebe", en: "place / where", alt: ["ebee"], src: "nkowaokwu" },
+            { ig: "nso", en: "near / close", src: "nkowaokwu" },
+            { ig: "Ọ dị nso?", en: "Is it near?", alt: ["O dị nso?"], src: "igboguide" },
+            { ig: "Ọ dị anya?", en: "Is it far?", alt: ["O dị anya?"], note: "'dị anya' = far (lit. 'is eye-distance').", unsure: true, src: "wikivoyage" },
+            { ig: "Ebee ka ahịa dị?", en: "Where is the market?", alt: ["Ebee ka ahịa dị"], src: "igbolearn" },
+            { ig: "Kwụsị ebe a", en: "Stop here", alt: ["Kwụsị ebe a!"], unsure: true, src: "wikivoyage" },
+            { ig: "Ebe a dị mma", en: "Here is fine", src: "wikivoyage" },
+            { ig: "ụlọ ọgwụ", en: "hospital", alt: ["ụlọ ahụ ike"], note: "Literally 'medicine house'.", src: "igboguide" },
+            { ig: "ụlọ ọrụ", en: "office", alt: ["ụlọ ọlụ"], note: "Literally 'work house'.", src: "igboguide" }
+          ]
+        },
+        {
+          id: "trv-talk",
+          title: "Going places",
+          tip: "A little journey conversation. 'Aga m …' and 'A ga m …' both mean 'I will …'.",
+          items: [
+            { ig: "Olee ebe ị na-aga?", en: "Where are you going?", alt: ["Kedụ ebe ị na-aga?", "Olee ebe i na-aga?"], src: "igboguide" },
+            { ig: "Ana m ala ụlọ", en: "I'm going home", alt: ["Ana m ala n'ụlọ"], note: "'ala ụlọ' = return home.", unsure: true, src: "igboguide" },
+            { ig: "E-e, ọ dị ezigbo nso", en: "Yes, it is very near", alt: ["Ee, ọ dị ezigbo nso"], src: "igboguide" },
+            { ig: "Biko, buga m ebe ahụ", en: "Please take me there", alt: ["Buga m ebe ahụ"], unsure: true, src: "igboguide" },
+            { ig: "Anyị ga-ala ụlọ na Dizemba", en: "We will go home in December", src: "nkowaokwu" },
+            { ig: "Ha ga-abịa echi", en: "They will come tomorrow", src: "nkowaokwu" }
           ]
         }
       ]

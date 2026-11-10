@@ -18,6 +18,13 @@ Status key: ✅ used in the app · 🔎 found, not mined yet · 🚫 blocked/unu
 | 🔎 | [Languages and Numbers: Igbo](https://www.languagesandnumbers.com/how-to-count-in-igbo/en/ibo/) | Number-building rules | |
 | 🔎 | [ilanguages.org Igbo](https://ilanguages.org/igbo.php) | Free vocab, phrases, flashcards | |
 | ✅ | [Omniglot: Igbo phrases](https://www.omniglot.com/language/phrases/igbo.php) / [numbers](https://www.omniglot.com/language/numbers/igbo.htm) | Phrase and number lists | You saved these. Converted copies are in sources/converted. Used for v1.1.0. |
+| ✅ | [Wikivoyage: Igbo phrasebook](https://en.wikivoyage.org/wiki/Igbo_phrasebook) | Travel, ordering, family, school and in-law words | Used in v1.3.0, always with a dictionary check or a second source (its spelling and tones are inconsistent). |
+| ✅ | [Igboguide.org: Igbo conversations](https://www.igboguide.org/HT-igboconversation.htm) | Sample market, school and travel conversations | Used in v1.3.0. Older spelling (ü, ö), normalised to Standard Igbo. |
+| ✅ | [ilanguages.org: Igbo phrases](https://www.ilanguages.org/igbo_phrases.php) | Where are you from / live, nationalities, "and you?" | Used in v1.3.0; single-source items are marked ⚑. |
+| ✅ | [IgboFocus: Learn Igbo 2 (archived)](https://web.archive.org/web/2019/http://www.igbofocus.co.uk/html/learn_igbo_2.html) | Price talk ("Ọ dị ọnụ") | Used in v1.3.0. |
+| ✅ | [IgboLearn blog: phrases for visiting Nigeria](https://blog.igbolearn.com/igbo-phrases-visiting-nigeria/) | "Too expensive", "reduce the price", "Where is the market?" | Used in v1.3.0. |
+| ✅ | [Nzukomba: 20 phrases for shopping](https://nzukomba.com/culture/the-20-best-phrases-in-igbo-language-for-shopping/) | "ọnụ ahịa", seller | Blog, single source; used lightly. |
+| 🔎 | [Flashcard Machine: Igbo Education/School](https://www.flashcardmachine.com/igboeducation-school.html) | School vocabulary | Learner-made, spellings inconsistent. Only used as a second opinion (pencil). Pen/library/exam words left out. |
 | 🚫 | [Polyglot Club: Igbo](https://polyglotclub.com/wiki/Language/Igbo/Vocabulary/Basic-Greetings) | Greetings, numbers | Bot-check page blocks automated reading. |
 | 🔎 | [Igboguide.org](https://www.igboguide.org/) + [Igbo conversations](http://www.igboguide.org/HT-igboconversation.htm) | Everyday conversation phrases | Saved as text in sources/web-pages. From your Omniglot list. |
 | 🔎 | [Wikivoyage: Igbo phrasebook](https://en.wikivoyage.org/wiki/Igbo_phrasebook) | Large travel phrasebook with pronunciation guide | Saved as text (Wikitravel link → Wikivoyage, the free version). |
@@ -44,3 +51,11 @@ Status key: ✅ used in the app · 🔎 found, not mined yet · 🚫 blocked/unu
 - Converted your saved pages (phrases, numbers, language/alphabet) to text in sources/converted. Duplicates were skipped.
 - Fixed 4 entries, confirmed and un-flagged 9, and added 6 lessons (Tones, Thanks & good wishes, Speak to me in Igbo!, Ordinals & big numbers, Help & emergencies, Celebrations). Now 41 lessons and 300 items.
 - New leads from Omniglot: ezinaulo.com (numbers lesson), teachyourselfigbo.com, Omniglot colours page (save it yourself).
+
+### 2026-11-10 (evening): v1.3.0 Section 1 build-out
+- Five research helpers wrote notes in sources/research (ordering, prices, school, travel/places, audit) from the saved pages plus Nkọwa okwu checks.
+- Added 4 units (Eating Out, At the Market, At School, Getting Around) and 3 lessons in Greetings, Introductions and Family: 115 new items, 36 marked ⚑ (single source or loanword).
+- Not added because nothing confirmed them: "I'll take it", "I don't want it", "the bill, please", pen, library, bus/keke/okada, "welcome back/return", customer. They are listed in section K-5 of QUESTIONS-FOR-PARENT.md.
+- Research helpers' "possible errors" in older items (ụka = church, ezinaụlọ, Biko chere, Nri a tọrọ ụtọ…) are listed as questions K1–K12 and were NOT applied. Only the missing dot in "Ebee ka ị si?" was fixed.
+- Audio: fetched 58 more native-speaker clips (Lingua Libre and Nkọwa okwu examples); 275 of 415 items now have audio.
+- Weather was left for a later section.
