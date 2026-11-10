@@ -25,6 +25,42 @@
   function looseKey(s) { return strictKey(s).normalize("NFD").replace(DOTS, ""); }
   const listenUrl = (w) => "https://nkowaokwu.com/search?word=" + encodeURIComponent(String(w).replace(/[?!.,…]/g, "").trim());
 
+  /* ───────────── native-speaker audio (Lingua Libre via Wikimedia Commons, data/audio.js) ───────────── */
+  const AUDIO = (window.AUDIO && typeof window.AUDIO === "object") ? window.AUDIO : {};
+  const audioByKey = {};
+  Object.keys(AUDIO).forEach((k) => { audioByKey[strictKey(k)] = AUDIO[k]; });
+  function audioFor(it) {
+    if (!it) return null;
+    for (const w of [it.ig, ...(it.alt || [])]) { const a = AUDIO[w] || audioByKey[strictKey(w)]; if (a && a.file) return a; }
+    return null;
+  }
+  let player = null, playingBtn = null;
+  function stopAudio() { if (player) { try { player.pause(); } catch (e) {} } if (playingBtn) playingBtn.classList.remove("playing"); playingBtn = null; }
+  function playClip(file, btn) {
+    stopAudio();
+    if (!player) {
+      player = new Audio();
+      player.preload = "auto";
+      player.onended = player.onerror = () => { if (playingBtn) playingBtn.classList.remove("playing"); playingBtn = null; };
+    }
+    if (!player.src.endsWith(file)) player.src = file;
+    else player.currentTime = 0;
+    playingBtn = btn || null;
+    if (btn) btn.classList.add("playing");
+    const p = player.play();
+    if (p && p.catch) p.catch(() => { if (btn) btn.classList.remove("playing"); }); // autoplay blocked / offline & not cached
+  }
+  // 🔊 control: plays in-app when we have a clip, otherwise links to Nkọwa okwu.
+  function listenBtn(it, label) {
+    const a = audioFor(it);
+    if (a) return `<button type="button" class="listen" data-audio="${esc(a.file)}" title="Play native speaker audio">${label}</button><span class="native" title="Recorded by a native speaker (Lingua Libre)">native speaker</span>`;
+    return `<a class="listen" href="${listenUrl(it.ig)}" target="_blank" rel="noopener" title="Hear it on Nkọwa okwu">${label}</a>`;
+  }
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest && e.target.closest("button[data-audio]");
+    if (b) { e.preventDefault(); e.stopPropagation(); playClip(b.dataset.audio, b); }
+  }, true);
+
   /* ───────────── catalogue ───────────── */
   const allLessons = [];
   const itemIndex = {}; // key -> {item, lesson, section}
@@ -35,7 +71,7 @@
   const findLesson = (id) => allLessons.find((x) => x.les.id === id);
 
   /* ───────────── state ───────────── */
-  const defaults = () => ({ xp: 0, streak: 0, lastActive: null, completed: {}, words: {}, daily: {}, xpByDay: {}, goal: 30, seenVersion: null, speakOn: true, speakAuto: true });
+  const defaults = () => ({ xp: 0, streak: 0, lastActive: null, completed: {}, words: {}, daily: {}, xpByDay: {}, goal: 30, seenVersion: null, speakOn: true, speakAuto: true, autoAudio: true });
   let S;
   try { S = Object.assign(defaults(), JSON.parse(localStorage.getItem(STORE_KEY) || "{}")); } catch (e) { S = defaults(); }
   function save() { try { localStorage.setItem(STORE_KEY, JSON.stringify(S)); } catch (e) { /* storage blocked: progress lives for this tab only */ } }
@@ -128,7 +164,7 @@
     if (!ex) return finishRun();
     R.state = { answered: false };
     const flag = (it) => it && it.unsure ? ` <span class="flag" title="Waiting for a native speaker to confirm">⚑ being checked</span>` : "";
-    const listen = (it) => `<a class="listen" href="${listenUrl(it.ig)}" target="_blank" rel="noopener" title="Hear it on Nkọwa okwu">🔊 hear</a>`;
+    const listen = (it) => listenBtn(it, "🔊 hear");
     let body = "", foot = `<button class="btn block" id="check" disabled>Check</button>`;
 
     if (ex.type === "intro") {
@@ -195,7 +231,13 @@
       <div class="runner-body">${body}</div>
       <div class="runner-foot" id="foot">${foot}</div>
     </div>`;
+    stopAudio();
     bindStep(ex);
+    // "Hear it first": auto-play once on new-word cards and speaking prompts.
+    if (S.autoAudio && (ex.type === "intro" || ex.type === "speak")) {
+      const a = audioFor(ex.item), btn = app.querySelector("button[data-audio]");
+      if (a) setTimeout(() => { if (R && R.queue[R.i] === ex && !R.state.answered) playClip(a.file, btn); }, 250);
+    }
   }
 
   function bindStep(ex) {
@@ -313,7 +355,7 @@
     mic.onclick = async () => {
       if (R.state.answered) return;
       if (recording) { try { rec && rec.state !== "inactive" && rec.stop(); } catch (e) {} try { recog && recog.stop(); } catch (e) {} if (!rec) finish(); return; }
-      chunks = []; heard = []; out.innerHTML = "";
+      chunks = []; heard = []; out.innerHTML = ""; stopAudio();
       try {
         stream = await navigator.mediaDevices.getUserMedia({ audio: true });
         rec = new MediaRecorder(stream);
@@ -513,13 +555,13 @@
     app.innerHTML = `<h1>📖 Words</h1>
       <input class="search" id="q" placeholder="Search Igbo or English…" value="${esc(wordQuery)}">
       <div class="chip-row">${chip("all", "All")}${chip("learned", "Learned")}${chip("weak", "Weak")}${chip("unsure", "⚑ Being checked")}</div>
-      <p class="muted small">${filtered.length} items · tap 🔊 to hear a native speaker on Nkọwa okwu</p>
+      <p class="muted small">${filtered.length} items · tap 🔊 to hear a native speaker (green = plays here, grey = opens Nkọwa okwu)</p>
       <div class="card">${filtered.map(({ it, sec }) => {
         const s = S.words[it._key]?.s ?? 0;
         return `<div class="word-row"><div><div class="ig">${esc(it.ig)} ${it.unsure ? '<span class="flag">⚑</span>' : ""}</div>
           <div class="muted small">${esc(it.en)} · ${esc(sec.title)}</div></div>
           <div style="display:flex;gap:10px;align-items:center"><span class="strength" title="Strength ${s}/5">${[1, 2, 3, 4, 5].map((n) => `<i class="${n <= s ? "on" : ""}"></i>`).join("")}</span>
-          <a class="listen" href="${listenUrl(it.ig)}" target="_blank" rel="noopener">🔊</a></div></div>`;
+          ${audioFor(it) ? `<button type="button" class="listen" data-audio="${esc(audioFor(it).file)}" title="Play native speaker audio" aria-label="Play ${esc(it.ig)}">🔊</button>` : `<a class="listen" href="${listenUrl(it.ig)}" target="_blank" rel="noopener" title="Hear it on Nkọwa okwu">🔊</a>`}</div></div>`;
       }).join("") || '<p class="muted">Nothing here yet.</p>'}</div>`;
     const q = document.getElementById("q");
     q.oninput = () => { wordQuery = q.value; const pos = q.selectionStart; viewWords(); const n = document.getElementById("q"); n.focus(); n.setSelectionRange(pos, pos); };
@@ -531,6 +573,7 @@
     const max = Math.max(S.goal, ...days.map((d) => S.xpByDay[d] || 0));
     const learned = learnedItems().length, total = Object.keys(itemIndex).length;
     const unsure = Object.values(itemIndex).filter((v) => v.item.unsure).length;
+    const clips = Object.entries(AUDIO).sort((a, b) => a[0].localeCompare(b[0]));
     app.innerHTML = `<h1>⚙️ More</h1>
       <div class="card"><h3>Your progress</h3>
         <p>⭐ ${S.xp} XP · 🔥 ${liveStreak()} day streak · 📚 ${Object.keys(S.completed).length}/${allLessons.length} lessons · 🗣️ ${learned}/${total} words</p>
@@ -540,8 +583,12 @@
       </div>
       <div class="card"><h3>🎤 Speaking</h3>
         <label><input type="checkbox" id="speak-on" ${S.speakOn ? "checked" : ""}> Include speaking exercises in lessons and the daily test</label>
-        <p class="muted small">You'll record yourself, play it back, and compare with a native speaker on Nkọwa okwu. ${S.speakAuto ? "If your browser can recognise Igbo speech, it also checks you automatically." : "Automatic checking isn't available in this browser, so you grade yourself."}
+        <p class="muted small">You'll record yourself, play it back, and compare with a native speaker (🔊). ${S.speakAuto ? "If your browser can recognise Igbo speech, it also checks you automatically." : "Automatic checking isn't available in this browser, so you grade yourself."}
         ${S.speakAuto ? "" : `<button class="linkbtn" id="speak-retry">Try automatic checking again</button>`}</p></div>
+      <div class="card"><h3>🔊 Sound</h3>
+        <label><input type="checkbox" id="auto-audio" ${S.autoAudio ? "checked" : ""}> 🔊 Sound effects / auto-play audio</label>
+        <p class="muted small">Plays the native-speaker recording automatically on new words and speaking exercises ("hear it first"). You can always tap 🔊 to play it yourself.
+        ${Object.values(itemIndex).filter((v) => audioFor(v.item)).length} of ${total} words have in-app audio; the rest link to Nkọwa okwu.</p></div>
       <div class="card"><h3>About the curriculum</h3>
         <p>Version <b>${esc(C.version)}</b>, updated ${esc(C.updated)}. ${allLessons.length} lessons across ${C.sections.length} sections.</p>
         <p class="small">⚑ <b>${unsure}</b> words/phrases are flagged as <i>being checked</i> with a native speaker — see <code>QUESTIONS-FOR-PARENT.md</code>. They're still taught, but double-check them.</p>
@@ -549,6 +596,10 @@
         ${C.changelog ? `<h4>What's new</h4>${C.changelog.slice(0, 5).map((c) => `<p class="small"><b>${esc(c.date)} · v${esc(c.version)}</b></p><ul class="clean small">${c.changes.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>`).join("")}` : ""}
       </div>
       <div class="card"><h3>Free sources used</h3><ul class="clean small">${C.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a> — <span class="muted">${esc(s.note)}</span></li>`).join("")}</ul></div>
+      <div class="card" id="audio-credits"><h3>🎙️ Audio credits</h3>
+        <p class="small">Native-speaker recordings come from <a href="https://lingualibre.org" target="_blank" rel="noopener">Lingua Libre</a>, a Wikimedia project where volunteers record words in their language, via <a href="https://commons.wikimedia.org/wiki/Category:Lingua_Libre_pronunciation-ibo" target="_blank" rel="noopener">Wikimedia Commons</a>. Each clip is free to reuse under the licence shown. Daalụ to every speaker!</p>
+        ${clips.length ? `<details><summary class="small"><b>${clips.length} clips</b> by ${new Set(clips.map(([, a]) => a.author)).size} speaker(s) — show all</summary>
+        <ul class="clean small credits">${clips.map(([w, a]) => `<li><b class="ig">${esc(w)}</b> — ${esc(a.author)} · ${esc(a.license)} · <a href="${esc(a.source)}" target="_blank" rel="noopener">Commons</a></li>`).join("")}</ul></details>` : `<p class="muted small">No audio files loaded.</p>`}</div>
       <div class="card"><h3>📱 Install on your phone</h3>
         ${isStandalone() ? `<p class="small">✅ You're using the installed app. It works offline too.</p>`
           : installPrompt ? `<p class="small">Add Mmụta Igbo to your home screen — it opens like an app and works offline.</p><button class="btn small" id="install">Install app</button>`
@@ -562,6 +613,7 @@
         </div><input type="file" id="file" accept="application/json" hidden></div>`;
     document.getElementById("goal").onchange = (e) => { S.goal = +e.target.value; save(); toast("Goal saved"); };
     document.getElementById("speak-on").onchange = (e) => { S.speakOn = e.target.checked; save(); toast(S.speakOn ? "Speaking on" : "Speaking off"); };
+    document.getElementById("auto-audio").onchange = (e) => { S.autoAudio = e.target.checked; save(); toast(S.autoAudio ? "Auto-play on" : "Auto-play off"); };
     const sr = document.getElementById("speak-retry"); if (sr) sr.onclick = () => { S.speakAuto = true; save(); viewMore(); };
     const ib = document.getElementById("install");
     if (ib) ib.onclick = async () => {

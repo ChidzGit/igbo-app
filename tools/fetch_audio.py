@@ -1,0 +1,230 @@
+"""Fetch native-speaker Igbo audio from Wikimedia Commons (Lingua Libre).
+
+Run from the project folder:   python -I tools/fetch_audio.py
+
+What it does
+  1. Lists every file in the Commons category "Lingua Libre pronunciation-ibo".
+  2. Matches each curriculum item's `ig` (and `alt`) to a recording, after
+     normalising both sides (case, tone marks stripped, dots ị ọ ụ ṅ kept,
+     punctuation like ?!… removed).
+  3. Downloads a SMALL version of each match into audio/ (the Commons MP3
+     transcode when there is one, else the original if it is <= 150 KB).
+  4. Writes data/audio.js:  window.AUDIO = { "<ig>": {file, author, license, source}, ... }
+
+Re-runnable: files already in audio/ are not downloaded again, and the
+category listing is cached in tools/.audio_cache.json for a day.
+All recordings are CC0 / CC BY / CC BY-SA, so credits are shown in the app
+(More -> Audio credits). Only the standard library is used.
+"""
+import hashlib
+import json
+import os
+import re
+import sys
+import time
+import unicodedata
+import urllib.parse
+import urllib.request
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CURRICULUM = os.path.join(ROOT, "data", "curriculum.js")
+AUDIO_DIR = os.path.join(ROOT, "audio")
+OUT_JS = os.path.join(ROOT, "data", "audio.js")
+CACHE = os.path.join(ROOT, "tools", ".audio_cache.json")
+
+API = "https://commons.wikimedia.org/w/api.php"
+CATEGORY = "Category:Lingua Libre pronunciation-ibo"
+UA = "MmutaIgboApp/1.0 (https://github.com/ChidzGit/igbo-app; Igbo learning PWA, fetches pronunciation clips)"
+DELAY = 1.0          # seconds between API calls
+MAX_ORIGINAL = 150 * 1024
+
+sys.stdout.reconfigure(encoding="utf-8")
+
+TONES = {"̀", "́", "̂", "̄", "̌"}  # grave acute circumflex macron caron
+KEEP = {"̣", "̇"}                                  # dot below, dot above
+
+
+def norm(s):
+    """Lower-case, strip tone marks and punctuation, keep dots; collapse spaces."""
+    s = unicodedata.normalize("NFD", s.replace("’", "'").replace("_", " "))
+    out = []
+    for ch in s:
+        if ch in TONES:
+            continue
+        if ch in KEEP or ch.isalnum() or ch == "'":
+            out.append(ch.lower())
+        else:
+            out.append(" ")  # punctuation, hyphens, spaces
+    return unicodedata.normalize("NFC", " ".join("".join(out).split()))
+
+
+def slug(key):
+    base = unicodedata.normalize("NFD", key)
+    base = "".join(c for c in base if not unicodedata.combining(c))
+    base = re.sub(r"[^a-z0-9]+", "-", base.lower()).strip("-")[:40] or "clip"
+    return base + "-" + hashlib.sha1(key.encode("utf-8")).hexdigest()[:6]
+
+
+def get(url, binary=False):
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    for attempt in range(5):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                data = r.read()
+            return data if binary else json.loads(data)
+        except Exception as e:  # noqa: BLE001 - network hiccups / 429s
+            wait = 5 * (attempt + 1)
+            print(f"  retry in {wait}s ({e})")
+            time.sleep(wait)
+    raise RuntimeError("giving up on " + url)
+
+
+def api(params):
+    params = dict(params, format="json", formatversion="2", maxlag="5")
+    d = get(API + "?" + urllib.parse.urlencode(params))
+    time.sleep(DELAY)
+    return d
+
+
+def list_category():
+    if os.path.exists(CACHE) and time.time() - os.path.getmtime(CACHE) < 86400:
+        with open(CACHE, encoding="utf-8") as f:
+            return json.load(f)
+    titles, cont = [], None
+    while True:
+        p = {"action": "query", "list": "categorymembers", "cmtitle": CATEGORY,
+             "cmlimit": "500", "cmprop": "title", "cmtype": "file"}
+        if cont:
+            p["cmcontinue"] = cont
+        d = api(p)
+        titles += [m["title"] for m in d["query"]["categorymembers"]]
+        print(f"  listed {len(titles)} files…")
+        cont = d.get("continue", {}).get("cmcontinue")
+        if not cont:
+            break
+    with open(CACHE, "w", encoding="utf-8") as f:
+        json.dump(titles, f, ensure_ascii=False)
+    return titles
+
+
+def read_items():
+    src = open(CURRICULUM, encoding="utf-8").read()
+    items = []
+    for line in src.splitlines():
+        m = re.search(r'\{\s*ig:\s*"([^"]+)"', line)
+        if not m:
+            continue
+        alt = []
+        a = re.search(r"alt:\s*\[([^\]]*)\]", line)
+        if a:
+            alt = re.findall(r'"([^"]+)"', a.group(1))
+        items.append((m.group(1), alt))
+    return items
+
+
+def tidy_author(a):
+    """Lingua Libre credits read 'Speaker: X Recorder: Y'; shorten when X == Y."""
+    m = re.match(r"Speaker:\s*(.+?)\s+Recorder:\s*(.+)$", a)
+    if m and m.group(1) == m.group(2):
+        return m.group(1)
+    return a
+
+
+def strip_html(s):
+    s = re.sub(r"<[^>]+>", "", s or "")
+    return " ".join(s.replace("&amp;", "&").replace("&#039;", "'").replace("&quot;", '"').split())
+
+
+def main():
+    print("Listing", CATEGORY)
+    titles = list_category()
+    index = {}  # normalised word -> [titles]
+    for t in titles:
+        m = re.match(r"File:LL-Q33578 \(ibo\)-([^-]+)-(.+)\.(wav|ogg|flac|mp3|webm)$", t)
+        if m:
+            index.setdefault(norm(m.group(2)), []).append(t)
+    for v in index.values():
+        v.sort()
+
+    items = read_items()
+    wanted = {}   # ig -> commons title
+    unmatched = []
+    for ig, alt in items:
+        if ig in wanted:
+            continue
+        hit = next((index[norm(w)][0] for w in [ig] + alt if norm(w) in index), None)
+        if hit:
+            wanted[ig] = hit
+        else:
+            unmatched.append(ig)
+
+    # Metadata + transcodes, 40 titles per request.
+    meta = {}
+    uniq = sorted(set(wanted.values()))
+    for i in range(0, len(uniq), 40):
+        batch = uniq[i:i + 40]
+        d = api({"action": "query", "titles": "|".join(batch), "prop": "videoinfo",
+                 "viprop": "url|size|mime|extmetadata|derivatives",
+                 "viextmetadatafilter": "Artist|LicenseShortName|UsageTerms"})
+        for p in d["query"]["pages"]:
+            if p.get("videoinfo"):
+                meta[p["title"]] = p["videoinfo"][0]
+        print(f"  metadata {min(i + 40, len(uniq))}/{len(uniq)}")
+
+    os.makedirs(AUDIO_DIR, exist_ok=True)
+    out, skipped = {}, []
+    for ig, title in wanted.items():
+        info = meta.get(title)
+        if not info:
+            skipped.append(ig)
+            continue
+        url, ext = None, None
+        for dv in info.get("derivatives", []):
+            if "mp3" in dv.get("type", "") or dv.get("src", "").endswith(".mp3"):
+                url, ext = dv["src"], ".mp3"
+                break
+        if not url and info.get("size", 1 << 30) <= MAX_ORIGINAL:
+            url = info["url"]
+            ext = os.path.splitext(urllib.parse.urlparse(url).path)[1].lower()
+        if not url:
+            skipped.append(ig)
+            continue
+        name = slug(norm(ig)) + ext
+        path = os.path.join(AUDIO_DIR, name)
+        if not os.path.exists(path) or os.path.getsize(path) == 0:
+            data = get(url, binary=True)
+            with open(path, "wb") as f:
+                f.write(data)
+            time.sleep(1.5)  # upload.wikimedia.org rate-limits bursts (HTTP 429)
+        em = info.get("extmetadata", {})
+        speaker = re.match(r"File:LL-Q33578 \(ibo\)-([^-]+)-", title).group(1)
+        out[ig] = {
+            "file": "audio/" + name,
+            "author": tidy_author(strip_html(em.get("Artist", {}).get("value")) or speaker),
+            "license": strip_html(em.get("LicenseShortName", {}).get("value")) or "see source",
+            "source": "https://commons.wikimedia.org/wiki/" + urllib.parse.quote(title.replace(" ", "_"), safe=":()"),
+        }
+
+    # Remove clips no longer referenced (e.g. an item was renamed).
+    used = {os.path.basename(v["file"]) for v in out.values()}
+    for f in os.listdir(AUDIO_DIR):
+        if f not in used:
+            os.remove(os.path.join(AUDIO_DIR, f))
+
+    with open(OUT_JS, "w", encoding="utf-8", newline="\n") as f:
+        f.write("/* Native-speaker audio from Wikimedia Commons (Lingua Libre). Generated by\n"
+                "   tools/fetch_audio.py; do not edit by hand. Credits: More -> Audio credits. */\n")
+        f.write("window.AUDIO = " + json.dumps(dict(sorted(out.items())), ensure_ascii=False, indent=1) + ";\n")
+
+    total = sum(os.path.getsize(os.path.join(AUDIO_DIR, f)) for f in os.listdir(AUDIO_DIR))
+    print(f"\nCategory files: {len(titles)}  distinct words: {len(index)}")
+    print(f"Curriculum items: {len(items)}  matched: {len(out)}  unmatched: {len(unmatched)}  no small file: {len(skipped)}")
+    print(f"Audio folder: {len(used)} files, {total / 1048576:.2f} MB")
+    if unmatched:
+        print("Unmatched:", ", ".join(unmatched))
+    if skipped:
+        print("Skipped (no small version):", ", ".join(skipped))
+
+
+if __name__ == "__main__":
+    main()

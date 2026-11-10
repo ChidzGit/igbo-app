@@ -117,6 +117,11 @@ h1 { font-size: 1.5rem; } h2 { font-size: 1.2rem; }
 .prompt-label { font-weight: 800; font-size: 1.25rem; margin: 8px 0 14px; }
 .prompt-word { font-size: 1.6rem; font-weight: 700; margin: 4px 0 18px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .listen { font-size: .8rem; font-weight: 700; text-decoration: none; border: 2px solid var(--line); border-radius: 10px; padding: 4px 8px; color: var(--muted); }
+button.listen { font-family: inherit; background: var(--card); cursor: pointer; border-color: var(--green); color: var(--green); }
+button.listen.playing { background: var(--green-soft); }
+.native { display: inline-block; font-size: .66rem; font-weight: 700; color: var(--green); letter-spacing: .02em; vertical-align: middle; margin-left: 4px; }
+.credits { max-height: 320px; overflow: auto; }
+.credits li { margin: 2px 0; overflow-wrap: anywhere; }
 .flag { display: inline-block; font-size: .72rem; font-weight: 700; background: var(--amber-soft); color: #92400e; border-radius: 8px; padding: 2px 7px; vertical-align: middle; }
 @media (prefers-color-scheme: dark) { .flag { color: #fcd34d; } }
 
