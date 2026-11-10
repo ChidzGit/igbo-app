@@ -25,7 +25,7 @@
   function looseKey(s) { return strictKey(s).normalize("NFD").replace(DOTS, ""); }
   const listenUrl = (w) => "https://nkowaokwu.com/search?word=" + encodeURIComponent(String(w).replace(/[?!.,…]/g, "").trim());
 
-  /* ───────────── native-speaker audio (Lingua Libre via Wikimedia Commons, data/audio.js) ───────────── */
+  /* ───────────── native-speaker audio (Lingua Libre via Commons + Nkọwa okwu dataset, data/audio.js) ───────────── */
   const AUDIO = (window.AUDIO && typeof window.AUDIO === "object") ? window.AUDIO : {};
   const audioByKey = {};
   Object.keys(AUDIO).forEach((k) => { audioByKey[strictKey(k)] = AUDIO[k]; });
@@ -598,8 +598,9 @@
       <div class="card"><h3>Free sources used</h3><ul class="clean small">${C.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a> — <span class="muted">${esc(s.note)}</span></li>`).join("")}</ul></div>
       <div class="card" id="audio-credits"><h3>🎙️ Audio credits</h3>
         <p class="small">Native-speaker recordings come from <a href="https://lingualibre.org" target="_blank" rel="noopener">Lingua Libre</a>, a Wikimedia project where volunteers record words in their language, via <a href="https://commons.wikimedia.org/wiki/Category:Lingua_Libre_pronunciation-ibo" target="_blank" rel="noopener">Wikimedia Commons</a>. Each clip is free to reuse under the licence shown. Daalụ to every speaker!</p>
-        ${clips.length ? `<details><summary class="small"><b>${clips.length} clips</b> by ${new Set(clips.map(([, a]) => a.author)).size} speaker(s) — show all</summary>
-        <ul class="clean small credits">${clips.map(([w, a]) => `<li><b class="ig">${esc(w)}</b> — ${esc(a.author)} · ${esc(a.license)} · <a href="${esc(a.source)}" target="_blank" rel="noopener">Commons</a></li>`).join("")}</ul></details>` : `<p class="muted small">No audio files loaded.</p>`}</div>
+        <p class="small">More recordings come from the <a href="https://huggingface.co/datasets/nkowaokwu/ibo-dict" target="_blank" rel="noopener">Nkọwa okwu / IgboAPI dataset</a> by Nkọwa okwu and the IgboAPI contributors, used under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. Clips were selected to match the words in this app and renamed (a few were converted to MP3).</p>
+        ${clips.length ? `<details><summary class="small"><b>${clips.length} clips</b> by ${new Set(clips.map(([, a]) => a.author)).size} speaker(s) / source(s) — show all</summary>
+        <ul class="clean small credits">${clips.map(([w, a]) => `<li><b class="ig">${esc(w)}</b> — ${esc(a.author)} · ${esc(a.license)} · <a href="${esc(a.source)}" target="_blank" rel="noopener">${/huggingface\.co/.test(a.source || "") ? "Nkọwa okwu dataset" : /wikimedia\.org/.test(a.source || "") ? "Wikimedia Commons" : "source"}</a></li>`).join("")}</ul></details>` : `<p class="muted small">No audio files loaded.</p>`}</div>
       <div class="card"><h3>📱 Install on your phone</h3>
         ${isStandalone() ? `<p class="small">✅ You're using the installed app. It works offline too.</p>`
           : installPrompt ? `<p class="small">Add Mmụta Igbo to your home screen — it opens like an app and works offline.</p><button class="btn small" id="install">Install app</button>`

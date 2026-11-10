@@ -4,7 +4,7 @@
    updates arrive whenever the device is online without a version bump.
    audio/ clips are cache-first in a separate runtime cache that survives
    version bumps, so every clip played once also works offline. */
-const CACHE_VERSION = "v2";
+const CACHE_VERSION = "v3";
 const AUDIO_CACHE = "mmuta-igbo-audio";
 const CACHE = "mmuta-igbo-" + CACHE_VERSION;
 const SHELL = [

@@ -19,7 +19,7 @@ Progress is saved in your browser. Use **More → Export progress** to back it u
 - **Speaking**: record yourself saying the phrase and play it back. If your browser can recognise Igbo speech it scores you automatically; otherwise compare with the native speaker (🔊, played in the app) and grade yourself. Turn it off under More → Speaking, or tap "Can't speak now". Use Chrome or Edge and allow the microphone.
 - **Daily test**: 10 questions from words you've learned, chosen by spaced repetition (weak and due words first). One score per day, with a history chart.
 - **Streak, XP and daily goal**, like Duolingo.
-- **Native-speaker audio** 🔊: many words play a real recording right in the app (from [Lingua Libre](https://lingualibre.org) on Wikimedia Commons). New words and speaking exercises play it automatically (turn off under More → Sound). Words without a clip link to Nkọwa okwu instead. Played clips are kept for offline use. Credits: More → Audio credits.
+- **Native-speaker audio** 🔊: many words play a real recording right in the app (from [Lingua Libre](https://lingualibre.org) on Wikimedia Commons and the [Nkọwa okwu / IgboAPI dataset](https://huggingface.co/datasets/nkowaokwu/ibo-dict), CC BY 4.0). New words and speaking exercises play it automatically (turn off under More → Sound). Words without a clip link to Nkọwa okwu instead. Played clips are kept for offline use. Credits: More → Audio credits.
 - **Words**: every word, with a strength meter, search, and a 🔊 button.
 - **⚑ flags**: words still waiting for a native-speaker check (see `QUESTIONS-FOR-PARENT.md`).
 
@@ -32,7 +32,8 @@ Progress is saved in your browser. Use **More → Export progress** to back it u
 | `RESOURCES.md` | Free sources found + daily research log. |
 | `sources/` | Every source used: saved pages as text, research notes, and an **inbox** for pages you save yourself (see `sources/README.md`). |
 | `tools/fetch_sources.py` | Turns web pages / saved HTML into compact text. |
-| `tools/fetch_audio.py` | Matches curriculum words to Lingua Libre recordings and downloads them to `audio/` + `data/audio.js`. Re-run (`python -I tools/fetch_audio.py`) after adding words. |
+| `tools/fetch_audio.py` | Matches curriculum words to Lingua Libre recordings and downloads them to `audio/` + `data/audio.js`. Re-run (`python -I tools/fetch_audio.py`) after adding words. Merge-only: keeps clips from other sources. |
+| `tools/fetch_audio_igboapi.py` | Fills remaining gaps from the Nkọwa okwu / IgboAPI Hugging Face dataset (gated; `hf auth login` once). Run after `fetch_audio.py`. Merge-only. |
 | `audio/`, `data/audio.js` | Native-speaker clips and their credits (generated). |
 | `index.html`, `css/`, `js/` | The app itself. |
 
