@@ -107,4 +107,4 @@ Status key: ✅ used in the app · 🔎 found, not mined yet · 🚫 blocked/unu
 - The new free source, Harvard ELIAS Unit 12 (daily routine), gave rahụ ụra, ịteta ụra and isi nri (cook; the guess "sie nri" was wrong), plus a short routine text.
 - Added 3 lessons (`day-night`, `home-more`, `q-why`), 24 items, 5 marked ⚑. Parent questions L75–L77.
 - Not found: why (gịnị mere / maka gịnị), TV (the dictionary's "igwenzisa" means a transmitter), spoon (eku is a ladle), oriọna, windo, ite mmiri.
-- Audio: 7 new native-speaker clips from the Nkọwa okwu dataset (e.g. mpanaaka, 'Nneka na-asa ụlọ ịsa ahụ'); 678 items now have audio.
+- Audio: 12 new native-speaker clips (5 from Lingua Libre: ụra, ibo, mma, akwandina, isi nri; 7 from the Nkọwa okwu dataset); 678 items now have audio.
