@@ -130,10 +130,15 @@ Themes come from the big courses' Section 5 (Spanish, French and Japanese; see `
 ## Sections 6–8 · B1–B2 (later)
 These come after Section 4 has content. They will follow the big courses' themes: wider topics, stories and news, and abstract opinions. Before starting them, re-check duolingodata.com for a course that lists Section 5–8 unit titles.
 
+**Section 6 is next (decided 2026-11-11).** The 12 Nov run builds it from scratch, over several runs if needed:
+1. Check duolingodata.com for Section 6 unit titles (big courses). Write a Section 6 gap table here, in the same format as Section 5, with priorities.
+2. Fill the table top-down, within the run's usage limit. Units not finished stay ❌ for the next run.
+
 ---
 
 ## Rules for filling gaps (morning routine)
 1. Take the **highest-priority ❌ or 🟡 in the lowest section** first: finish Section 1, then 2, then 3, then 4.
+   - **Skip gaps that only wait for the parent** (the status says ⚑ or "waits for the parent"). The parent review is planned for the weekend of 14–15 Nov 2026. If every gap left in Sections 1–5 is waiting on the parent, move on to **Section 6** (see below).
 2. Add each new unit as a new `sections[]` entry with a new id, and put that id in the right stage's `units` list. Never reuse or rename lesson ids.
 3. Verify words on Nkọwa okwu. Mark anything unsure `unsure: true` and add a row to `QUESTIONS-FOR-PARENT.md`.
 4. When a gap is filled, change its status here to ✅ and add the date.
