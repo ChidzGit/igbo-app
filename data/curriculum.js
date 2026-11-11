@@ -19,11 +19,16 @@
   title, tip, items, type ("letters" = no typing exercises).
 */
 window.CURRICULUM = {
-  version: "1.6.0",
-  updated: "2026-11-10",
+  version: "1.7.0",
+  updated: "2026-11-11",
 
   // Newest first. Shown in the app under More → "What's new".
   changelog: [
+    { version: "1.7.0", date: "2026-11-11", changes: [
+      "3 new lessons in Section 2: 'Cooking, sleeping and waking' (My Day), 'Door, window, bed and bathroom' (At Home) and 'Why and because' (Asking Questions).",
+      "24 new words and sentences: sleep (ụra), wake up (teta), go to bed (lakpu ụra), cooking (isi nri), door, window, bed, bathroom, knife, lantern and 'because' (maka).",
+      "Most come from Nkọwa okwu dictionary examples or the free Harvard daily-routine unit. The 'why' questions are marked ⚑ until a native speaker checks them."
+    ] },
     { version: "1.6.0", date: "2026-11-10", changes: [
       "Section 5 (B1) is now open: 11 new units, 21 lessons and 157 new words, phrases and sentences.",
       "New units: Memories, Hopes & Dreams, Work & Business, Studies & Exams, Accidents & Injuries, Friends & Relationships, Housework, Giving Directions, News, Media & Film, Technology, and Community & Environment.",
@@ -78,6 +83,7 @@ window.CURRICULUM = {
     { id: "wiki-alpha", name: "Wikipedia: Igbo alphabet (Ọnwụ orthography)", url: "https://en.wikipedia.org/wiki/Igbo_alphabet", note: "36 letters, IPA values. Free." },
     { id: "nkowaokwu", name: "Nkọwa okwu / IgboAPI dictionary", url: "https://nkowaokwu.com", note: "Free online Igbo–English dictionary with native-speaker audio and dialect variants. Best place to HEAR words." },
     { id: "elias", name: "Harvard ELIAS — Beginning Igbo", url: "https://elias.fas.harvard.edu/languages/igbo/beginning", note: "Free university course: greetings, family, days/weeks/months, grammar notes." },
+    { id: "elias12", name: "Harvard ELIAS — Beginning Igbo, Unit 12 (Daily routine)", url: "https://elias.unix.fas.harvard.edu/languages/Igbo/Beginning/12/daily-routine", note: "Free university unit: wake up, sleep, cook, plus a short daily-routine text." },
     { id: "peace-corps", name: "Peace Corps Igbo (Welmers, 1964) — ERIC ED233567", url: "https://eric.ed.gov/?id=ED233567", note: "Free public-domain 12-lesson course. Older spelling in places." },
     { id: "fsi", name: "FSI Igbo Basic Course (public domain)", url: "https://www.fsi-language-courses.org/fsi-igbo-language-course/", note: "US government course, free. Older orthography." },
     { id: "igbostudy", name: "IgboStudy — free beginner course & blog", url: "https://www.igbostudy.com", note: "Free 1-hour beginner audio/video course and articles." },
@@ -942,6 +948,20 @@ window.CURRICULUM = {
             { ig: "Ị bụ onye Igbo?", en: "Are you Igbo?", alt: ["I bụ onye Igbo?"], note: "Say it with a rising voice. Yes: 'Ee, a bụ m onye Igbo.'", unsure: true },
             { ig: "Ole ihe ị nwere?", en: "How many things do you have?", note: "'ole' = how many / how much (you met it in Numbers).", unsure: true }
           ]
+        },
+        {
+          id: "q-why",
+          title: "Why and because",
+          tip: "'maka' and 'n'ihi na' both mean 'because'. To ask 'why?', people often say 'Gịnị mere …?' (lit. what happened that …) or 'Maka gịnị?' (for what?).",
+          items: [
+            { ig: "maka", en: "because / for", alt: ["màkà"], note: "Dictionary: a conjunction meaning 'for the reason that'.", src: "nkowaokwu" },
+            { ig: "Ka anyị jee ahịa echi maka ahịa taa emechiela", en: "Let's go to the market tomorrow because today's market has closed", alt: ["Ka anyị jee ahịa echi maka ahịa taa emechiela."], src: "nkowaokwu" },
+            { ig: "Maka gịnị?", en: "Why? (lit. for what?)", alt: ["N'ihi gịnị?"], unsure: true },
+            { ig: "Gịnị mere i ji abịa?", en: "Why are you coming?", alt: ["Gịnị mere i ji abịa"], note: "'Gịnị mere … ji …' is a common 'why' pattern.", unsure: true },
+            { ig: "Gịnị mere ị na-amụ Igbo?", en: "Why are you learning Igbo?", alt: ["Gịnị mere i ji amụ Igbo?"], unsure: true },
+            { ig: "A na m amụ Igbo maka na ọ bụ asụsụ nne m", en: "I am learning Igbo because it is my mother's language", alt: ["Ana m amụ Igbo maka na ọ bụ asụsụ nne m","Ana m amụ Igbo n'ihi na ọ bụ asụsụ nne m"], unsure: true },
+            { ig: "Kedụ ihe Adaọra na-eme ụtụtụ niile?", en: "What does Adaora do every morning?", alt: ["Kedụ ihe Adaọra na-eme ụtụtụ nile?"], note: "'Kedụ ihe' = what (thing).", src: "elias12" }
+          ]
         }
       ]
     },
@@ -1023,6 +1043,21 @@ window.CURRICULUM = {
             { ig: "Achọrọ m idina ala", en: "I want to lie down", alt: ["Achọrọ m idina ala."], note: "'dina ala' = lie down (the dictionary has no clear word for 'sleep').", src: "nkowaokwu" },
             { ig: "Olee oge ị na-alọta ụlọ?", en: "What time do you come home?", unsure: true }
           ]
+        },
+        {
+          id: "day-night",
+          title: "Cooking, sleeping and waking",
+          tip: "'ụra' is sleep. You 'sleep a sleep': rahụ ụra (sleep), teta ụra (wake up), lakpu ụra (go to bed). 'isi nri' is cooking (from 'si', cook).",
+          items: [
+            { ig: "ụra", en: "sleep (noun)", note: "Dictionary example: Biko hapụ ụra rụchapụ ọrụ a (Please stop sleeping and finish this work).", src: "nkowaokwu" },
+            { ig: "Na abalị, m na-arahụ ụra", en: "At night I sleep", alt: ["Na abalị, m na-arahụ ụra.","N'abalị, m na-arahụ ụra","Na abalị m na-arahụ ụra"], note: "'rahụ ụra' = sleep. 'abalị' = night.", src: "elias12" },
+            { ig: "Etetara m n'elekere isii nke ụtụtụ", en: "I woke up at six o'clock in the morning", alt: ["Etetara m n'elekere isii nke ụtụtụ."], note: "'teta' = wake up. Dictionary example.", src: "nkowaokwu" },
+            { ig: "Mgbe m tete ụra n'ụtụtụ, m na-agba ọsọ", en: "When I wake up in the morning, I go running", alt: ["Mgbe m tete ụra na ụtụtụ, m na-agba ọsọ","Mgbe m tete ụra n'ụtụtụ, m na-agba ọsọ."], note: "'gba ọsọ' = run.", src: "elias12" },
+            { ig: "Ụtụtụ niile, m na-aza ụlọ m", en: "Every morning I sweep my house", alt: ["Ụtụtụ nile, m na-aza ụlọ m","Ụtụtụ niile, m na-aza ụlọ m."], note: "'za' = sweep: the broom (azịza) is what you sweep with.", src: "elias12" },
+            { ig: "isi nri", en: "cooking (to cook food)", alt: ["ịsi nri"], note: "From the verb 'si' (cook). A cook is 'osiite'.", src: "elias12" },
+            { ig: "M na-aga ahịa zụta nri maka isi nri ehihie", en: "I go to the market to buy food to cook lunch", alt: ["M na-aga ahịa zụta nri maka isi nri ehihie."], note: "'maka' = for / because.", src: "elias12" },
+            { ig: "Achọghị m ịlakpu ụra ugbu a", en: "I don't want to go to bed now", alt: ["Achọghị m ịlakpu ụra ugbu a."], note: "'lakpu ụra' = go to bed. Dictionary example.", src: "nkowaokwu" }
+          ]
         }
       ]
     },
@@ -1062,6 +1097,22 @@ window.CURRICULUM = {
             { ig: "Ọ zụtara ekwentị ọhụrụ", en: "She bought a new phone", alt: ["Ọ zụtara ekwentị ọhụrụ."], note: "'zụtara' = bought. Dictionary example.", src: "nkowaokwu" },
             { ig: "Anyị nwere usekwu abụọ", en: "We have two kitchens", alt: ["Anyị nwere usekwu abụọ."], src: "nkowaokwu" },
             { ig: "Ebee ka ekwentị m dị?", en: "Where is my phone?", unsure: true }
+          ]
+        },
+        {
+          id: "home-more",
+          title: "Door, window, bed and bathroom",
+          tip: "Tone keeps similar words apart: àkwà (bed), ákwà (cloth), àkwá (egg). Likewise mmà (knife) and mma (beauty, as in mara mma).",
+          items: [
+            { ig: "ibo", en: "door", alt: ["ụzọ","ọnụ ụzọ"], note: "Dictionary word: íbó. 'ụzọ' means way / doorway, and many people say 'ọnụ ụzọ' for the doorway.", unsure: true, src: "nkowaokwu" },
+            { ig: "mpio", en: "window", alt: ["m̀pio"], note: "Tone: m̀pio.", src: "nkowaokwu" },
+            { ig: "akwandina", en: "bed", alt: ["akwa ndina","akwa"], note: "Literally 'a bed for lying on'. Short form: àkwà (bed), as in 'gaa na akwa m' (go to my bed).", src: "nkowaokwu" },
+            { ig: "ụlọ ịsa ahụ", en: "bathroom", alt: ["ụlọịsaahụ"], note: "Literally 'house for washing the body'.", src: "nkowaokwu" },
+            { ig: "mma", en: "knife", alt: ["mmà"], note: "Tone: mmà. A kitchen knife is 'mmeekwu'.", src: "nkowaokwu" },
+            { ig: "mpanaaka", en: "lantern / kerosene lamp", src: "nkowaokwu" },
+            { ig: "Mechie mpio n'ihi na mmiri ga-ezo", en: "Close the window because it is going to rain", alt: ["Mechie mpio n'ihi na mmiri ga-ezo.","Mechie mpio n'ihi mmiri ga-ezo n'obere oge"], note: "Based on a dictionary example. 'mechie' = close, 'n'ihi' = because.", src: "nkowaokwu" },
+            { ig: "Nneka na-asa ụlọ ịsa ahụ", en: "Nneka is washing the bathroom", alt: ["Nneka na-asa ụlọ ịsa ahụ.","Nneka na-asa ụlọịsaahụ"], src: "nkowaokwu" },
+            { ig: "Anyị chọrọ ibufe akwandina a n'imụlọ nke ọzọ", en: "We want to carry this bed to the other room", alt: ["Anyị chọrọ ibufe akwandina a n'imụlọ nke ọzọ."], note: "'bufe' = carry across. Dictionary example.", src: "nkowaokwu" }
           ]
         }
       ]
@@ -1976,7 +2027,7 @@ window.CURRICULUM = {
             { ig: "Ọ bụ eziokwu", en: "It is true", alt: ["Ọ bụ eziokwu.", "O bu eziokwu"], note: "Literally 'it is the truth'.", unsure: true },
             { ig: "Ọ bụghị eziokwu", en: "It is not true", alt: ["Ọ bụghị eziokwu.", "O bughi eziokwu"], note: "'bụghị' = is not.", unsure: true },
             { ig: "Echeghị m na ọ bụ eziokwu", en: "I do not think it is true", alt: ["Echeghị m na ọ bụ eziokwu."], note: "The negative of 'Echere m na …' (I think that …).", unsure: true },
-            { ig: "n'ihi na", en: "because", alt: ["maka na"], note: "Joins a reason to a statement.", unsure: true },
+            { ig: "n'ihi na", en: "because", alt: ["maka na"], note: "Joins a reason to a statement. The dictionary confirms 'maka' (because) and uses 'n'ihi' in its examples.", unsure: true },
             { ig: "Ahụ adịghị m mma n'ihi na m rịa ọrịa", en: "I do not feel well because I am sick", alt: ["Ahụ adịghị m mma n'ihi na m rịa ọrịa."], unsure: true },
             { ig: "dịka ọmụmaatụ", en: "for example", alt: ["dika omumaatu"], unsure: true },
             { ig: "ọmụmaatụ", en: "example", alt: ["omumaatu"], unsure: true }

@@ -50,6 +50,10 @@ Status key: ✅ used in the app · 🔎 found, not mined yet · 🚫 blocked/unu
 | 🚫 | Harvard ELIAS Units 9, 15, 16, 20, 21 (telling time, future, professions, buying/selling, directions) | The best free lessons for the Section 2 and 3 topics | Site did not load from this machine (DNS failure). Save the pages yourself. |
 | 🔎 | [Census 2020 Igbo glossary (PDF)](https://www2.census.gov/programs-surveys/decennial/2020/resources/language-materials/glossaries/Igbo-Glossary.pdf) | Official-use words (urban, rural) | Seen in a search summary only; not opened. |
 | 💲 | Udemy, AmazingTalker, Linguashop, Selar courses | | Paid: not used. |
+| ✅ | [Harvard ELIAS Unit 12: Daily routine](https://elias.unix.fas.harvard.edu/languages/Igbo/Beginning/12/daily-routine) | wake up, sleep, cook, a short daily-routine text | Added 2026-11-11 (source id `elias12`). |
+| 🔎 | [Harvard ELIAS Unit 17: In my house](https://elias.fas.harvard.edu/node/180) | household vocabulary | Found 2026-11-11, not fetched yet. Next: check TV, key, lamp. |
+| 🔎 | [Africancherry: food vocabulary in Ìgbò](https://africancherry.com/?p=7143) | food and kitchen words | Found 2026-11-11, not checked. |
+| 🔎 | [Igbo Daily Drops podcast](https://igbodailydrops.buzzsprout.com/2594059) | free audio mini-lessons | Audio only, no transcript. |
 
 ## Daily research log
 
@@ -96,3 +100,11 @@ Status key: ✅ used in the app · 🔎 found, not mined yet · 🚫 blocked/unu
 - New sources in data/curriculum.js: Nollysenti Igbo film reviews (huggingface.co/datasets/Davlan/nollysenti), a community Igbo style guide on GitHub (for ịntanetị), and the saved "Useful phrases in Igbo" page (for one line).
 - Leads not used: the Microsoft Language Portal glossary for Igbo, Igbo Wikipedia technology pages (two guessed pages gave 404), the UNIZIK computer-terms paper (PDF unreadable), ozikoro.com (age grades, web summary only).
 - Left out because nothing confirmed them: see section O-3 of QUESTIONS-FOR-PARENT.md.
+
+### 2026-11-11 (Day 1 of 10): v1.7.0, Section 2 gaps
+- The inbox was empty and no parent answers had come in yet. Section 1's last gaps (church, village) wait for the parent, so this run worked on Section 2: My Day, At Home and Asking Questions.
+- Checked against Nkọwa okwu: ụra (sleep), teta (wake up), lakpu ụra (go to bed), ibo (door), mpio (window), akwandina (bed), ụlọ ịsa ahụ (bathroom), mma (knife), mpanaaka (lantern), maka (because). Notes are in sources/research-2026-11-11.md.
+- The new free source, Harvard ELIAS Unit 12 (daily routine), gave rahụ ụra, ịteta ụra and isi nri (cook; the guess "sie nri" was wrong), plus a short routine text.
+- Added 3 lessons (`day-night`, `home-more`, `q-why`), 24 items, 5 marked ⚑. Parent questions L75–L77.
+- Not found: why (gịnị mere / maka gịnị), TV (the dictionary's "igwenzisa" means a transmitter), spoon (eku is a ladle), oriọna, windo, ite mmiri.
+- Audio: 7 new native-speaker clips from the Nkọwa okwu dataset (e.g. mpanaaka, 'Nneka na-asa ụlọ ịsa ahụ'); 678 items now have audio.

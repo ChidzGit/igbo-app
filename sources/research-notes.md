@@ -40,3 +40,9 @@ Saved 12 pages. Blocked or unavailable:
   - Ordinals: nke + number. First = nke mbụ / nke izizi.
   - Further free links from that page: ezinaulo.com/igbo-lessons/vocabulary/numbers/ and teachyourselfigbo.com/counting-of-numbers.php
 - "igbo.htm", "igbo 1.htm" and "igbo 2.htm" were all the numbers page, so there are 2 unique pages in total.
+
+## 2026-11-11: dictionary checks (Section 2 gaps)
+Full table: sources/research-2026-11-11.md.
+- Confirmed on Nkọwa okwu: ụra, rahụ (sleep), teta (wake up), lakpu ụra, ibo (door; ụzọ = doorway), m̀pio (window), àkwàndinà (bed), ụlọ ịsa ahụ, ìko, mmà / mmeekwu, mpanaaka (lantern), màkà (because).
+- Harvard Unit 12 only: isi nri (cook), ịteta ụra.
+- Not found: gịnị mere / maka gịnị / n'ihi gịnị (why), otu esi (how), televishọn, oriọna, windo, ọnụ ụzọ, ite mmiri, saa akwa. eku = ladle (not spoon); ǹgàjì was not glossed.

@@ -283,6 +283,9 @@ The notes below came from a research helper's dictionary check, which is noisy. 
 | L72 | male goat, female goat, lamb, donkey | "mkpi" (he-goat) and "nne ewu" (she-goat) only from community lists; "nwa atụrụ" (lamb) and "ịnyịnya ibu" (donkey) appear in the dictionary only as related terms. Confirm? | |
 | L73 | countries: Ghana, Africa, Britain; "Which country are you from?" | Nothing found for Ghana or Africa. "onye Britain" is already flagged (K17). No source for "Ị bụ onye obodo ebee?". | |
 | L74 | "The goat is eating", "I am wearing …" | No source sentence. Candidates "Ewu na-eri nri" and "Ana m eyi …" are built, not confirmed. | |
+| L75 | door: ibo or ọnụ ụzọ? (lesson `home-more`) | The dictionary gives "ibo" for door and "ụzọ" for doorway. Which do you say for a door at home? | |
+| L76 | why: Maka gịnị? / Gịnị mere i ji abịa? / Gịnị mere ị na-amụ Igbo? (lesson `q-why`) | No dictionary entry for "why". Are these natural ways to ask why? | |
+| L77 | A na m amụ Igbo maka na ọ bụ asụsụ nne m (I am learning Igbo because it is my mother's language) | Built sentence. Is "maka na" or "n'ihi na" better here? | |
 
 ---
 
