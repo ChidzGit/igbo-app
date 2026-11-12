@@ -200,7 +200,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 /* shared focus: a 2px surface gap then a 2px indigo ring */
 .mi-btn:focus-visible, .mi-link:focus-visible, .mi-choice:focus-visible, .mi-key:focus-visible, .mi-tile:focus-visible,
-.mi-chip:focus-visible, .mi-speaker:focus-visible, .mi-mic:focus-visible, .mi-close:focus-visible, .mi-tab:focus-visible,
+.mi-chip:focus-visible, .mi-letter:focus-visible, .mi-speaker:focus-visible, .mi-mic:focus-visible, .mi-close:focus-visible, .mi-tab:focus-visible,
 .mi-node:focus-visible .mi-node-bubble, .mi-brand:focus-visible, .mi-toggle input:focus-visible, .mi-select:focus-visible {
   outline: 2px solid transparent; box-shadow: var(--focus-ring);
 }
@@ -273,7 +273,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .mi-stat .mi-icon { stroke: var(--ochre); fill: var(--ochre); }
 
 .mi-tabbar {
-  position: sticky; bottom: 0; z-index: var(--z-bar); display: grid; grid-template-columns: repeat(4, 1fr);
+  position: sticky; bottom: 0; z-index: var(--z-bar); display: grid; grid-template-columns: repeat(5, 1fr);
   background: var(--surface-raised); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom);
 }
 .mi-tab { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--space-1); min-height: var(--bar-tab); background: none; border: 0; border-radius: var(--radius-md); color: var(--ink-muted); cursor: pointer; }
@@ -627,3 +627,15 @@ main > .mi-stat-tiles { margin: 0 0 var(--space-4); }
 .mi-stage-next { margin-top: var(--space-6); opacity: 0.9; }
 .mi-stage-next h2 { margin: 0; }
 .mi-stage-next p { margin: var(--space-2) 0 0; }
+
+/* Letters tab */
+.mi-letters-group { margin: var(--space-6) 0; }
+.mi-letter-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: var(--space-3); margin: var(--space-3) 0; }
+.mi-letter { display: flex; flex-direction: column; align-items: center; gap: var(--space-1); min-height: 44px; padding: var(--space-3) var(--space-2); text-align: center; background: var(--surface-raised); color: var(--ink); border: 2px solid var(--edge); border-radius: var(--radius-md); box-shadow: 0 var(--depth-md) 0 var(--edge); cursor: pointer; font: inherit; }
+.mi-letter--quiet { cursor: default; }
+.mi-letter.is-playing { border-color: var(--primary); background: var(--primary-soft); }
+.mi-letter-big { font-family: var(--font-display, inherit); font-size: 2rem; font-weight: 800; line-height: 1.1; color: var(--primary); }
+.mi-letter-ex { font-weight: 600; overflow-wrap: anywhere; }
+.mi-letter-mean, .mi-letter-say { overflow-wrap: anywhere; }
+.mi-letters-practise { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+@media (prefers-reduced-motion: reduce) { .mi-letter { transition: none; } }

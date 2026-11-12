@@ -22,7 +22,8 @@ What it does
      installed, otherwise skipped.
   3. Downloads only the matched clips (hf_hub_download) and copies them into
      audio/ as <readable-slug>-<hash>-nko.mp3.
-  4. MERGES new entries into data/audio.js; never changes or deletes entries or
+  4. Never overwrites an entry with source "parent" (family recordings, see tools/add_parent_audio.py).
+     MERGES new entries into data/audio.js; never changes or deletes entries or
      files that came from other sources. Re-runnable: existing entries are kept.
 """
 import argparse

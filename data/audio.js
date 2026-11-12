@@ -3447,34 +3447,34 @@ window.AUDIO = {
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Juliegwen-Z%E1%BB%A5ta.wav"
  },
  "àkwà": {
-  "file": "audio/akwa-1cf338.mp3",
-  "author": "Deventus",
-  "license": "CC0",
-  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Deventus-Akwa.wav"
+  "file": "audio/akwa-low-low-tone-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
  "àkwá": {
-  "file": "audio/akwa-1cf338.mp3",
-  "author": "Deventus",
-  "license": "CC0",
-  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Deventus-Akwa.wav"
+  "file": "audio/akwa-low-high-tone-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
  "ákwà": {
-  "file": "audio/akwa-1cf338.mp3",
-  "author": "Deventus",
-  "license": "CC0",
-  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Deventus-Akwa.wav"
+  "file": "audio/akwa-high-low-tone-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
  "ákwá": {
-  "file": "audio/akwa-1cf338.mp3",
-  "author": "Deventus",
-  "license": "CC0",
-  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Deventus-Akwa.wav"
+  "file": "audio/akwa-high-high-tone-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
  "èzè": {
-  "file": "audio/eze-ee63de.mp3",
-  "author": "Celetex",
-  "license": "CC0",
-  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Celetex-Eze.wav"
+  "file": "audio/eze-low-low-tone-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
  "ényí": {
   "file": "audio/enyi-c80c5c.mp3",
@@ -3483,10 +3483,10 @@ window.AUDIO = {
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Iwuala_chisom-enyi.wav"
  },
  "ézé": {
-  "file": "audio/eze-ee63de.mp3",
-  "author": "Celetex",
-  "license": "CC0",
-  "source": "https://commons.wikimedia.org/wiki/File:LL-Q33578_(ibo)-Celetex-Eze.wav"
+  "file": "audio/eze-high-high-tone-nko.mp3",
+  "author": "Nkọwa okwu / IgboAPI contributors",
+  "license": "CC BY 4.0",
+  "source": "https://huggingface.co/datasets/nkowaokwu/ibo-dict"
  },
  "ṅ": {
   "file": "audio/n-1927a1.mp3",

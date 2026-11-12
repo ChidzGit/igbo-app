@@ -59,11 +59,21 @@
 
   /* ───────────── native-speaker audio (Lingua Libre via Commons + Nkọwa okwu dataset, data/audio.js) ───────────── */
   const AUDIO = (window.AUDIO && typeof window.AUDIO === "object") ? window.AUDIO : {};
-  const audioByKey = {};
-  Object.keys(AUDIO).forEach((k) => { audioByKey[strictKey(k)] = AUDIO[k]; });
+  // Exact lookup (tone marks kept, NFC) first; the tone-stripped key is only a fallback.
+  // Family recordings (source "parent") always win. Items with noAudioFallback (tone pairs)
+  // never borrow another tone's clip: no sound is better than the wrong sound.
+  const nfc = (s) => String(s).normalize("NFC");
+  const audioExact = {}, audioByKey = {};
+  Object.keys(AUDIO).forEach((k) => { if (AUDIO[k] && AUDIO[k].file) audioExact[nfc(k)] = AUDIO[k]; });
+  Object.keys(AUDIO).forEach((k) => { const a = AUDIO[k]; if (a && a.source !== "parent") audioByKey[strictKey(k)] = a; });
+  Object.keys(AUDIO).forEach((k) => { const a = AUDIO[k]; if (a && a.source === "parent") audioByKey[strictKey(k)] = a; });
   function audioFor(it) {
     if (!it) return null;
-    for (const w of [it.ig, ...(it.alt || [])]) { const a = AUDIO[w] || audioByKey[strictKey(w)]; if (a && a.file) return a; }
+    const words = [it.ig, ...(it.alt || [])];
+    for (const w of words) { const a = audioExact[nfc(w)]; if (a && a.source === "parent") return a; }
+    for (const w of words) { const a = audioExact[nfc(w)]; if (a) return a; }
+    if (it.noAudioFallback) return null;
+    for (const w of words) { const a = audioByKey[strictKey(w)]; if (a && a.file) return a; }
     return null;
   }
   // One shared, never-attached Audio element (no native controls bar). Every 🔊 press
@@ -702,7 +712,7 @@
         <p class="text-gloss">${esc(st.focus)}</p><p class="text-caption mi-muted">${dn}/${tot} lessons in this section</p></div>`;
       secs.forEach((s) => renderSec(s, si++));
     });
-    const rest = C.sections.filter((s) => !placed.has(s.id));
+    const rest = C.sections.filter((s) => !placed.has(s.id) && !s.reference);
     if (rest.length) {
       if (stages.length) html += `<div class="mi-stage"><h2 class="mi-stage-title text-title">More topics</h2></div>`;
       rest.forEach((s) => renderSec(s, si++));
@@ -772,7 +782,7 @@
   let wordFilter = "all", wordQuery = "";
   function viewWords() {
     const rows = [];
-    C.sections.forEach((sec) => sec.lessons.forEach((les) => les.items.forEach((it) => rows.push({ it, sec, les }))));
+    C.sections.filter((sec) => !sec.reference).forEach((sec) => sec.lessons.forEach((les) => les.items.forEach((it) => rows.push({ it, sec, les }))));
     const filtered = rows.filter(({ it, les }) => {
       if (wordFilter === "learned" && !S.completed[les.id]) return false;
       if (wordFilter === "weak" && !(S.completed[les.id] && (S.words[it._key]?.s ?? 0) <= 2)) return false;
@@ -878,8 +888,42 @@
     window.addEventListener("load", () => { navigator.serviceWorker.register("sw.js").catch(() => { /* offline support unavailable */ }); });
   }
 
+  /* ───────────── Letters tab (reference section: the alphabet) ───────────── */
+  function viewLetters() {
+    const sec = C.sections.find((s) => s.reference && s.id === "alphabet") || C.sections.find((s) => s.reference);
+    if (!sec) { app.innerHTML = `<h1 class="text-title">Letters</h1><p class="text-body mi-muted">No letters yet.</p>`; return; }
+    const les = (id) => sec.lessons.find((l) => l.id === id);
+    const groups = [
+      { title: "Vowels", ids: ["alpha-vowels"] },
+      { title: "Consonants", ids: ["alpha-consonants-1", "alpha-consonants-2"] },
+      { title: "Double letters & ṅ", ids: ["alpha-digraphs"] }
+    ];
+    const tile = (it) => {
+      const parts = String(it.ex || "").split(/\s+[—–-]\s+/);
+      const word = parts[0], meaning = parts.slice(1).join(" — ");
+      const a = audioFor(it);
+      const body = `<span class="mi-letter-big mi-ig" aria-hidden="true">${esc(it.ig)}</span>
+        <span class="mi-letter-ex mi-ig text-caption">${esc(word)}</span>${meaning ? `<span class="mi-letter-mean text-caption mi-muted">${esc(meaning)}</span>` : ""}
+        <span class="mi-letter-say text-caption mi-muted">${esc(String(it.en).replace(/^(vowel|letter) '[^']*' — /, ""))}</span>`;
+      const label = `${it.ig}${word ? ", " + word : ""}${meaning ? ", " + meaning : ""}`;
+      if (a) return `<button type="button" class="mi-letter" data-audio="${esc(a.file)}" aria-label="Play ${esc(label)}">${body}</button>`;
+      return `<div class="mi-letter mi-letter--quiet">${body}<a class="mi-link text-caption" href="${listenUrl(it.ig)}" target="_blank" rel="noopener" aria-label="Hear ${esc(it.ig)} on Nkọwa okwu (opens a new tab)">Nkọwa okwu</a></div>`;
+    };
+    let html = `<h1 class="text-title">Letters</h1>
+      <p class="text-gloss">Igbo has 36 letters: 8 vowels and 28 consonants, 9 of them double letters. Tap a letter to hear it.</p>`;
+    groups.forEach((g, gi) => {
+      const ls = g.ids.map(les).filter(Boolean);
+      if (!ls.length) return;
+      html += `<section class="mi-letters-group" aria-labelledby="lg-${gi}"><h2 class="text-heading" id="lg-${gi}">${esc(g.title)}</h2>
+        <div class="mi-letter-grid">${ls.flatMap((l) => l.items).map(tile).join("")}</div>
+        <div class="mi-letters-practise">${ls.map((l) => `<button type="button" class="mi-btn mi-btn--secondary text-button" data-practise="${l.id}">Practise${ls.length > 1 ? " " + esc(l.title.replace(/^The /, "")) : ""}</button>`).join("")}</div></section>`;
+    });
+    app.innerHTML = html;
+    app.querySelectorAll("[data-practise]").forEach((b) => b.onclick = () => { stopAudio(); const x = findLesson(b.dataset.practise); if (x) startRun({ mode: "lesson", lessonId: x.les.id, queue: buildLesson(x.sec, x.les) }); });
+  }
+
   /* ───────────── router ───────────── */
-  const views = { home: viewHome, daily: viewDaily, words: viewWords, more: viewMore };
+  const views = { home: viewHome, daily: viewDaily, words: viewWords, letters: viewLetters, more: viewMore };
   function go(name) {
     if (R) return;
     location.hash = name;

@@ -14,16 +14,24 @@
     src     (optional) id of the source in `sources` below
 
   Stages: see `stages` below; each lists the section ids (units) it contains.
+  Sections with `reference: true` (the alphabet) are in no stage: they are not part of the
+  Learn path and are shown in the Letters tab instead.
 
   Lesson fields: id (never change once published, progress is stored by id),
   title, tip, items, type ("letters" = no typing exercises).
 */
 window.CURRICULUM = {
-  version: "1.7.0",
-  updated: "2026-11-11",
+  version: "1.8.0",
+  updated: "2026-11-12",
 
   // Newest first. Shown in the app under More → "What's new".
   changelog: [
+    { version: "1.8.0", date: "2026-11-12", changes: [
+      "The alphabet now has its own Letters tab (between Words and More): tap a letter to hear it, or practise each group. Section 1 now starts with Greetings.",
+      "The tones lesson ('Tones: same letters, new word') moved to the end of At School.",
+      "The tone words (àkwá, ákwá, ákwà, àkwà, ézé, èzè) now play different recordings instead of one clip for all of them. Where there is no matching recording the app shows the Nkọwa okwu link instead of a wrong sound.",
+      "Families can add their own recordings: see audio/parent/README.md."
+    ] },
     { version: "1.7.0", date: "2026-11-11", changes: [
       "3 new lessons in Section 2: 'Cooking, sleeping and waking' (My Day), 'Door, window, bed and bathroom' (At Home) and 'Why and because' (Asking Questions).",
       "24 new words and sentences: sleep (ụra), wake up (teta), go to bed (lakpu ụra), cooking (isi nri), door, window, bed, bathroom, knife, lantern and 'because' (maka).",
@@ -119,7 +127,7 @@ window.CURRICULUM = {
   // Every section id appears in exactly one stage's `units`. When you add a new
   // unit (section), also add its id to a stage's `units`. Empty stages show as "coming next".
   stages: [
-    { id: "s1", number: 1, cefr: "Intro", title: "Essential phrases", focus: "Start with essential phrases and simple grammar.", units: ["alphabet","greetings","intro","family","eatingout","market","school","travel"] },
+    { id: "s1", number: 1, cefr: "Intro", title: "Essential phrases", focus: "Start with essential phrases and simple grammar.", units: ["greetings","intro","family","eatingout","market","school","travel"] },
     { id: "s2", number: 2, cefr: "A1", title: "Basic interactions", focus: "Words, phrases and grammar for basic interactions.", units: ["food","numbers","colours","verbs","questions","whereis","routine","home","jobs","animals","clothes","describe","opinions","peoples","linking"] },
     { id: "s3", number: 3, cefr: "A1", title: "Basic conversations", focus: "Foundational sentences for basic conversations.", units: ["time","body","everyday","clock","past","future","feelings","people","chat","cities","nature","arts","igboland"] },
     { id: "s4", number: 4, cefr: "A2", title: "Everyday topics", focus: "Use sentences in conversations about everyday topics.", units: ["ilu","discuss","omenala","ceremonies","beliefs","weather","cooking","doctor","plans"] },
@@ -133,6 +141,7 @@ window.CURRICULUM = {
     /* ───────────────────────── 1. ALPHABET ───────────────────────── */
     {
       id: "alphabet",
+      reference: true,
       title: "The Alphabet",
       igTitle: "Mkpụrụ Edemede (Abịdịị)",
       color: "#157a43",
@@ -204,19 +213,6 @@ window.CURRICULUM = {
             { ig: "ny", en: "letter 'ny' — like 'ny' in 'canyon'", ex: "nye — give", src: "wiki-alpha" },
             { ig: "sh", en: "letter 'sh' — as in 'ship'", ex: "(rare letter; used in some dialect words)", unsure: true, src: "wiki-alpha" },
             { ig: "ṅ", en: "letter 'ṅ' — the 'ng' sound in 'sing'", ex: "ṅụọ — drink!", src: "wiki-alpha" }
-          ]
-        },
-        {
-          id: "alpha-tones",
-          title: "Tones: same letters, new word",
-          tip: "Igbo is a tonal language: pitch changes meaning. Writers sometimes mark tones: grave accent (à) = low tone, acute accent (á) = high tone. Most everyday writing leaves them out, and you never need to type them in this app. Listen on Nkọwa okwu to hear the difference!",
-          items: [
-            { ig: "àkwá", en: "egg", note: "low-high", unsure: true, src: "omniglot" },
-            { ig: "ákwá", en: "crying / weeping", note: "high-high", unsure: true, src: "omniglot" },
-            { ig: "ákwà", en: "cloth / fabric", note: "high-low", unsure: true, src: "omniglot" },
-            { ig: "àkwà", en: "bed (also bridge)", note: "low-low", unsure: true, src: "omniglot" },
-            { ig: "ézé", en: "tooth", note: "Compare èzè = king", unsure: true, src: "omniglot" },
-            { ig: "èzè", en: "king", unsure: true, src: "omniglot" }
           ]
         }
       ]
@@ -635,6 +631,19 @@ window.CURRICULUM = {
             { ig: "O dere ya n'akwụkwọ", en: "She wrote it on paper", alt: ["Ọ dere ya n'akwụkwọ"], src: "nkowaokwu" },
             { ig: "A ga m agụ akwụkwọ ahụ taata", en: "I will read that book today", alt: ["A ga m agụ akwụkwọ ahụ taa", "Aga m agụ akwụkwọ ahụ taa"], src: "nkowaokwu" },
             { ig: "Ọ na-akụzi n'ọtaakara", en: "She teaches in a nursery school", alt: ["O na-akụzi n'ọtaakara"], note: "'ọtaakara' = nursery school.", src: "nkowaokwu" }
+          ]
+        },
+        {
+          id: "alpha-tones",
+          title: "Tones: same letters, new word",
+          tip: "Igbo is a tonal language: pitch changes meaning. Writers sometimes mark tones: grave accent (à) = low tone, acute accent (á) = high tone. Most everyday writing leaves them out, and you never need to type them in this app. Listen on Nkọwa okwu to hear the difference!",
+          items: [
+            { ig: "àkwá", en: "egg", noAudioFallback: true, note: "low-high", unsure: true, src: "omniglot" },
+            { ig: "ákwá", en: "crying / weeping", noAudioFallback: true, note: "high-high", unsure: true, src: "omniglot" },
+            { ig: "ákwà", en: "cloth / fabric", noAudioFallback: true, note: "high-low", unsure: true, src: "omniglot" },
+            { ig: "àkwà", en: "bed (also bridge)", noAudioFallback: true, note: "low-low", unsure: true, src: "omniglot" },
+            { ig: "ézé", en: "tooth", noAudioFallback: true, note: "Compare èzè = king", unsure: true, src: "omniglot" },
+            { ig: "èzè", en: "king", noAudioFallback: true, unsure: true, src: "omniglot" }
           ]
         }
       ]

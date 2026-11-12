@@ -233,7 +233,7 @@ def main():
     previous = load_audio_js()
     merged = {k: v for k, v in previous.items() if COMMONS not in v.get("source", "")}
     for k, v in out.items():
-        merged.setdefault(k, v)  # never overwrite another source's entry
+        merged.setdefault(k, v)  # never overwrite another source's entry (incl. source "parent" family recordings)
 
     # Remove only our own stale clips (used by an old Commons entry, unused now).
     used = {os.path.basename(v["file"]) for v in merged.values()}
