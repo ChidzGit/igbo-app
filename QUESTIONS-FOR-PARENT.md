@@ -521,6 +521,34 @@ Pass / fail an exam, result, degree, graduate; cut, bleed, swollen, first aid, b
 
 ---
 
+## P. Section 6 additions (Nov 2026)
+
+New units in Section 6 (B1): Asking Politely, Hair & Grooming, and Clothes, Fabrics & Sewing (35 new items). Most come from Nkọwa okwu dictionary examples. Five are marked ⚑, and the rows below also list words I could not find anywhere.
+
+### P-1. Doubts about items marked ⚑
+
+| # | Igbo in the app | Doubt and evidence | Parent says |
+|---|-----------------|--------------------|-------------|
+| P1 | Biko, chetụ (excuse me) | Only Omniglot has it, and the spelling varies (Biko chere / Biko, chetụ). What do you say to get someone's attention, e.g. "excuse me"? | |
+| P2 | Biko, iwe ewela gị (excuse me / don't be angry) | Only Omniglot ("Biko, iwe e wela gị"). Is it spaced and spelled right, and is it really "excuse me"? | |
+| P3 | Sị ya ndo. (say sorry to him/her) | Adapted from the dictionary example "Amaka, sị ya ndo." Is "ndo" the normal word for "sorry"? Is it only for sympathy or also for apology? | |
+| P4 | Achọrọ m inye ya akwụkwọ ya. (I want to give him his book) | The dictionary has "Achọ m inye ya akwụkwọ ya". I used "achọrọ m". Which is more natural, and is it polite enough to say "I would like to"? | |
+| P5 | enyo (mirror) | The dictionary lists ènyò as mirror, lens and glass, but its example is about a lens ("Enyo a dị ọnụ"). Is enyo what you say for a mirror at home? | |
+
+### P-2. Words we still need (no source, so left out)
+
+| # | English | Doubt | Parent says |
+|---|---------|-------|-------------|
+| P6 | plait / braid hair | I guessed "kpa isi" but no source confirmed it. What do you say? | |
+| P7 | cut hair | "kpụ isi" is not confirmed. What do you say for getting a haircut? | |
+| P8 | bathe / have a bath | "saa ahụ" is not confirmed (the dictionary gave other "sa" words). What is the everyday word? | |
+| P9 | sponge | One site lists "ògbo" for sponge; the dictionary gave ụgà (a plant used for sponges). Which is right? | |
+| P10 | it's too big / too small / it fits me | No source. How do you say these when trying on clothes? | |
+| P11 | isiagu | No dictionary entry loaded. How is it spelled and what is it (the lion-head cloth/shirt)? | |
+| P12 | Can you help me? (Nyere m aka?) | "nyere m aka" is not confirmed as "help me". What is the polite way to ask for help? | |
+
+---
+
 ## Answered ✅
 
 *(The daily routine moves answered items here and records what changed.)*

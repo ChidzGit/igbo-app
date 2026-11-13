@@ -46,3 +46,6 @@ Full table: sources/research-2026-11-11.md.
 - Confirmed on Nkọwa okwu: ụra, rahụ (sleep), teta (wake up), lakpu ụra, ibo (door; ụzọ = doorway), m̀pio (window), àkwàndinà (bed), ụlọ ịsa ahụ, ìko, mmà / mmeekwu, mpanaaka (lantern), màkà (because).
 - Harvard Unit 12 only: isi nri (cook), ịteta ụra.
 - Not found: gịnị mere / maka gịnị / n'ihi gịnị (why), otu esi (how), televishọn, oriọna, windo, ọnụ ụzọ, ite mmiri, saa akwa. eku = ladle (not spoon); ǹgàjì was not glossed.
+
+## 2026-11-13: dictionary checks (Section 6: polite, grooming, fabrics)
+Full table with URLs and confidence: `sources/research-s6-day3.md`. Nkọwa okwu checked: biko, ndo, gbaghara, ọda, ntutu, bọ isi, ọkpụisi, ncha, enyo, kpụ, mma, akwa, ọgọdọ, ma akwa, mgbaji (jigida → mgbaji), kwa akwa, ọkwaakwa, owu, ndụdụ. Second sources: Omniglot "excuse me" page (biko, Biko chetụ). Not found anywhere: plait/braid, cut hair, bathe, too big/small, isiagu, "can you help me?". English searches on Nkọwa okwu are noisy; search by the Igbo word.

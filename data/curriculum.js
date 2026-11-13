@@ -21,11 +21,17 @@
   title, tip, items, type ("letters" = no typing exercises).
 */
 window.CURRICULUM = {
-  version: "1.8.0",
-  updated: "2026-11-12",
+  version: "1.9.0",
+  updated: "2026-11-13",
 
   // Newest first. Shown in the app under More → "What's new".
   changelog: [
+    { version: "1.9.0", date: "2026-11-13", changes: [
+      "Section 6 (B1) is now open with 3 units: Asking Politely, Hair & Grooming, and Clothes, Fabrics & Sewing.",
+      "35 new words and sentences, e.g. biko (please), ọda (permission), ntutu (hair), ọkpụisi (barber), ọgọdọ (wrapper), mgbaji (waist beads) and ọkwaakwa (tailor). Most come from real Nkọwa okwu dictionary examples.",
+      "5 of them are marked ⚑ because only one source had them or the sentence was adapted: excuse me (two versions), say sorry (Sị ya ndo), mirror (enyo) and I want to give him his book.",
+      "Left out for now because no source was found: plait/braid hair, cut hair, bathe, sponge, too big / too small, and isiagu."
+    ] },
     { version: "1.8.0", date: "2026-11-12", changes: [
       "The alphabet now has its own Letters tab (between Words and More): tap a letter to hear it, or practise each group. Section 1 now starts with Greetings.",
       "The tones lesson ('Tones: same letters, new word') moved to the end of At School.",
@@ -132,7 +138,7 @@ window.CURRICULUM = {
     { id: "s3", number: 3, cefr: "A1", title: "Basic conversations", focus: "Foundational sentences for basic conversations.", units: ["time","body","everyday","clock","past","future","feelings","people","chat","cities","nature","arts","igboland"] },
     { id: "s4", number: 4, cefr: "A2", title: "Everyday topics", focus: "Use sentences in conversations about everyday topics.", units: ["ilu","discuss","omenala","ceremonies","beliefs","weather","cooking","doctor","plans"] },
     { id: "s5", number: 5, cefr: "B1", title: "Wider topics", focus: "Form sentences about a wider variety of topics.", units: ["memories","hopes","career","exams","injuries","relations","chores","directions","media","tech","community"] },
-    { id: "s6", number: 6, cefr: "B1", title: "Complex ideas", focus: "Communicate more complex ideas in conversations.", units: [] },
+    { id: "s6", number: 6, cefr: "B1", title: "Complex ideas", focus: "Communicate more complex ideas in conversations.", units: ["polite","grooming","fabrics"] },
     { id: "s7", number: 7, cefr: "B2", title: "Feelings & opinions", focus: "Talk about abstract feelings and opinions.", units: [] },
     { id: "s8", number: 8, cefr: "B2", title: "Confident conversation", focus: "Converse confidently, even about specialised topics.", units: [] }
   ],
@@ -2813,6 +2819,104 @@ window.CURRICULUM = {
             { ig: "Mmiri kwara ebe ahụ ruru m n'ikpere", en: "The water standing there reached my knee", alt: ["Mmiri kwara ebe ahụ ruru m n'ikpere."], src: "nkowaokwu" },
             { ig: "Ọ dịghị ọkụ n'obodo anyị", en: "There is no light (electricity) in our town", alt: ["Ọ dịghị ọkụ n'obodo anyị."], unsure: true },
             { ig: "Anyị kwesịrị inyere ibe anyị aka", en: "We should help one another", alt: ["Anyị kwesịrị inyere ibe anyị aka."], unsure: true }
+          ]
+        }
+      ]
+    },
+
+    /* ───────────────────────── SECTION 6 (B1): ASKING POLITELY, GROOMING, CLOTHES & SEWING ───────────────────────── */
+    {
+      id: "polite",
+      title: "Asking Politely",
+      color: "#7b4a9e",
+      description: "Please, sorry, permission and saying what you want.",
+      lessons: [
+        {
+          id: "pol-please",
+          title: "Please, sorry and permission",
+          tip: "'Biko' (please) softens any request: put it first. 'ka m + verb' means 'let me' or 'that I may', as in 'ka m soro unu' (let me follow you). 'Achọrọ m' + verb is the polite way to say 'I want to'. 'na-' = ongoing, 'ga-' = will.",
+          items: [
+            { ig: "biko", en: "please", src: "nkowaokwu" },
+            { ig: "Biko, gbaghara m.", en: "Please forgive me.", alt: ["Biko gbaghara m"], src: "nkowaokwu" },
+            { ig: "Sị ya ndo.", en: "Say sorry to him/her.", alt: ["Si ya ndo"], note: "'ndo' = sorry. Another 'ndo' means shade (different tone). The dictionary example names a person first: 'Amaka, sị ya ndo.'", unsure: true, src: "nkowaokwu" },
+            { ig: "ọda", en: "permission", alt: ["oda"], src: "nkowaokwu" },
+            { ig: "Onyeisi nyere m ọda ka m soro unu.", en: "The chairman gave me permission to follow you.", alt: ["Onyeisi nyere m oda ka m soro unu"], note: "'ka m soro unu' = 'that I may follow you'.", src: "nkowaokwu" },
+            { ig: "Biko, chetụ", en: "Excuse me (to get attention)", alt: ["Biko chetu", "Biko chere"], unsure: true, src: "omniglot" },
+            { ig: "Biko, iwe ewela gị", en: "Excuse me / please don't be angry", alt: ["Biko iwe ewela gị", "Biko, iwe e wela gị"], unsure: true, src: "omniglot" },
+            { ig: "Achọrọ m inye ya akwụkwọ ya.", en: "I want to give him his book.", alt: ["Achọ m inye ya akwụkwọ ya", "Achọrọ m inye ya akwukwo ya"], note: "Pattern: achọrọ m + verb. The dictionary has 'Achọ m inye ya akwụkwọ ya'.", unsure: true, src: "nkowaokwu" }
+          ]
+        }
+      ]
+    },
+
+    {
+      id: "grooming",
+      title: "Hair & Grooming",
+      color: "#b0476b",
+      description: "Hair, combing, the barber, soap and looking good.",
+      lessons: [
+        {
+          id: "groom-words",
+          title: "Hair and grooming words",
+          tip: "'ntutu' = hair. 'bọ isi' = comb hair ('isi' = head). 'ncha' = soap, not 'ǹchá' (all). 'ọkpụisi' = barber.",
+          items: [
+            { ig: "ntutu", en: "hair", alt: ["ntụtụ"], note: "Not 'ntụtụ' (syringe): the tones differ.", src: "nkowaokwu" },
+            { ig: "bọ isi", en: "comb hair", alt: ["bo isi"], src: "nkowaokwu" },
+            { ig: "ọkpụisi", en: "barber", alt: ["okpuisi"], src: "nkowaokwu" },
+            { ig: "ncha", en: "soap", note: "Not 'ǹchá' (all): different tones.", src: "nkowaokwu" },
+            { ig: "enyo", en: "mirror", alt: ["ènyò"], note: "The dictionary also lists 'lens' and 'glass'; its example is about a lens.", unsure: true, src: "nkowaokwu" },
+            { ig: "kpụ afụọnụ", en: "shave the beard", alt: ["kpu afuonu"], src: "nkowaokwu" },
+            { ig: "mara mma", en: "beautiful", note: "Literally 'be beautiful'.", src: "nkowaokwu" }
+          ]
+        },
+        {
+          id: "groom-talk",
+          title: "Talking about hair and looks",
+          tip: "'-rV' endings show past: 'toro' = grew. 'ga-' = will: 'Ị ga-abọ' = you will comb. 'ma ka e si eme' = knows how to make.",
+          items: [
+            { ig: "Ntutu Ada toro ogologo.", en: "Ada's hair is long.", alt: ["Ntutu Ada toro ogologo"], src: "nkowaokwu" },
+            { ig: "Ị ga-abọ isi gị tupu i jee ụlọ akwụkwọ.", en: "You will comb your hair before going to school.", alt: ["I ga-abo isi gị tupu i jee ụlọ akwụkwọ", "Ị ga-abọ isi gị tupu i jee ulọakwụkwọ"], src: "nkowaokwu" },
+            { ig: "Ọkpụisi ahụ bụ nwanne m nwoke.", en: "That barber is my brother.", alt: ["Okpuisi ahu bu nwanne m nwoke"], src: "nkowaokwu" },
+            { ig: "Ada ma ka e si eme ncha.", en: "Ada knows how to make soap.", src: "nkowaokwu" },
+            { ig: "Achọrọ m ịkpụ afụọnụ.", en: "I want to shave.", alt: ["Achọrọ m ikpu afuonu"], src: "nkowaokwu" },
+            { ig: "Adaọra mara mma.", en: "Adaọra is beautiful.", alt: ["Adaora mara mma"], src: "nkowaokwu" }
+          ]
+        }
+      ]
+    },
+
+    {
+      id: "fabrics",
+      title: "Clothes, Fabrics & Sewing",
+      color: "#2f7d6b",
+      description: "Cloth, wrappers, waist beads, sewing and tailors.",
+      lessons: [
+        {
+          id: "fab-words",
+          title: "Cloth and sewing words",
+          tip: "'akwa' (cloth) is not 'ákwá' (cry): the tones differ. 'ma akwa' = tie a wrapper, 'kwa akwa' = sew. 'ọkwaakwa' = tailor.",
+          items: [
+            { ig: "akwa", en: "cloth / fabric", alt: ["akwà"], src: "nkowaokwu" },
+            { ig: "ọgọdọ", en: "wrapper (cloth tied round the waist)", alt: ["ogodo"], src: "nkowaokwu" },
+            { ig: "ma akwa", en: "tie a wrapper", alt: ["ma akwà"], src: "nkowaokwu" },
+            { ig: "mgbaji", en: "waist beads", alt: ["jigida"], note: "Also called 'jigida'.", src: "nkowaokwu" },
+            { ig: "kwa akwa", en: "sew", alt: ["kwá ákwà"], src: "nkowaokwu" },
+            { ig: "ọkwaakwa", en: "tailor", alt: ["okwaakwa"], src: "nkowaokwu" },
+            { ig: "owu", en: "thread", alt: ["òwu"], src: "nkowaokwu" }
+          ]
+        },
+        {
+          id: "fab-talk",
+          title: "Talking about clothes and sewing",
+          tip: "'na-' = ongoing ('na-ama' = was tying). 'ga-' = will ('Aga m azụ' = I will buy). 'Onye ka' starts a 'who' question.",
+          items: [
+            { ig: "Onye ka Ada zụụrụ akwa ndị a?", en: "Who did Ada buy these fabrics for?", alt: ["Onye ka Ada zuuru akwa ndi a"], src: "nkowaokwu" },
+            { ig: "Ndị nne na-amakarị ọgọdọ mgbe ha na-ezu ike.", en: "Mothers usually tie wrappers when they are resting.", alt: ["Ndi nne na-amakari ogodo mgbe ha na-ezu ike"], src: "nkowaokwu" },
+            { ig: "Ijeọma na-ama akwa mgbe m biara.", en: "Ijeoma was tying a wrapper when I came.", alt: ["Ijeoma na-ama akwa mgbe m biara"], src: "nkowaokwu" },
+            { ig: "Nkọlịka yi mgbaji n'ukwu.", en: "Nkọlịka is wearing waist beads on her waist.", alt: ["Nkolika yi mgbaji n'ukwu"], src: "nkowaokwu" },
+            { ig: "Ịkwa akwa bụ ọrụ aka ha.", en: "Sewing is their occupation.", alt: ["Ikwa akwa bu oru aka ha"], src: "nkowaokwu" },
+            { ig: "Ọ sị na ọ chọrọ ịbụ ọkwaakwa.", en: "He said he wants to be a tailor.", alt: ["O si na o choro ibu okwaakwa"], src: "nkowaokwu" },
+            { ig: "Aga m azụ owu ọzọ echi.", en: "I will buy more thread tomorrow.", alt: ["Aga m azu owu ozo echi"], src: "nkowaokwu" }
           ]
         }
       ]

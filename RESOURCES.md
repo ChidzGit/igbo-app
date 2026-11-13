@@ -54,6 +54,7 @@ Status key: ✅ used in the app · 🔎 found, not mined yet · 🚫 blocked/unu
 | 🔎 | [Harvard ELIAS Unit 17: In my house](https://elias.fas.harvard.edu/node/180) | household vocabulary | Found 2026-11-11, not fetched yet. Next: check TV, key, lamp. |
 | 🔎 | [Africancherry: food vocabulary in Ìgbò](https://africancherry.com/?p=7143) | food and kitchen words | Found 2026-11-11, not checked. |
 | 🔎 | [Igbo Daily Drops podcast](https://igbodailydrops.buzzsprout.com/2594059) | free audio mini-lessons | Audio only, no transcript. |
+| ✅ | [Omniglot: "Excuse me" in many languages](https://omniglot.com/language/phrases/excuseme.htm) | Igbo "excuse me" (Biko, chetụ / Biko, iwe ewela gị) | Used in v1.9.0, both ⚑ (single source). |
 
 ## Daily research log
 
@@ -108,3 +109,10 @@ Status key: ✅ used in the app · 🔎 found, not mined yet · 🚫 blocked/unu
 - Added 3 lessons (`day-night`, `home-more`, `q-why`), 24 items, 5 marked ⚑. Parent questions L75–L77.
 - Not found: why (gịnị mere / maka gịnị), TV (the dictionary's "igwenzisa" means a transmitter), spoon (eku is a ladle), oriọna, windo, ite mmiri.
 - Audio: 12 new native-speaker clips (5 from Lingua Libre: ụra, ibo, mma, akwandina, isi nri; 7 from the Nkọwa okwu dataset); 678 items now have audio.
+
+### 2026-11-13 (Day 3 of 10): v1.9.0, Section 6 opens
+- The inbox was empty and no parent answers yet. Every open gap in Sections 1–5 waits for the parent (weekend 14–15 Nov) or has no source, so Section 6 started: its gap table (9 units) is now in CURRICULUM-PLAN.md.
+- Checked on Nkọwa okwu (pages saved in sources/web-pages): biko, ndo, gbaghara, ọda (permission), ntutu (hair), bọ isi (comb hair), ọkpụisi (barber), ncha (soap), enyo (mirror/lens), kpụ (shave), mara mma, akwa (cloth), ọgọdọ (wrapper), ma akwa (tie a wrapper), mgbaji (waist beads; jigida redirects here), kwa akwa (sew), ọkwaakwa (tailor), owu (thread). Details: sources/research-s6-day3.md.
+- New free source: Omniglot's "Excuse me" page (row above).
+- Added 3 units / 5 lessons (`pol-please`, `groom-words`, `groom-talk`, `fab-words`, `fab-talk`), 35 items, 5 marked ⚑. Parent questions P1–P12 (P6–P12 ask for words with no source: plait, cut hair, bathe, sponge, too big/small/fits, isiagu, "can you help me?").
+- Blocked: Harvard ELIAS Unit 20 (buying and selling) failed to load for the fetch tool; polyglotclub clothes page returned 403 (added to the save-it checklist).

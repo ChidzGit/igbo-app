@@ -29,6 +29,8 @@ That's it. The next morning update (or any Claude session you ask) converts it t
 - [x] https://www.omniglot.com/language/numbers/igbo.htm: numbers
 - [ ] https://www.omniglot.com/writing/igbo.htm: alphabet & pronunciation ⭐
 - [ ] https://www.omniglot.com/language/colours/igbo.htm: colours ⭐ (would settle the 6 flagged colour words)
+- [ ] https://elias.fas.harvard.edu/index.php/languages/Igbo/Beginning/20/buying-and-selling: Harvard Unit 20, buying and selling (sponge, comb, shop phrases) ⭐
+- [ ] https://beta.polyglotclub.com/wiki/Language/Igbo/Vocabulary/Clothes: clothes vocabulary (403 to tools)
 - [ ] http://www.columbia.edu/itc/mealac/pritchett/00fwp/igbo_index.html: Columbia Igbo index
 - [ ] https://polyglotclub.com/wiki/Language/Igbo/Vocabulary/Basic-Greetings
 - [ ] https://polyglotclub.com/wiki/Language/Igbo/Vocabulary/Numbers

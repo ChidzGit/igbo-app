@@ -134,6 +134,21 @@ These come after Section 4 has content. They will follow the big courses' themes
 1. Check duolingodata.com for Section 6 unit titles (big courses). Write a Section 6 gap table here, in the same format as Section 5, with priorities.
 2. Fill the table top-down, within the run's usage limit. Units not finished stay ❌ for the next run.
 
+## Section 6 · B1: "Communicate more complex ideas" (gap table written 13 Nov 2026)
+Themes come from the first 30 Section 6 units of the Spanish, French and Japanese courses (`sources/web-pages/duolingo-section5-themes.md`). Kept: themes that appear in at least two of the three and that Sections 1–5 do not already cover. Priority 1 = build first.
+
+| Pri | Unit id | Title | Covers | Status |
+|---|---|---|---|---|
+| 1 | `polite` | Asking Politely | please, excuse me, may I…?, can you help me?, permission, sorry, polite requests at a shop or restaurant | 🟡 1 lesson (2026-11-13): no source yet for "may I", "can you help me?", "I would like" |
+| 2 | `grooming` | Hair & Grooming | hair, comb, plait/braid, barber, soap, sponge, mirror, bath, shave, beauty | ✅ 2 lessons (2026-11-13): no source for plait, cut hair, bathe, sponge (asked the parent) |
+| 3 | `fabrics` | Clothes, Fabrics & Sewing | wrapper, isiagu, beads, sew, tailor, fits / too big / too small, new and old clothes | ✅ 2 lessons (2026-11-13): no source for isiagu, too big/small, fits (asked the parent) |
+| 4 | `neighbours` | Neighbours & Social Life | neighbour, visit, quarrel, help each other, gossip, compound | ❌ |
+| 5 | `imagine` | Imagining & "Would" | if I had…, I would…, imagine, wish (ọ bụrụ na … m ga-) | ❌ |
+| 6 | `repairs` | Broken Things & Complaints | broken, spoilt, repair, mend, return, complain, money back | ❌ |
+| 7 | `stories6` | Films, Stories & Characters | story, character, hero, villain, ending, liked / didn't like | ❌ |
+| 8 | `storms` | Storms, Fire & Disasters | storm, wind, thunder, fire, flood, smoke, danger | ❌ |
+| 9 | `workplace` | Talking at Work | meeting, polite at work, colleague, busy, finish, start a business | ❌ |
+
 ---
 
 ## Rules for filling gaps (morning routine)
@@ -152,3 +167,4 @@ These come after Section 4 has content. They will follow the big courses' themes
 - 2026-11-10: Section 5 filled (v1.6.0). 11 new units (`memories`, `hopes`, `career`, `exams`, `injuries`, `relations`, `chores`, `directions`, `media`, `tech`, `community`), 21 lessons, 157 new items, 80 marked unsure; parent questions are in section O of QUESTIONS-FOR-PARENT.md (O1–O51). `media` and `tech` are one lesson each (thin). Many core words (pass/fail, cut, bleed, rubbish, charger, password...) had no source and were left out.
 - 2026-11-11 (Day 1 of the morning routine): v1.7.0. Section 1's last 🟡 (church, village) still waits for the parent, so Section 2 gaps were filled: new lessons `day-night` (sleep, wake up, go to bed, cooking), `home-more` (door, window, bed, bathroom, knife, lantern) and `q-why` (because, why). 24 items, 5 ⚑; parent questions L75–L77. My Day is now ✅. Still open in Section 2: colours, why, TV, jobs, clothes, nationalities, linking words, "Don't!".
 - 12 Nov 2026 (v1.8.0): alphabet moved out of the Learn path into a Letters tab (`reference: true`); tones lesson moved to the end of At School; tone words now have distinct clips; `audio/parent/` drop-in for family recordings.
+- 13 Nov 2026 (Day 3, v1.9.0): Sections 1–5 gaps all wait for the parent or have no source, so Section 6 started. Gap table written (9 units). Built `polite` (1 lesson), `grooming` (2) and `fabrics` (2) from Nkọwa okwu examples + Omniglot. Next run: `neighbours`, then `imagine`.
