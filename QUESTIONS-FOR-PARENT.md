@@ -547,6 +547,39 @@ New units in Section 6 (B1): Asking Politely, Hair & Grooming, and Clothes, Fabr
 | P11 | isiagu | No dictionary entry loaded. How is it spelled and what is it (the lion-head cloth/shirt)? | |
 | P12 | Can you help me? (Nyere m aka?) | "nyere m aka" is not confirmed as "help me". What is the polite way to ask for help? | |
 
+## Q. Restructure additions (Nov 2026)
+
+(Named Q because section P already holds the Section 6 additions.) The 13 Nov restructure (v2.0.0) added 16 short practice items, built only from words already in the app. They are marked ⚑ except the plain word bụ. Nothing here replaces the earlier questions: it only adds what the restructure created.
+
+### Q-1. New items built from patterns we already teach
+
+| # | Igbo in the app | Doubt and evidence | Parent says |
+|---|-----------------|--------------------|-------------|
+| Q1 | A bụ m nwoke (I am a man) · A bụ m nwaanyị (I am a woman) | Built on the confirmed "A bụ m onye Igbo". Are these natural, or would you say them differently? Also: "A bụ m" or "Abụ m"? | |
+| Q2 | Ọ bụ nwa nwoke (He is a boy) · Ọ bụ nwa nwaanyị (She is a girl) | Built on "Ọ bụ onye Igbo". Is "Ọ bụ nwa nwoke" right for "He is a boy"? | |
+| Q3 | elekere abụọ (2 o'clock) · elekere isii (6 o'clock) · elekere iri (10 o'clock) | The dictionary tip says "elekere otu = one o'clock", so I followed the same pattern with other numbers. Is that how you say them, and is "elekere iri" right for 10? | |
+| Q4 | bịara (came) · hụrụ (saw) · zụtara (bought) | The past tip gave "hụ → hụrụ, zụta → zụtara", and "bịara" follows the same -r + vowel rule. Are these the right single-word past forms? | |
+| Q5 | Ọ riri nri (he/she ate food) · Ahụrụ m gị ụnyaahụ (I saw you yesterday) · Ọ bịara ụnyaahụ (he/she came yesterday) | Short past sentences built from the forms above. Are they natural? | |
+| Q6 | Agaghị m (I will not) · Agaghị m abịa echi (I will not come tomorrow) | The future tip promised "Agaghị m", but no item taught it. Is this the right negative of "Aga m"? | |
+
+### Q-2. Choices the restructure had to make (please confirm or correct)
+
+| # | What changed | Doubt | Parent says |
+|---|--------------|-------|-------------|
+| Q7 | The pronoun lesson now teaches **mụ** (I / me), with "m" accepted as the typed answer, because the single letter "m" clashed with the letter m in the Letters tab. | Is "mụ" fine as the lesson word for "I / me"? The short "m" (Aha m) is explained in the note. | |
+| Q8 | "Kedụ ebe ị si?" was merged into "Ebee ka ị si?" (both are accepted when typing). | Which one is the natural way to ask "Where are you from?" It was taught twice with different Igbo before. | |
+| Q9 | "jere" (went) is now only an accepted alternative of "gara"; "gara" is the standard form taught first. | Is "gara" the better first form for "went"? | |
+| Q10 | Same-spelling words could not be two cards. **afọ** (stomach) became a note on **afọ** (year); **azụ** (back) became a note on **azụ** (fish); **akwa** (cloth) became a note on **akwa** (egg). | Are those notes right, and which meaning should have the main card (stomach, back and cloth are very common words)? | |
+
+### Q-3. Removed or trimmed in the restructure (for information)
+
+These were dropped or folded into other lessons to keep lessons short. No action needed unless you want one back:
+- Numbers: 14, 16, 17, 18, nde (million), ijeri (billion), ọgụ and nnụ (old base-20 counting), nke atọ, nke iri, 101, 200, 2,000, 10,000.
+- Weather: "Ọkọchị na-abịa", urukpu (clouds), two "Ugbu a bụ oge …" sentences (this also removes the udu mmiri / oge mmiri ozuzo clash from the lesson) , "Kpakpando apụtala n'urukpu", "Oke mmiri ozuzo ekweghị anyị lọta", "Ụbọchị taa dị mma".
+- Cooking: seven example sentences (planting onugbu, white soup, akpụ, oil, 12 minutes, gari swallowed, I like abacha).
+- Other trims: chat sentences "Hei! Nke a karịrị m" and "Ee, eziokwu"; the bare city cards Owerri and Aba; "Ibi n'Legọọsị adịghị ofele", two exam sentences, "E ji ntụtụ agba ọgwụ", the radio-broke sentence, "Achọrọ m ịnata ya ego m", and bare "gụ" and "de".
+- Section 6 repeats: biko, "Biko, gbaghara m." and "Sị ya ndo." (still in Sections 1 and 5), enyo, ntutu, ọgọdọ and akwa (still in earlier lessons), and one repeated "Ndị nne na-amakarị ọgọdọ …" sentence.
+
 ---
 
 ## Answered ✅

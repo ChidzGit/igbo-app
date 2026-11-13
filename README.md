@@ -51,3 +51,7 @@ A scheduled task (**"Igbo curriculum morning update"**) runs every morning at 7:
 It only runs while the Claude desktop app is open. If the app is closed at 7:00, it runs the next time you open it.
 
 Each run is a **separate, fresh session**. It doesn't add to this chat's context. Find runs under **Scheduled** in the sidebar.
+
+## App fixes (13 Nov 2026)
+
+Answer checking now accepts every item with the same English meaning, lessons are capped at about 15 exercises, word banks only for 3–8 word sentences (lower-case tiles), the results screen lists "Words to review" with a "Practise these" mini-lesson, and the Letters practise quiz is audio-first. Service worker cache is `v8`.

@@ -176,6 +176,37 @@
   const plain = (s) => String(s).normalize("NFD").replace(TONES, "").replace(DOTS, "").toLowerCase().replace(/[^\p{L}\s]/gu, "").replace(/\s+/g, " ").trim();
   // Text as shown, ignoring only case/punctuation/spacing ("Ọ dị mma" == "Ọ dị mma.").
   const shown = (s) => String(s).normalize("NFC").toLowerCase().replace(/[^\p{L}\p{N}\p{M}\s]/gu, "").replace(/\s+/g, " ").trim();
+  // English meanings: "goodbye / see you; (formal)" -> parts {goodbye, see you}. Used so that two items that
+  // mean the same thing are never offered as right-vs-wrong, and either is accepted when typing.
+  const enNorm = (s) => String(s).toLowerCase().replace(/[^\p{L}\p{N}\s]/gu, " ").replace(/\s+/g, " ").trim();
+  const enPartsCache = new Map();
+  function enParts(en) {
+    let r = enPartsCache.get(en);
+    if (!r) {
+      const base = String(en).replace(/\([^)]*\)/g, " ");
+      r = base.split(/[\/;]/).map(enNorm).filter(Boolean);
+      if (!r.length) r = [enNorm(en)];
+      enPartsCache.set(en, r);
+    }
+    return r;
+  }
+  const enKey = (en) => enParts(en).slice().sort().join("|");
+  const enOverlap = (a, b) => { const pb = enParts(b.en); return enParts(a.en).some((x) => pb.includes(x)); };
+  let enKeyIndex = null;
+  function sameEnItems(it) {
+    if (!enKeyIndex) { enKeyIndex = new Map(); ALL_ITEMS().forEach((p) => { if (p._ctx.les.type === "letters") return; const k = enKey(p.en); if (!enKeyIndex.has(k)) enKeyIndex.set(k, []); enKeyIndex.get(k).push(p); }); }
+    return enKeyIndex.get(enKey(it.en)) || [it];
+  }
+  // Split on a separator outside parentheses.
+  function splitTop(s, sep) { const out = []; let d = 0, cur = ""; for (const ch of String(s)) { if (ch === "(") d++; else if (ch === ")") d = Math.max(0, d - 1); if (ch === sep && !d) { out.push(cur); cur = ""; } else cur += ch; } out.push(cur); return out.map((x) => x.trim()); }
+  // English prompt for en->ig exercises: first meaning big, the rest small as a hint.
+  function enPromptHtml(en) {
+    const parts = splitTop(en, "/");
+    if (parts.length < 2 || parts.some((x) => !/\p{L}/u.test(x))) return `<span class="text-word">${esc(en)}</span>`;
+    return `<span class="text-word">${esc(parts[0])}</span><span class="mi-prompt-alt text-caption mi-muted">also: ${esc(parts.slice(1).join(" / "))}</span>`;
+  }
+  const wordCount = (s) => String(s).trim().split(/\s+/).filter(Boolean).length;
+  const cleanTok = (t) => String(t).normalize("NFC").toLowerCase().replace(/[.,!?;:…"“”]+$/u, "").replace(/^["“”]+/u, "");
   function editSim(a, b) {
     if (!a.length || !b.length) return 0;
     let prev = Array.from({ length: b.length + 1 }, (_, j) => j);
@@ -233,7 +264,8 @@
     const scored = [];
     for (const p of ALL_ITEMS()) {
       if (p === item || shown(p.ig) === shown(item.ig) || shown(p.en) === shown(item.en)) continue;
-      if (answers.has(shown(p.ig)) || [p.ig, ...(p.alt || [])].some((a) => shown(a) === shown(item.ig))) continue;
+      if ([p.ig, ...(p.alt || [])].some((a) => answers.has(shown(a)))) continue;
+      if (!isLetter && enOverlap(item, p)) continue; // same English meaning = also a right answer
       const pk = kindOf(p), pc = p._ctx || {};
       if (isLetter !== (pk === "letter")) continue; // letters only against letters
       let s = 0;
@@ -259,6 +291,7 @@
   const tokenCtx = (() => {
     const m = new Map(); // token -> {les:Set, sec:Set}
     ALL_ITEMS().filter((it) => it._ctx.les.type !== "letters").forEach((it) => it.ig.split(/\s+/).forEach((t) => {
+      t = cleanTok(t);
       if (!t || t.includes("…")) return;
       if (!m.has(t)) m.set(t, { les: new Set(), sec: new Set() });
       m.get(t).les.add(it._ctx.les); m.get(t).sec.add(it._ctx.sec);
@@ -266,14 +299,14 @@
     return m;
   })();
   function bankDecoys(item, tokens, n) {
-    const own = new Set(tokens.map(shown)), ctx = item._ctx;
+    const own = new Set(tokens.map(shown)), ownPlain = new Set(tokens.map(plain)), ctx = item._ctx;
     const scored = [];
     for (const [t, c] of tokenCtx) {
-      if (own.has(shown(t)) || !shown(t)) continue;
+      // never a dot/tone twin of a real tile (i/ị, o/ọ, n/ṅ, or same letters ignoring tones)
+      if (own.has(shown(t)) || !shown(t) || ownPlain.has(plain(t))) continue;
       let best = 0;
       for (const w of tokens) {
         let s = 4 * editSim(plain(w), plain(t));
-        if (plain(w) === plain(t)) s += 5; // dotted/undotted twin that exists in the curriculum
         if (plain(w).slice(0, 2) === plain(t).slice(0, 2)) s += 0.5;
         best = Math.max(best, s);
       }
@@ -282,32 +315,77 @@
     }
     scored.sort((a, b) => b.s - a.s);
     const top = [], seen = new Set();
-    for (const { t } of scored) { const k = shown(t); if (seen.has(k)) continue; seen.add(k); top.push(t); if (top.length >= 6) break; }
+    for (const { t } of scored) { const k = plain(t); if (seen.has(k)) continue; seen.add(k); top.push(t); if (top.length >= 6) break; }
     return pickRanked(top, n);
   }
   if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) window.__mmutaDebug = { distract, bankDecoys, items: ALL_ITEMS };
   function mk(type, item, sec, les) { return { type, item, pool: poolFor(sec), lesson: les, letters: les.type === "letters" }; }
-  function reviewTypes(item, les) {
+  const CAP = 15; // exercises in a fresh lesson, before re-queued mistakes
+  const letterWord = (it) => { const w = String(it.ex || "").split(/\s+[—–-]\s+/)[0].trim(); return plain(w).startsWith(plain(it.ig)) ? w : ""; }; // only real example words that start with the letter
+  const primaryType = (les) => les.type === "letters" ? "mc-lhear" : "mc-ig2en";
+  // One extra exercise type per item (never two of the same kind): sentences of 3-8 words get a bank OR a
+  // multiple-choice, typing only for answers of up to 6 words, longer ones rely on "choose the meaning".
+  function extraTypes(item, les) {
+    if (les.type === "letters") return letterWord(item) ? ["mc-lword"] : [];
+    const n = wordCount(item.ig), blank = item.ig.includes("…");
+    if (n > 8) return [];
     const t = ["mc-en2ig"];
-    if (les.type !== "letters") t.push("type");
-    if (S.speakOn) t.push("speak");
-    if (item.ig.split(/\s+/).length >= 3 && !item.ig.includes("…")) t.push("bank", "bank");
-    return t;
+    if (n <= 6) t.push("type");
+    return n >= 3 && !blank ? ["bank", "mc-en2ig"] : t;
   }
-  function buildLesson(sec, les) {
-    const items = les.items;
-    const repeat = !!S.completed[les.id];
-    const q = [];
-    if (!repeat) {
-      items.forEach((it) => { q.push(mk("intro", it, sec, les)); q.push(mk("mc-ig2en", it, sec, les)); });
-      q.push({ type: "match", items: pick(items, Math.min(5, items.length)), lesson: les });
-      if (S.speakOn) pick(items, 2).forEach((it) => q.push(mk("speak", it, sec, les)));
-      pick(items, Math.ceil(items.length / 2)).forEach((it) => q.push(mk(pick(reviewTypes(it, les), 1)[0], it, sec, les)));
-    } else {
-      q.push({ type: "match", items: pick(items, Math.min(5, items.length)), lesson: les });
-      shuffle(items).concat(pick(items, 3)).slice(0, 11).forEach((it) => q.push(mk(pick(["mc-ig2en", ...reviewTypes(it, les)], 1)[0], it, sec, les)));
+  function typePicker() {
+    let speak = 0;
+    return (it, les, withPrimary) => {
+      const pool = [...(withPrimary ? [primaryType(les)] : []), ...extraTypes(it, les)];
+      if (S.speakOn && les.type !== "letters" && !speak && Math.random() < 0.25) { speak++; return "speak"; }
+      return pick(pool.length ? pool : [primaryType(les)], 1)[0];
+    };
+  }
+  // Match sets never hold two items with the same English meaning.
+  function matchSet(items, max) {
+    const out = [];
+    for (const it of shuffle(items)) { if (out.length >= max) break; if (!out.some((o) => enOverlap(o, it) || shown(o.ig) === shown(it.ig))) out.push(it); }
+    return out;
+  }
+  function buildLesson(sec, les, opts) {
+    const items = les.items, letters = les.type === "letters";
+    const repeat = !!S.completed[les.id] || !!(opts && opts.quiz);
+    const prim = primaryType(les), q = [];
+    // Listen & read lessons (long sentences, proverbs): card + "what does it mean?" only, no typing or word banks.
+    if (les.lessonMode === "read") {
+      items.forEach((it) => { if (!repeat) q.push(mk("intro", it, sec, les)); });
+      shuffle(items).forEach((it) => q.push(mk("mc-ig2en", it, sec, les)));
+      return q;
     }
-    return q;
+    const matchEx = () => { const m = matchSet(items, 5); return m.length >= 2 ? { type: "match", items: m, lesson: les } : null; };
+    if (!repeat) {
+      // New = not met before in another lesson (keys are per lesson, so compare the Igbo text).
+      const met = new Set();
+      Object.values(itemIndex).forEach((v) => { if (v.lesson !== les && S.words[v.item._key]) met.add(shown(v.item.ig)); });
+      const m = matchEx();
+      const intros = items.filter((it) => !met.has(shown(it.ig)));
+      const primSlots = Math.max(0, CAP - intros.length - (m ? 1 : 0));
+      const gets = new Set(shuffle(items).slice(0, primSlots));
+      items.forEach((it) => { if (!met.has(shown(it.ig))) q.push(mk("intro", it, sec, les)); if (gets.has(it)) q.push(mk(prim, it, sec, les)); });
+      if (m) q.push(m);
+      const pickT = typePicker(), spare = CAP - q.length;
+      shuffle(items.filter((it) => extraTypes(it, les).length)).slice(0, Math.max(0, spare)).forEach((it) => q.push(mk(pickT(it, les, false), it, sec, les)));
+    } else {
+      const m = matchEx(); if (m) q.push(m);
+      const pickT = typePicker();
+      shuffle(items).concat(pick(items, 3)).slice(0, letters ? 12 : 11).forEach((it, k) => q.push(mk(letters && k % 2 ? "mc-lword" : pickT(it, les, true), it, sec, les)));
+    }
+    return q.map((e) => e.type === "mc-lword" && !letterWord(e.item) ? Object.assign(e, { type: "mc-lhear" }) : e);
+  }
+  // Mini-lesson of just the missed items: two different exercises each, shuffled.
+  function buildPractice(missed) {
+    const q = [];
+    missed.forEach((it) => {
+      const les = it._ctx.les, sec = it._ctx.sec, ex = extraTypes(it, les);
+      q.push(mk(primaryType(les), it, sec, les));
+      if (ex.length) q.push(mk(pick(ex, 1)[0], it, sec, les));
+    });
+    return shuffle(q).slice(0, 14);
   }
   function buildReview(n, weakOnly) {
     let pool = learnedItems();
@@ -317,14 +395,15 @@
     if (weakOnly) pool = pool.filter(({ it }) => (S.words[it._key]?.s ?? 0) <= 2);
     const chosen = pool.slice().sort((a, b) => score(a) - score(b)).slice(0, n);
     while (chosen.length < n && pool.length) chosen.push(pool[Math.floor(Math.random() * pool.length)]);
-    return shuffle(chosen).map(({ it, x }) => mk(pick(["mc-ig2en", ...reviewTypes(it, x.les)], 1)[0], it, x.sec, x.les));
+    const pickT = typePicker();
+    return shuffle(chosen).map(({ it, x }) => mk(pickT(it, x.les, true), it, x.sec, x.les));
   }
 
   /* ───────────── runner ───────────── */
   let R = null; // current run
   function startRun(opts) {
     if (!opts.queue.length) { toast("Finish a lesson first to unlock this!"); return; }
-    R = Object.assign({ i: 0, correct: 0, wrong: 0, answered: 0, retried: new Set(), start: Date.now(), firstTry: {} }, opts);
+    R = Object.assign({ i: 0, correct: 0, wrong: 0, answered: 0, retried: new Set(), start: Date.now(), firstTry: {}, missed: new Map(), maxPct: 0 }, opts);
     R.total = R.queue.length;
     document.body.classList.add("in-lesson");
     renderStep();
@@ -333,7 +412,9 @@
     if (R && R.i > 0 && !confirm("Quit? Your progress in this lesson will be lost.")) return;
     R = null; document.body.classList.remove("in-lesson"); go("home");
   }
-  function progressPct() { return Math.round((R.i / R.queue.length) * 100); }
+  // Never goes backwards when a mistake is re-queued and the total grows.
+  function progressPct() { R.maxPct = Math.max(R.maxPct || 0, Math.round((R.i / R.queue.length) * 100)); return R.maxPct; }
+  function updateCount() { const c = app.querySelector(".mi-count"); if (c) c.textContent = (R.i + 1) + "/" + R.queue.length; }
 
   function renderStep() {
     const ex = R.queue[R.i];
@@ -354,6 +435,24 @@
         ${it.note ? `<div class="mi-inset text-gloss"><b>Tip:</b> ${esc(it.note)}</div>` : ""}
       </div>`;
       foot = btn("next", "Got it");
+    } else if (ex.type === "mc-lhear" || ex.type === "mc-lword") {
+      // Letters, audio first: nothing in the prompt or options gives the letter away.
+      const it = ex.item, hear = ex.type === "mc-lhear";
+      let correct, opts, prompt, label;
+      if (hear) {
+        correct = it.ig; opts = shuffle([it, ...distract(it, "ig", 3)]).map((o) => o.ig);
+        if (audioFor(it)) { label = "Which letter do you hear?"; prompt = listen(it); }
+        else { label = "Which letter sounds like this?"; prompt = `<span class="text-gloss">${esc(String(it.en).replace(/^[a-z]+ '[^']*' — /, ""))}</span>`; }
+      } else {
+        const w = letterWord(it); correct = w; label = "Which word starts with this letter?";
+        const L = plain(it.ig), bad = ALL_ITEMS().filter((p) => p !== it && p._ctx.les.type === "letters").map(letterWord).filter((x) => x && !plain(x).startsWith(L) && x !== w);
+        opts = shuffle([w, ...pick([...new Set(bad)], 3)]);
+        prompt = `<span class="text-word mi-ig">${esc(it.ig)}</span>`;
+      }
+      R.state.correct = correct; R.state.solution = correct;
+      body = `<p class="mi-prompt text-title">${label}</p>
+        <div class="mi-prompt-word">${prompt}</div>
+        <div class="mi-choices">${opts.map((o, k) => `<button class="mi-choice text-option" data-v="${esc(o)}"><span class="mi-choice-key text-caption" aria-hidden="true">${k + 1}</span><span class="mi-choice-text mi-ig">${esc(o)}</span></button>`).join("")}</div>`;
     } else if (ex.type === "mc-ig2en" || ex.type === "mc-en2ig") {
       const it = ex.item, toEn = ex.type === "mc-ig2en";
       const field = toEn ? "en" : "ig";
@@ -361,22 +460,22 @@
       R.state.correct = it[field];
       const label = toEn ? (ex.letters ? "What sound does this letter make?" : "What does this mean?") : (ex.letters ? "Which letter is this?" : "How do you say this in Igbo?");
       body = `<p class="mi-prompt text-title">${label}</p>
-        <div class="mi-prompt-word"><span class="text-word${toEn ? " mi-ig" : ""}">${esc(toEn ? it.ig : it.en)}</span>${toEn ? listen(it) + flag(it) : ""}</div>
+        <div class="mi-prompt-word">${toEn ? `<span class="text-word mi-ig">${esc(it.ig)}</span>` + listen(it) + flag(it) : enPromptHtml(it.en)}</div>
         <div class="mi-choices">${opts.map((o, k) => `<button class="mi-choice text-option" data-v="${esc(o[field])}"><span class="mi-choice-key text-caption" aria-hidden="true">${k + 1}</span><span class="mi-choice-text${toEn ? "" : " mi-ig"}">${esc(o[field])}</span></button>`).join("")}</div>`;
     } else if (ex.type === "type") {
       const it = ex.item;
       body = `<p class="mi-prompt text-title">Write this in Igbo</p>
-        <div class="mi-prompt-word"><span class="text-word">${esc(it.en)}</span></div>
+        <div class="mi-prompt-word">${enPromptHtml(it.en)}</div>
         <textarea class="mi-input mi-ig text-option" id="answer" placeholder="Type in Igbo…" aria-label="Your answer in Igbo" autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>
         <div class="mi-keys" aria-label="Igbo letters">${["ị", "ọ", "ụ", "ṅ", "Ị", "Ọ", "Ụ", "'"].map((k) => `<button class="mi-key mi-ig text-option" data-k="${k}" aria-label="Insert ${k}">${k}</button>`).join("")}</div>
         <p class="mi-input-hint text-caption mi-muted">Tone marks are optional. Dots under ị ọ ụ do matter!</p>`;
     } else if (ex.type === "bank") {
       const it = ex.item;
-      const tokens = it.ig.split(/\s+/);
+      const tokens = it.ig.split(/\s+/).map(cleanTok).filter(Boolean); // lower-case, no final punctuation: no capital giveaway
       R.state.tokens = tokens; R.state.built = [];
       R.state.tiles = shuffle([...tokens, ...bankDecoys(it, tokens, 3)]);
       body = `<p class="mi-prompt text-title">Build this sentence in Igbo</p>
-        <div class="mi-prompt-word"><span class="text-word">${esc(it.en)}</span></div>
+        <div class="mi-prompt-word">${enPromptHtml(it.en)}</div>
         <div class="mi-bank-answer mi-ig" id="built" aria-label="Your sentence"></div>
         <div class="mi-bank mi-ig">${R.state.tiles.map((t, k) => `<button class="mi-tile text-option" data-t="${k}">${esc(t)}</button>`).join("")}</div>`;
     } else if (ex.type === "speak") {
@@ -403,14 +502,14 @@
 
     const pct = progressPct();
     app.innerHTML = `<div class="mi-runner">
-      <div class="mi-runner-top"><button class="mi-close" id="quit" aria-label="Quit lesson">${ICON.close}</button><div class="mi-pbar" role="progressbar" aria-label="Lesson progress" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100"><i style="width:${pct}%"></i></div><span class="mi-count text-caption">${R.i + 1}/${R.queue.length}</span></div>
+      <div class="mi-runner-top"><button class="mi-close" id="quit" aria-label="Quit lesson">${ICON.close}</button><div class="mi-pbar" role="progressbar" aria-label="Lesson progress" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100"><i style="width:${pct}%"></i></div><span class="mi-count text-caption" aria-label="Question ${R.i + 1} of ${R.queue.length}">${R.i + 1}/${R.queue.length}</span></div>
       <div class="mi-runner-body">${body}</div>
       <div class="mi-sheet" id="foot">${foot}</div>
     </div>`;
     stopAudio();
     bindStep(ex);
     // "Hear it first": auto-play once on new-word cards and speaking prompts.
-    if (S.autoAudio && (ex.type === "intro" || ex.type === "speak")) {
+    if (S.autoAudio && (ex.type === "intro" || ex.type === "speak" || ex.type === "mc-lhear")) {
       const a = audioFor(ex.item), btn = app.querySelector(".mi-runner-body button[data-audio]");
       if (a) setTimeout(() => { if (R && R.queue[R.i] === ex && !R.state.answered) playClip(a.file, btn); }, durBase());
     }
@@ -428,7 +527,7 @@
         app.querySelectorAll(".mi-choice").forEach((x) => x.classList.remove("is-selected"));
         b.classList.add("is-selected"); R.state.value = b.dataset.v; check.disabled = false;
       });
-      check.onclick = () => submit(R.state.value === R.state.correct, ex.item[ex.type === "mc-ig2en" ? "en" : "ig"]);
+      check.onclick = () => submit(R.state.value === R.state.correct, R.state.solution || ex.item[ex.type === "mc-ig2en" ? "en" : "ig"]);
     }
     if (ex.type === "type") {
       const ta = document.getElementById("answer");
@@ -441,7 +540,8 @@
         ta.selectionStart = ta.selectionEnd = s + b.dataset.k.length; ta.focus(); ta.oninput();
       });
       check.onclick = () => {
-        const answers = [ex.item.ig, ...(ex.item.alt || [])];
+        // any item with exactly the same English meaning is also right (goodbye: Ka ọ dị / Ka ọmesịa)
+        const answers = sameEnItems(ex.item).flatMap((p) => [p.ig, ...(p.alt || [])]).concat(ex.item.ig, ex.item.alt || []);
         const v = ta.value;
         const strict = answers.some((a) => strictKey(a) === strictKey(v));
         const loose = !strict && answers.some((a) => looseKey(a) === looseKey(v));
@@ -459,7 +559,7 @@
         check.disabled = !R.state.built.length;
       };
       app.querySelectorAll(".mi-bank .mi-tile").forEach((b) => b.onclick = () => { if (R.state.answered || b.classList.contains("is-used")) return; R.state.built.push(+b.dataset.t); redraw(); });
-      check.onclick = () => submit(R.state.built.map((k) => R.state.tiles[k]).join(" ") === R.state.tokens.join(" "), ex.item.ig);
+      check.onclick = () => submit(R.state.built.map((k) => R.state.tiles[k]).join(" ").toLowerCase() === R.state.tokens.join(" ").toLowerCase(), ex.item.ig);
     }
     if (ex.type === "speak") bindSpeak(ex);
     if (ex.type === "match") {
@@ -473,7 +573,7 @@
         const ok = sel.dataset.key === b.dataset.key;
         const pair = [sel, b]; sel = null;
         pair.forEach((x) => { x.classList.remove("is-selected"); x.classList.add(ok ? "is-correct" : "is-wrong"); });
-        grade(pair[0].dataset.key, ok); if (!ok) { grade(pair[1].dataset.key, false); R.state.mistakes++; }
+        grade(pair[0].dataset.key, ok); if (!ok) { grade(pair[1].dataset.key, false); R.state.mistakes++; pair.forEach((x) => { const v = itemIndex[x.dataset.key]; if (v) R.missed.set(v.item._key, v.item); }); }
         setTimeout(() => {
           pair.forEach((x) => { x.classList.remove("is-correct", "is-wrong"); if (ok) { x.classList.add("is-matched"); x.disabled = true; } });
           if (ok && ++R.state.done === ex.items.length) { check.disabled = false; check.focus(); }
@@ -563,6 +663,7 @@
     };
   }
 
+  function shortTip(t) { t = String(t).trim(); if (t.length <= 150) return t; const cut = t.slice(0, 150), k = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf("; ")); return k > 60 ? cut.slice(0, k + 1) : cut.replace(/\s+\S*$/, "") + "…"; }
   function submit(ok, solution, almost) {
     if (R.state.answered) return;
     R.state.answered = true;
@@ -572,7 +673,8 @@
     if (ok) R.correct++; else R.wrong++;
     grade(ex.item._key, ok);
     // Mistakes come back at the end of a lesson (not in the daily test, which is scored once).
-    if (!ok && R.mode !== "daily" && firstAttempt) { R.queue.push(ex); R.retried.add(R.queue.length - 1); }
+    if (!ok && R.mode !== "daily" && firstAttempt) { R.queue.push(ex); R.retried.add(R.queue.length - 1); R.total = R.queue.length; updateCount(); }
+    if (!ok) R.missed.set(ex.item._key, ex.item);
     if (R.mode === "daily") R.firstTry[R.i] = ok;
 
     app.querySelectorAll(".mi-choices .mi-choice").forEach((b) => {
@@ -596,6 +698,7 @@
       : `<span class="mi-ig mi-ig-em">${esc(it.ig)}</span> means ${esc(it.en)}`;
     foot.innerHTML = `<p class="mi-sheet-head text-heading"><span class="mi-sheet-mark">${ok ? ICON.check : ICON.close}</span>${esc(msg)}</p>
       <div class="mi-sheet-sol text-body"><span>${sol}</span>${speakerBtn(it, false)}</div>
+      ${!ok && (it.note || (ex.lesson && ex.lesson.tip)) ? `<p class="mi-sheet-note mi-sheet-tip text-caption"><b>Tip:</b> ${esc(shortTip(it.note || ex.lesson.tip))}</p>` : ""}
       ${it.unsure ? `<p class="mi-sheet-note text-caption">${flagHtml(true)} Still being checked with a native speaker.</p>` : ""}
       <button class="mi-btn mi-btn--block text-button${ok ? "" : " mi-btn--danger"}" id="cont">Continue</button>`;
     const cont = document.getElementById("cont");
@@ -609,9 +712,11 @@
     document.body.classList.remove("in-lesson");
     const scored = r.answered || 1;
     const acc = Math.round((r.correct / scored) * 100);
-    let xp = 0, title = "Lesson complete!", extra = "";
+    let xp = 0, title = "Lesson complete!", extra = "", unlocked = "";
     if (r.mode === "lesson") {
       const first = !S.completed[r.lessonId];
+      const fx = findLesson(r.lessonId), nx = fx && fx.sec.lessons[fx.li + 1];
+      if (first && nx) unlocked = nx.title;
       xp = first ? 15 : 8;
       const prev = S.completed[r.lessonId] || { times: 0, best: 0 };
       S.completed[r.lessonId] = { times: prev.times + 1, best: Math.max(prev.best, acc), date: today() };
@@ -635,7 +740,7 @@
     const seen = new Set(), words = [];
     const les = r.mode === "lesson" ? findLesson(r.lessonId) : null;
     (les ? les.les.items : r.queue.flatMap((q) => q.item ? [q.item] : (q.items || []))).forEach((it) => { if (!seen.has(it._key)) { seen.add(it._key); words.push(it); } });
-    const streak = liveStreak();
+    const streak = liveStreak(), missed = [...r.missed.values()];
     app.innerHTML = `<div class="mi-results">
       <span class="mi-results-mark" aria-hidden="true">${ICON.trophy}</span>
       <h1 class="text-title">${title}</h1>
@@ -647,11 +752,15 @@
       </div>
       <p class="mi-stat text-option">${ICON.flame}${streak}-day streak</p>
       ${weekRow()}
+      ${unlocked ? `<p class="mi-unlocked text-body"><b>Next lesson unlocked:</b> ${esc(unlocked)}</p>` : ""}
       <button class="mi-btn mi-btn--block text-button" id="done">Continue</button>
+      ${missed.length ? `<div class="mi-card mi-card--rows"><h2 class="text-heading">Words to review</h2>${missed.map((it) => wordRow(it, it.en)).join("")}<button class="mi-btn mi-btn--secondary mi-btn--block text-button mi-mt-3" id="practise-missed">Practise these</button></div>` : ""}
       ${words.length ? `<div class="mi-card mi-card--rows"><h2 class="text-heading">Words from this ${r.mode === "lesson" ? "lesson" : "round"}</h2>${words.map((it) => wordRow(it, it.en)).join("")}</div>` : ""}
     </div>`;
     document.getElementById("done").focus();
     document.getElementById("done").onclick = () => go(r.mode === "daily" ? "daily" : "home");
+    const pm = document.getElementById("practise-missed");
+    if (pm) pm.onclick = () => startRun({ mode: "practice", queue: buildPractice(missed) });
   }
 
   /* ───────────── screens ───────────── */
@@ -721,7 +830,7 @@
     if (empty.length) {
       const n = empty[0];
       html += `<div class="mi-card mi-stage-next"><h2 class="text-heading"><span class="text-label">Coming next</span> Section ${n.number} · ${esc(n.cefr)} — ${esc(n.title)}</h2>
-        <p class="text-gloss">${esc(n.focus)} New units arrive with the morning updates.</p>${empty.length > 1 ? `<p class="text-caption">Then Sections ${empty[1].number}–${empty[empty.length - 1].number}: ${esc(empty[1].cefr)}–${esc(empty[empty.length - 1].cefr)}</p>` : ""}</div>`;
+        <p class="text-gloss">${esc(n.focus)} New units arrive with the morning updates.</p>${empty.length > 1 ? (() => { const r = empty.slice(1), a = r[0], z = r[r.length - 1]; return `<p class="text-caption">Then ${r.length > 1 ? `Sections ${a.number}–${z.number}` : `Section ${a.number}`} (${esc(a.cefr === z.cefr ? a.cefr : a.cefr + "–" + z.cefr)})</p>`; })() : ""}</div>`;
     }
     html += `<p class="text-caption mi-muted mi-center mi-mt-8">Tip: every section's first lesson is open — jump into any topic you like.</p>`;
     app.innerHTML = html;
@@ -919,7 +1028,7 @@
         <div class="mi-letters-practise">${ls.map((l) => `<button type="button" class="mi-btn mi-btn--secondary text-button" data-practise="${l.id}">Practise${ls.length > 1 ? " " + esc(l.title.replace(/^The /, "")) : ""}</button>`).join("")}</div></section>`;
     });
     app.innerHTML = html;
-    app.querySelectorAll("[data-practise]").forEach((b) => b.onclick = () => { stopAudio(); const x = findLesson(b.dataset.practise); if (x) startRun({ mode: "lesson", lessonId: x.les.id, queue: buildLesson(x.sec, x.les) }); });
+    app.querySelectorAll("[data-practise]").forEach((b) => b.onclick = () => { stopAudio(); const x = findLesson(b.dataset.practise); if (x) startRun({ mode: "lesson", lessonId: x.les.id, queue: buildLesson(x.sec, x.les, { quiz: true }) }); });
   }
 
   /* ───────────── router ───────────── */

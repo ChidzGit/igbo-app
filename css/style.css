@@ -639,3 +639,8 @@ main > .mi-stat-tiles { margin: 0 0 var(--space-4); }
 .mi-letter-mean, .mi-letter-say { overflow-wrap: anywhere; }
 .mi-letters-practise { display: flex; flex-wrap: wrap; gap: var(--space-3); }
 @media (prefers-reduced-motion: reduce) { .mi-letter { transition: none; } }
+
+/* answer-flow polish: multi-meaning prompt hint, results line, feedback tip */
+.mi-prompt-alt { flex-basis: 100%; margin-top: calc(var(--space-2) * -1); }
+.mi-unlocked { margin: var(--space-4) 0; color: var(--ink); }
+.mi-sheet-tip { color: var(--ink); }

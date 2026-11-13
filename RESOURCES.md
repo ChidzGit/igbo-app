@@ -116,3 +116,4 @@ Status key: ✅ used in the app · 🔎 found, not mined yet · 🚫 blocked/unu
 - New free source: Omniglot's "Excuse me" page (row above).
 - Added 3 units / 5 lessons (`pol-please`, `groom-words`, `groom-talk`, `fab-words`, `fab-talk`), 35 items, 5 marked ⚑. Parent questions P1–P12 (P6–P12 ask for words with no source: plait, cut hair, bathe, sponge, too big/small/fits, isiagu, "can you help me?").
 - Blocked: Harvard ELIAS Unit 20 (buying and selling) failed to load for the fetch tool; polyglotclub clothes page returned 403 (added to the save-it checklist).
+- 13 Nov 2026 (restructure v2.0.0): no new sources. Reordered and merged existing lessons; 16 new short items built only from words already in the course (parent rows Q1–Q10). Section 1 cut from 29 to 12 lessons.

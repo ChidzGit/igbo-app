@@ -14,12 +14,12 @@ Sources: [duolingodata.com](https://www.duolingodata.com/) (data from Jul 2025, 
 
 | Section | CEFR | Focus (Duolingo's wording) | Igbo units |
 |---|---|---|---|
-| 1 | Intro | Essential phrases and simple grammar | Alphabet · Greetings · Introducing Yourself · Family · Eating Out · At the Market · At School · Getting Around |
-| 2 | A1 | Words, phrases and grammar for basic interactions | Food & Drink · Numbers · Colours · Action Words · Asking Questions · Where Is It? · My Day · At Home · Jobs · Animals · Clothes · Describing Things · Opinions & Advice · Countries & Peoples · Linking Words |
+| 1 | Intro | Essential phrases and simple grammar | Greetings · Introducing Yourself · Family (12 lessons; the alphabet is in the Letters tab) |
+| 2 | A1 | Words, phrases and grammar for basic interactions | Food & Drink · Numbers · Eating Out · At the Market · Colours · Action Words · At School · Getting Around · Asking Questions · My Day · At Home · Where Is It? · Jobs · Animals · Clothes · Describing Things · Opinions & Advice · Countries & Peoples · Linking Words |
 | 3 | A1 | Foundational sentences for basic conversations | Time & Days · The Body · Everyday Phrases · Telling the Time · The Past · The Future · Feelings · Describing People · Chatting with Friends · Cities & Towns · Nature · Sports, Music & Stories · Igboland |
-| 4 | A2 | Sentences about everyday topics | (coming soon) |
-| 5 | B1 | Sentences about a wider variety of topics | (later) |
-| 6 | B1 | More complex ideas in conversation | (later) |
+| 4 | A2 | Sentences about everyday topics | Discussing & Comparing · Plans, Invitations & Calls · At the Doctor · Weather & Seasons · Cooking · Custom & Respect · Life Events · Chi, Ancestors & Folktales · Proverbs (Ilu) |
+| 5 | B1 | Sentences about a wider variety of topics | Housework · Giving Directions · Accidents & Injuries · Studies & Exams · Community & Environment · Technology · News, Media & Film · Work & Business · Friends & Relationships · Memories · Hopes & Dreams |
+| 6 | B1 | More complex ideas in conversation | Asking Politely · Hair & Grooming · Clothes, Fabrics & Sewing (needs fresh B1 content: see below) |
 | 7 | B2 | Abstract feelings and opinions | (later) |
 | 8 | B2 | Converse confidently, even on specialised topics | (later) |
 
@@ -29,24 +29,50 @@ Status key: ✅ covered · 🟡 partly covered · ❌ gap (the number is its pri
 
 ---
 
+## Restructure v2.0.0 (13 Nov 2026): Section 1 is now true basics
+After the 13 Nov review (`REVIEW-2026-11-13.md`, group B) the unit lists above changed. Lesson ids never changed; moved lessons keep their ids, and nine lessons whose items were merged elsewhere are **retired for good** (never reuse their ids): `sch-verbs`, `num-tens`, `num-ordinals`, `wea-today`, `cook-kitchen`, `chat-talk`, `city-talk`, `exam-uni`, `ilu-wisdom`.
+
+**New Section 1 (3 units, 12 lessons, 82 items):**
+| # | Lesson id | Title | Notes |
+|---|---|---|---|
+| 1 | `greet-hello` | Hello, yes, no, thanks | Ndewo, Kedụ, Daalụ, Ee, Mba, Biko, Ndo |
+| 2 | `greet-welcome` | How are you? | Kedụ ka ị mere?, Adị m mma, And you? |
+| 3 | `greet-times` | Welcome, goodbye, thanks | one goodbye first; Ị meela, Nsogbu adịghị |
+| 4 | `intro-age` | Boy, girl, man, woman | onye, nwoke, nwaanyị, nwa, nwa nwoke, nwa nwaanyị, enyi |
+| 5 | `intro-pronouns` | I, you, we, they | pronouns plus the word bụ (new item) |
+| 6 | `intro-iam` (new) | I am, you are, he or she is | A bụ m / Ị bụ / Ọ bụ pattern; 4 new ⚑ sentences |
+| 7 | `intro-name` | Name and where from | one way to ask "where are you from"; the other is an accepted alternative |
+| 8 | `intro-from` | Where I live and what I speak | |
+| 9 | `intro-learning` | I'm learning Igbo | survival kit |
+| 10 | `fam-core` | Mum, dad & siblings | |
+| 11 | `fam-extended` | Grandparents & more | tip now mentions the parent check on okene / dede / anti |
+| 12 | `fam-sentences` | My family | Nke a bụ nne m / di m / nwunye m |
+
+Moved out of Section 1: `eat-*` (Eating Out) and `mkt-*` (At the Market) to Section 2 after Food and Numbers; `sch-*` (At School; `alpha-tones` stays last) and `trv-*` (Getting Around, now starting with `every-places`, "Places in town") to Section 2 after Action Words. Occasion greetings (`greet-thanks` = good wishes, `greet-polite` = day greetings and blessings, `intro-speak-to-me`) moved to `everyday` in Section 3, and `fam-more` (⚑ aunts, uncles, in-laws) moved to `people` in Section 3.
+
+**Other v2.0.0 changes:** numbers 6 → 4 lessons (0–5, 6–10, 11–19 and the tens, using numbers); `every-questions` leads the `questions` unit and `q-read` ends it; `body-health` moved into `doctor`; weekdays (`plan-days`) moved into `time`; weather, cooking, chat, cities and exams pairs merged into one lesson each; media and tech trimmed; clock, past and future are pattern drills with a final reading lesson (`past-read`, `fut-read`; `lessonMode: "read"`); proverbs: short ones drilled in `ilu-unity`, long ones in `ilu-long` (`lessonMode: "read"`; the app may ignore it for now). Stage orders: s2 = food, numbers, eatingout, market, colours, verbs, school, travel, questions, routine, home, whereis, jobs, animals, clothes, describe, opinions, peoples, linking; s4 = discuss, plans, doctor, weather, cooking, omenala, ceremonies, beliefs, ilu; s5 = chores, directions, injuries, exams, community, tech, media, career, relations, memories, hopes.
+
+---
+
+
 ## Section 1 · Intro
 | Vietnamese unit | Igbo coverage | Status |
 |---|---|---|
 | (Igbo-specific) Letters, dots and tones | `alpha-*` (5 lessons) | ✅ |
-| Introduce yourself | `intro-name`, `intro-pronouns`, `intro-age`, `intro-learning`, `intro-speak-to-me`, `intro-from` (2026-11-10) | ✅ |
-| Greet people | `greet-hello`, `greet-times`, `greet-polite`, `greet-thanks`, `greet-welcome` (2026-11-10) | ✅ |
-| Introduce family members | `fam-core`, `fam-extended`, `fam-sentences`, `fam-more` (2026-11-10) | ✅ |
-| Order a drink / request to the waiter | `eat-order`, `eat-table`, `eat-pay`, `eat-buka` (unit `eatingout`; 2026-11-10) | ✅ |
-| Talk about the price | `mkt-money`, `mkt-haggle`, `mkt-talk` (unit `market`; 2026-11-10) | ✅ |
-| Communicate at school | `sch-things`, `sch-verbs`, `sch-talk` (unit `school`; 2026-11-10) | ✅ |
-| Communicate when travelling | `trv-go`, `trv-where`, `trv-talk` (unit `travel`; 2026-11-10) | ✅ |
+| Introduce yourself | `intro-age`, `intro-pronouns`, `intro-iam`, `intro-name`, `intro-from`, `intro-learning` (restructured 2026-11-13; `intro-speak-to-me` is now in `everyday`) | ✅ |
+| Greet people | `greet-hello`, `greet-welcome`, `greet-times` (restructured 2026-11-13; `greet-thanks` and `greet-polite` are now in `everyday`) | ✅ |
+| Introduce family members | `fam-core`, `fam-extended`, `fam-sentences` (2026-11-13; `fam-more` is in `people`) | ✅ |
+| Order a drink / request to the waiter | `eat-order`, `eat-table`, `eat-pay`, `eat-buka` (unit `eatingout`, now in Section 2; 2026-11-10) | ✅ |
+| Talk about the price | `mkt-money`, `mkt-haggle`, `mkt-talk` (unit `market`, now in Section 2; 2026-11-10) | ✅ |
+| Communicate at school | `sch-things`, `sch-talk` (unit `school`, now in Section 2; `sch-verbs` retired 2026-11-13) | ✅ |
+| Communicate when travelling | `trv-go`, `trv-where`, `trv-talk` (unit `travel`, now in Section 2; 2026-11-10) | ✅ |
 | Talk about places | `every-places` (Section 3), plus hospital / office / "Where is the market?" in `trv-where` (2026-11-10) | 🟡 church (ụka vs ụlọ ụka) and village (obodo vs ogbe) wait for the parent |
 
 ## Section 2 · A1
 | Vietnamese unit | Igbo coverage | Status |
 |---|---|---|
 | Talk about food / restaurants | `food-basics`, `food-more`, `food-phrases` | ✅ |
-| Identify numbers | `num-*` (6 lessons) | ✅ |
+| Identify numbers | `num-*` (4 lessons since 2026-11-13) | ✅ |
 | Describe colours | `col-basic` (6 of 9 items ⚑ waiting for parent check) | 🟡 |
 | Use the present tense / common verbs / describe actions | `verb-commands`, `verb-more`, `verb-sentences` | ✅ |
 | Describe your family | `fam-sentences` | ✅ |
@@ -151,6 +177,10 @@ Themes come from the first 30 Section 6 units of the Spanish, French and Japanes
 
 ---
 
+**Section 6 needs fresh B1 content (13 Nov 2026 review).** The three built units are mostly A1/A2 material (please, hair, cloth), and v2.0.0 removed their repeats of earlier lessons (they are now 5 + 5 + 6 + 5 + 6 items). The next runs should add real B1 content, starting with a **morning routine** unit (get up, wash, dress, breakfast, travel to work, in the evening) built from longer connected sentences, then `neighbours`, `imagine` and `repairs` below.
+
+---
+
 ## Rules for filling gaps (morning routine)
 1. Take the **highest-priority ❌ or 🟡 in the lowest section** first: finish Section 1, then 2, then 3, then 4.
    - **Skip gaps that only wait for the parent** (the status says ⚑ or "waits for the parent"). The parent review is planned for the weekend of 14–15 Nov 2026. If every gap left in Sections 1–5 is waiting on the parent, move on to **Section 6** (see below).
@@ -168,3 +198,4 @@ Themes come from the first 30 Section 6 units of the Spanish, French and Japanes
 - 2026-11-11 (Day 1 of the morning routine): v1.7.0. Section 1's last 🟡 (church, village) still waits for the parent, so Section 2 gaps were filled: new lessons `day-night` (sleep, wake up, go to bed, cooking), `home-more` (door, window, bed, bathroom, knife, lantern) and `q-why` (because, why). 24 items, 5 ⚑; parent questions L75–L77. My Day is now ✅. Still open in Section 2: colours, why, TV, jobs, clothes, nationalities, linking words, "Don't!".
 - 12 Nov 2026 (v1.8.0): alphabet moved out of the Learn path into a Letters tab (`reference: true`); tones lesson moved to the end of At School; tone words now have distinct clips; `audio/parent/` drop-in for family recordings.
 - 13 Nov 2026 (Day 3, v1.9.0): Sections 1–5 gaps all wait for the parent or have no source, so Section 6 started. Gap table written (9 units). Built `polite` (1 lesson), `grooming` (2) and `fabrics` (2) from Nkọwa okwu examples + Omniglot. Next run: `neighbours`, then `imagine`.
+- 13 Nov 2026 (v2.0.0, restructure B6–B11 from the review): Section 1 cut from 29 to 12 basic lessons; Eating Out, Market, School and Travel moved to Section 2; Sections 4 and 5 reordered; 9 overlapping lessons merged and retired (ids listed above); numbers 6 → 4 lessons; clock, past and future became pattern drills with reading lessons; proverbs split into short (drilled) and long (listen & read); Section 6 repeats removed. 16 new items (15 marked ⚑, parent rows Q1–Q10 in QUESTIONS-FOR-PARENT.md section Q). Duplicate Igbo strings across the course were resolved (see section Q).
