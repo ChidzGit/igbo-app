@@ -49,3 +49,11 @@ Full table: sources/research-2026-11-11.md.
 
 ## 2026-11-13: dictionary checks (Section 6: polite, grooming, fabrics)
 Full table with URLs and confidence: `sources/research-s6-day3.md`. Nkọwa okwu checked: biko, ndo, gbaghara, ọda, ntutu, bọ isi, ọkpụisi, ncha, enyo, kpụ, mma, akwa, ọgọdọ, ma akwa, mgbaji (jigida → mgbaji), kwa akwa, ọkwaakwa, owu, ndụdụ. Second sources: Omniglot "excuse me" page (biko, Biko chetụ). Not found anywhere: plait/braid, cut hair, bathe, too big/small, isiagu, "can you help me?". English searches on Nkọwa okwu are noisy; search by the Igbo word.
+
+## 2026-11-14: dictionary checks (Section 6: myday6, neighbours)
+Pages saved in `web-pages/` as nkowaokwu-com-search-word-*.md. Confirmed on Nkọwa okwu, with examples:
+- àgbàtòobì (neighbour; "Mmadụ na agbatoobi ya kwesịrị ibi n'udo"), ọbịa (visitor/guest), kele (greet; thank), nye aka ("Biko, nyee aka" = please help out), udo (peace), èsèmokwu (quarrel), àsị̀rị̀ (gossip; ịgba asịrị), ògìgè (premises, yard, garden), ezi (compound / extended family, already in Housework).
+- sa àhụ (wash the body, bathe; "Bịa saa ahụ"), yì (wear; "Yiri akwa i yi ụnyaahụ"), emesịa (afterwards / later), tupu (before), mecha (finish), mgbede (evening; "A lọtara m na mgbede"), lọta (return home).
+- Not found or wrong: "leta" is letter (not visit); nleta, nyerịta and "yi uwe" gave no entry; the ndụmọdụ search returned arò (idea), not "advice".
+- The Haiku research agent stopped without output, so these checks were done directly.
+

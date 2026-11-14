@@ -117,3 +117,11 @@ Status key: ✅ used in the app · 🔎 found, not mined yet · 🚫 blocked/unu
 - Added 3 units / 5 lessons (`pol-please`, `groom-words`, `groom-talk`, `fab-words`, `fab-talk`), 35 items, 5 marked ⚑. Parent questions P1–P12 (P6–P12 ask for words with no source: plait, cut hair, bathe, sponge, too big/small/fits, isiagu, "can you help me?").
 - Blocked: Harvard ELIAS Unit 20 (buying and selling) failed to load for the fetch tool; polyglotclub clothes page returned 403 (added to the save-it checklist).
 - 13 Nov 2026 (restructure v2.0.0): no new sources. Reordered and merged existing lessons; 16 new short items built only from words already in the course (parent rows Q1–Q10). Section 1 cut from 29 to 12 lessons.
+
+### 2026-11-14 (Day 4 of 10): v2.1.0, A Day in My Life + Neighbours
+- The inbox was empty and no parent answers yet (parent check this weekend). Continued Section 6.
+- No new outside source this run: the research agent stopped before searching, so all 20 checks used Nkọwa okwu (https://nkowaokwu.com). See sources/research-notes.md.
+- Added 2 units / 4 lessons (`day6-order`, `day6-story`, `nbr-guests`, `nbr-peace`), 27 items, 4 marked ⚑ (parent rows P13–P16). "saa ahụ" (bathe, P8) now has a dictionary source.
+- Not found: "visit" (leta is letter), "advice", "help each other".
+- Audio: 15 new native-speaker clips from the Nkọwa okwu dataset; 684 items now have audio.
+

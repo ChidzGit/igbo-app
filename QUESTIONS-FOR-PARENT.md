@@ -541,11 +541,22 @@ New units in Section 6 (B1): Asking Politely, Hair & Grooming, and Clothes, Fabr
 |---|---------|-------|-------------|
 | P6 | plait / braid hair | I guessed "kpa isi" but no source confirmed it. What do you say? | |
 | P7 | cut hair | "kpụ isi" is not confirmed. What do you say for getting a haircut? | |
-| P8 | bathe / have a bath | "saa ahụ" is not confirmed (the dictionary gave other "sa" words). What is the everyday word? | |
+| P8 | bathe / have a bath | Update 14 Nov: Nkọwa okwu now lists "sa àhụ" (wash the body; example "Bịa saa ahụ" = come and have a bath), so the app uses "saa ahụ" in A Day in My Life. Is that the everyday word? | |
 | P9 | sponge | One site lists "ògbo" for sponge; the dictionary gave ụgà (a plant used for sponges). Which is right? | |
 | P10 | it's too big / too small / it fits me | No source. How do you say these when trying on clothes? | |
 | P11 | isiagu | No dictionary entry loaded. How is it spelled and what is it (the lion-head cloth/shirt)? | |
 | P12 | Can you help me? (Nyere m aka?) | "nyere m aka" is not confirmed as "help me". What is the polite way to ask for help? | |
+
+### P-3. A Day in My Life and Neighbours (added 14 Nov 2026)
+
+These 4 sentences were built from dictionary words (tupu, emesịa, saa ahụ, lọta, kele, agbatoobi), so the grammar needs a native speaker's check.
+
+| # | Igbo in the app | Doubt and evidence | Parent says |
+|---|-----------------|--------------------|-------------|
+| P13 | Ana m asa ahụ tupu m rie nri ụtụtụ (I bathe before I eat breakfast) | After "tupu" the dictionary has both "tupu Ndụka abịa" and "tupu ị lọtawa". Is it "tupu m rie" or "tupu m eri"? | |
+| P14 | Emesịa, ana m aga ọrụ (Afterwards, I go to work) | "emesịa" is confirmed (afterwards / later); the sentence is built. Is it natural to start a sentence with it? | |
+| P15 | Mgbe m lọtara na mgbede, ana m esi nri (When I come home in the evening, I cook) | Built from "A lọtara m na mgbede". For a habit, should it be "Mgbe m lọtara" or "Mgbe m na-alọta"? | |
+| P16 | Gaa kelee agbatoobi gị (Go and greet your neighbour) | Nkọwa okwu has "agbatoobi" for neighbour; the app also had "onye agbata obi" (Wikivoyage). Which do you say? | |
 
 ## Q. Restructure additions (Nov 2026)
 

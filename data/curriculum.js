@@ -27,11 +27,16 @@
   Items were moved or trimmed; completed lessons keep counting for progress.
 */
 window.CURRICULUM = {
-  version: "2.0.0",
-  updated: "2026-11-13",
+  version: "2.1.0",
+  updated: "2026-11-14",
 
   // Newest first. Shown in the app under More → "What's new".
   changelog: [
+    { version: "2.1.0", date: "2026-11-14", changes: [
+      "Two new Section 6 units: A Day in My Life (before, afterwards, finish, bathe, coming home in the evening, in longer linked sentences) and Neighbours & Social Life (neighbour, guest, greet, help out, peace, quarrel, gossip).",
+      "27 new words and sentences, 23 of them from Nkọwa okwu dictionary examples. 4 sentences built from them are marked ⚑ for checking.",
+      "'saa ahụ' (bathe) now has a dictionary source."
+    ] },
     { version: "2.0.0", date: "2026-11-13", changes: [
       "Section 1 is now short and basic: 12 lessons (it was 29). It starts with hello, yes, no and thanks, then How are you?, welcome and goodbye, boy and girl, I am / you are, your name and your family.",
       "Eating Out, At the Market, At School and Getting Around moved to Section 2, after Food and Numbers, so they only use words you have already met.",
@@ -155,7 +160,7 @@ window.CURRICULUM = {
     { id: "s3", number: 3, cefr: "A1", title: "Basic conversations", focus: "Foundational sentences for basic conversations.", units: ["time", "body", "everyday", "clock", "past", "future", "feelings", "people", "chat", "cities", "nature", "arts", "igboland"] },
     { id: "s4", number: 4, cefr: "A2", title: "Everyday topics", focus: "Use sentences in conversations about everyday topics.", units: ["discuss", "plans", "doctor", "weather", "cooking", "omenala", "ceremonies", "beliefs", "ilu"] },
     { id: "s5", number: 5, cefr: "B1", title: "Wider topics", focus: "Form sentences about a wider variety of topics.", units: ["chores", "directions", "injuries", "exams", "community", "tech", "media", "career", "relations", "memories", "hopes"] },
-    { id: "s6", number: 6, cefr: "B1", title: "Complex ideas", focus: "Communicate more complex ideas in conversations.", units: ["polite", "grooming", "fabrics"] },
+    { id: "s6", number: 6, cefr: "B1", title: "Complex ideas", focus: "Communicate more complex ideas in conversations.", units: ["polite", "grooming", "fabrics", "myday6", "neighbours"] },
     { id: "s7", number: 7, cefr: "B2", title: "Feelings & opinions", focus: "Talk about abstract feelings and opinions.", units: [] },
     { id: "s8", number: 8, cefr: "B2", title: "Confident conversation", focus: "Converse confidently, even about specialised topics.", units: [] }
   ],
@@ -2812,6 +2817,79 @@ window.CURRICULUM = {
             { ig: "Ịkwa akwa bụ ọrụ aka ha.", en: "Sewing is their occupation.", alt: ["Ikwa akwa bu oru aka ha"], src: "nkowaokwu" },
             { ig: "Ọ sị na ọ chọrọ ịbụ ọkwaakwa.", en: "He said he wants to be a tailor.", alt: ["O si na o choro ibu okwaakwa"], src: "nkowaokwu" },
             { ig: "Aga m azụ owu ọzọ echi.", en: "I will buy more thread tomorrow.", alt: ["Aga m azu owu ozo echi"], src: "nkowaokwu" }
+          ]
+        }
+      ]
+    },
+    /* ───────────────────────── A DAY IN MY LIFE ───────────────────────── */
+    {
+      id: "myday6",
+      title: "A Day in My Life",
+      color: "#8a6d00",
+      description: "Linking the steps of your day: before, afterwards, finish, bathe, come home in the evening.",
+      lessons: [
+        {
+          id: "day6-order",
+          title: "Before and afterwards",
+          tip: "'tupu' = before, 'emesịa' = afterwards / later, 'mecha' = finish (doing something). They link the steps of your day into longer sentences. 'saa ahụ' = bathe (literally wash the body).",
+          items: [
+            { ig: "tupu", en: "before", src: "nkowaokwu" },
+            { ig: "Aga m emecha ihe m na-eme tupu Ndụka abịa.", en: "I will finish what I am doing before Nduka comes.", alt: ["Aga m emecha ihe m na-eme tupu Ndụka abịa", "A ga m emecha ihe m na-eme tupu Ndụka abịa"], src: "nkowaokwu" },
+            { ig: "emesịa", en: "afterwards / later", alt: ["emesia"], src: "nkowaokwu" },
+            { ig: "Emesịa, ị bịa.", en: "Later, you come.", alt: ["Emesịa ị bịa", "Emesia, i bia"], src: "nkowaokwu" },
+            { ig: "mecha", en: "to finish (doing something)", src: "nkowaokwu" },
+            { ig: "saa ahụ", en: "to bathe / take a shower", alt: ["sa ahụ", "saa ahu"], note: "Dictionary entry 'sa àhụ': wash the body. Same verb as 'Ana m asa ahụ' in My Day.", src: "nkowaokwu" },
+            { ig: "Bịa saa ahụ.", en: "Come and have a bath.", alt: ["Bịa saa ahụ", "Bia saa ahu"], src: "nkowaokwu" }
+          ]
+        },
+        {
+          id: "day6-story",
+          title: "My day, step by step",
+          tip: "Put the steps together: 'Ana m … tupu m …' (I … before I …), 'Emesịa, …' (afterwards, …), 'Mgbe m …, …' (when I …, …). The long Lagos sentence is a real dictionary example of 'mecha' + 'tupu'.",
+          items: [
+            { ig: "Ana m asa ahụ tupu m rie nri ụtụtụ", en: "I bathe before I eat breakfast", alt: ["Ana m asa ahụ tupu m eri nri ụtụtụ", "Ana m asa ahụ tupu m rie nri ụtụtụ."], unsure: true },
+            { ig: "Yiri akwa i yi ụnyaahụ.", en: "Wear the clothes you wore yesterday.", alt: ["Yiri akwa i yi ụnyaahụ"], src: "nkowaokwu" },
+            { ig: "Emesịa, ana m aga ọrụ", en: "Afterwards, I go to work", alt: ["Emesịa ana m aga ọrụ", "Emesịa, ana m aga ọrụ."], unsure: true },
+            { ig: "A lọtara m na mgbede.", en: "I came back in the evening.", alt: ["A lọtara m na mgbede", "Alọtara m na mgbede"], src: "nkowaokwu" },
+            { ig: "Mgbe m lọtara na mgbede, ana m esi nri", en: "When I come home in the evening, I cook", alt: ["Mgbe m lọtara na mgbede, ana m esi nri."], unsure: true },
+            { ig: "Mechaa ihe niile ị gara ime na Legoos tupu ị lọtawa Ọnịcha.", en: "Finish everything you went to do in Lagos before returning to Onitsha.", alt: ["Mechaa ihe niile ị gara ime na Legoos tupu ị lọtawa Ọnịcha"], note: "Legoos = Lagos, Ọnịcha = Onitsha.", src: "nkowaokwu" }
+          ]
+        }
+      ]
+    },
+    /* ───────────────────────── NEIGHBOURS & SOCIAL LIFE ───────────────────────── */
+    {
+      id: "neighbours",
+      title: "Neighbours & Social Life",
+      color: "#3d6a8a",
+      description: "Neighbours, guests, greeting, helping out, peace and quarrels, and gossip.",
+      lessons: [
+        {
+          id: "nbr-guests",
+          title: "Neighbours and guests",
+          tip: "'agbatoobi' = neighbour (agbata = nearby, obi = homestead), so the Section 3 phrase 'onye agbata obi' is accepted too. 'ọbịa' = visitor / guest (from 'bịa', come). 'kele' = greet or thank.",
+          items: [
+            { ig: "agbatoobi", en: "neighbour", alt: ["agbatobi", "agbata obi", "onye agbata obi"], src: "nkowaokwu" },
+            { ig: "Mmadụ na agbatoobi ya kwesịrị ibi n'udo.", en: "One should live in peace with one's neighbour.", alt: ["Mmadụ na agbatoobi ya kwesịrị ibi n'udo"], src: "nkowaokwu" },
+            { ig: "ọbịa", en: "visitor / guest", alt: ["obia"], src: "nkowaokwu" },
+            { ig: "Ndị ọbịa dị iche iche bịara ya bụ mmemme.", en: "Many guests came to the ceremony.", alt: ["Ndị ọbịa dị iche iche bịara ya bụ mmemme"], src: "nkowaokwu" },
+            { ig: "kele", en: "to greet / to thank", alt: ["kelee"], src: "nkowaokwu" },
+            { ig: "Gaa kelee agbatoobi gị", en: "Go and greet your neighbour", alt: ["Gaa kelee agbatoobi gị.", "Gaa kelee onye agbata obi gị"], unsure: true },
+            { ig: "Biko, nyee aka.", en: "Please, help out.", alt: ["Biko, nyee aka", "Biko nyee aka"], src: "nkowaokwu" }
+          ]
+        },
+        {
+          id: "nbr-peace",
+          title: "Peace, quarrels and gossip",
+          tip: "'udo' = peace; 'esemokwu' = a quarrel (from 'se', pull); 'asịrị' = gossip, and 'ịgba asịrị' = to gossip. 'ogige' = premises / yard around a house.",
+          items: [
+            { ig: "udo", en: "peace", src: "nkowaokwu" },
+            { ig: "Ihe anyị chọrọ bụ udo na ịdịnotu.", en: "What we want is peace and unity.", alt: ["Ihe anyị chọrọ bụ udo na ịdịnotu"], src: "nkowaokwu" },
+            { ig: "esemokwu", en: "quarrel / dispute", alt: ["esemookwu"], src: "nkowaokwu" },
+            { ig: "Esemokwu bụ mmehie.", en: "Quarrelling is a sin.", alt: ["Esemokwu bụ mmehie"], src: "nkowaokwu" },
+            { ig: "asịrị", en: "gossip", alt: ["asiri"], src: "nkowaokwu" },
+            { ig: "Nkechi hụrụ ịgba asịrị n'anya.", en: "Nkechi loves to gossip.", alt: ["Nkechi hụrụ ịgba asịrị n'anya"], src: "nkowaokwu" },
+            { ig: "ogige", en: "premises / yard", note: "Also a garden or park. 'ezi' (compound) is in Housework.", src: "nkowaokwu" }
           ]
         }
       ]
