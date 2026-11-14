@@ -123,5 +123,5 @@ Status key: ✅ used in the app · 🔎 found, not mined yet · 🚫 blocked/unu
 - No new outside source this run: the research agent stopped before searching, so all 20 checks used Nkọwa okwu (https://nkowaokwu.com). See sources/research-notes.md.
 - Added 2 units / 4 lessons (`day6-order`, `day6-story`, `nbr-guests`, `nbr-peace`), 27 items, 4 marked ⚑ (parent rows P13–P16). "saa ahụ" (bathe, P8) now has a dictionary source.
 - Not found: "visit" (leta is letter), "advice", "help each other".
-- Audio: 15 new native-speaker clips from the Nkọwa okwu dataset; 684 items now have audio.
+- Audio: 22 new native-speaker clips (7 from Lingua Libre, 15 from the Nkọwa okwu dataset); 684 items now have audio.
 
