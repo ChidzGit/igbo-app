@@ -294,8 +294,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .mi-section-meta .mi-pbar { flex: 1; }
 
 .mi-path { display: flex; flex-direction: column; align-items: center; gap: var(--space-6); padding: var(--space-6) 0 var(--space-2); }
-.mi-path > .mi-node:nth-child(4n+2) { transform: translateX(calc(var(--space-12) * -1)); }
-.mi-path > .mi-node:nth-child(4n+4) { transform: translateX(var(--space-12)); }
+.mi-path > .mi-node { transform: translateX(calc(var(--shift, 0) * var(--space-12))); } /* gentle zig-zag: --shift cycles 0, -1, 0, 1 (set per node) */
 .mi-node { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); width: calc(var(--node) * 2); padding: 0; background: none; border: 0; color: var(--ink); cursor: pointer; }
 .mi-node { --section-edge: color-mix(in srgb, var(--section, var(--primary)) 65%, black); } /* section colour darkened 35% for the lip */
 .mi-node-bubble {
@@ -644,3 +643,83 @@ main > .mi-stat-tiles { margin: 0 0 var(--space-4); }
 .mi-prompt-alt { flex-basis: 100%; margin-top: calc(var(--space-2) * -1); }
 .mi-unlocked { margin: var(--space-4) 0; color: var(--ink); }
 .mi-sheet-tip { color: var(--ink); }
+
+/* ---------- Levels, badges, results (WP A/B/C/F) ---------- */
+.mi-badge--hard { background: var(--wrong-soft); color: var(--wrong-ink); }
+.mi-badge--prev { background: var(--ochre-soft); color: var(--warning); }
+.mi-ex-meta { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-2); }
+.mi-ex-meta + .mi-prompt { margin-top: var(--space-2); }
+.mi-level-pip { margin: 0; padding: 0 var(--space-4); }
+.mi-gear { text-align: center; padding-block: var(--space-8); }
+.mi-fill { margin: 0 0 var(--space-5); }
+.mi-blank { display: inline-block; min-width: 3.5ch; border-bottom: 3px solid var(--selected); vertical-align: baseline; }
+.mi-ring { position: absolute; inset: calc(var(--space-2) * -1); width: calc(100% + var(--space-4)); height: calc(100% + var(--space-4)); transform: rotate(-90deg); pointer-events: none; }
+.mi-ring circle { fill: none; stroke: var(--line); stroke-width: 2.5; stroke-linecap: round; }
+.mi-ring circle.is-on { stroke: var(--ochre); }
+.mi-node-lv { position: absolute; top: calc(var(--space-1) * -1); right: calc(var(--space-2) * -1); padding: 0 var(--space-2); border-radius: var(--radius-full); background: var(--surface); color: var(--ink); font-weight: 800; box-shadow: 0 0 0 2px var(--line); }
+.mi-level-prog { display: flex; align-items: center; justify-content: center; gap: var(--space-3); margin: var(--space-3) 0; }
+.mi-level-dots { display: inline-flex; gap: var(--space-1); }
+.mi-level-dots i { width: var(--space-6); height: var(--space-2); border-radius: var(--radius-full); background: var(--line); }
+.mi-level-dots i.is-on { background: var(--ochre); }
+.mi-mt-3 { margin-top: var(--space-3); }
+
+/* ---------- Path v2 (WP D): unit banner, node kinds, node sheet ---------- */
+.mi-unit-banner { display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-4); border-radius: var(--radius-lg); background: var(--section, var(--primary)); color: var(--on-section); }
+.mi-unit-banner-main { flex: 1; min-width: 0; }
+.mi-unit-banner h1, .mi-unit-banner h2 { margin: var(--space-1) 0 0; }
+.mi-unit-banner .mi-ig { margin: var(--space-1) 0 0; font-weight: 600; }
+.mi-unit-kicker { margin: 0; text-transform: uppercase; letter-spacing: 0.04em; }
+.mi-unit-banner .mi-section-meta { margin-top: var(--space-3); }
+.mi-unit-guide { flex: none; background: var(--surface-raised); color: var(--ink); box-shadow: 0 var(--depth-md) 0 color-mix(in srgb, var(--section, var(--primary)) 55%, black); text-transform: none; }
+.mi-unit-guide:focus-visible { box-shadow: 0 var(--depth-md) 0 color-mix(in srgb, var(--section, var(--primary)) 55%, black), var(--focus-ring); }
+.mi-unit-guide .mi-icon { width: 20px; height: 20px; }
+.mi-unit-banner--guide { margin-top: var(--space-2); }
+.mi-node--dialogue .mi-node-bubble { border-radius: var(--radius-lg); }
+.mi-node--practice .mi-node-bubble { width: calc(var(--node) * 0.85); height: calc(var(--node) * 0.85); background: var(--surface-raised); color: var(--section, var(--primary)); border: 3px dashed var(--section, var(--primary)); box-shadow: 0 var(--depth-md) 0 var(--section-edge); }
+.mi-node--practice .mi-node-bubble .mi-icon, .mi-node--dialogue .mi-node-bubble .mi-icon, .mi-node--review .mi-node-bubble .mi-icon { stroke: currentColor; }
+.mi-node--review .mi-node-bubble { width: calc(var(--node) * 1.5); height: calc(var(--node) * 0.9); border-radius: var(--radius-lg); background: var(--ochre); color: #2b1d00; box-shadow: 0 var(--depth-lg) 0 var(--ochre-edge); }
+.mi-node--practice.is-locked .mi-node-bubble { background: var(--surface-sunken); border-color: var(--locked-edge); color: var(--on-locked); box-shadow: 0 var(--depth-md) 0 var(--locked-edge); }
+.mi-node--review.is-locked .mi-node-bubble { background: var(--locked); color: var(--on-locked); box-shadow: 0 var(--depth-lg) 0 var(--locked-edge); }
+.mi-node--practice .mi-node-label, .mi-node--review .mi-node-label { color: var(--ink-muted); }
+.mi-pop { position: fixed; inset: 0; z-index: calc(var(--z-sheet) + 1); display: flex; align-items: flex-end; justify-content: center; }
+.mi-pop-scrim { position: absolute; inset: 0; background: #0c0e1473; }
+.mi-pop-card { position: relative; width: 100%; max-width: var(--content-max); padding: var(--space-5) var(--space-4); padding-bottom: calc(var(--space-4) + env(safe-area-inset-bottom)); border-radius: var(--radius-lg) var(--radius-lg) 0 0; background: var(--surface-raised); color: var(--ink); border-top: 6px solid var(--section, var(--primary)); box-shadow: var(--shadow-float); animation: mi-rise var(--dur-base) var(--ease-out); max-height: 90vh; overflow: auto; }
+.mi-pop-card h2 { margin: var(--space-1) var(--space-8) var(--space-3) 0; }
+.mi-pop-card p { margin: 0 0 var(--space-2); }
+.mi-pop-kind { color: var(--ink-muted); margin: 0; text-transform: uppercase; }
+.mi-pop-x { position: absolute; top: var(--space-2); right: var(--space-2); }
+.mi-pop-card .mi-btn { margin-top: var(--space-3); }
+.mi-pop-card .mi-btnrow .mi-btn { margin-top: 0; }
+.mi-pop-card .mi-link { margin-top: var(--space-1); }
+.mi-pop-card .mi-icon { width: 20px; height: 20px; }
+
+/* ---------- New exercise types (WP G) ---------- */
+.mi-speaker--big { width: calc(var(--mic) * 0.9); height: calc(var(--mic) * 0.9); border-radius: var(--radius-lg); }
+.mi-speaker--big .mi-icon { width: calc(var(--icon) * 1.5); height: calc(var(--icon) * 1.5); }
+.mi-listen { display: inline-flex; }
+.mi-pat { display: grid; gap: var(--space-2); margin: 0 0 var(--space-5); }
+.mi-pat-ex { padding: var(--space-3) var(--space-4); border-radius: var(--radius-md); background: var(--surface-sunken); }
+.mi-pat-ex p { margin: 0; }
+.mi-hl { background: var(--ochre-soft); color: inherit; border-radius: var(--radius-sm); padding: 0 var(--space-1); box-shadow: inset 0 -3px 0 var(--ochre); }
+
+/* ---------- Dialogue / story (WP I) ---------- */
+.mi-dlg { display: grid; gap: var(--space-3); margin: 0 0 var(--space-4); }
+.mi-dlg-row { display: flex; align-items: flex-start; gap: var(--space-2); }
+.mi-dlg-row--b { flex-direction: row-reverse; }
+.mi-dlg-row .mi-speaker { margin-top: var(--space-1); }
+.mi-dlg-bub { display: flex; flex-direction: column; gap: var(--space-1); max-width: 80%; padding: var(--space-3) var(--space-4); border: 2px solid var(--line); border-radius: var(--radius-lg); background: var(--surface-raised); color: var(--ink); text-align: left; font: inherit; }
+button.mi-dlg-bub { cursor: pointer; min-height: var(--tap-min); }
+button.mi-dlg-bub:focus-visible { box-shadow: var(--focus-ring); outline: 2px solid transparent; }
+.mi-dlg-row--a .mi-dlg-bub { border-bottom-left-radius: var(--radius-sm); }
+.mi-dlg-row--b .mi-dlg-bub { border-bottom-right-radius: var(--radius-sm); background: var(--primary-soft); }
+.mi-dlg-row.is-now .mi-dlg-bub { border-color: var(--primary); }
+.mi-dlg-row:not(.is-now) .mi-dlg-bub { opacity: 0.85; }
+.mi-dlg-who { color: var(--ink-muted); font-weight: 700; }
+.mi-dlg-en { color: var(--ink-muted); }
+.mi-dlg-roles { display: flex; flex-wrap: wrap; gap: var(--space-3); margin: var(--space-3) 0 0; padding: 0; list-style: none; }
+.mi-dlg-flag { margin-top: var(--space-3); }
+@media (prefers-reduced-motion: reduce) { .mi-pop-card { animation: none; } }
+
+/* ---------- Guidebook (WP E) ---------- */
+.mi-kp .mi-word-row-ig { font-size: 1.25rem; line-height: 1.35; }
+.mi-guide-tip p { margin: 0 0 var(--space-3); }

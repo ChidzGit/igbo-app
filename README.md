@@ -55,3 +55,6 @@ Each run is a **separate, fresh session**. It doesn't add to this chat's context
 ## App fixes (13 Nov 2026)
 
 Answer checking now accepts every item with the same English meaning, lessons are capped at about 15 exercises, word banks only for 3–8 word sentences (lower-case tiles), the results screen lists "Words to review" with a "Practise these" mini-lesson, and the Letters practise quiz is audio-first. Service worker cache is `v8`.
+
+## Path, Guidebook and story nodes
+Each unit shows a banner with a Guidebook button (`#guide-<unit>`; data in `data/guides.js`, optional) and a path of lessons, an optional story (`data/dialogues.js`, optional), optional Practice nodes and an optional Unit Review. Only lessons unlock the next lesson. Details: `docs/STRUCTURE-SPEC.md` ("Implemented (D, E, G, H, I)").

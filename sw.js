@@ -7,7 +7,7 @@
    Google Fonts (fonts.googleapis.com CSS + fonts.gstatic.com files) are
    stale-while-revalidate in their own runtime cache, so Nunito / Noto Sans
    keep working offline after the first online visit. */
-const CACHE_VERSION = "v8";
+const CACHE_VERSION = "v10";
 const AUDIO_CACHE = "mmuta-igbo-audio";
 const FONT_CACHE = "mmuta-igbo-fonts";
 const FONT_HOSTS = ["fonts.googleapis.com", "fonts.gstatic.com"];
@@ -18,6 +18,8 @@ const SHELL = [
   "css/style.css",
   "js/app.js",
   "data/curriculum.js",
+  "data/guides.js",
+  "data/dialogues.js",
   "data/audio.js",
   "manifest.webmanifest",
   "icons/icon-192.png",
@@ -25,7 +27,7 @@ const SHELL = [
   "icons/icon-maskable-512.png",
   "icons/apple-touch-icon.png"
 ];
-const NETWORK_FIRST = ["data/curriculum.js", "data/audio.js", "index.html"];
+const NETWORK_FIRST = ["data/curriculum.js", "data/guides.js", "data/dialogues.js", "data/audio.js", "index.html"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL.map((p) => new Request(p, { cache: "reload" })))).then(() => self.skipWaiting()));

@@ -29,6 +29,7 @@
 window.CURRICULUM = {
   version: "2.1.0",
   updated: "2026-11-14",
+  levelsPerSkill: 3, // levels per skill node: 3 (Meet/Build/Recap) now; set 5 for Meet/Practise/Build/Produce/Recap. Progress is stored per level key.
 
   // Newest first. Shown in the app under More → "What's new".
   changelog: [
